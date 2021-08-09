@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.activity.FeedbackActivity">
+
+    <include layout="@layout/lib_include_head" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="690pt"
+        android:layout_height="300pt"
+        android:layout_marginTop="20pt"
+        android:background="@drawable/mine_dialog_bg_2d3"
+        android:gravity="start"
+        android:hint="@string/minemine_activity_feedback40"
+        android:paddingStart="30pt"
+        android:paddingTop="30pt"
+        android:textColor="@color/libTextWhite"
+        android:textColorHint="@color/libTextHint"
+        android:textCursorDrawable="@drawable/lib_cursor_color"
+        android:textSize="28pt" />
+
+    <EditText
+        android:id="@+id/et_contact"
+        android:layout_width="690pt"
+        android:layout_height="100pt"
+        android:layout_marginTop="20pt"
+        android:background="@drawable/mine_dialog_bg_2d3"
+        android:gravity="start"
+        android:hint="@string/minemine_activity_feedback60"
+        android:paddingStart="30pt"
+        android:paddingTop="30pt"
+        android:textColor="@color/libTextWhite"
+        android:textColorHint="@color/libTextHint"
+        android:textCursorDrawable="@drawable/lib_cursor_color"
+        android:textSize="28pt" />
+
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/libButtonStyle"
+        android:layout_margin="47pt"
+        android:text="@string/minemine_activity_bind_mobile330" />
+
+</LinearLayout>

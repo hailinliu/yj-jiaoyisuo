@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.activity.PublishRecordActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lib_bg">
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50pt"
+                android:layout_height="64pt"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15pt"
+                android:padding="15pt"
+                android:src="@mipmap/lib_icon_back" />
+
+
+            <com.flyco.tablayout.SegmentTabLayout
+                android:id="@+id/segmentTabLayout"
+                android:layout_width="320pt"
+                android:layout_height="58pt"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25pt"
+                android:layout_marginBottom="25pt"
+                app:tl_bar_stroke_color="@color/libApp"
+                app:tl_bar_stroke_width="2pt"
+                app:tl_indicator_anim_enable="true"
+                app:tl_indicator_bounce_enable="false"
+                app:tl_indicator_color="@color/libApp"
+                app:tl_indicator_corner_radius="29pt"
+                app:tl_textSelectColor="@color/white"
+                app:tl_textUnselectColor="@color/libApp"
+                app:tl_textsize="30pt" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20pt"
+            android:background="@color/lib_bg" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</RelativeLayout>

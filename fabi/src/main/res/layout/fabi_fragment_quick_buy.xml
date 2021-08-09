@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.QuickBuyFragment">
+
+    <com.sskj.lib.util.HeySlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_marginTop="170pt"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/lib_bg"
+        />
+
+
+    <com.sskj.lib.util.ViewPagerBoolean
+        android:id="@+id/viewpager"
+        android:layout_marginTop="20pt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+  <!--  <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80pt"
+        android:gravity="bottom"
+        android:layout_marginTop="100pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30pt"
+            android:text="@string/fabifabi_fragment_fabi80"
+            android:textColor="@color/libTextWhite"
+            android:textSize="35pt" />
+
+        <TextView
+            android:id="@+id/tvSell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fabifabi_fragment_fabi100"
+            android:textColor="@color/fabiTextHint"
+            android:textSize="35pt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="290pt"
+        android:orientation="vertical">
+        <com.sskj.lib.util.HeySlidingTabLayout
+            android:id="@+id/tabs"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="#F9f9f9"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/fabiDivider" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+-->
+</LinearLayout>

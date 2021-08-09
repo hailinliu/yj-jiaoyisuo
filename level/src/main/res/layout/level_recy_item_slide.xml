@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100pt"
+    android:background="@color/bibiBg"
+    android:gravity="center_vertical"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt">
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8pt"
+        android:textColor="@color/bibiTextContent"
+        android:textSize="32pt"
+        android:textStyle="bold"
+        tools:text="@tools:sample/last_names" />
+
+    <TextView
+        android:id="@+id/tvTypeRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bibiTextHint"
+        android:textSize="24pt"
+        tools:text="@tools:sample/last_names" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/bibiGreen"
+        android:textSize="32pt"
+        android:textStyle="bold"
+        tools:text="@tools:sample/last_names" />
+
+</LinearLayout>

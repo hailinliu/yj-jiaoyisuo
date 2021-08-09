@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/fabiBg" android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="30pt" tools:showIn="@layout/fabi_activity_order_record_detail">
+
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabifabi_include_order_record_info40" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvAllMoney" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiApp" android:textSize="28pt" tools:text="11256666623415556"/>
+    </LinearLayout>
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabifabi_recy_item_buy_sell260" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvPrice" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+
+    </LinearLayout>
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabitipFabiUtil6" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvNum" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+
+    </LinearLayout>
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabifabi_include_order_record_info310" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvName" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="0pt" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+
+        <TextView android:id="@+id/tvPhone" android:layout_height="wrap_content" android:layout_marginEnd="15pt" android:layout_marginStart="34pt" android:layout_width="wrap_content" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="@tools:sample/last_names"/>
+
+        <ImageView android:gravity="end" android:id="@+id/ivCopy" android:layout_height="40pt" android:layout_width="40pt" android:padding="5pt" android:src="@mipmap/fabi_icon_copy_gray"/>
+
+    </LinearLayout>
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabifabi_include_order_record_info440" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvRemark" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+
+    </LinearLayout>
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabifabi_include_order_record_info530" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvOrderNum" android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="0pt" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+
+    </LinearLayout>
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="140pt" android:text="@string/fabifabi_include_order_record_info620" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvTime" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+
+    </LinearLayout>
+
+
+    <View android:background="@color/fabiDivider" android:layout_height="1pt" android:layout_width="match_parent"/>
+
+
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/llOrderNumInfo" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal" android:visibility="visible">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/fabifabi_include_order_record_info710" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvCode" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+    </LinearLayout>
+
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/llPayInfo" android:layout_height="80pt" android:layout_width="match_parent" android:orientation="horizontal" android:visibility="visible">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/fabipublishActivity5" android:textColor="@color/fabiTextHint" android:textSize="28pt"/>
+
+        <TextView android:gravity="end" android:id="@+id/tvPayInfo" android:layout_height="wrap_content" android:layout_width="match_parent" android:textColor="@color/fabiTextContent" android:textSize="28pt" tools:text="11256666623415556"/>
+    </LinearLayout>
+</LinearLayout>

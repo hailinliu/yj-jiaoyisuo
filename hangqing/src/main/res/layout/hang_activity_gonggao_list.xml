@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hangBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.GonggaoListActivity">
+
+    <include layout="@layout/lib_include_head" />
+
+    <com.shizhefei.view.coolrefreshview.CoolRefreshView
+        android:id="@+id/coolRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20pt"
+        android:background="@color/lib_bg">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.shizhefei.view.coolrefreshview.CoolRefreshView>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    tools:context=".ui.fragment.PayTypeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:text="@string/paypay_activity_add_pay_type110"
+        android:textColor="@color/payTextContent"
+        android:textSize="28pt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:layout_marginBottom="20pt"
+        android:text="@string/paypay_activity_pay_type40"
+        android:textColor="@color/payTextHint"
+        android:textSize="24pt" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvAdd"
+        android:textSize="26pt"
+        android:textColor="@color/payApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10pt"
+        android:layout_marginBottom="10pt"
+        android:padding="20pt"
+        android:text="@string/paypay_activity_pay_type80" />
+
+</LinearLayout>

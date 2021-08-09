@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!--换肤产品，颜色-->
+    <color name="loginTextContent">#323232</color>
+    <color name="loginTextHint">#999999</color>
+    <color name="loginBg">#ffffff</color>
+    <color name="loginDivider">#EEEEEE</color>
+    <color name="loginApp">#6185E5</color>
+    <color name="login_login">#1CBA97</color>
+    <color name="login_bg">#f6f9f9</color>
+</resources>

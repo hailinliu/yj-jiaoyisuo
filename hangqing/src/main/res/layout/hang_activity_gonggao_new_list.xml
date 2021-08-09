@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBgDeep"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:orientation="vertical"
+    android:layout_marginTop="290pt"
+    tools:ignore="MissingDefaultResource">
+   <include layout="@layout/lib_include_head" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+</LinearLayout>

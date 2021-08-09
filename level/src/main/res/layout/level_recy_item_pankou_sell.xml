@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55pt">
+
+    <ProgressBar
+        android:id="@+id/bibiProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:max="100"
+        android:progress="100"
+        android:progressDrawable="@drawable/bibi_progress_red"
+        android:translationZ="0pt" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical|end"
+        android:text="1231"
+        android:textColor="@color/bibiGreen"
+        android:textSize="22pt"
+        android:translationZ="1pt" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|start"
+        android:paddingStart="10pt"
+        android:text="123"
+        android:textColor="@color/bibiTextHint"
+        android:textSize="22pt"
+        android:translationZ="1pt" />
+
+
+</RelativeLayout>

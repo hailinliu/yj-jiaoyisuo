@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:paddingBottom="35pt"
+    tools:context=".ui.activity.MarketActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="112pt"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30pt"
+            android:text="@string/hangqinghang_activity_market_scroll40"
+            android:visibility="invisible"
+            android:textColor="@color/hangTextTitle"
+            android:textSize="36pt" />
+
+        <LinearLayout
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40pt"
+                android:layout_height="34pt"
+                android:layout_marginEnd="14pt"
+                android:background="@mipmap/lib_icon_back"
+                android:backgroundTint="@color/libTextWhite" />
+
+            <TextView
+                android:id="@+id/tvTitleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="BTC/USDT"
+                android:textColor="@color/hangTextTitle"
+                android:textSize="36pt" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1pt"
+        android:background="@color/hangDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            android:layout_weight="1"
+            android:background="@color/lib_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20pt"
+                        android:orientation="horizontal"
+                        android:paddingStart="34pt"
+                        android:paddingEnd="35pt">
+
+                        <LinearLayout
+                            android:layout_width="0pt"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="90pt"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvUSDT"
+                                    android:layout_width="0pt"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/hangGreen"
+                                    android:textSize="55pt"
+                                    android:textStyle="bold"
+                                    tools:text="8136.0021" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingBottom="15pt">
+
+                                <TextView
+                                    android:id="@+id/tvRate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/commonText999"
+                                    android:textSize="28pt"
+                                    android:textStyle="bold"
+                                    tools:text="+4.21%" />
+
+                                <TextView
+                                    android:id="@+id/tvRMB"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10pt"
+                                    android:layout_marginEnd="34pt"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt"
+                                    tools:text="≈8136.0021 " />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0pt"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="60pt"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hangqinghang_activity_market_scroll450"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt" />
+
+                                <TextView
+                                    android:id="@+id/tvHigh"
+                                    android:layout_width="150pt"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt"
+                                    tools:text="800.2154" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0pt"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="60pt"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hangqinghang_activity_market_scroll520"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt" />
+
+                                <TextView
+                                    android:id="@+id/tvLow"
+                                    android:layout_width="150pt"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt"
+                                    tools:text="800.2154" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0pt"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="60pt"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hangqinghang_activity_market_scroll521"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt" />
+
+                                <TextView
+                                    android:id="@+id/tvNum"
+                                    android:layout_width="150pt"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:textColor="@color/hangTextHint"
+                                    android:textSize="28pt"
+                                    tools:text="800.2154" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1pt"
+                        android:background="@color/hangDivider" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="800pt" />
+                </LinearLayout>
+
+                <com.flyco.tablayout.CommonTabLayout
+                    android:id="@+id/slidingTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80pt"
+                    android:background="@color/hangBgDeep"
+                    app:tl_indicator_color="@color/hangSelect"
+                    app:tl_indicator_height="6pt"
+                    app:tl_indicator_width="60pt"
+                    app:tl_indicator_width_equal_title="true"
+                    app:tl_tab_space_equal="true"
+                    app:tl_textSelectColor="@color/hangSelect"
+                    app:tl_textUnselectColor="@color/hangUnSelect"
+                    app:tl_textsize="26pt" />
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btTrade"
+            style="@style/hangButtonStyle"
+            android:layout_width="690pt"
+            android:layout_height="90pt"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/hangqinghang_activity_market_scroll700" />
+    </LinearLayout>
+
+
+</LinearLayout>

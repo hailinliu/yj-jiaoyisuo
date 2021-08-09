@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+
+
+    <!--换肤产品，颜色-->
+    <color name="payTextTitle">@color/libTextTitle</color>
+    <color name="payTextContent">@color/libTextContent</color>
+    <color name="payBg">@color/libBg</color>
+    <color name="payTextHint">@color/libTextHint</color>
+    <color name="payBgDeep">@color/libBgDeep</color>
+    <color name="payApp">@color/libApp</color>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <resources>
+    <string name="identverificationResultActivity4">重新認證</string>
+    <string name="identverificationResultActivity3">認證失敗，請</string>
+    <string name="identverificationResultActivity1">認證成功</string>
+    <string name="identident_activity_verification_second100">請上傳身份證正面</string>
+    <string name="identident_activity_verification_second220">請上傳身份證</string>
+    <string name="identident_activity_verification_second180">身份證手持確保無水印無污漬，身份信息清晰，非文字反向照片，請勿進行PS處理。</string>
+    <string name="identident_activity_verification_first80">爲保障您的賬戶安全，需要進行身份驗證\n身份一旦認證無法修改，請仔細填寫您的真實信息</string>
+    <string name="identverificationMenuActivity2">未認證</string>
+    <string name="identverificationMenuActivity1">身份認證</string>
+    <string name="identverificationMenuActivity4">已認證</string>
+    <string name="identverificationMenuActivity3">請先進行初級認證</string>
+    <string name="identverificationMenuActivity6">審覈中</string>
+    <string name="identverificationMenuActivity5">您已初級認證</string>
+    <string name="identverificationMenuActivity8">認證失敗</string>
+    <string name="identverificationMenuActivity7">請耐心等待審覈</string>
+    <string name="identident_activity_verification_second160">請上傳身份證反面</string>
+    <string name="identident_activity_verification_first120">請輸入您的姓名</string>
+    <string name="identident_activity_verification_first240">提交</string>
+    <string name="identident_activity_verification_first100">姓名</string>
+    <string name="identident_activity_verification_result100">恭喜您認證成功</string>
+    <string name="identident_activity_verification_first180">請輸入您的身份證號碼</string>
+    <string name="identident_activity_verification_second120">身份證正面確保無水印無污漬，身份信息清晰，非文字反向照片，請勿進行PS處理。</string>
+    <string name="identident_activity_verification_second240">需要您本人單手手持一張放置有身份證、有您手寫的騰幣和當天日期的白紙，確保身份證和白紙在您的胸前，不遮擋您的臉部，並且身份證和白紙上的信息清晰可見</string>
+    <string name="identverificationSecondActivity1">高級認證</string>
+    <string name="identverificationSecondActivity2">請補齊二張照片</string>
+    <string name="identident_activity_verification_first160">身份證號碼</string>
+    <string name="identverificationFirstActivity1">初級認證</string>
+    <string name="ident_verificationn_result100">失敗原因:</string>
+    </resources>

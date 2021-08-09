@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fabiBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.FabiMainFragmentActivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60pt"
+        android:layout_marginTop="80pt">
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40pt"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20pt"
+        android:tint="@color/libTextWhite"
+        android:src="@mipmap/lib_icon_back_white"
+        android:layout_height="40pt"/>
+        <RadioGroup
+            android:id="@+id/rgArea"
+            android:layout_width="250pt"
+            android:layout_marginStart="20pt"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fabi_shape_unselect_corner_40"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbQuickBuy"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fabi_selector_tab_filter"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/fabifabi_fragment_main80"
+                android:textColor="@drawable/fabi_selector_text"
+                android:textSize="30pt" />
+
+            <RadioButton
+                android:id="@+id/rbFabi"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fabi_selector_tab_filter_next"
+                android:button="@null"
+                android:gravity="center"
+                android:checked="true"
+                android:text="@string/fabifabi_fragment_main100"
+                android:textColor="@drawable/fabi_selector_text_next"
+                android:textSize="30pt" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/tv_xin"
+            android:layout_width="wrap_content"
+            android:text="@string/fabi_xinshou"
+            android:textColor="@color/libTextWhite"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20pt"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

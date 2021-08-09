@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90pt"
+    android:layout_marginTop="30pt"
+    android:background="@color/libBg2"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:showIn="@layout/login_activity_pwd_forget">
+
+    <ImageView
+        android:layout_width="42pt"
+        android:layout_height="44pt"
+        android:layout_marginEnd="30pt"
+        android:src="@mipmap/login_icon_verify_code"
+        android:tint="@color/loginApp" />
+
+    <EditText
+        android:id="@+id/etInputCode"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="@string/login_tuxing"
+        android:inputType="textPassword"
+        android:digits="0123456789qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+        android:textColor="@color/loginTextContent"
+        android:textColorHint="@color/loginTextHint"
+        android:textSize="30pt" />
+
+    <ImageView
+        android:id="@+id/imageCode"
+        android:layout_width="180pt"
+        android:layout_height="70pt"
+       />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--换肤产品，颜色-->
+    <color name="inviteTextContent">@color/libTextContent</color>
+    <color name="inviteTextHint">@color/libTextHint</color>
+    <color name="inviteTextTitle">@color/libTextTitle</color>
+    <color name="inviteBgDeep">@color/libBgDeep</color>
+    <color name="inviteBg">@color/libBg</color>
+    <color name="inviteBgAlpha">#90ffffff</color>
+    <color name="inviteDivider">@color/libDivider</color>
+    <color name="inviteApp">@color/libApp</color>
+</resources>

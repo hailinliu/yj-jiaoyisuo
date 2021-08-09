@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fabi_shape_bg_corner_top"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt">
+
+            <ImageView
+                android:layout_width="80pt"
+                android:layout_height="80pt"
+                android:layout_centerVertical="true"
+                android:padding="20pt"
+                android:src="@mipmap/lib_icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/fabifabi_dialog_quick_buy80"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20pt"
+                android:layout_marginBottom="20pt"
+                android:text="@string/fabifabi_dialog_quick_buy100"
+                android:textColor="@color/fabiTextHint"
+                android:textSize="26pt" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/fabiDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30pt"
+            android:paddingEnd="30pt">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fabifabi_dialog_quick_buy190"
+                    android:textColorHint="@color/fabiTextHint"
+                    android:textSize="28pt" />
+
+                <TextView
+                    android:id="@+id/tvPayType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt"
+                    tools:text="@tools:sample/last_names" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:background="@color/fabiDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fabifabi_recy_item_buy_sell260"
+                    android:textColorHint="@color/fabiTextHint"
+                    android:textSize="28pt" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt"
+                    tools:text="@tools:sample/last_names" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:background="@color/fabiDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fabitipFabiUtil6"
+                    android:textColorHint="@color/fabiTextHint"
+                    android:textSize="28pt" />
+
+                <TextView
+                    android:id="@+id/tvNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt"
+                    tools:text="@tools:sample/last_names" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:background="@color/fabiDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/fabifabi_dialog_quick_buy460"
+                    android:textColorHint="@color/fabiTextHint"
+                    android:textSize="28pt" />
+
+                <TextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt"
+                    tools:text="@tools:sample/last_names" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:background="@color/fabiDivider" />
+
+            <Button
+                android:id="@+id/btSubmit"
+                style="@style/fabiButtonStyle.Sure"
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:layout_marginTop="40pt"
+                android:layout_marginBottom="50pt"
+                android:text="@string/fabipublishActivity2" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

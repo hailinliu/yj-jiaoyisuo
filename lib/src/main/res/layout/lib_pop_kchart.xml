@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="750pt"
+    android:layout_height="wrap_content"
+    android:background="@color/libBg"
+    android:orientation="vertical"
+    android:padding="30pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44pt"
+            android:text="@string/liblib_pop_kchart40"
+            android:textColor="@color/libTextWhite"
+            android:textSize="26pt" />
+
+        <View
+            android:layout_width="1pt"
+            android:layout_height="34pt"
+            android:layout_marginEnd="44pt"
+            android:background="@color/libTextHint" />
+
+        <TextView
+            android:id="@+id/tvMa"
+            android:layout_width="130pt"
+            android:layout_height="wrap_content"
+            android:text="MA"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tvBoll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44pt"
+            android:text="BOLL"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt" />
+
+        <View
+            android:layout_width="0pt"
+            android:layout_height="1pt"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivUpToggle"
+            android:layout_width="32pt"
+            android:layout_height="32pt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="44pt"
+            android:text="@string/liblib_pop_kchart190"
+            android:textColor="@color/libTextWhite"
+            android:textSize="26pt" />
+
+        <View
+            android:layout_width="1pt"
+            android:layout_height="34pt"
+            android:layout_marginEnd="44pt"
+            android:background="@color/libTextHint" />
+
+        <TextView
+            android:id="@+id/tvMacd"
+            android:layout_width="130pt"
+            android:layout_height="wrap_content"
+            android:text="MACD"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tvKdj"
+            android:layout_width="130pt"
+            android:layout_height="wrap_content"
+            android:text="KDJ"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tvRsi"
+            android:layout_width="130pt"
+            android:layout_height="wrap_content"
+            android:text="RSI"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tvWr"
+            android:layout_width="130pt"
+            android:layout_height="wrap_content"
+            android:text="WR"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt" />
+
+        <View
+            android:layout_width="0pt"
+            android:layout_height="1pt"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ivDownToggle"
+            android:layout_width="32pt"
+            android:layout_height="32pt" />
+    </LinearLayout>
+
+</LinearLayout>

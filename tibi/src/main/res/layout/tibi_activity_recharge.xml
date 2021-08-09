@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tibiBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.RechargeActivity">
+
+    <include layout="@layout/lib_include_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:gravity="center_vertical"
+        android:paddingStart="12pt"
+        android:paddingEnd="12pt"
+        android:visibility="gone">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/slidingTabLayout"
+            android:layout_width="450pt"
+            android:layout_height="80pt"
+            android:layout_centerInParent="true"
+            app:tl_indicator_color="@color/transparent"
+            app:tl_indicator_height="6pt"
+            app:tl_indicator_width="40pt"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/tibiApp"
+            app:tl_textUnselectColor="@color/tibiTextHint" />
+
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20pt"
+        android:background="@color/tibiBg" />
+
+</LinearLayout>

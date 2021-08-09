@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+
+<string name="quickmark_quickMarkActivity1_j">スキャンに失敗!</string>
+<string name="quickmark_viewfinderView1_j">qrコードをボックスに入れると、自動的にスキャンされます</string>
+<string name="quickmark_quickMarkActivity2_j">コード掃きサービスを提供する権限がオンになっていません</string>
+<string name="quickmarkquickMarkActivity1">qrコードをスキャンします</string>
+</resources>

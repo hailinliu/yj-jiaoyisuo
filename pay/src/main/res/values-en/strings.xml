@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+<string name="paypay_recy_item_pay_type20">modify</string>
+<string name="paypay_activity_add_pay_type490">Please upload your Alipay QR code.</string>
+<string name="paypay_activity_add_pay_type130">WeChat</string>
+<string name="paypay_activity_add_pay_type250">Alipay QR Code</string>
+<string name="paypay_activity_add_pay_type650">Bank branch</string>
+<string name="paypay_activity_add_pay_type780">Confirm</string>
+<string name="payaddPayTypeActivity1">Please input micro signal.</string>
+<string name="paypay_activity_pay_type80">collect</string>
+<string name="payaddPayTypeActivity3">Please enter the fund password.</string>
+<string name="payaddPayTypeActivity2">Please upload the picture.</string>
+<string name="payaddPayTypeActivity5">Please upload the picture.</string>
+<string name="paypay_activity_add_pay_type700">Fund password</string>
+<string name="payaddPayTypeActivity4">Please enter Alipay account number</string>
+<string name="payaddPayTypeActivity7">Please enter your bank card account number.</string>
+<string name="payaddPayTypeActivity6">Please enter the name of the opening bank.</string>
+<string name="payaddPayTypeActivity8">Please enter the name of the branch opening an account.</string>
+<string name="paypay_activity_add_pay_type230">Please enter your account number.</string>
+<string name="paypay_activity_add_pay_type110">Payment method</string>
+<string name="paypay_activity_add_pay_type760">Cancel</string>
+<string name="paypay_activity_add_pay_type170">Sun WuKong</string>
+<string name="paypay_activity_add_pay_type570">Bank of deposit</string>
+<string name="paypay_activity_add_pay_type210">Account number</string>
+<string name="paypay_activity_add_pay_type610">Bank Card Account</string>
+<string name="paypay_activity_pay_type40">Be sure to use your own account. Activated payment methods will be displayed to the buyer at the time of the transaction, with up to three activations.</string>
+<string name="paypay_activity_add_pay_type390">Account number</string>
+<string name="paypay_activity_add_pay_type670">Please enter the branch of the opening bank</string>
+<string name="paypay_activity_add_pay_type60">Binding payment method</string>
+<string name="paypay_add_pay_type_yhk">Bank card</string>
+<string name="paypay_add_pay_type">Alipay</string>
+<string name="paypay_activity_add_pay_type150">Full name</string>
+<string name="paypay_activity_add_pay_type310">Please upload your QR code picture of Wechat Receipt</string>
+    <string name="paypay_activity_add_pay_type251">Wechat QR code</string>
+</resources>

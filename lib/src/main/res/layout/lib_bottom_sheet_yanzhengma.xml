@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="40pt"
+    android:paddingEnd="40pt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/app_shape_corner_bai2"
+    android:orientation="vertical">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_marginTop="20pt"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/lib_phone_yanzheng"
+        android:textColor="@color/libTextWhite"
+        android:textSize="30pt" />
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:text="@string/common_cancel"
+        android:textColor="@color/libTextGray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>
+  <View
+      android:layout_width="match_parent"
+      android:layout_marginTop="10pt"
+      android:background="@color/libTextGray"
+      android:layout_height="1pt"/>
+    <TextView
+        android:id="@+id/tv_yourphone"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50pt"
+        android:textColor="@color/libTextWhite"
+        android:text="@string/lib_yanzheng"
+        android:layout_height="wrap_content"/>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="30pt"
+    android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/et_yanzheng"
+        android:layout_width="match_parent"
+        android:maxEms="6"
+        android:maxLength="6"
+        android:inputType="number"
+        android:background="@null"
+        android:textColor="@color/libTextWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_dianji"
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/lib_dianji_get"
+        android:textColor="@color/libGreen1"
+        android:layout_height="wrap_content"/>
+</android.support.constraint.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10pt"
+        android:background="@color/libGreen1"
+        android:layout_height="1pt"/>
+    <Button
+        android:id="@+id/btSure"
+        style="@style/libButtonStyle"
+        android:layout_marginLeft="35pt"
+        android:layout_marginTop="110pt"
+        android:layout_marginRight="35pt"
+        android:layout_marginBottom="40pt"
+        android:text="@string/common_sure" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/lib_diushi"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20pt"
+        android:textColor="@color/libGreen"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

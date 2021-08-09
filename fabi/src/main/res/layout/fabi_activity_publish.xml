@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fabiBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.PublishActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88pt"
+        android:background="@color/fabiBg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include layout="@layout/lib_include_head" />
+
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/commonTabLayout"
+            android:layout_width="320pt"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            app:tl_indicator_color="@color/fabiSelect"
+            app:tl_indicator_height="4pt"
+            app:tl_indicator_width="60pt"
+            app:tl_textSelectColor="@color/fabiSelect"
+            app:tl_textUnselectColor="@color/fabiUnSelect"
+            app:tl_textsize="30pt" />
+
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fabiBg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="70pt"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/fabiBgDeep"
+                android:gravity="center"
+                android:textColor="@color/libTextHint"
+                android:textSize="24pt"
+                tools:text="@tools:sample/last_names" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lib_bg"
+                android:orientation="vertical"
+                android:paddingStart="31pt"
+                android:paddingEnd="31pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="58pt"
+                    android:text="@string/fabitipFabiUtil6"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="28pt" />
+
+                <EditText
+                    android:id="@+id/etNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45pt"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/fabifabi_activity_publish190"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/libTextWhite"
+                    android:textColorHint="@color/fabiTextHint"
+                    android:textSize="28pt" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1pt"
+                    android:layout_marginTop="31pt"
+                    android:background="@color/fabiDivider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="41pt"
+                    android:text="@string/fabibuySellFragment4"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="28pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="46pt"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etMin"
+                        android:layout_width="0pt"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/fabifabi_activity_publish270"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/libTextWhite"
+                        android:textColorHint="@color/fabiTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="71pt"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/fabiTextHint"
+                        android:textSize="28pt" />
+
+                    <EditText
+                        android:id="@+id/etMax"
+                        android:layout_width="0pt"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60pt"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/fabifabi_activity_publish310"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/libTextWhite"
+                        android:textColorHint="@color/fabiTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/fabiTextHint"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1pt"
+                    android:layout_marginTop="31pt"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0pt"
+                        android:layout_height="1pt"
+                        android:layout_weight="1"
+                        android:background="@color/fabiDivider" />
+
+                    <View
+                        android:layout_width="0pt"
+                        android:layout_height="1pt"
+                        android:layout_marginStart="60pt"
+                        android:layout_weight="1"
+                        android:background="@color/fabiDivider" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40pt"
+                    android:text="@string/fabifabi_recy_item_buy_sell260"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="28pt" />
+
+                <EditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45pt"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/fabifabi_bottom_sheet_trade200"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/libTextWhite"
+                    android:textColorHint="@color/fabiTextHint"
+                    android:textSize="28pt" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1pt"
+                    android:layout_marginTop="30pt"
+                    android:background="@color/fabiDivider" />
+
+                <LinearLayout
+                    android:id="@+id/remark_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40pt"
+                    android:layout_marginBottom="20pt"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fabifabi_include_order_record_info440"
+                        android:textColor="@color/libTextWhite"
+                        android:textSize="28pt" />
+
+                    <EditText
+                        android:id="@+id/etRemark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35pt"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/fabifabi_activity_publish530"
+                        android:minHeight="60pt"
+                        android:textColor="@color/libTextWhite"
+                        android:textColorHint="@color/fabiTextHint"
+                        android:textSize="28pt" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:background="@color/fabiDivider" />
+
+            <LinearLayout
+                android:id="@+id/llPayType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fabiBg"
+                android:orientation="vertical"
+                android:paddingStart="31pt"
+                android:paddingTop="50pt"
+                android:paddingEnd="31pt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPayType"
+                        android:layout_width="0pt"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/fabipublishActivity4"
+                        android:textColor="@color/libTextWhite"
+                        android:textSize="28pt" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30pt"
+                    android:paddingBottom="30pt" />
+
+                <TextView
+                    android:id="@+id/tvAddPayType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="35pt"
+                    android:text="@string/fabipublishActivity6"
+                    android:textColor="@color/libApp"
+                    android:textSize="28pt" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btOrder"
+                style="@style/fabiButtonStyle.Sure"
+                android:layout_marginStart="30pt"
+                android:layout_marginTop="88pt"
+                android:layout_marginEnd="30pt"
+                android:layout_marginBottom="50pt"
+                android:text="@string/fabipublishActivity2" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

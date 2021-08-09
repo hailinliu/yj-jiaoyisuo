@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <string name="levellevel_fragment_buy_sell790">手續費</string>
+    <string name="levelbuyAndSellFragment10">最小下單量</string>
+    <string name="levelbuyAndSellFragment7">請先登錄</string>
+    <string name="levelbuyAndSellFragment15">操作成功</string>
+    <string name="levelbuyAndSellFragment25">下單成功</string>
+    <string name="levelbuyAndSellFragment8">請輸入價格</string>
+    <string name="levelbuyAndSellFragment9">請輸入數量</string>
+    <string name="levellevel_recy_item_deal470">平倉價</string>
+    <string name="levellevel_recy_item_holder1130">修改</string>
+    <string name="levellevel_fragment_buy_sell540">可用 </string>
+    <string name="levellevel_recy_item_deal400">成交價</string>
+    <string name="leveltradeListBean2">限價</string>
+    <string name="leveltradeListBean1">市價</string>
+    <string name="levellevel_dialog_cancel220">委託價</string>
+    <string name="levellevel_recy_item_deal1180">分享</string>
+    <string name="levellevel_recy_item_deal810">過夜費</string>
+    <string name="leveltradeActivity10">爆倉率</string>
+    <string name="levellevel_dialog_trade_info_tip480">類型</string>
+    <string name="levellevel_fragment_buy_sell610">輸入數量</string>
+    <string name="levellevel_activity_share170">USDT合約</string>
+    <string name="levellevel_dialog_cancel290">是否確認要撤單</string>
+    <string name="levellevel_dialog_trade_info_tip120">買入</string>
+    <string name="levellevel_dialog_trade_info_tip240">交易總額</string>
+    <string name="levellevel_dialog_set_price270">請設置止盈價格</string>
+    <string name="levellevel_recy_item_holder1110">平倉</string>
+    <string name="levellevel_recy_item_entrust710">撤單</string>
+    <string name="levelbuyAndSellFragment3">市價交易</string>
+    <string name="levelbuyAndSellFragment4">限價交易</string>
+    <string name="levelbuyAndSellFragment5">資金不足</string>
+    <string name="levellevel_activity_share310">開倉均價</string>
+    <string name="levelbuyAndSellFragment6">1張=</string>
+    <string name="levelbuySellEnum2">做空</string>
+    <string name="levelbuySellEnum1">做多</string>
+    <string name="levelbuyAndSellFragment1">請登錄</string>
+    <string name="levelbuyAndSellFragment2">爆倉率%s</string>
+    <string name="levellevel_dialog_pingcang290">平倉數量</string>
+    <string name="leveltradeActivity4">成交</string>
+    <string name="leveltradeActivity3">委託</string>
+    <string name="leveltradeActivity6">動態權益</string>
+    <string name="levellevel_dialog_set_price140">最新價</string>
+    <string name="leveltradeActivity5">是否確認要全部平倉？ </string>
+    <string name="leveltradeActivity2">持倉</string>
+    <string name="leveltradeActivity1">歷史記錄</string>
+    <string name="leveltradeActivity8">凍結USDT</string>
+    <string name="leveltradeActivity7">可用USDT</string>
+    <string name="levellevel_dialog_cancel160">委託量</string>
+    <string name="leveltradeActivity9">浮動盈虧</string>
+    <string name="levellevel_fragment_main220">當前委託</string>
+    <string name="levelcontractNoteBean18">手續費</string>
+    <string name="levellevel_fragment_buy_sell630">張</string>
+    <string name="leveltipLevelUtil4">最多平倉%s張</string>
+    <string name="levellevel_dialog_set_price250">止盈價格</string>
+    <string name="levellevel_dialog_pingcang400">是否要確認平倉？ </string>
+    <string name="levellevel_dialog_set_price530">請設置止損價格</string>
+    <string name="levellevel_dialog_trade_info_tip170">數量</string>
+    <string name="levellevel_dialog_set_price510">止損價格</string>
+    <string name="levellevel_dialog_cancel60">提醒</string>
+    <string name="levellevel_fragment_five60">盤口</string>
+    <string name="levellevel_fragment_buy_sell1020">交易總額:</string>
+    <string name="levellevel_activity_share240">指數合約</string>
+    <string name="levelholderFragment1">盈虧：</string>
+    <string name="leveldealFragment1">手動平倉</string>
+    <string name="levellevel_activity_trade270">一鍵平倉</string>
+    <string name="leveldealFragment3">止損平倉</string>
+    <string name="leveldealFragment2">止盈止損平倉</string>
+    <string name="leveldealFragment5">爆倉強平</string>
+    <string name="leveldealFragment4">系統強平</string>
+    <string name="levellevel_dialog_set_price750">確認</string>
+    <string name="leveldealFragment6">盈虧:</string>
+    <string name="leveltradeListBean21">止損價</string>
+    <string name="leveltradeListBean22">止盈價</string>
+    <string name="levellevel_recy_item_deal570">成交量</string>
+    <string name="levelcurrentEntrustFragment1">是否確認要撤單？ </string>
+    <string name="levellevel_dialog_set_price80">方向</string>
+    <string name="levellevel_fragment_buy_sell480">以當前最優價格交易</string>
+    <string name="levellevel_fragment_buy_sell80">風險率：--</string>
+    <string name="levellevel_dialog_set_price730">取消</string>
+    <string name="levellevel_dialog_pingcang60">平倉確認</string>
+    <string name="levellevel_dialog_trade_info_tip550">價格(USDT)</string>
+    <string name="levellevel_recy_item_deal1080">盈虧  </string>
+    <string name="levellevel_dialog_trade_info_tip5500">張數</string>
+    <string name="level_slide_coin1">幣種</string>
+    <string name="level_slide_coin2">漲跌幅</string>
+    <string name="level_slide_coin3">最新價格</string>
+    <string name="leveltipLevelUtil48">平倉數量不能爲0</string>
+    <string name="level_pingcang_success">平倉成功</string>
+    <string name="level_with_drawal_success">撤單成功</string>
+    <string name="level_num">數量</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell430">以市場最優價成交</string>
+
+    <string name="bibi_bibiBuyAndSellFragment4">最小下單量</string>
+
+    <string name="bibi_pankouFragment3">數量(%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail530">成交價</string>
+
+    <string name="bibi_bibiBuyAndSellFragment2">限價</string>
+
+    <string name="bibi_pankouFragment1">買價(%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail330">手續費(ETH)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment3">交易額</string>
+
+    <string name="bibi_pankouFragment2">賣價(%s)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment8">請登錄</string>
+
+    <string name="bibi_bibiBuyAndSellFragment9">請先登錄</string>
+
+    <string name="bibi_bibi_activity_record_detail460">時間</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip250">類型</string>
+
+    <string name="bibi_bibi_activity_slide60">切換幣種</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip450">確定</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history310">成交總額</string>
+
+    <string name="bibi_activity_all_entrust_and_history150">篩選</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history80">撤銷</string>
+
+    <string name="bibi_allEntrustFragment4">價格(%s)</string>
+
+    <string name="bibi_tipBibiUtil1">買入</string>
+
+    <string name="bibi_allEntrustFragment3">撤單</string>
+
+    <string name="bibi_allEntrustFragment6">數量(%s)</string>
+
+    <string name="bibi_bibi_fragment_hangqing60">最新價格</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history150">委託價(USDT)</string>
+
+    <string name="bibi_allEntrustFragment5">總金額</string>
+
+    <string name="bibi_allEntrustFragment7">實際成交(%s)</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip80">方向</string>
+
+    <string name="bibi_tipBibiUtil2">市價</string>
+
+    <string name="bibi_tipBibiUtil3">金額</string>
+
+    <string name="bibi_bibi_activity_record_detail190">成交量(ETH)</string>
+
+    <string name="bibi_bibi_fragment_pankou150">數量(EOS)</string>
+
+    <string name="bibi_bibi_activity_record_detail150">成交總額(USDT)</string>
+
+    <string name="bibi_historyEntrustFragment11">成交均價(%s)</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell640">可用</string>
+
+    <string name="bibi_historyEntrustFragment12">委託金額(%s)</string>
+
+    <string name="bibi_recordDetailActivity4">成交均價(%s)</string>
+
+    <string name="bibi_historyEntrustFragment2">交易中</string>
+
+    <string name="bibi_bibi_activity_record320">幣種</string>
+
+    <string name="bibi_recordDetailActivity5">成交數量(%s)</string>
+
+    <string name="bibi_recordDetailActivity2">成交總額(%s)</string>
+
+    <string name="bibi_recordDetailActivity3">手續費(%s)</string>
+
+    <string name="bibi_historyEntrustFragment1">委託中</string>
+
+    <string name="bibi_bibi_activity_record_detail670">手續費</string>
+
+    <string name="bibi_historyEntrustFragment7">市價</string>
+
+    <string name="bibi_pankouUpDownFragment1">位小數</string>
+
+    <string name="bibi_bibiBuyAndSellFragment13">請輸入%s價格</string>
+
+    <string name="bibi_bibiBuyAndSellFragment14">交易額：</string>
+
+    <string name="bibi_recordActivity3">賣出</string>
+
+    <string name="bibi_bibiBuyAndSellFragment15">交易量： </string>
+
+    <string name="bibi_recordActivity4">已成交</string>
+
+    <string name="bibi_bibiBuyAndSellFragment16">交易額： </string>
+
+    <string name="bibi_recordActivity5">已撤銷</string>
+
+    <string name="bibi_bibiBuyAndSellFragment10">請輸入%s數量</string>
+
+    <string name="bibi_bibiBuyAndSellFragment11">購買</string>
+
+    <string name="bibi_bibi_include_pankou60">盤口</string>
+
+    <string name="bibi_bibiBuyAndSellFragment12">出售</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip150">價格</string>
+
+    <string name="bibi_bibi_activity_record280">交易對</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip430">取消</string>
+
+    <string name="bibi_activity_all_entrust_and_history120">歷史記錄</string>
+
+    <string name="bibi_bibi_activity_record360">選擇計價單位</string>
+
+    <string name="bibi_recordDetailActivity1">Detail</string>
+
+    <string name="bibi_bibi_fragment_hangqing80">漲跌幅</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history170">委託量</string>
+
+    <string name="bibi_activity_all_entrust_and_history80">查看全部</string>
+
+    <string name="bibi_bibi_fragment_pankou_up_down40">1位小數</string>
+
+    <string name="bibi_bibi_activity_record_detail600">成交量</string>
+
+    <string name="bibi_bibi_activity_record_detail170">成交均價(USDT)</string>
+
+    <string name="bibi_bibi_fragment_pankou130">買價(USDT)</string>
+
+    <string name="bibi_bibi_fragment_bibi_main210">爆倉率：—</string>
+
+    <string name="bibi_bibi_fragment_bibi_main330">當前委託</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell820">交易額：</string>
+
+    <string name="bibi_bibi_activity_record390">訂單狀態</string>
+
+    <string name="bibi_bibi_fragment_pankou170">賣價(USDT)</string>
+
+    <string name="bibi_count_hint">數量</string>
+
+    <string name="bibi_all_commission">當前委託</string>
+    <string name="bibi_history_commission">歷史訂單</string>
+    <string name="bibi_cfj">觸發價</string>
+    <string name="bibi_bibicftint">請輸入正確觸發價格</string>
+    <string name="bibi_zyzs">止盈止損</string>
+    <string name="bibi_allEntrustFragment400">觸發價(%s)</string>
+    <string name="bibi_wcf">（未觸發）</string>
+    <string name="bibi_ycf">（已觸發）</string>
+    <string name="bibi_cancel">撤銷</string>
+    <string name="bibi_cancel_title">撤銷訂單</string>
+    <string name="bibi_qiehuan">切換幣種</string>
+    <string name="bibi_detail_record">成交明細</string>
+    <string name="bibi_market_price">市價</string>
+    <string name="bibi_limit_price">限價</string>
+    <string name="bibi_now_price">限價</string>
+    <string name="bibi_shi_jia">市價</string>
+    <string name="bibi_stop_pl">止盈損</string>
+    <string name="level_cancel">取消</string>
+    <string name="levelUsdt">委託價(USDT)</string>
+    <string name="level_unit">委託量(USDT)</string>
+    <string name="level_zong">委託總量(USDT)</string>
+    <string name="level_jiaoyi_zonge">成交總額</string>
+    <string name="level_cedan">撤單</string>
+    <string name="level_dangqian">當前盈虧:</string>
+    <string name="level_fengxian">風險率:</string>
+    <string name="level_chicang">當前持倉</string>
+    <string name="levelbtc_usdt">BTC/USDT 深度圖</string>
+    <string name="level_zhankai">點擊展開</string>
+    <string name="level_zuoduo">做多</string>
+    <string name="level_zuokong">做空</string>
+    <string name="level_1">1位小數</string>
+    <string name="level_baozhengjin">保證金</string>
+    <string name="level_weituoliang">委託量</string>
+    <string name="level_gangganbeishu">槓桿倍數</string>
+    <string name="level_pingcang">平倉量</string>
+    <string name="level_new_usdt">委託價(USDT)</string>
+    <string name="level_usdt_num">委託量(USDT)</string>
+    <string name="level_zongliang">委託總量(USDT)</string>
+    <string name="level_time">時間</string>
+    <string name="level_chengjiao_zongliang">成交總額</string>
+    <string name="level_junjia">成交均價(USDT)</string>
+    <string name="level_ganggan">槓桿倍數</string>
+    <string name="level_chicangliang">持倉量</string>
+    <string name="level_zyzs">止盈止損</string>
+    <string name="level_ce">已撤單</string>
+    <string name="level_shen">深度圖</string>
+    <string name="level_weituo">委托价(%s)</string>
+    <string name="level_default">默认盘</string>
+    <string name="level_maipan">买盘</string>
+    <string name="level_mai_pan">卖盘</string>
+    <string name="level_success">成功</string>
+
+</resources>

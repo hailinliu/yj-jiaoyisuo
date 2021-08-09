@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!--换肤产品，颜色-->
+    <color name="appTextHint">@color/libTextHint</color>
+    <color name="appTextContent">@color/libTextContent</color>
+    <color name="appBgDeep">@color/libBgDeep</color>
+    <color name="appBg">@color/libBg</color>
+    <color name="appBgAlpha">#90ffffff</color>
+    <color name="appDivider">@color/libDivider</color>
+    <color name="appApp">@color/libApp</color>
+    <color name="appSelect">@color/libSelect</color>
+    <color name="appUnSelect">@color/libUnSelect</color>
+</resources>

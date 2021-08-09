@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hang_main"
+    android:layout_width="match_parent"
+    android:layout_height="224pt"
+    android:background="@color/lib_bg"
+    android:orientation="horizontal"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt">
+
+    <LinearLayout
+        android:layout_width="0pt"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="30pt"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45pt"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="2"
+            android:text="@string/hangqinghang_recy_item_zixun60"
+            android:textColor="@color/libTextWhite"
+            android:textSize="30pt" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="60pt"
+            android:gravity="center_vertical"
+            android:text="03-25 15:36"
+            android:textColor="@color/hangTextHint"
+            android:textSize="24pt" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivImg"
+        android:layout_width="210pt"
+        android:layout_height="145pt"
+        android:layout_marginTop="40pt"
+        android:src="@drawable/no_banner" />
+</LinearLayout>

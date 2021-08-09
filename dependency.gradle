@@ -1,0 +1,88 @@
+ext {
+    android = [
+
+            APP_NAME                : "yj",//app名字
+            IP                      : "http://api.digbit.pro",//域名
+            IMG_IP                  : "http://49.4.21.136:9538",//图片域名
+            WS7272                  : "ws://api.digbit.pro/websocket/123123",//推送
+            APPLICATION_ID          : "com.sskj.yj",//app 包名
+            storeFile               : '../bi.jks',//签名文件位置
+            storePassword           : 'a123456',//签名文件密码
+            keyAlias                : 'sskj',//签名文件别名
+            keyPassword             : 'a123456',//签名文件别名密码
+            versionCode             : 1,
+            versionName             : "1.4.0",
+            compileSdkVersion       : 27,
+            buildToolsVersion       : "27.0.3",
+            minSdkVersion           : 21,
+            targetSdkVersion        : 27,
+
+            androidSupportSdkVersion: "27.0.3",
+            retrofitSdkVersion      : "2.1.0",
+            dagger2SdkVersion       : "2.22.1",
+            rxlifecycleSdkVersion   : "2.2.1",
+            espressoSdkVersion      : "2.2.2",
+            rxbindingSdkVersion     : "2.1.1"
+    ]
+
+    dependencies = [
+            /*##########################dex分包#############################*/
+            "multidex"                 : "com.android.support:multidex:1.0.2",
+
+            /*##########################测试#############################*/
+            "androidJUnitRunner"       : "android.support.test.runner.AndroidJUnitRunner",
+            "junit"                    : "junit:junit:4.12",
+            "runner"                   : 'com.android.support.test:runner:0.5',
+            "espresso-core"            : "com.android.support.test.espresso:espresso-core:${android["espressoSdkVersion"]}",
+            "espresso-contrib"         : "com.android.support.test.espresso:espresso-contrib:${android["espressoSdkVersion"]}",
+            "espresso-intents"         : "com.android.support.test.espresso:espresso-intents:${android["espressoSdkVersion"]}",
+
+            "javax.annotation"         : "javax.annotation:jsr250-api:1.0",
+
+            /*##########################基本组件#############################*/
+            "appcompat-v7"             : "com.android.support:appcompat-v7:${android["androidSupportSdkVersion"]}",
+            "compat"                   : "com.android.support:compat:${android["androidSupportSdkVersion"]}",
+            "design"                   : "com.android.support:design:${android["androidSupportSdkVersion"]}",
+            "support-v4"               : "com.android.support:support-v4:${android["androidSupportSdkVersion"]}",
+            "cardview-v7"              : "com.android.support:cardview-v7:${android["androidSupportSdkVersion"]}",
+            "annotations"              : "com.android.support:support-annotations:${android["androidSupportSdkVersion"]}",
+            "recyclerview-v7"          : "com.android.support:recyclerview-v7:${android["androidSupportSdkVersion"]}",
+
+            /*##########################流行套装#############################*/
+            "retrofit"                 : "com.squareup.retrofit2:retrofit:${android["retrofitSdkVersion"]}",
+            "retrofit-converter-gson"  : "com.squareup.retrofit2:converter-gson:${android["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava"  : "com.squareup.retrofit2:adapter-rxjava2:${android["retrofitSdkVersion"]}",
+            "okhttp3"                  : "com.squareup.okhttp3:okhttp:3.2.0",
+            "gson"                     : "com.google.code.gson:gson:2.8.5",
+            "butterknife"              : "com.jakewharton:butterknife:9.0.0-rc2",
+            "butterknife-apt"          : "com.jakewharton:butterknife-compiler:9.0.0-rc2",
+            "rxandroid"                : "io.reactivex.rxjava2:rxandroid:2.0.0",
+            "rxjava"                   : "io.reactivex.rxjava2:rxjava:2.1.3",
+            "rxlifecycle"              : "com.trello.rxlifecycle2:rxlifecycle:${android["rxlifecycleSdkVersion"]}",
+            "rxlifecycle-components"   : "com.trello.rxlifecycle2:rxlifecycle-components:${android["rxlifecycleSdkVersion"]}",
+            "dagger2"                  : "com.google.dagger:dagger:${android["dagger2SdkVersion"]}",
+            "dagger2-apt-compiler"     : "com.google.dagger:dagger-compiler:${android["dagger2SdkVersion"]}",
+            "rxbinding"                : "com.jakewharton.rxbinding2:rxbinding:${android["rxbindingSdkVersion"]}",
+            "rxbinding-recyclerview-v7": "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:${android["rxbindingSdkVersion"]}",
+            "rxbinding-support-v4"     : "com.jakewharton.rxbinding2:rxbinding-support-v4:${android["rxbindingSdkVersion"]}",
+            "rxbinding-design"         : "com.jakewharton.rxbinding2:rxbinding-design:${android["rxbindingSdkVersion"]}",
+            "rxbinding-appcompat-v7"   : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${android["rxbindingSdkVersion"]}",
+            "rxpermissions"            : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar",
+
+            /*##########################滑轮选择#############################*/
+            "pickerview"               : "com.contrarywind:Android-PickerView:4.1.0",
+
+            /*##########################动画兼容库#############################*/
+            "nineoldandroids"          : "com.nineoldandroids:library:2.4.0",
+
+            /*##########################内存泄漏检测#############################*/
+            "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
+            "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
+
+            /*##########################二维码扫描,解析,生成#############################*/
+            "zxing-library"            : "cn.bingoogolapple:bga-qrcode-zxing:1.2.1",
+
+            /*##########################桌面添加消息数#############################*/
+            "ShortcutBadger"           : "me.leolin:ShortcutBadger:1.1.13@aar",
+    ]
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<com.shizhefei.view.coolrefreshview.CoolRefreshView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coolRefreshView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/mineBg"
+    tools:context=".ui.fragment.MineFragment">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/my_assert_backgroundxxx"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:layout_marginStart="50pt"
+        android:text="@string/mine_total_assert"
+        android:textColor="@color/libDivider"
+        android:textSize="35pt" />
+    <TextView
+        android:id="@+id/tv_US"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:layout_marginStart="50pt"
+        android:textColor="@color/libDivider"
+        android:textSize="35pt" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:id="@+id/tvCNY"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:visibility="invisible"
+          android:text="≈89784.13221"
+          android:textColor="@color/libDivider"
+          android:layout_marginStart="50pt"
+          android:textSize="30pt"
+          android:textStyle="bold"
+          />
+      <TextView
+          android:id="@+id/tv_huazhuan"
+          style="@style/mineButtonStyle.strokeWhite"
+          android:layout_width="180pt"
+          android:layout_height="80pt"
+          android:layout_alignParentEnd="true"
+          android:layout_marginEnd="40pt"
+          android:layout_marginBottom="40pt"
+          android:text="@string/mine_tranfer"/>
+
+    </RelativeLayout>
+</LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+  </LinearLayout>
+
+
+</com.shizhefei.view.coolrefreshview.CoolRefreshView>

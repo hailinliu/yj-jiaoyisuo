@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/identBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.VerificationFirstActivity">
+
+    <include layout="@layout/lib_include_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20pt"
+        android:background="@color/identBg"
+        android:orientation="vertical"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt">
+
+        <ImageView
+            android:layout_width="150pt"
+            android:layout_height="150pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130pt"
+            android:src="@mipmap/ident_icon_verification_first_head" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50pt"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/identident_activity_verification_first80"
+            android:textColor="@color/identTextHint"
+            android:textSize="26pt" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40pt"
+            android:text="@string/identident_activity_verification_first100"
+            android:textColor="@color/identTextContent"
+            android:textSize="28pt" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/identident_activity_verification_first120"
+            android:paddingTop="40pt"
+            android:paddingBottom="20pt"
+            android:textColor="@color/identTextContent"
+            android:textColorHint="@color/identTextHint"
+            android:textSize="28pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/identDivider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingTop="40pt"
+            android:text="@string/identident_activity_verification_first160"
+            android:textColor="@color/identTextContent"
+            android:textSize="28pt" />
+
+        <EditText
+            android:id="@+id/etIDCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/identident_activity_verification_first180"
+            android:maxLines="20"
+            android:paddingTop="40pt"
+            android:paddingBottom="20pt"
+            android:textColor="@color/identTextContent"
+            android:textColorHint="@color/identTextHint"
+            android:textSize="30pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/identDivider" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btSubmit"
+            style="@style/identButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:layout_marginBottom="80pt"
+            android:text="@string/identident_activity_verification_first240" />
+    </LinearLayout>
+
+</LinearLayout>

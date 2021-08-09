@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+
+    <style name="hangButtonStyle">
+        <item name="android:stateListAnimator">@drawable/lib_button_press_anim</item>
+        <item name="android:textColor">@color/libSolidButtonText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:background">@drawable/hang_button</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80pt</item>
+    </style>
+    <style name="hangButtonStyle1">
+        <item name="android:stateListAnimator">@drawable/lib_button_press_anim</item>
+        <item name="android:textColor">@color/libSolidButtonText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:background">@drawable/hang_button1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80pt</item>
+    </style>
+
+    <style name="bibiSlideAnim">
+        <item name="android:windowEnterAnimation">@anim/bibi_slide_left_in</item>
+        <item name="android:windowExitAnimation">@anim/bibi_slide_left_out</item>
+    </style>
+
+    <style name="bibiDialogStyle" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>              <!-- 设置title -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置边框 -->
+        <item name="android:windowIsTranslucent">true</item>        <!-- 设置半透明 -->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/fabi_slide_left_in</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/fabi_slide_left_out</item>-->
+        <!--可以设置Activity的弹出和消失动画（可选）-->
+        <item name="android:windowAnimationStyle">@style/bibiSlideAnim</item>
+
+    </style>
+</resources>

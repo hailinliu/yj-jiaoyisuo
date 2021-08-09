@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hang_main"
+    android:layout_width="match_parent"
+    android:layout_height="130pt"
+    android:background="@color/lib_bg"
+    android:gravity="center_vertical"
+    android:paddingStart="30pt"
+    android:paddingTop="13pt"
+    android:paddingEnd="30pt"
+    android:paddingBottom="13pt">
+
+    <LinearLayout
+        android:layout_width="240pt"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivCoin"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCode"
+                android:layout_marginTop="6pt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/libTextWhite"
+                android:textSize="34pt" />
+
+            <TextView
+                android:layout_width="120pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6pt"
+                android:text="/USDT"
+                android:textColor="@color/libTextWhite"
+                android:textSize="28pt" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="20pt"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textColor="@color/libTextWhite"
+            android:textSize="32pt"
+            tools:text="826.7811" />
+
+        <TextView
+            android:id="@+id/tvRMB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:visibility="visible"
+            android:textColor="@color/libTextWhite"
+            android:textSize="24pt"
+            tools:text="≈3546.21" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRate"
+        android:layout_width="0pt"
+        android:layout_marginTop="20pt"
+        android:paddingStart="10pt"
+        android:paddingEnd="10pt"
+        android:layout_marginBottom="20pt"
+        android:layout_marginStart="40pt"
+        android:layout_marginEnd="10pt"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvRate"
+            android:layout_width="180pt"
+            android:layout_height="70pt"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="+1.11%"
+            android:textSize="28pt"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

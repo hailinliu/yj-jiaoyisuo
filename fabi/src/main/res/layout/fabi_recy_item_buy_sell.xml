@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    android:padding="30pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPhoto"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:layout_marginEnd="15pt"
+            android:background="@drawable/fabi_shape_app_oval"
+            android:gravity="center"
+            android:text="B"
+            android:textColor="@color/white"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/fabiTextHint"
+            android:textSize="32pt"
+            tools:text="@tools:sample/first_names" />
+
+        <View
+            android:layout_width="0pt"
+            android:layout_height="1pt"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvDealNum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20pt"
+            android:gravity="center_vertical"
+            android:textColor="@color/fabiTextHint"
+            android:textSize="24pt"
+            tools:text="@tools:sample/last_names" />
+    <View
+        android:layout_width="1pt"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_marginTop="15pt"
+        android:layout_marginBottom="15pt"
+        android:background="@color/libTextContent"
+        android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tvPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:textColor="@color/fabiTextHint"
+            android:textSize="24pt"
+            tools:text="@tools:sample/last_names" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:layout_marginTop="37pt"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:textColor="@color/fabiTextHint"
+                android:textSize="24pt"
+                tools:text="@tools:sample/first_names" />
+            <TextView
+                android:id="@+id/tvLimitMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:textColor="@color/fabiTextHint"
+                android:textSize="24pt"
+                tools:text="@tools:sample/first_names" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:text="@string/fabifabi_recy_item_buy_sell260"
+                android:textColor="@color/fabiTextHint"
+                android:textSize="24pt" />
+
+            <TextView
+                android:id="@+id/tv_china_money"
+                android:layout_width="wrap_content"
+                android:layout_height="0pt"
+                android:layout_weight="1"
+                android:text="29999"
+                android:textColor="@color/fabiApp"
+                android:textSize="36pt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_alipay"
+            android:layout_width="32pt"
+            android:layout_height="32pt"
+            android:src="@mipmap/lib_icon_alipay"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_wechat"
+            android:layout_width="32pt"
+            android:layout_height="32pt"
+            android:layout_marginStart="20pt"
+            android:src="@mipmap/lib_icon_wx"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/iv_bank"
+            android:layout_width="32pt"
+            android:layout_height="32pt"
+            android:layout_marginStart="20pt"
+            android:layout_marginEnd="20pt"
+            android:src="@mipmap/fabi_yinhangka" />
+
+        <View
+            android:layout_width="0pt"
+            android:layout_height="0pt"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btSale"
+            android:layout_width="140pt"
+            android:layout_height="56pt"
+            android:background="@drawable/fabi_solid_03c_bg"
+            android:gravity="center"
+            android:text="@string/fabibuySellFragment6"
+            android:textColor="@color/commonWhite"
+            android:textSize="28pt" />
+    </LinearLayout>
+
+</LinearLayout>

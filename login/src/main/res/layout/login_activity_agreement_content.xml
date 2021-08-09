@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:orientation="vertical"
+    android:background="@color/lib_bg"
+    >
+    <include layout="@layout/lib_include_head" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30pt"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_new_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:textColor="@color/libTextWhite"
+        android:layout_height="match_parent"/>
+</LinearLayout>

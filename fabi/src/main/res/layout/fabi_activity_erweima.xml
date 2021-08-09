@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300pt"
+    android:layout_height="300pt"
+    android:background="@color/fabiBgDeep"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+    <ImageView
+        android:id="@+id/imageerweima"
+        android:layout_width="300pt"
+        android:layout_gravity="center"
+        android:layout_height="300pt"
+        android:layout_margin="30pt"
+        />
+
+</LinearLayout>

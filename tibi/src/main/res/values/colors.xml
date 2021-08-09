@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!--换肤产品，颜色-->
+    <color name="tibiTextContent">@color/libTextContent</color>
+    <color name="tibiTextHint">@color/libTextHint</color>
+    <color name="tibiBgDeep">@color/libBgDeep</color>
+    <color name="tibiBg">@color/libBg</color>
+    <color name="tibiDivider">@color/libDivider</color>
+    <color name="tibiApp">@color/libApp</color>
+    <color name="tibiApp1">@color/libBg</color>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fabiBgDeep"
+    android:layout_marginTop="30pt"
+    android:orientation="vertical"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    tools:ignore="MissingDefaultResource">
+
+
+             <TextView
+                 android:id="@+id/tvTypeTitle"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="30pt"
+                 android:text="@string/fabiquickBuyFragment5"
+                 android:textColor="@color/libTextWhite"
+                 android:textSize="26pt" />
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="100pt"
+                 android:layout_marginTop="30pt"
+                 android:gravity="center_vertical"
+                 android:orientation="horizontal">
+
+
+                 <EditText
+                     android:id="@+id/etNum"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:background="@null"
+                     android:hint="@string/fabifabi_fragment_quick_buy300"
+                     android:inputType="numberDecimal"
+                     android:textColor="@color/libTextWhite"
+                     android:textColorHint="@color/fabiTextHint"
+                     android:textSize="50pt"
+                     android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tvUnitUSDT"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="20pt"
+                     android:text="USDT"
+                     android:textColor="@color/libTextWhite"
+                     android:textSize="40pt"
+                     android:visibility="gone" />
+                 <LinearLayout
+                     android:id="@+id/ll_unit"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+                 <TextView
+                     android:id="@+id/tvUnit"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="20pt"
+                     android:text="USD"
+                     android:textColor="@color/libTextWhite"
+                     android:textSize="40pt"
+                     android:visibility="visible" />
+                 <ImageView
+                     android:layout_width="15pt"
+                     android:src="@mipmap/fabi_select"
+                     android:visibility="gone"
+                     android:layout_gravity="center"
+                     android:layout_height="15pt"/>
+                 </LinearLayout>
+             </LinearLayout>
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1pt"
+                 android:background="@color/fabiDivider" />
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="60pt"
+                 android:gravity="center_vertical"
+                 android:orientation="horizontal"
+                 android:visibility="visible">
+
+                 <TextView
+                     android:id="@+id/tvPrice"
+                     android:layout_width="0pt"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:visibility="invisible"
+                     android:text="参考单价:5.66 CNY/USDT"
+                     android:textColor="@color/fabiTextHint"
+                     android:textSize="26pt"
+                      />
+
+                 <ImageView
+                     android:id="@+id/image"
+                     android:layout_width="36pt"
+                     android:layout_height="25pt"
+                     android:layout_marginEnd="5pt"
+                     android:src="@mipmap/fabi_icon_switch1" />
+
+                 <TextView
+                     android:id="@+id/tvBuyType"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/fabiquickBuyFragment7"
+                     android:textColor="@color/fabiApp"
+                     android:textSize="26pt" />
+             </LinearLayout>
+
+             <Button
+                 android:id="@+id/btSubmit"
+                 style="@style/fabiButtonStyle"
+                 android:layout_width="match_parent"
+                 android:layout_height="80pt"
+                 android:layout_marginTop="80pt"
+                 android:text="@string/fabipublishActivity2" />
+
+             <LinearLayout
+                 android:id="@+id/llFee"
+                 android:layout_width="wrap_content"
+                 android:layout_height="50pt"
+                 android:visibility="invisible"
+                 android:layout_marginTop="20pt"
+                 android:gravity="center_vertical">
+
+                 <ImageView
+                     android:layout_width="30pt"
+                     android:layout_height="30pt"
+                     android:layout_marginEnd="10pt"
+                     android:src="@mipmap/fabi_icon_tip" />
+
+                 <TextView
+                     android:id="@+id/tvFee"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/fabifabi_fragment_quick_buy520"
+                     android:textColor="@color/fabiTextHint"
+                     android:textSize="26pt" />
+             </LinearLayout>
+
+
+
+</LinearLayout>

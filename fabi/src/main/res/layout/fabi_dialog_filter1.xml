@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="wrap_content"
+    android:text="@string/fabi_ordertype"
+    android:layout_marginStart="20pt"
+    android:layout_marginTop="40pt"
+    android:textColor="@color/libTextWhite"
+    android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20pt"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt"
+        android:layout_height="wrap_content">
+        <com.sskj.lib.widget.MyRadioGroup
+            android:id="@+id/myradio"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20pt"
+            android:layout_height="wrap_content"
+            >
+            <RadioButton
+                android:id="@+id/rb_quan"
+                android:layout_width="0pt"
+                android:text="@string/fabi_all"
+                android:button="@null"
+                android:padding="20pt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/fabi_selector_filter"
+                android:textColor="@drawable/fabi_selector_text"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:id="@+id/rb_mairu"
+                android:layout_width="0pt"
+                android:text="@string/fabi_buy"
+                android:button="@null"
+                android:padding="20pt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/fabi_selector_filter"
+                android:textColor="@drawable/fabi_selector_text"
+                android:layout_height="match_parent"/>
+            <RadioButton
+                android:id="@+id/rb_maichu"
+                android:layout_width="0pt"
+                android:text="@string/fabi_sell"
+                android:button="@null"
+                android:padding="20pt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/fabi_selector_filter"
+                android:textColor="@drawable/fabi_selector_text"
+                android:layout_height="match_parent"/>
+        </com.sskj.lib.widget.MyRadioGroup>
+
+    </LinearLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="0dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btReset"
+                style="@style/fabiButtonStyle.Cancel"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="60pt"
+                android:layout_weight="1"
+                android:text="@string/fabifabi_dialog_filter270" />
+
+            <Button
+                android:id="@+id/btSubmit"
+                style="@style/fabiButtonStyle.Sure"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/fabi_queren" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+

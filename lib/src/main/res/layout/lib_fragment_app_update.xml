@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00ffffff"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.AppUpDateFragment">
+
+    <LinearLayout
+        android:layout_width="600pt"
+        android:layout_height="wrap_content"
+        android:background="@color/lib_bg"
+        android:orientation="vertical"
+        android:paddingBottom="30pt">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="600pt"
+                android:layout_height="300pt"
+                android:background="@mipmap/lib_bg_update"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="51pt"
+                android:layout_marginTop="90pt"
+                android:text="@string/lib_ban_ben_updata"
+                android:textColor="@color/libBg"
+                android:textSize="42pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="51pt"
+                android:layout_marginTop="160pt"
+                android:text="Version update"
+                android:textColor="@color/libBg"
+                android:textSize="26pt" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="51pt"
+            android:text="@string/lib_ban_ben_updata_content"
+            android:textColor="@color/libTextWhite"
+            android:textSize="42pt" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|top"
+            android:minHeight="200pt"
+            android:padding="50pt"
+            android:textColor="@color/libTextWhite"
+            android:textSize="30pt"
+            tools:text="@tools:sample/last_names" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10pt">
+
+            <sskj.lee.appupdatelibrary.NumberProgressBar
+                android:id="@+id/progress"
+                style="@style/UpdateAppNumberProgressBar_Red"
+                android:visibility="invisible"/>
+        </FrameLayout>
+
+        <Button
+            style="@style/libButtonStyle.Sure"
+            android:id="@+id/app_update_confirm"
+            android:layout_width="400pt"
+            android:layout_height="90pt"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40pt"
+            android:text="@string/lib_liji" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_cancel"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60pt"
+        android:background="@mipmap/lib_close"
+        android:backgroundTint="@color/libBg" />
+
+
+</LinearLayout>

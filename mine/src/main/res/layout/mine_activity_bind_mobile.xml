@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBgDeep"
+    android:orientation="vertical">
+
+    <include layout="@layout/lib_include_head" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:background="@color/mineBg"
+        android:orientation="vertical"
+        android:padding="30pt">
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minebindMobileActivity5"
+            android:textColor="@color/mineTextContent"
+            android:textSize="32pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="108pt"
+            android:orientation="horizontal">
+
+            <com.hey.lib.HeySpinner
+                android:id="@+id/heySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20pt"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="10pt"
+                android:paddingEnd="10pt"
+                android:text="+86"
+                android:textColor="@color/libGreen"
+                android:textSize="30pt"
+                app:arrowColor="@color/libGreen" />
+
+            <EditText
+                android:id="@+id/mobile_edt"
+                android:layout_width="match_parent"
+                android:layout_height="108pt"
+                android:background="@null"
+                android:hint="@string/minemine_activity_bind_mobile140"
+                android:textColor="@color/mineTextContent"
+                android:textColorHint="@color/mineTextHint"
+                android:textSize="28pt" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line_code"
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/mineDivider" />
+
+        <LinearLayout
+            android:id="@+id/ll_getCode"
+            android:layout_width="match_parent"
+            android:layout_height="108pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/code_edt"
+                android:layout_width="0dp"
+                android:layout_height="108pt"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="0123456789Xx"
+                android:hint="@string/minemine_activity_bind_mobile210"
+                android:textColor="@color/mineTextContent"
+                android:textColorHint="@color/mineTextHint"
+                android:textSize="28pt" />
+
+            <Button
+                android:id="@+id/get_code_tv"
+                style="@style/mineButtonStyle"
+                android:layout_width="200pt"
+                android:layout_height="70pt"
+                android:gravity="center"
+                android:text="@string/minemine_activity_bind_mobile230"
+                android:textColor="@color/libBg"
+                android:textSize="26pt" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider" />
+
+        <EditText
+            android:id="@+id/pwd_edt"
+            android:layout_width="match_parent"
+            android:layout_height="108pt"
+            android:background="@null"
+            android:hint="@string/minemine_activity_bind_mobile280"
+            android:inputType="textPassword"
+            android:textColor="@color/libTextContent"
+            android:textColorHint="@color/mineTextHint"
+            android:textSize="28pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="91pt"
+        android:layout_marginStart="30pt"
+        android:layout_marginTop="134pt"
+        android:layout_marginEnd="30pt"
+        android:layout_marginBottom="50pt"
+        android:background="@drawable/mine_btn_submit_618"
+        android:text="@string/minemine_activity_bind_mobile330"
+        android:textColor="@color/white"
+        android:textSize="34pt" />
+
+</LinearLayout>

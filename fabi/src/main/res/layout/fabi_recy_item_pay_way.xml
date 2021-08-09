@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/libBg" android:layout_height="100pt" android:layout_width="match_parent">
+
+    <LinearLayout android:gravity="center_vertical" android:layout_height="match_parent" android:layout_width="wrap_content">
+
+        <ImageView android:id="@+id/ivPayType" android:layout_height="44pt" android:layout_width="44pt" tools:src="@tools:sample/avatars"/>
+
+        <TextView android:id="@+id/tvPayType" android:layout_height="wrap_content" android:layout_marginStart="20pt" android:layout_width="wrap_content" android:textColor="@color/libTextContent" android:textSize="28pt" tools:text="@tools:sample/first_names"/>
+
+        <TextView android:id="@+id/tvNumber" android:layout_height="wrap_content" android:layout_marginStart="20pt" android:layout_width="wrap_content" android:textColor="@color/libTextContent" android:textSize="28pt" android:visibility="gone" tools:text="@tools:sample/first_names"/>
+    </LinearLayout>
+
+    <CheckBox android:button="@null" android:drawableRight="@drawable/mine_seller_check_box" android:id="@+id/checkbox" android:layout_height="100pt" android:layout_width="match_parent" android:visibility="visible">
+
+    </CheckBox>
+
+</RelativeLayout>

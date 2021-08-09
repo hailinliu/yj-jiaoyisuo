@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80pt"
+    android:layout_marginTop="30pt"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:showIn="@layout/fabi_dialog_appeal">
+
+    <Button
+        android:id="@+id/btCancel"
+        style="@style/fabiButtonStyle.Cancel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="50pt"
+        android:layout_weight="1"
+        android:text="@string/fabifabi_dialog_publish_confirm220" />
+
+    <Button
+        android:id="@+id/btSure"
+        style="@style/fabiButtonStyle.Sure"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/fabifabi_dialog_publish_confirm240" />
+</LinearLayout>

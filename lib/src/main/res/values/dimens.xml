@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lib_gonggao_redius">20dp</dimen>
+    <dimen name="lib_gonggaoright_redius">20dp</dimen>
+    <dimen name="lib_gonggao_maginstartandend">20dp</dimen>
+    <dimen name="lib_gonggao_width">300dp</dimen>
+    <dimen name="lib_gonggao_magrinstart">5dp</dimen>
+</resources>

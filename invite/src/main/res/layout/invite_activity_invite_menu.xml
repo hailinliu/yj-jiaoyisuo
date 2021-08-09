@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inviteBgDeep"
+    android:orientation="vertical">
+
+    <include layout="@layout/lib_include_head" />
+
+    <LinearLayout
+        android:layout_marginTop="20pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/team_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:text="0.0000"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="36pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/today_reward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/today_reward_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="0.0000"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="36pt"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="36pt"
+                    app:autoSizeMinTextSize="10pt"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reward_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/reward_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="0.0000"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="36pt"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="36pt"
+                    app:autoSizeMinTextSize="10pt"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_team_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="36pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_push_person_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="36pt"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="36pt"
+                    app:autoSizeMinTextSize="10pt"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_team_person_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="0"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="36pt"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="36pt"
+                    app:autoSizeMinTextSize="10pt"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="24pt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/menu_invite"
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:paddingLeft="20pt"
+        android:paddingRight="20pt"
+        app:sBackgroundDrawableRes="@color/inviteBg"
+        app:sDividerLineColor="@color/inviteDivider"
+        app:sLeftTextColor="@color/inviteTextContent"
+        app:sLeftTextSize="30pt"
+        app:sLeftTextString="我的邀请"
+        app:sRightTvDrawableRight="@mipmap/invite_icon_arrow_right" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/menu_account"
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:paddingLeft="20pt"
+        android:paddingRight="20pt"
+        app:sBackgroundDrawableRes="@color/inviteBg"
+        app:sDividerLineColor="@color/inviteDivider"
+        app:sLeftTextColor="@color/inviteTextContent"
+        app:sLeftTextSize="30pt"
+        app:sLeftTextString="我的团队"
+        app:sRightTvDrawableRight="@mipmap/invite_icon_arrow_right" />
+
+    <com.allen.library.SuperTextView
+        android:id="@+id/menu_money"
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:paddingLeft="20pt"
+        android:paddingRight="20pt"
+        app:sBackgroundDrawableRes="@color/inviteBg"
+        app:sDividerLineColor="@color/inviteDivider"
+        app:sLeftTextColor="@color/inviteTextContent"
+        app:sLeftTextSize="30pt"
+        app:sLeftTextString="我的佣金"
+        app:sRightTvDrawableRight="@mipmap/invite_icon_arrow_right" />
+
+</LinearLayout>

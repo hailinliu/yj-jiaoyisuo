@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="bibi_bibi_fragment_buy_and_sell430">Deal best market price</string>
+
+    <string name="bibi_bibiBuyAndSellFragment4">min order</string>
+
+    <string name="bibi_pankouFragment3">Number (%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail530">Clinch a deal valence</string>
+
+    <string name="bibi_bibiBuyAndSellFragment2">price</string>
+
+    <string name="bibi_pankouFragment1">Purchase price (%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail330">Fee (ETH)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment3">turnover</string>
+
+    <string name="bibi_pankouFragment2">The price (%s)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment8">Please log in</string>
+
+    <string name="bibi_bibiBuyAndSellFragment9">Please login first</string>
+
+    <string name="bibi_bibi_activity_record_detail460">time</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip250">type</string>
+
+    <string name="bibi_bibi_activity_slide60">Switch the currency</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip450">determine</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history310">Clinch a deal amount</string>
+
+    <string name="bibi_activity_all_entrust_and_history150">screening</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history80">undo</string>
+
+    <string name="bibi_allEntrustFragment4">Price(%s)</string>
+
+    <string name="bibi_tipBibiUtil1">buy</string>
+
+    <string name="bibi_allEntrustFragment3">cancellations</string>
+
+    <string name="bibi_allEntrustFragment6">Number(%s)</string>
+
+    <string name="bibi_bibi_fragment_hangqing60">The latest price</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history150">Entrusted price (USDT)</string>
+
+    <string name="bibi_allEntrustFragment5">The total amount</string>
+
+    <string name="bibi_allEntrustFragment7">Actual transaction (%s)</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip80">The direction of</string>
+
+    <string name="bibi_tipBibiUtil2">The market price</string>
+
+    <string name="bibi_tipBibiUtil3">The amount of</string>
+
+    <string name="bibi_bibi_activity_record_detail190">Volume (ETH)</string>
+
+    <string name="bibi_bibi_fragment_pankou150">The number (EOS)</string>
+
+    <string name="bibi_bibi_activity_record_detail150">Total Transaction Value (USDT)</string>
+
+    <string name="bibi_historyEntrustFragment11">Average transaction price (%s)</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell640">available</string>
+
+    <string name="bibi_historyEntrustFragment12">Amount entrusted (%s)</string>
+
+    <string name="bibi_recordDetailActivity4">Average transaction price (%s)</string>
+
+    <string name="bibi_historyEntrustFragment2">Trading in</string>
+
+    <string name="bibi_bibi_activity_record320">currency</string>
+
+    <string name="bibi_recordDetailActivity5">Number of transactions (%s)</string>
+
+    <string name="bibi_recordDetailActivity2">Total Transaction Value (%s)</string>
+
+    <string name="bibi_recordDetailActivity3">Fee (%s)</string>
+
+    <string name="bibi_historyEntrustFragment1">Commissioned in</string>
+
+    <string name="bibi_bibi_activity_record_detail670">poundage</string>
+
+    <string name="bibi_historyEntrustFragment7">The market price</string>
+
+    <string name="bibi_pankouUpDownFragment1">Decimal places</string>
+
+    <string name="bibi_bibiBuyAndSellFragment13">Please enter %s price</string>
+
+    <string name="bibi_bibiBuyAndSellFragment14">Transactions:</string>
+
+    <string name="bibi_recordActivity3">sell</string>
+
+    <string name="bibi_bibiBuyAndSellFragment15">Volume:</string>
+
+    <string name="bibi_recordActivity4">Has been to clinch a deal</string>
+
+    <string name="bibi_bibiBuyAndSellFragment16">Transactions:</string>
+
+    <string name="bibi_recordActivity5">Had withdrawn</string>
+
+    <string name="bibi_bibiBuyAndSellFragment10">Please enter the number of %s</string>
+
+    <string name="bibi_bibiBuyAndSellFragment11">buy</string>
+
+    <string name="bibi_bibi_include_pankou60">dish</string>
+
+    <string name="bibi_bibiBuyAndSellFragment12">sell</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip150">The price</string>
+
+    <string name="bibi_bibi_activity_record280">Trading on</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip430">cancel</string>
+
+    <string name="bibi_activity_all_entrust_and_history120">The historical record</string>
+
+    <string name="bibi_bibi_activity_record360">Optional unit of valuation</string>
+
+    <string name="bibi_recordDetailActivity1">Detail</string>
+
+    <string name="bibi_bibi_fragment_hangqing80">applies</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history170">Entrust amount</string>
+
+    <string name="bibi_activity_all_entrust_and_history80">Look at all</string>
+
+    <string name="bibi_bibi_fragment_pankou_up_down40">1 decimal places</string>
+
+    <string name="bibi_bibi_activity_record_detail600">volume</string>
+
+    <string name="bibi_bibi_activity_record_detail170">Average Transaction Price (USDT)</string>
+
+    <string name="bibi_bibi_fragment_pankou130">Purchase price (USDT)</string>
+
+    <string name="bibi_bibi_fragment_bibi_main210">Burst rate: --</string>
+
+    <string name="bibi_bibi_fragment_bibi_main330">Commissioned by the current</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell820">Transactions:</string>
+
+    <string name="bibi_bibi_activity_record390">The order status</string>
+
+    <string name="bibi_bibi_fragment_pankou170">The price (USDT)</string>
+
+    <string name="bibi_count_hint">The number of</string>
+
+
+    <string name="bibi_all_commission">current</string>
+
+    <string name="bibi_history_commission">Order history</string>
+
+    <string name="bibi_cfj">Trigger price</string>
+
+    <string name="bibi_bibicftint">Please enter the correct trigger price</string>
+
+    <string name="bibi_zyzs">Check full stop</string>
+
+    <string name="bibi_all_Entrust_Fragment400">Trigger price (%s)</string>
+
+    <string name="bibi_wcf">(Not triggered)</string>
+
+    <string name="bibi_ycf">(Triggered)</string>
+    <string name="bibi_cancel">undo</string>
+    <string name="bibi_cancel_title">Cancel the order</string>
+    <string name="bibi_qiehuan">Switch the currency</string>
+    <string name="bibi_detail_record">Clinch a deal the detail</string>
+    <string name="bibi_market_price">The market price</string>
+    <string name="bibi_limit_price">price</string>
+    <string name="bibi_now_price">price</string>
+    <string name="bibi_shi_jia">The market price</string>
+    <string name="bibi_stop_pl">Check surplus loss</string>
+    <string name="bibi_xiaoshu">Decimal places</string>
+    <string name="bibi_moren">The default disk</string>
+    <string name="bibi_maipan">buying</string>
+    <string name="bibi_mai_pan">The selling</string>
+    <string name="bibiBtc_usdt">BTC/USDT depth map</string>
+    <string name="bibi_zhankai">Click on</string>
+    <string name="bibi_shendu">Depth map</string>
+    <string name="bibi_weituo">Entrusted price (%s)</string>
+    <string name="bibi_weituoliang">Entrust the amount (%s)</string>
+    <string name="bibi_weituoe">Total amount entrusted (%s)</string>
+    <string name="bibi_shijia">The market price</string>
+    <string name="bibi_jiaoyizhong">Trading in</string>
+    <string name="bibi_wancheng">complete</string>
+    <string name="bibi_chaoshi">timeout</string>
+    <string name="bibi_chengjiaozong">Total Transaction Value (%s)</string>
+    <string name="bibi_shijichengjiao">Actual transaction (%s)</string>
+    <string name="bibi_chengjiaojunjia">Average transaction price (%s)</string>
+    <string name="bibiUsdt_chengjiao">transaction price(USDT)</string>
+    <string name="bibi_count">count</string>
+    <string name="bibiUsdt_all">all money(USDT)</string>
+    <string name="bibi_fee">fee</string>
+    <string name="bibi_success">success</string>
+</resources>

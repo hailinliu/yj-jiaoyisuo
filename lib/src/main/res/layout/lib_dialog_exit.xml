@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/libBg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="50pt"
+        android:paddingEnd="50pt"
+        android:paddingBottom="30pt">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45pt"
+            android:text="@string/libappCircleCheckUtil1"
+            android:textColor="@color/libTextWhite"
+            android:textSize="32pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50pt"
+            android:textColor="@color/libTextHint"
+            android:textSize="26pt"
+            tools:text="---" />
+
+        <Button
+            android:id="@+id/btSure"
+            style="@style/libButtonStyle.Sure"
+            android:layout_width="320pt"
+            android:layout_height="80pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="70pt"
+            android:gravity="center"
+            android:text="@string/liblib_activity_finger_login130"
+            android:textSize="30pt" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="54pt"
+        android:layout_height="54pt"
+        android:layout_marginTop="30pt"
+        android:src="@mipmap/lib_close"
+        android:tint="@color/libBg" />
+</LinearLayout>

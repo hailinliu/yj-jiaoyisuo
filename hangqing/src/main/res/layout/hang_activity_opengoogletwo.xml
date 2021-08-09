@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBgDeep"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:orientation="vertical"
+    android:layout_marginTop="290pt"
+    tools:ignore="MissingDefaultResource">
+   <include layout="@layout/lib_include_head" />
+<TextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:text="@string/hang_google_yanzheng"
+    android:textColor="@color/libTextWhite"
+    android:textSize="50pt"
+    android:textStyle="bold"
+    android:layout_marginTop="50pt"
+    android:layout_marginStart="10pt"
+    android:layout_height="wrap_content"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_marginStart="10pt"
+       android:layout_marginTop="20pt"
+       android:layout_height="wrap_content">
+      <TextView
+          android:id="@+id/tv_buzou"
+          android:layout_width="wrap_content"
+          android:text="@string/hang_buzou2"
+          android:textColor="@color/libTextWhite"
+          android:textSize="30pt"
+          android:layout_height="wrap_content"/>
+      <TextView
+          android:id="@+id/tv_xuanze"
+          android:layout_width="wrap_content"
+          android:text="@string/hangApp"
+          android:textColor="@color/libTextWhite"
+          android:textSize="30pt"
+          android:layout_marginStart="30pt"
+          android:layout_height="wrap_content"/>
+   </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_marginStart="10pt"
+      android:layout_marginEnd="10pt"
+      android:paddingTop="30pt"
+      android:paddingBottom="30pt"
+      android:gravity="center"
+      android:layout_gravity="center"
+      android:layout_marginTop="50pt"
+      android:orientation="vertical"
+      android:layout_height="wrap_content">
+      <ImageView
+          android:id="@+id/image"
+          android:layout_width="250pt"
+          android:src="@mipmap/hang_apple"
+          android:layout_gravity="center"
+          android:layout_height="250pt"/>
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="@string/hang_sao"
+         android:textSize="30pt"
+         android:gravity="center"
+         android:layout_gravity="center"
+         android:layout_marginTop="30pt"
+         android:textColor="@color/libTextWhite"
+         android:layout_height="wrap_content"/>
+      <LinearLayout
+          android:id="@+id/ll_fuzhi"
+          android:layout_width="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginTop="30pt"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:id="@+id/tv_secret"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:paddingTop="20pt"
+              android:paddingBottom="20pt"
+              android:paddingStart="30pt"
+              android:paddingEnd="30pt"
+              android:background="@drawable/hang_shape_new_circle_8e9"
+              android:gravity="center"
+              android:text="ERTERTGRRTRT" />
+          <ImageView
+              android:layout_width="30pt"
+              android:layout_marginStart="30pt"
+              android:layout_gravity="center"
+              android:src="@mipmap/hang_copy"
+              android:layout_height="30pt"/>
+      </LinearLayout>
+
+  </LinearLayout>
+
+    <Button
+        android:id="@+id/logout_btn"
+        style="@style/libButtonStyle"
+        android:layout_marginLeft="50pt"
+        android:layout_marginTop="100pt"
+        android:layout_marginRight="50pt"
+        android:text="@string/hang_next" />
+
+    <Button
+        android:id="@+id/logout_btn1"
+        android:layout_height="80pt"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/lib_button_cancel"
+        android:layout_marginTop="30pt"
+        android:layout_marginLeft="50pt"
+        android:layout_marginRight="50pt"
+        android:textColor="@color/libApp"
+        android:text="@string/hang_shangyibu" />
+</LinearLayout>

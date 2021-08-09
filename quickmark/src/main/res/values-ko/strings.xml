@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+
+<string name="quickmark_quickMarkActivity1_j">검색 실패!</string>
+<string name="quickmark_viewfinderView1_j">2차원 코드를 박스 안에 넣으면 자동으로 스캔이 된다</string>
+<string name="quickmark_quickMarkActivity2_j">권한이 열려 있지 않습니다. 코드를 스캔하기 위해 필요합니다</string>
+<string name="quickmarkquickMarkActivity1">2차원 코드 스캔</string>
+</resources>

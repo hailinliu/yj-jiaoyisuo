@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="hang_icon_dimen">40pt</dimen>
+    <dimen name="hang_icon_magin">20pt</dimen>
+    <dimen name="hang_dingdan">30pt</dimen>
+    <dimen name="hang_start">30pt</dimen>
+    <dimen name="hang_magin_top">50pt</dimen>
+    <dimen name="hang_icon_size">24pt</dimen>
+    <dimen name="hang_identify_titlle">60pt</dimen>
+    <dimen name="hang_second_title">28pt</dimen>
+</resources>

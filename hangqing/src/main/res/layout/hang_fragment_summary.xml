@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="25pt"
+        android:paddingEnd="25pt"
+        tools:context=".ui.fragment.SummaryFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:layout_marginTop="20pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hangqinghang_fragment_summary80"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvFirst"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="2021-1-05" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hangqinghang_fragment_summary150"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvSecond"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="@tools:sample/last_names" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hangqinghang_fragment_summary220"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvThird"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="@tools:sample/last_names" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="区块查询"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvFour"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="@tools:sample/last_names" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="官网"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvFive"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hangqinghang_fragment_summary290"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvSix"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发行时间"
+                android:textColor="@color/hangTextHint"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tvSeven"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+               />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50pt"
+            android:layout_marginBottom="50pt"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/libTextWhite"
+            android:textSize="30pt"
+           />
+    </LinearLayout>
+</LinearLayout>

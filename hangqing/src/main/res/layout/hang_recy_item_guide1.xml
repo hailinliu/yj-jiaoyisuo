@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="110pt"
+    android:background="@color/lib_bg"
+    android:gravity="center_vertical"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt">
+
+    <View
+        android:layout_width="20pt"
+        android:layout_height="20pt"
+        android:layout_marginEnd="28pt"
+        android:background="@drawable/hang_shape_circle_8e9" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:lines="1"
+        android:singleLine="true"
+        android:textColor="@color/libTextWhite"
+        android:textSize="30pt"
+        tools:text="123" />
+
+    <View
+        android:layout_width="16pt"
+        android:layout_height="26pt"
+        android:background="@mipmap/hang_icon_zixun_into" />
+</LinearLayout>

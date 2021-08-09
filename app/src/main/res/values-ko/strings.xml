@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_label">Yolocoin</string>
+    <string name="appmainActivity6">알아챘습니다</string>
+    <string name="appmainActivity5">자산</string>
+    <string name="appmainActivity2">정보</string>
+    <string name="appmainActivity7">토큰</string>
+    <string name="appmainActivity1">홈페이지</string>
+    <string name="appmainActivity4">토큰</string>
+    <string name="appmainActivity3">시세</string>
+    <string name="app_heyue">계약</string>
+</resources>

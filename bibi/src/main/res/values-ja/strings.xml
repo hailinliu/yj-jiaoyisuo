@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="bibi_bibi_fragment_buy_and_sell430">市場最安値で取引する</string>
+
+    <string name="bibi_bibiBuyAndSellFragment4">最小発注量</string>
+
+    <string name="bibi_pankouFragment3">数量(%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail530">呼値</string>
+
+    <string name="bibi_bibiBuyAndSellFragment2">価</string>
+
+    <string name="bibi_pankouFragment1">買値(%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail330">手数料(eth)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment3">取引額</string>
+
+    <string name="bibi_pankouFragment2">売値(%s)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment8">ログインしてください</string>
+
+    <string name="bibi_bibiBuyAndSellFragment9">先にログインしてください</string>
+
+    <string name="bibi_bibi_activity_record_detail460">时间</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip250">タイプ</string>
+
+    <string name="bibi_bibi_activity_slide60">貨幣種の切り替え</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip450">確定</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history310">成約総額</string>
+
+    <string name="bibi_activity_all_entrust_and_history150">選別</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history80">撤回</string>
+
+    <string name="bibi_allEntrustFragment4">価格(%s)</string>
+
+    <string name="bibi_tipBibiUtil1">買い入れ</string>
+
+    <string name="bibi_allEntrustFragment3">撤去単</string>
+
+    <string name="bibi_allEntrustFragment6">数量(%s)</string>
+
+    <string name="bibi_bibi_fragment_hangqing60">最新価格</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history150">委託価格(usdt)</string>
+
+    <string name="bibi_allEntrustFragment5">合計金額</string>
+
+    <string name="bibi_allEntrustFragment7">実際成約(%s)</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip80">方向</string>
+
+    <string name="bibi_tipBibiUtil2">時価</string>
+
+    <string name="bibi_tipBibiUtil3">金額</string>
+
+    <string name="bibi_bibi_activity_record_detail190">出来高(eth)</string>
+
+    <string name="bibi_bibi_fragment_pankou150">数量(eos)</string>
+
+    <string name="bibi_bibi_activity_record_detail150">成約総額(usdt)</string>
+
+    <string name="bibi_historyEntrustFragment11">成約平均価格(%s)</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell640">可用</string>
+
+    <string name="bibi_historyEntrustFragment12">依頼金額(%s)</string>
+
+    <string name="bibi_recordDetailActivity4">成約平均価格(%s)</string>
+
+    <string name="bibi_historyEntrustFragment2">取引中</string>
+
+    <string name="bibi_bibi_activity_record320">为替</string>
+
+    <string name="bibi_recordDetailActivity5">成約数量(%s)</string>
+
+    <string name="bibi_recordDetailActivity2">成約総額(%s)</string>
+
+    <string name="bibi_recordDetailActivity3">手数料(%s)</string>
+
+    <string name="bibi_historyEntrustFragment1">依頼中</string>
+
+    <string name="bibi_bibi_activity_record_detail670">手数料</string>
+
+    <string name="bibi_historyEntrustFragment7">時価</string>
+
+    <string name="bibi_pankouUpDownFragment1">桁小数</string>
+
+    <string name="bibi_bibiBuyAndSellFragment13">%s価格を入力してください</string>
+
+    <string name="bibi_bibiBuyAndSellFragment14">取引額:</string>
+
+    <string name="bibi_recordActivity3">売れ</string>
+
+    <string name="bibi_bibiBuyAndSellFragment15">取引量:</string>
+
+    <string name="bibi_recordActivity4">成約済み</string>
+
+    <string name="bibi_bibiBuyAndSellFragment16">取引額:</string>
+
+    <string name="bibi_recordActivity5">廃止済み</string>
+
+    <string name="bibi_bibiBuyAndSellFragment10">%s数を入力してください</string>
+
+    <string name="bibi_bibiBuyAndSellFragment11">購入</string>
+
+    <string name="bibi_bibi_include_pankou60">ハンディキャップ</string>
+
+    <string name="bibi_bibiBuyAndSellFragment12">売却</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip150">価格</string>
+
+    <string name="bibi_bibi_activity_record280">取引対</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip430">キャンセル</string>
+
+    <string name="bibi_activity_all_entrust_and_history120">歴史の記録</string>
+
+    <string name="bibi_bibi_activity_record360">出来高単位を選択する</string>
+
+    <string name="bibi_recordDetailActivity1">detail</string>
+
+    <string name="bibi_bibi_fragment_hangqing80">下げ幅</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history170">依頼量</string>
+
+    <string name="bibi_activity_all_entrust_and_history80">全部見る</string>
+
+    <string name="bibi_bibi_fragment_pankou_up_down40">1桁の小数</string>
+
+    <string name="bibi_bibi_activity_record_detail600">出来高</string>
+
+    <string name="bibi_bibi_activity_record_detail170">成約平均価格(usdt)</string>
+
+    <string name="bibi_bibi_fragment_pankou130">買値(usdt)</string>
+
+    <string name="bibi_bibi_fragment_bibi_main210">爆発倉率:—</string>
+
+    <string name="bibi_bibi_fragment_bibi_main330">当面の依頼</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell820">取引額:</string>
+
+    <string name="bibi_bibi_activity_record390">注文状態</string>
+
+    <string name="bibi_bibi_fragment_pankou170">売値(usdt)</string>
+
+    <string name="bibi_count_hint">数</string>
+
+
+    <string name="bibi_all_commission">当面の依頼</string>
+
+    <string name="bibi_history_commission">履歴注文書</string>
+
+    <string name="bibi_cfj">トリガー価格</string>
+
+    <string name="bibi_bibicftint">正しくトリガー価格を入力してください</string>
+
+    <string name="bibi_zyzs">損切り止め</string>
+
+    <string name="bibi_all_Entrust_Fragment400">トリガー価格(%s)</string>
+
+    <string name="bibi_wcf">(トリガーなし)</string>
+
+    <string name="bibi_ycf">(トリガー済み)</string>
+    <string name="bibi_cancel">撤回</string>
+    <string name="bibi_cancel_title">注文を取り消す</string>
+    <string name="bibi_qiehuan">貨幣種の切り替え</string>
+    <string name="bibi_detail_record">成約明細</string>
+    <string name="bibi_market_price">時価</string>
+    <string name="bibi_limit_price">価</string>
+    <string name="bibi_now_price">価</string>
+    <string name="bibi_shi_jia">時価</string>
+    <string name="bibi_stop_pl">ストップロス</string>
+    <string name="bibi_xiaoshu">小桁</string>
+    <string name="bibi_moren">デフォルトディスク</string>
+    <string name="bibi_maipan">上升</string>
+    <string name="bibi_mai_pan">売る盤</string>
+    <string name="bibiBtc_usdt">btc / usdtディープマップ</string>
+    <string name="bibi_zhankai">クリックして展開する</string>
+    <string name="bibi_shendu">深さマップ</string>
+    <string name="bibi_weituo">委託価格(%s)</string>
+    <string name="bibi_weituoliang">依頼量(%s)</string>
+    <string name="bibi_weituoe">委託総額(%s)</string>
+    <string name="bibi_shijia">時価</string>
+    <string name="bibi_jiaoyizhong">取引中</string>
+    <string name="bibi_wancheng">完成</string>
+    <string name="bibi_chaoshi">ターンオーバー</string>
+    <string name="bibi_chengjiaozong">成約総額(%s)</string>
+    <string name="bibi_shijichengjiao">実際成約(%s)</string>
+    <string name="bibi_chengjiaojunjia">成約平均価格(%s)</string>
+    <string name="bibiUsdt_chengjiao">できね(USDT)</string>
+    <string name="bibiUsdt_all">そうけい(USDT)</string>
+    <string name="bibi_success">成功した</string>
+</resources>

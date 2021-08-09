@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300pt"
+    android:background="@color/tibiBg"
+    android:padding="30pt">
+
+    <TextView
+        android:id="@+id/tibiTextview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tibi_num1"
+        android:textColor="@color/tibiTextContent"
+        android:textSize="30pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tibiTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tibi_time"
+        android:textColor="@color/tibiTextContent"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toTopOf="@+id/tibiTextview7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tibiTextview2" />
+
+    <TextView
+        android:id="@+id/tibiTextview7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tibi_miaosu"
+        android:textColor="@color/tibiTextContent"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tibiTextview" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/tibiTextHint"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toBottomOf="@+id/tibiTextview7"
+        app:layout_constraintStart_toEndOf="@+id/tibiGuideline2"
+        app:layout_constraintTop_toTopOf="@+id/tibiTextview7"
+        tools:text="@tools:sample/last_names" />
+
+    <TextView
+        android:id="@+id/tvNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/tibiTextHint"
+        android:textSize="32pt"
+        app:layout_constraintBottom_toBottomOf="@+id/tibiTextview2"
+        app:layout_constraintStart_toEndOf="@+id/tibiGuideline2"
+        app:layout_constraintTop_toTopOf="@+id/tibiTextview2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="@tools:sample/last_names" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/tibiTextHint"
+        android:textSize="26pt"
+        app:layout_constraintBottom_toBottomOf="@+id/tibiTextview"
+        app:layout_constraintStart_toEndOf="@+id/tibiGuideline2"
+        app:layout_constraintTop_toTopOf="@+id/tibiTextview"
+        tools:text="@tools:sample/last_names" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/tibiGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+
+</android.support.constraint.ConstraintLayout>

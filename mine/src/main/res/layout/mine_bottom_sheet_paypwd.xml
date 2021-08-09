@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/app_shape_corner_bai"
+    android:padding="10dp"
+    android:layout_height="250dp"
+
+   >
+<TextView
+    android:id="@+id/tv_fukuan"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:text="@string/mine_assert_password"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fukuan"
+        android:layout_marginTop="10dp"
+        android:text="￥20"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="@string/mine_assert_input_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/et_pwd"
+        app:layout_constraintTop_toBottomOf="@id/tv_price"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="50dp"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pwd"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:gravity="center"
+        android:background="@drawable/app_shape_rectangle_bai"
+        android:text="@string/mine_cancel"
+        android:layout_marginBottom="10dp"
+        android:layout_width="60dp"
+        android:layout_height="30dp"/>
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/app_shape_rectangle"
+        android:text="@string/mine_true"
+        android:textColor="#ff495a"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toBottomOf="@id/et_pwd"
+        android:layout_height="30dp"/>
+
+
+</android.support.constraint.ConstraintLayout>

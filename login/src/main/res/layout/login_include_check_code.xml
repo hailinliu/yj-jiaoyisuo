@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/login_tongyi"
+    android:background="@drawable/login_shape_stroke4c5_corner6"
+    android:layout_marginTop="30pt"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:showIn="@layout/login_activity_pwd_forget">
+
+    <ImageView
+        android:layout_width="42pt"
+        android:layout_height="44pt"
+        android:layout_marginStart="10pt"
+        android:visibility="gone"
+        android:src="@mipmap/login_icon_verify_code"
+        android:tint="@color/loginApp" />
+
+    <EditText
+        android:id="@+id/etCheckCode"
+        android:layout_width="0dp"
+        android:layout_marginStart="30pt"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="@string/loginlogin_include_check_code40"
+        android:inputType="number"
+        android:textColor="@color/loginTextContent"
+        android:textColorHint="@color/loginTextHint"
+        android:textSize="30pt" />
+
+    <TextView
+        android:id="@+id/tvCheckCode"
+        style="@style/libButtonStyle.CheckCode"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="@dimen/login_tonger"
+        android:paddingStart="20pt"
+        android:paddingEnd="20pt"
+        android:textSize="26pt" />
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sskj.lightning">
+
+    <application
+        android:name="com.sskj.lightning.BaseApplication"
+        android:allowBackup="false"
+        android:clearTaskOnLaunch="false"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_label"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/libBaseTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:theme,android:allowBackup"
+        tools:targetApi="n">
+        <activity
+            android:name="com.sskj.lightning.ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

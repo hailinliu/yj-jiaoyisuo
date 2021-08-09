@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/login_shape_stroke4c5_corner6"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/login_tongyi"
+    android:layout_marginTop="30pt"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:showIn="@layout/login_activity_pwd_forget">
+
+    <ImageView
+        android:id="@+id/image_diqiu"
+        android:layout_width="42pt"
+        android:layout_height="44pt"
+        android:layout_marginStart="15pt"
+        android:visibility="gone"
+        android:src="@mipmap/login_icon_area"
+        android:tint="@color/libTextWhite" />
+
+    <com.hey.lib.HeySpinner
+        android:id="@+id/heySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30pt"
+        android:paddingEnd="10pt"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:text="@string/loginlogin_include_area_code40"
+        android:textColor="@color/loginTextContent"
+        android:textSize="30pt"
+        app:arrowColor="@color/libTextWhite"
+        app:arrowSrc="@mipmap/login_icon_arrow_down"
+        app:showArrow="true" />
+</LinearLayout>

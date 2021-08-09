@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!--换肤产品，颜色-->
+    <color name="libTextTitle">#000000</color>
+    <color name="libTextContent">#000000</color>
+    <color name="libTextFabi">#F15A24</color>
+    <color name="libTextContent1">#333333</color>
+    <color name="libTextContent2">#666666</color>
+    <color name="libTextHint">#999999</color>
+    <color name="libBgDeep">#151B29</color>
+    <color name="libBg">#ffffff</color>
+    <color name="libstatusbar">#0C151E</color>
+    <color name="libJianXi">#eeeeee</color>
+    <color name="libBg1">#ffffff</color>
+    <color name="libBg2">#ffffff</color>
+    <color name="libBg3">#ffffff</color>
+    <color name="libBg4">#ffffff</color>
+    <color name="libSelect">#1c68e2</color>
+    <color name="libUnSelect">#888D9D</color>
+    <color name="libGreen">#32B16C</color>
+    <color name="libGreen1">#0CAF90</color>
+    <color name="lib_login">#1CBA97</color>
+    <color name="libRed">#E53030</color>
+    <color name="libDivider">#cccccc</color>
+    <color name="libApp">#1cba97</color>
+    <color name="libSolidButtonText">#ffffff</color>
+    <color name="libGreenHint">#3032b28f</color>
+    <color name="libRedHint">#30ff5755</color>
+    <color name="libTextMineColor">#333333</color>
+    <!--statusBar颜色-->
+    <color name="libColorPrimary">#22305b</color>
+    <color name="libColorText">#C0C1C7</color>
+    <!---->
+    <color name="libColorPrimaryDark">#212E5B</color>
+    <color name="libColorControlNormal">#7E8399</color>
+    <color name="lib_hint">#b5b8c2</color>
+
+
+    <!--默认背景主色调-->
+    <color name="lib_bg">#151B29</color>
+    <color name="lib_background">#111c40</color>
+    <color name="lib_white">#ffffff</color>
+    <color name="lib_bg_f7f7fa">#111c40</color>
+    <color name="lib_bg_bar1">#1E2840</color>
+    <color name="lib_bg_bar2">#0A1225</color>
+    <!--蓝色主色调-->
+    <color name="lib_dominant">#2099ff</color>
+    <color name="lib_dominant1">#ffbe21</color>
+    <!---->
+    <color name="lib_bg_white">#ffffff</color>
+    <!--editText提示色-->
+    <color name="libTextColorHint">#b5b8c2</color>
+    <color name="libTextColorHintLight">#50ffffff</color>
+    <!--editText字体颜色-->
+    <color name="libEditColor">#888d9d</color>
+    <!--默认灰色字体-->
+    <color name="libTextGray">#cccccc</color>
+    <color name="libText_3">#333333</color>
+    <color name="libText_6">#666666</color>
+    <color name="libText_9">#999999</color>
+    <!--默认白色字体-->
+    <color name="libTextWhite">#ffffff</color>
+    <!--默认白色字体-->
+    <color name="libTextWhiteGrey">#E9EAEB</color>
+    <!--默认黑色字体-->
+    <color name="libTextBlack">#121212</color>
+    <!--默认蓝色字体-->
+    <color name="libTextBlue">#92a2e8</color>
+    <!--上涨颜色-->
+    <color name="libUpColor">#05c089</color>
+    <!--下跌颜色-->
+    <color name="libDownColor">#ff5755</color>
+    <!--按钮默认颜色-->
+    <!--分割线颜色-->
+    <color name="lib_divider">#111c40</color>
+    <color name="lib_divider_dcdcdc">#dcdcdc</color>
+
+    <color name="lib_color_efa517">#efa517</color>
+
+    <color name="lib_color_translucent">#50ffffff</color>
+
+
+    <color name="lib_color_bbbbbb">#bbbbbb</color>
+
+    <color name="lib_color_txt">#F2F3F7</color>
+    #F2F3F7
+</resources>

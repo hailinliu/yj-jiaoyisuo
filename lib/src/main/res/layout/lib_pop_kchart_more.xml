@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80pt"
+    android:background="@color/lib_bg"
+    android:paddingStart="30pt">
+
+
+    <TextView
+        android:id="@+id/tvFive"
+        android:layout_width="100pt"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="1M"
+        android:textColor="@color/libTextHint"
+        android:textSize="26pt" />
+
+    <TextView
+        android:id="@+id/tvThirty"
+        android:layout_width="100pt"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="5M"
+        android:textColor="@color/libTextHint"
+        android:textSize="26pt" />
+    <TextView
+        android:id="@+id/tvThirty1"
+        android:layout_width="100pt"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="30M"
+        android:visibility="gone"
+        android:textColor="@color/libTextHint"
+        android:textSize="26pt" />
+    <TextView
+        android:id="@+id/tvWeek"
+        android:layout_width="100pt"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="@string/liblib_pop_kchart_more60"
+        android:textColor="@color/libTextHint"
+        android:textSize="26pt" />
+
+    <TextView
+        android:id="@+id/tvMonth"
+        android:layout_width="100pt"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="@string/liblib_pop_kchart_more80"
+        android:textColor="@color/libTextHint"
+        android:textSize="26pt" />
+
+</LinearLayout>

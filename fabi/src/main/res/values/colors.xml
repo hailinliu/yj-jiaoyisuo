@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+
+
+    <!--换肤产品，颜色-->
+    <color name="fabiTextTitle">@color/libTextTitle</color>
+    <color name="fabiTextContent">@color/libTextContent</color>
+    <color name="fabiTextHint">@color/libTextHint</color>
+    <color name="fabiBgDeep">@color/libBgDeep</color>
+    <color name="fabiBg">@color/libBg</color>
+    <color name="fabiSelect">@color/libSelect</color>
+    <color name="fabiUnSelect">@color/libUnSelect</color>
+    <color name="fabiDivider">@color/libDivider</color>
+    <color name="fabiApp">@color/libApp</color>
+    <color name="fabi_tv_title_color">#626262</color>
+</resources>

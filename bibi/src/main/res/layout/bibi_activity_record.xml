@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    tools:context=".ui.activity.RecordActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100pt">
+
+        <include layout="@layout/lib_include_head" />
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/slidingTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="100pt"
+            android:layout_centerHorizontal="true"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_bounce_enable="false"
+            app:tl_indicator_height="4pt"
+            app:tl_indicator_width="80pt"
+            app:tl_textSelectColor="@color/libTextWhite"
+            app:tl_textUnselectColor="@color/bibiUnSelect" />
+    </RelativeLayout>
+
+    <com.sskj.lib.util.ViewPagerBoolean
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

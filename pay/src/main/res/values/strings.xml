@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+<string name="paypay_recy_item_pay_type20">修改</string>
+<string name="paypay_activity_add_pay_type490">请上传您的支付宝收款二维码图片</string>
+<string name="paypay_activity_add_pay_type130">微信</string>
+<string name="paypay_add_pay_type">支付宝</string>
+<string name="paypay_activity_add_pay_type250">支付宝二维码</string>
+<string name="paypay_activity_add_pay_type251">微信二维码</string>
+<string name="paypay_activity_add_pay_type650">开户支行</string>
+<string name="paypay_activity_add_pay_type780">确定</string>
+<string name="payaddPayTypeActivity1">请输入微信号</string>
+<string name="paypay_activity_pay_type80">添加收款方式</string>
+<string name="payaddPayTypeActivity3">请输入资金密码</string>
+<string name="payaddPayTypeActivity2">请上传微信图片</string>
+<string name="payaddPayTypeActivity5">请上传支付宝图片</string>
+<string name="paypay_activity_add_pay_type700">资金密码</string>
+<string name="payaddPayTypeActivity4">请输入支付宝账号</string>
+<string name="payaddPayTypeActivity7">请输入银行卡账号</string>
+<string name="payaddPayTypeActivity6">请输入开户行名称</string>
+<string name="payaddPayTypeActivity8">请输入开户支行名称</string>
+<string name="paypay_activity_add_pay_type230">请输入微信账号</string>
+<string name="paypay_activity_add_pay_type110">收款方式</string>
+<string name="paypay_activity_add_pay_type760">取消</string>
+<string name="paypay_activity_add_pay_type170">孙悟空</string>
+<string name="paypay_activity_add_pay_type570">开户银行</string>
+<string name="paypay_activity_add_pay_type210">微信账号</string>
+<string name="paypay_activity_add_pay_type610">银行卡账号</string>
+<string name="paypay_activity_pay_type40">请务必使用您本人的实名账户，被激活的支付方式将在交易时向买方展示，最多激活3种</string>
+<string name="paypay_activity_add_pay_type390">支付宝账号</string>
+<string name="paypay_activity_add_pay_type670">请输入开户银行支行</string>
+<string name="paypay_activity_add_pay_type60">绑定收款方式</string>
+<string name="paypay_activity_add_pay_type150">姓名</string>
+<string name="paypay_activity_add_pay_type310">请上传您的微信收款二维码图片</string>
+    <string name="paypay_add_pay_type_yhk">银行卡</string>
+</resources>

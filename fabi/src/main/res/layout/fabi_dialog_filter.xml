@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lib_bg"
+        android:orientation="vertical"
+        android:padding="20pt">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15pt"
+            android:text="@string/fabifabi_dialog_filter_bottom60"
+            android:textColor="@color/libTextWhite"
+            android:textSize="36pt" />
+        <com.sskj.lib.widget.MyRadioGroup
+            android:id="@+id/myradiogroup"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20pt"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="horizontal"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content">
+                      <RadioButton
+                          android:layout_width="0pt"
+                          android:text=" (CNY)"
+                          android:textSize="26pt"
+                          android:button="@null"
+                          android:padding="20pt"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:background="@drawable/fabi_selector_filter"
+                          android:textColor="@drawable/fabi_selector_text"
+                          android:layout_height="match_parent"/>
+                   <RadioButton
+                       android:layout_width="0pt"
+                       android:text=" (MYR)"
+                       android:button="@null"
+                       android:padding="20pt"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:textSize="26pt"
+                       android:background="@drawable/fabi_selector_filter"
+                       android:textColor="@drawable/fabi_selector_text"
+                       android:layout_height="match_parent"/>
+                   <RadioButton
+                       android:layout_width="0pt"
+                       android:text=" (USDT)"
+                       android:button="@null"
+                       android:textSize="26pt"
+                       android:padding="20pt"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:background="@drawable/fabi_selector_filter"
+                       android:textColor="@drawable/fabi_selector_text"
+                       android:layout_height="match_parent"/>
+               </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="20pt"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="0pt"
+                        android:text=" (KRW)"
+                        android:textSize="26pt"
+                        android:button="@null"
+                        android:padding="20pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/fabi_selector_filter"
+                        android:textColor="@drawable/fabi_selector_text"
+                        android:layout_height="match_parent"/>
+                    <RadioButton
+                        android:layout_width="0pt"
+                        android:text=" (SGD)"
+                        android:textSize="26pt"
+                        android:button="@null"
+                        android:padding="20pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/fabi_selector_filter"
+                        android:textColor="@drawable/fabi_selector_text"
+                        android:layout_height="match_parent"/>
+                    <RadioButton
+                        android:layout_width="0pt"
+                        android:text=" (THB)"
+                        android:textSize="26pt"
+                        android:button="@null"
+                        android:padding="20pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/fabi_selector_filter"
+                        android:textColor="@drawable/fabi_selector_text"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="20pt"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="0pt"
+                        android:text=" (TWD)"
+                        android:textSize="26pt"
+                        android:button="@null"
+                        android:padding="20pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/fabi_selector_filter"
+                        android:textColor="@drawable/fabi_selector_text"
+                        android:layout_height="match_parent"/>
+                    <RadioButton
+                        android:layout_width="0pt"
+                        android:text=" (VND)"
+                        android:textSize="26pt"
+                        android:button="@null"
+                        android:padding="20pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/fabi_selector_filter"
+                        android:textColor="@drawable/fabi_selector_text"
+                        android:layout_height="match_parent"/>
+                    <RadioButton
+                        android:layout_width="0pt"
+                        android:text=" (IDR)"
+                        android:textSize="26pt"
+                        android:button="@null"
+                        android:padding="20pt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/fabi_selector_filter"
+                        android:textColor="@drawable/fabi_selector_text"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.sskj.lib.widget.MyRadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30pt"
+            android:text="@string/fabipublishActivity4"
+            android:textColor="@color/libTextWhite"
+            android:textSize="30pt" />
+
+        <RadioGroup
+            android:id="@+id/rgFilter"
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:layout_marginTop="30pt"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbAll"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30pt"
+                android:layout_weight="1"
+                android:background="@drawable/fabi_selector_filter"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/fabi_all"
+                android:textColor="@drawable/fabi_selector_text"
+                android:textSize="26pt" />
+            <RadioButton
+                android:id="@+id/rbAlipay"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30pt"
+                android:layout_weight="1"
+                android:background="@drawable/fabi_selector_filter"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/fabipublishActivity21"
+                android:textColor="@drawable/fabi_selector_text"
+                android:textSize="26pt" />
+
+            <RadioButton
+                android:id="@+id/rbBank"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30pt"
+                android:layout_weight="1"
+                android:background="@drawable/fabi_selector_filter"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/fabibuySellFragment11"
+                android:textColor="@drawable/fabi_selector_text"
+                android:textSize="26pt" />
+
+            <RadioButton
+                android:id="@+id/rbWX"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/fabi_selector_filter"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/fabipublishActivity20"
+                android:textColor="@drawable/fabi_selector_text"
+                android:textSize="26pt" />
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70pt"
+            android:text="@string/fabitipFabiUtil5"
+            android:textColor="@color/libTextWhite"
+            android:textSize="30pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_marginTop="20pt"
+            android:background="@color/fabiDivider" />
+
+        <EditText
+            android:id="@+id/etMoney"
+            android:layout_width="match_parent"
+            android:layout_height="65pt"
+            android:background="@drawable/fabi_shape_edit_border"
+            android:gravity="center_vertical"
+            android:hint="@string/fabifabi_dialog_filter100"
+            android:inputType="numberDecimal"
+            android:paddingStart="15pt"
+            android:paddingEnd="15pt"
+            android:textColor="@color/libTextWhite"
+            android:textColorHint="@color/fabiTextHint"
+            android:textSize="26pt" />
+        <View
+            android:layout_width="0pt"
+            android:layout_height="0pt"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btReset"
+                style="@style/fabiButtonStyle.Cancel"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="60pt"
+                android:layout_weight="1"
+                android:text="@string/fabifabi_dialog_filter270" />
+
+            <Button
+                android:id="@+id/btSubmit"
+                style="@style/fabiButtonStyle.Sure"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/fabi_queren" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

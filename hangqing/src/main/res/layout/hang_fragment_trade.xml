@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false"
+    android:orientation="vertical"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    tools:context=".ui.fragment.TradeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hangqinghang_recy_item_trade20"
+            android:textColor="@color/hangTextHint"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/hangqinghang_fragment_trade80"
+            android:textColor="@color/hangTextHint"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/hangqinghang_fragment_trade100"
+            android:textColor="@color/hangTextHint"
+            android:textSize="20pt" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sskj.mine">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application>
+        <activity android:name=".ui.activity.QuestionListActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.HelpCenterActivity" android:screenOrientation="portrait"/>
+        <activity android:label="SettingFundPwdActivity" android:launchMode="singleTop" android:name=".ui.activity.SettingFundPwdActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.FeedbackActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.VerifyGoogleActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.PersonActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.SecurityActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.BindMobileActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.SetLoginPwdActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.SellerApplyActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.FingerprintActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.sskj.mine.ui.activity.ContactUsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MyAssertsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.TransferActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MyassertDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AssertsExchangeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AssertsExchangeRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PromotionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PromotionDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MyCustomerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.NewCoinBaseActivity" />
+        <activity android:name=".ui.activity.TransferRecordActivity" />
+    </application>
+
+</manifest>

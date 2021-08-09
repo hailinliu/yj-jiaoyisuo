@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <string name="identverificationResultActivity4">Re certification</string>
+    <string name="identverificationResultActivity3">Authentication failed, please</string>
+    <string name="identverificationResultActivity1">Certification success</string>
+    <string name="identident_activity_verification_second100">Please upload the front of your ID card.</string>
+    <string name="identident_activity_verification_second220">Please upload your handheld ID card</string>
+    <string name="identident_activity_verification_second180">The ID card is hand held to ensure no watermark no stain, identity information clear, non - text reverse photos, do not PS processing</string>
+    <string name="identident_activity_verification_first80">To ensure the security of your account, you need to authenticate n identity. Once the authentication cannot be modified, please fill in your true information carefully.</string>
+    <string name="identverificationMenuActivity2">Uncertified</string>
+    <string name="identverificationMenuActivity1">identity authentication</string>
+    <string name="identverificationMenuActivity4">Certified</string>
+    <string name="identverificationMenuActivity3">Please carry out primary certification first.</string>
+    <string name="identverificationMenuActivity6">To be audited</string>
+    <string name="identverificationMenuActivity5">You have a preliminary certification</string>
+    <string name="identverificationMenuActivity8">Authentication failed</string>
+    <string name="identverificationMenuActivity7">Please wait patiently for review</string>
+    <string name="identident_activity_verification_second160">Please upload the rear of your ID card.</string>
+    <string name="identident_activity_verification_first120">Please enter your name.</string>
+    <string name="identident_activity_verification_first240">Submit</string>
+    <string name="identident_activity_verification_first100">Full name</string>
+    <string name="identident_activity_verification_result100">Congratulations on your successful certification</string>
+    <string name="identident_activity_verification_first180">Please enter your ID number.</string>
+    <string name="identident_activity_verification_second120">The front of ID card ensures no watermarking, no stain, clear identity information, non-text reverse photos, please do not carry out PS processing.</string>
+    <string name="identident_activity_verification_second240">You need to hold a Tcoin with your handwritten ID card and a white paper with the date of the day in your hand. Make sure that the ID card and the white paper are on your chest, not covering your face, and the information on the ID card and the white paper is clear and visible.</string>
+    <string name="identverificationSecondActivity1">Advanced Verification</string>
+    <string name="identverificationSecondActivity2">Please fill in two photos.</string>
+    <string name="identident_activity_verification_first160">ID card No.</string>
+    <string name="identverificationFirstActivity1">Primary Verification</string>
+    <string name="ident_verificationn_result100">Reasons for failure:</string>
+</resources>

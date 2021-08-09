@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <resources>
+    <string name="loginlogin_activity_pwd_forget360">提交</string>
+    <string name="loginlogin_dialog_google_check200">確認</string>
+    <string name="loginlogin_activity_login340">忘記密碼？</string>
+    <string name="loginlogin_activity_register430">請勾選《用戶服務協議》</string>
+    <string name="loginlogin_include_check_code40">請輸入驗證碼</string>
+    <string name="loginlogin_dialog_google_check150">請輸入谷歌驗證碼</string>
+    <string name="loginpwdForgetActivity1">忘記密碼</string>
+    <string name="loginpwdForgetActivity2">驗證碼不能爲空</string>
+    <string name="loginlogin_activity_login360">立即註冊 ></string>
+    <string name="loginlogin_activity_register450">我已閱讀並同意</string>
+    <string name="loginlogin_include_area_code40">中國(CHINA)</string>
+    <string name="loginlogin_include_check_code60">獲取驗證碼</string>
+    <string name="loginlogin_activity_register100">註冊</string>
+    <string name="loginlogin_include_pwd_again40">請確認登錄密碼</string>
+    <string name="loginlogin_activity_login140">登錄</string>
+    <string name="loginlogin_activity_register470">《用戶服務協議》</string>
+    <string name="loginlogin_dialog_google_check60">安全驗證</string>
+    <string name="loginlogin_dialog_google_check110">谷歌驗證碼</string>
+    <string name="loginlogin_activity_register360">邀請碼 (非必填)</string>
+    <string name="loginlogin_include_account40">請輸入您的手機號或者郵箱</string>
+    <string name="loginlogin_activity_pwd_forget140">密碼找回</string>
+    <string name="loginlogin_dialog_google_check80">取消</string>
+    <string name="loginlogin_dialog_google_check170">粘貼</string>
+    <string name="loginlogin_include_pwd40">請輸入密碼(8-20位數字+字母)</string>
+    <string name="login_state_success">登錄成功</string>
+    <string name="login_register_state_success">註冊成功</string>
+    <string name="login_get_code_success">操作成功</string>
+    <string name="login_tuxing">請輸入圖形驗證碼</string>
+    <string name="login_login_text">登錄</string>
+    <string name="login_forget_pwd">忘記密碼</string>
+    </resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/mineBg" android:gravity="center_horizontal" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.activity.FingerprintActivity">
+
+    <TextView android:layout_height="wrap_content" android:layout_marginTop="240pt" android:layout_width="wrap_content" android:text="@string/minemine_activity_fingerprint20" android:textColor="@color/mineTextContent" android:textSize="48pt"/>
+
+    <ImageView android:layout_height="144pt" android:layout_marginTop="266pt" android:layout_width="144pt" android:src="@mipmap/mine_fingerprint" android:tint="@color/mineApp"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_marginTop="43pt" android:layout_width="wrap_content" android:text="@string/minemine_activity_fingerprint60" android:textColor="@color/mineTextContent" android:textSize="28pt"/>
+
+    <View android:layout_height="0pt" android:layout_weight="1" android:layout_width="match_parent"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_marginBottom="112pt" android:layout_width="wrap_content" android:text="@string/minemine_activity_fingerprint20" android:textColor="@color/mineTextContent" android:textSize="28pt"/>
+
+</LinearLayout>

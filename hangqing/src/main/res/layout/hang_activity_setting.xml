@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    tools:context=".ui.activity.NewSettingActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:id="@+id/ccBack"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/lib_icon_back_white"
+            android:tint="@color/libTextWhite"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:textColor="@color/libTextWhite"
+            android:text="@string/hang_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:background="@color/lib_bg"
+        android:orientation="vertical"
+        android:paddingStart="16pt"
+        android:paddingEnd="16pt">
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/menu_language"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/lib_bg"
+            app:sBackgroundDrawableRes="@color/lib_bg"
+            app:sDividerLineColor="@color/libDivider"
+            app:sLeftTextColor="@color/libTextWhite"
+            app:sLeftTextString="@string/hang_yuyan"
+            app:sRightTextColor="@color/libTextWhite"
+            app:sRightTvDrawableRight="@mipmap/hang_icon_zixun_into" />
+        <com.allen.library.SuperTextView
+            android:id="@+id/menu_fabi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/lib_bg"
+            android:visibility="gone"
+            app:sBackgroundDrawableRes="@color/lib_bg"
+            app:sDividerLineColor="@color/libDivider"
+            app:sLeftTextColor="@color/libTextWhite"
+            app:sLeftTextString="@string/hang_fabi_jijia"
+            app:sRightTextString="CNY"
+            app:sRightTextColor="@color/libTextWhite"
+            app:sRightTvDrawableRight="@mipmap/hang_icon_zixun_into" />
+        <com.allen.library.SuperTextView
+            android:id="@+id/menu_version"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/lib_bg"
+            android:visibility="visible"
+            app:sBackgroundDrawableRes="@color/lib_bg"
+            app:sDividerLineColor="@color/libDivider"
+            app:sLeftTextColor="@color/libTextWhite"
+            app:sLeftTextString="@string/hang_banben"
+            app:sRightTextColor="@color/libTextWhite"
+            />
+        <com.allen.library.SuperTextView
+            android:id="@+id/menu_tongzhishezhi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/lib_bg"
+            android:visibility="invisible"
+            app:sBackgroundDrawableRes="@color/lib_bg"
+            app:sDividerLineColor="@color/libDivider"
+            app:sLeftTextColor="@color/libTextWhite"
+            app:sLeftTextString="通知设置"
+            app:sRightTextColor="@color/libTextWhite"
+            app:sRightTvDrawableRight="@mipmap/hang_icon_zixun_into" />
+
+   <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:visibility="invisible"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="黑夜版"
+        />
+    <Switch
+        android:id="@+id/switchBtn"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_marginEnd="20dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logout_btn"
+        style="@style/libButtonStyle"
+        android:layout_marginLeft="50pt"
+        android:layout_marginTop="100pt"
+        android:layout_marginRight="50pt"
+        android:text="@string/hang_logout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1" />
+</LinearLayout>

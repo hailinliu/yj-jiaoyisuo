@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <string name="app_label">Yolocoin</string>
+
+    <string name="appmainActivity6">I got it!</string>
+    <string name="appmainActivity5">asset</string>
+    <string name="appmainActivity2">information</string>
+    <string name="appmainActivity1">Home</string>
+    <string name="appmainActivity4">Fiat</string>
+    <string name="appmainActivity3">Hang</string>
+    <string name="appmainActivity7">Exchange</string>
+    <string name="app_heyue">Contract</string>
+</resources>

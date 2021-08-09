@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tibiBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.WithdrawRecordActivity">
+    <include layout="@layout/lib_include_head" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="数量"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="状态"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0pt"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="时间"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <com.shizhefei.view.coolrefreshview.CoolRefreshView
+        android:id="@+id/coolRefreshView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20pt"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.shizhefei.view.coolrefreshview.CoolRefreshView>
+
+   <!-- <fragment
+        android:id="@+id/frameLayout"
+        android:name="com.sskj.tibi.ui.fragment.WithdrawRecordFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20pt" />-->
+</LinearLayout>

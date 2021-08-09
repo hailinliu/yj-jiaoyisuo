@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBgDeep"
+    android:orientation="vertical">
+
+    <include layout="@layout/lib_include_head" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mineBg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/security_img"
+                android:layout_width="400pt"
+                android:layout_height="330pt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30pt"
+                android:src="@mipmap/mine_icon_security" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/menu_bind_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="101pt"
+                android:layout_marginStart="30pt"
+                android:layout_marginEnd="30pt"
+                app:sBackgroundDrawableRes="@color/libBg"
+                app:sDividerLineColor="@color/libDivider"
+                app:sLeftTextColor="@color/libTextContent"
+                app:sLeftTextSize="28pt"
+                app:sLeftTextString="@string/minemine_activity_security120"
+                app:sRightTextColor="@color/libTextHint"
+                app:sRightTextSize="26pt"
+                app:sRightTextString="@string/minesecurityActivity10"
+                app:sRightTvDrawableRight="@mipmap/mine_icon_arrow_right"
+                app:sTextViewDrawablePadding="30pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:layout_marginStart="18pt"
+                android:layout_marginEnd="18pt"
+                android:background="@color/libDivider"
+                android:visibility="visible" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/menu_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="101pt"
+                android:layout_marginStart="30pt"
+                android:layout_marginEnd="30pt"
+                app:sBackgroundDrawableRes="@color/libBg"
+                app:sDividerLineColor="@color/libDivider"
+                app:sLeftTextColor="@color/libTextContent"
+                app:sLeftTextSize="28pt"
+                app:sLeftTextString="@string/minemine_activity_security160"
+                app:sRightTextColor="@color/libGreen"
+                app:sRightTextSize="26pt"
+                app:sRightTextString="@string/minesecurityActivity11"
+                app:sRightTvDrawableRight="@mipmap/mine_icon_arrow_right"
+                app:sTextViewDrawablePadding="30pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:layout_marginStart="18pt"
+                android:layout_marginEnd="18pt"
+                android:background="@color/libDivider" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/menu_pay_password"
+                android:layout_width="match_parent"
+                android:layout_height="101pt"
+                android:layout_marginStart="30pt"
+                android:layout_marginEnd="30pt"
+                app:sBackgroundDrawableRes="@color/libBg"
+                app:sDividerLineColor="@color/libDivider"
+                app:sLeftTextColor="@color/libTextContent"
+                app:sLeftTextSize="28pt"
+                app:sLeftTextString="@string/minemine_activity_security200"
+                app:sRightTextColor="@color/libTextHint"
+                app:sRightTextSize="26pt"
+                app:sRightTextString="@string/minesecurityActivity12"
+                app:sRightTvDrawableRight="@mipmap/mine_icon_arrow_right"
+                app:sTextViewDrawablePadding="30pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:background="@color/libDivider"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.allen.library.SuperTextView
+                    android:id="@+id/menu_chrome"
+                    android:layout_width="match_parent"
+                    android:layout_height="101pt"
+                    android:layout_marginStart="30pt"
+                    android:layout_marginEnd="30pt"
+                    android:visibility="visible"
+                    app:sBackgroundDrawableRes="@color/libBg"
+                    app:sLeftTextColor="@color/libTextContent"
+                    app:sLeftTextSize="28pt"
+                    app:sLeftTextString="@string/minemine_activity_security260"
+                    app:sRightTextColor="@color/libTextHint"
+                    app:sRightTextSize="26pt"
+                    app:sRightTextString="@string/minesecurityActivity10"
+                    app:sRightTvDrawableRight="@mipmap/mine_icon_arrow_right"
+                    app:sTextViewDrawablePadding="30pt" />
+
+                <ImageView
+                    android:id="@+id/iv_chrome"
+                    android:layout_width="100pt"
+                    android:layout_height="41pt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="80pt"
+                    android:src="@mipmap/icon_off"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:layout_marginStart="18pt"
+                android:layout_marginEnd="18pt"
+                android:background="@color/libDivider" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/menu_bind_email"
+                android:layout_width="match_parent"
+                android:layout_height="101pt"
+                android:layout_marginStart="30pt"
+                android:layout_marginEnd="30pt"
+                android:visibility="visible"
+                app:sLeftTextColor="@color/libTextContent"
+                app:sLeftTextString="@string/mine_email"
+                app:sLeftTextSize="28pt"
+                app:sRightTextSize="26pt"
+                app:sRightTextString="@string/mine_weibangding"
+                app:sRightTvDrawableRight="@mipmap/mine_icon_arrow_right"
+                app:sTextViewDrawablePadding="30pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:layout_marginStart="30pt"
+                android:layout_marginEnd="30pt"
+                android:background="@color/libDivider" />
+
+            <com.allen.library.SuperTextView
+                android:id="@+id/menu_seller"
+                android:layout_width="match_parent"
+                android:layout_height="101pt"
+                android:layout_marginStart="30pt"
+                android:layout_marginEnd="30pt"
+                app:sBackgroundDrawableRes="@color/libBg"
+                app:sDividerLineColor="@color/libDivider"
+                app:sLeftTextColor="@color/libTextContent"
+                app:sLeftTextSize="28pt"
+                app:sLeftTextString="@string/minemine_activity_security260"
+                app:sRightTextColor="@color/libTextHint"
+                app:sRightTextSize="26pt"
+                android:visibility="gone"
+                app:sRightTextString="@string/minesecurityActivity14"
+                app:sRightTvDrawableRight="@mipmap/mine_icon_arrow_right"
+                app:sTextViewDrawablePadding="30pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:layout_marginStart="18pt"
+                android:layout_marginEnd="18pt"
+                android:background="@color/libDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="25pt"
+                android:paddingEnd="10pt"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/minemine_activity_security430"
+                    android:textColor="@color/commonWhite"
+                    android:textSize="30pt" />
+
+                <CheckedTextView
+                    android:id="@+id/checkedTextView"
+                    android:layout_width="130pt"
+                    android:layout_height="52pt"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/mine_selector_switch"
+                    android:paddingLeft="16pt"
+                    android:paddingRight="16pt" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayoutPayType"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

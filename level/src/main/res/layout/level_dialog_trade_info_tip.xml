@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20pt"
+        android:background="@drawable/level_dialog_sure_bg"
+        android:orientation="vertical"
+        android:padding="35pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15pt"
+            android:background="@color/levelBg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_dialog_set_price80"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvDirection"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_dialog_trade_info_tip120"
+                        android:textColor="@color/levelRed"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_dialog_trade_info_tip170"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="120pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_dialog_trade_info_tip240"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvCashPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="120pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/leveltradeListBean22"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvWinPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="120pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levelcontractNoteBean18"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvServicePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_dialog_trade_info_tip480"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_dialog_trade_info_tip550"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150pt"
+                        android:layout_height="65pt"
+                        android:gravity="center_vertical"
+                        android:text="@string/levellevel_fragment_buy_sell790"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="65pt"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65pt"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="120pt"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/leveltradeListBean21"
+                        android:textColor="@color/levelTextHint"
+                        android:textSize="28pt" />
+
+                    <TextView
+                        android:id="@+id/tvLossPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="---"
+                        android:textColor="@color/levelTextContent"
+                        android:textSize="28pt" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80pt"
+            android:layout_marginTop="20pt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="50pt"
+                android:layout_weight="1"
+                android:background="@drawable/level_button_cancel"
+                android:gravity="center"
+                android:text="@string/levellevel_dialog_set_price730"
+                android:textColor="@color/levelApp"
+                android:textSize="32pt" />
+
+            <TextView
+                android:id="@+id/tvSure"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/level_button_sure"
+                android:gravity="center"
+                android:text="@string/levellevel_dialog_set_price750"
+                android:textColor="@color/levelSolidButtonText"
+                android:textSize="32pt" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

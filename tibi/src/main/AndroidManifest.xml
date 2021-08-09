@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sskj.tibi">
+
+    <application>
+        <activity
+            android:name=".ui.activity.OtherRecordActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.activity.WithdrawRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RechargeRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommissionWithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RechargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AddressListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AssetManageActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.NewRechargeActivity" />
+        <activity android:name=".ui.activity.SelectCoinActivity" />
+        <activity android:name=".ui.activity.CongRecordActivity" />
+        <activity android:name=".ui.activity.AddressManagerActivity" />
+        <activity android:name=".ui.activity.NewSelectCoinActivity" />
+    </application>
+
+</manifest>

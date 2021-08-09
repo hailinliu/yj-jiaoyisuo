@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+
+    <!--换肤产品，颜色-->
+    <color name="hangTextTitle">@color/libTextTitle</color>
+    <color name="hangTextContent">@color/libTextContent</color>
+    <color name="hangTextContent1">#535353</color>
+    <color name="hangTextContent2">#333333</color>
+    <color name="hangTextHint">@color/libTextHint</color>
+    <color name="hangBgDeep">@color/libBgDeep</color>
+    <color name="hangBg">@color/libBg1</color>
+    <color name="hangBg1">@color/libBg2</color>
+    <color name="hangSelect">@color/libSelect</color>
+    <color name="hangUnSelect">@color/libUnSelect</color>
+    <color name="hangGreen">@color/libGreen</color>
+    <color name="hangRed">@color/libRed</color>
+    <color name="hangDivider">@color/libDivider</color>
+    <color name="hangDivider1">#cccccc</color>
+    <color name="hangApp">@color/libApp</color>
+    <color name="hangGreenHint">#301ED189</color>
+    <color name="hangRedHint">#30f53131</color>
+    <color name="hang_jianxi">@color/libJianXi</color>
+    <color name="hang_identify_background">#F3FBF9</color>
+
+
+</resources>

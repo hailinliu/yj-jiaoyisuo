@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <!--#############################主题样式#######################-->
+    <style name="libBaseTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="colorPrimary">@color/libBg2</item>
+        <item name="colorPrimaryDark">@color/libBg2</item>
+        <item name="colorAccent">@color/libApp</item>
+        <item name="colorControlNormal">@color/libTextHint</item>
+        <!--<item name="colorControlActivated">@color/libColorControlActivated</item>-->
+
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--默认text字体颜色-->
+        <item name="android:textColor">@color/libTextContent</item>
+        <!--输入框默认输入字体-->
+        <item name="editTextColor">@color/libTextContent</item>
+        <!--提示字体颜色-->
+        <item name="android:textColorHint">@color/libTextHint</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!--默认所有按钮样式-->
+        <item name="buttonStyle">@style/libButtonStyle</item>
+        <item name="android:windowBackground">@color/libBg</item>
+    </style>
+    <!--启动页样式-->
+    <style name="libSplashTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">@color/libBg</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+    <!--#############################主题样式#######################-->
+
+
+    <!--Button默认样式-->
+    <style name="libButtonStyle">
+        <item name="android:stateListAnimator">@drawable/lib_button_press_anim</item>
+        <item name="android:textColor">@color/libSolidButtonText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:background">@drawable/lib_button</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80pt</item>
+    </style>
+    <style name="libButtonStyle1">
+        <item name="android:stateListAnimator">@drawable/lib_button_press_anim</item>
+        <item name="android:textColor">@color/libSolidButtonText</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:background">@drawable/lib_button1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80pt</item>
+    </style>
+    <style name="libButtonStyle2">
+        <item name="android:stateListAnimator">@drawable/lib_button_press_anim</item>
+        <item name="android:textColor">@color/libApp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:background">@drawable/lib_button_cancel</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80pt</item>
+
+    </style>
+    <!--Button确定键样式-->
+    <style name="libButtonStyle.Sure">
+        <item name="android:textColor">@color/libBg2</item>
+        <item name="android:background">@drawable/lib_button_sure</item>
+    </style>
+
+    <!--Button取消键样式-->
+    <style name="libButtonStyle.Cancel">
+        <item name="android:textColor">@color/libTextWhite</item>
+        <item name="android:background">@drawable/lib_button_cancel</item>
+    </style>
+
+    <!--Button获取验证码键样式-->
+    <style name="libButtonStyle.CheckCode">
+        <item name="android:textSize">28pt</item>
+        <item name="android:minWidth">180pt</item>
+        <item name="android:text">@string/libsendCodeUtil1</item>
+        <item name="android:paddingStart">15pt</item>
+        <item name="android:paddingEnd">15pt</item>
+    </style>
+
+
+</resources>

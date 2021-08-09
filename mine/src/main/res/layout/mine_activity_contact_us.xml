@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.HelpCenterActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <include layout="@layout/lib_include_head" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/mine_contact_us_content1"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/libTextBlue"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_margin="30dp"
+        android:elevation="5dp"
+        android:background="@drawable/app_shape_rectangle1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_qq"
+            android:text="QQ客服"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_below="@id/tv_qq"
+            android:layout_toRightOf="@id/tv_qq"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/app_shape_rectangle1"
+        android:layout_margin="30dp"
+        android:layout_marginTop="40dp"
+        android:elevation="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_weixin"
+            android:text="微信客服"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_below="@id/tv_weixin"
+            android:layout_toRightOf="@id/tv_weixin"
+            android:layout_marginStart="10dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

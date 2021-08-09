@@ -1,0 +1,52 @@
+apply from: "dependency.gradle"
+apply from: "config.gradle"
+apply plugin: 'com.alibaba.arouter'
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath "com.alibaba:arouter-register:1.0.2"
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven{ url 'https://maven.aliyun.com/repository/google'}
+        maven{ url 'D://maven_repository/'}
+        /*  maven {
+              url 'http://localhost:7000'
+  //            url 'http://114.116.114.182:8088/lv/maven/raw/master'
+          }*/
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+subprojects {
+    project.configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex')) {
+                details.useVersion "27.0.1"
+            }
+        }
+    }
+}

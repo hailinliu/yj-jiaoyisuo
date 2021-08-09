@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80pt">
+
+    <ProgressBar
+        android:id="@+id/bibiProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/hang_progress_green"
+        android:translationZ="0pt"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:translationZ="1pt">
+
+        <TextView
+            android:id="@+id/tvOrderNum"
+            android:layout_width="80pt"
+            android:layout_height="wrap_content"
+            android:textColor="@color/libTextWhite"
+            android:textSize="20pt"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/libTextWhite"
+            android:textSize="24pt" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10pt"
+            android:textColor="@color/libTextWhite"
+            android:textSize="24pt" />
+    </LinearLayout>
+</RelativeLayout>

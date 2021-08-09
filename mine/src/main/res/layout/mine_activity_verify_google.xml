@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/mineBgDeep" android:clipToPadding="true" android:fitsSystemWindows="true" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.activity.VerifyGoogleActivity" tools:ignore="ResourceName">
+
+    <include layout="@layout/lib_include_head"/>
+
+    <android.support.v4.widget.NestedScrollView android:background="@color/mineBg" android:layout_height="match_parent" android:layout_marginTop="22pt" android:layout_width="match_parent">
+
+        <LinearLayout android:id="@+id/google_a_layout" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" android:paddingLeft="@dimen/recovery_default_margin" android:paddingRight="@dimen/recovery_default_margin">
+
+            <TextView android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_marginLeft="30pt" android:layout_marginRight="30pt" android:layout_marginTop="67pt" android:layout_width="wrap_content" android:lineSpacingExtra="8pt" android:text="@string/minemine_activity_verify_google80" android:textColor="@color/mineTextHint" android:textSize="22pt"/>
+
+            <TextView android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_marginTop="83pt" android:layout_width="wrap_content" android:lineSpacingExtra="8pt" android:text="@string/minemine_activity_verify_google100" android:textColor="@color/mineTextHint" android:textSize="30pt" android:visibility="gone"/>
+
+            <View android:background="@color/mineDivider" android:layout_height="1pt" android:layout_marginLeft="30pt" android:layout_marginRight="30pt" android:layout_marginTop="30pt" android:layout_width="match_parent"/>
+
+            <ImageView android:background="@color/mineBg" android:id="@+id/iv_qr_code" android:layout_gravity="center_horizontal" android:layout_height="300pt" android:layout_marginTop="181pt" android:layout_width="300pt" android:padding="10dp"/>
+
+            <LinearLayout android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_marginTop="80pt" android:layout_width="wrap_content" android:orientation="horizontal">
+
+                <TextView android:id="@+id/tv_code" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textColor="@color/mineTextHint" android:textSize="30pt" tools:text="NASDNASLFNKALSFN"/>
+
+                <TextView android:id="@+id/tv_code_copy" android:layout_height="wrap_content" android:layout_marginStart="35pt" android:layout_width="wrap_content" android:text="@string/minemineFragment3" android:textColor="@color/mineApp" android:textSize="30pt"/>
+
+            </LinearLayout>
+
+            <TextView android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_marginTop="118pt" android:layout_width="wrap_content" android:text="@string/minemine_activity_verify_google230" android:textColor="#A5B2BA" android:textColorHint="@color/mineTextHint" android:textSize="20pt"/>
+
+            <Button android:id="@+id/btn_next" android:layout_marginBottom="40pt" android:layout_marginLeft="@dimen/recovery_default_margin" android:layout_marginRight="@dimen/recovery_default_margin" android:layout_marginTop="100pt" android:text="@string/minemine_activity_verify_google250" style="@style/libButtonStyle"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

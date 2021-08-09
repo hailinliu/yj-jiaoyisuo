@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hang_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingStart="30pt"
+    android:paddingTop="20pt"
+    android:paddingEnd="30pt"
+    android:paddingBottom="20pt">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
+        android:src="@mipmap/hang_icon_zixun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0pt"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15pt"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/libTextWhite"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime"
+        app:layout_constraintLeft_toRightOf="@+id/ivIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivIcon"
+        tools:text="@tools:sample/lorem/random" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/hangTextHint"
+        android:textSize="24pt"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivIcon"
+        app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="@tools:sample/date/mmddyy" />
+</android.support.constraint.ConstraintLayout>

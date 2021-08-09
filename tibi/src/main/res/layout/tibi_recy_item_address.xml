@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lib_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90pt"
+        android:background="@color/lib_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt">
+
+        <TextView
+            android:id="@+id/tvCoin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BTC"
+            android:textColor="@color/libTextWhite"
+            android:textSize="30pt" />
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="76pt"
+            android:layout_height="76pt"
+            android:padding="20pt"
+            android:src="@mipmap/tibi_icon_add"
+            android:tint="@color/tibiApp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewItem"
+        android:background="@color/lib_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sskj.bibi">
+
+    <application>
+        <activity
+            android:name=".ui.activity.RecordDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activity.RecordActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activity.SlideActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/bibiDialogStyle" />
+    </application>
+
+</manifest>

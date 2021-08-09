@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88pt"
+    android:background="@color/lib_bg"
+    android:paddingEnd="12pt">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/libTextWhite"
+        android:textSize="36pt"
+        android:textStyle="bold"
+        tools:text="Login" />
+
+    <LinearLayout
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100pt"
+            android:layout_height="match_parent"
+            android:paddingBottom="28pt"
+            android:paddingEnd="28pt"
+            android:paddingTop="28pt"
+            android:src="@mipmap/lib_icon_back_white"
+            android:tint="@color/libTextWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/liblib_include_head80"
+            android:textColor="@color/libTextWhite"
+            android:textSize="32pt"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/right_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20pt"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:textColor="@color/libTextWhite"
+        android:textSize="28pt"
+        tools:text="hehe" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="80pt"
+        android:layout_height="80pt"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="20pt"
+        android:visibility="visible" />
+
+</RelativeLayout>

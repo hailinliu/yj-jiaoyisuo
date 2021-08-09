@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bibiBgDeep"
+    android:paddingTop="45pt"
+    android:orientation="vertical"
+    tools:context="com.sskj.bibi.ui.fragment.BibiMainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="101pt"
+        android:layout_marginTop="20pt"
+        android:background="@color/bibiBgDeep"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivTopLeft"
+            android:layout_width="90pt"
+            android:layout_height="90pt"
+            android:padding="30pt"
+            android:src="@mipmap/bibi_icon_main_left"
+           />
+<LinearLayout
+    android:id="@+id/ll_click"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:layout_marginStart="50pt">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/libTextWhite"
+        android:textSize="36pt"
+        tools:text="ETH/USDT" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10pt"
+        android:layout_gravity="center"
+        android:src="@mipmap/bibi_icon_arrow_down"
+        android:tint="@color/libTextWhite" />
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/ivTopRight"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginEnd="30pt"
+    android:layout_marginTop="30pt"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="60pt"
+        android:layout_height="60pt"
+        android:padding="15pt"
+        android:src="@mipmap/lib_usd"
+        />
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:text="USD"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/libTextWhite"
+        android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="40pt"
+            android:layout_height="40pt"
+            android:padding="15pt"
+            android:layout_gravity="center"
+            android:src="@mipmap/bibi_icon_arrow_down"
+            android:tint="@color/libTextWhite"
+           />
+</LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20pt" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0pt">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bibiBgDeep"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/tradeFrameLayout"
+                        android:layout_width="0pt"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <FrameLayout
+                        android:id="@+id/pankouFrameLayout"
+                        android:layout_width="0pt"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100pt"
+                    android:layout_marginTop="20pt"
+                    android:background="@color/bibiBgDeep"
+                    android:paddingStart="32pt"
+                    android:paddingEnd="32pt">
+
+                    <TextView
+                        android:id="@+id/tvEntrustCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/levellevel_fragment_main220"
+                        android:textColor="@color/libTextWhite"
+                        android:textSize="32pt"
+                         />
+
+                    <TextView
+                        android:id="@+id/tvEntrustAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/leveltradeActivity1"
+                        android:textColor="@color/libRed"
+                        android:textSize="32pt"
+                        />
+
+                    <ImageView
+                        android:id="@+id/ivEntrustAll"
+                        android:layout_width="28pt"
+                        android:layout_height="28pt"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12pt"
+                        android:layout_toStartOf="@id/tvEntrustAll"
+                        android:src="@mipmap/bibi_icon_all_entrust"
+                        android:tint="@color/libTextWhite"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1pt"
+                    android:background="@color/bibiDivider" />
+
+                <FrameLayout
+                    android:id="@+id/entrustFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bibiBgDeep" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+<LinearLayout
+    android:id="@+id/ll_button"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="10pt"
+    android:layout_marginBottom="10pt"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:text="@string/bibiBtc_usdt"
+        android:textColor="@color/libTextWhite"
+        android:layout_marginStart="20pt"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/bibi_zhankai"
+        android:layout_marginEnd="20pt"
+        android:textColor="@color/libTextGray"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+    <com.sskj.depth.view.DepthMapView
+        android:id="@+id/depthMapView"
+        android:layout_width="match_parent"
+        android:layout_height="320pt"
+        android:visibility="gone"
+        app:depth_mv_background_color="@color/bibiBgDeep"
+        app:depth_mv_buy_path_color="@color/hangGreenHint"
+        app:depth_mv_sell_path_color="@color/hangRedHint" />
+
+</LinearLayout>

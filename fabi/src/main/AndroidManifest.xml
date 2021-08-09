@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sskj.fabi">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application>
+        <activity android:name=".ui.activity.OrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OrderRecordDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.OrderRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PublishRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PublishActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.PayOrderActivity" />
+        <activity android:name=".ui.activity.ChartActivity" />
+        <activity android:name=".ui.activity.PayOrderSellActivity" />
+        <activity android:name=".ui.activity.MerchantCenterActivity" />
+        <activity android:name=".ui.fragment.FabiMainFragmentActivity" />
+    </application>
+
+</manifest>

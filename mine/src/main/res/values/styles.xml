@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+    <style name="mineButtonStyle" parent="libButtonStyle"/>
+
+    <style name="mineButtonStyle.CheckCode" parent="libButtonStyle.CheckCode"/>
+
+    <style name="mineButtonStyle.white">
+        <item name="android:background">@drawable/mine_shape_bg_corner45</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:textColor">@color/libDivider</item>
+    </style>
+
+    <style name="mineButtonStyle.strokeWhite">
+        <item name="android:background">@drawable/mine_shape_corner45_stroke_bg</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:textColor">@color/libDivider</item>
+    </style>
+    <style name="mineButtonStyle.trans">
+        <item name="android:background">@drawable/mine_shape_corner45_trans</item>
+        <item name="android:textSize">30pt</item>
+        <item name="android:textColor">@color/mineBg</item>
+    </style>
+</resources>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.activity.AddPayTypeActivity">
+
+    <LinearLayout
+        android:layout_width="690pt"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="30pt"
+        android:background="@drawable/pay_add_pay_bg"
+        android:orientation="vertical"
+        android:padding="30pt">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/paypay_activity_add_pay_type60"
+                android:textColor="@color/payApp"
+                android:textSize="30pt" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="70pt"
+                android:layout_height="70pt"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="20pt"
+                android:src="@mipmap/pay_icon_close"
+                android:tint="@color/commonTextBBB" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingTop="8pt"
+            android:paddingBottom="8pt"
+            android:text="@string/paypay_activity_add_pay_type110"
+            android:textColor="@color/payTextTitle"
+            android:textSize="28pt" />
+        <com.hey.lib.HeySpinner
+            android:id="@+id/heySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="90pt"
+            android:background="@drawable/pay_shape_strokeeee"
+            android:clickable="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:padding="10pt"
+            android:text="@string/paypay_activity_add_pay_type130"
+            android:textColor="@color/payTextTitle"
+            android:textSize="28pt"
+            app:arrowColor="@color/payTextTitle"
+            app:dividerColor="@color/transparent"
+            app:itemBackground="@color/payBgDeep"
+            app:itemTextColor="@color/payTextContent"
+            app:showArrow="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingTop="8pt"
+            android:paddingBottom="8pt"
+            android:text="@string/paypay_activity_add_pay_type150"
+            android:textColor="@color/payTextTitle"
+            android:textSize="28pt" />
+
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10pt"
+            android:layout_marginEnd="8dp"
+            android:background="@color/payBgDeep"
+            android:gravity="center_vertical"
+            android:padding="10pt"
+            android:text="@string/paypay_activity_add_pay_type170"
+            android:textColor="@color/commonBlack"
+            android:textSize="26pt" />
+
+        <LinearLayout
+            android:id="@+id/llWx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type210"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt" />
+
+            <EditText
+                android:id="@+id/etWx"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pay_shape_strokeeee"
+                android:gravity="center_vertical"
+                android:hint="@string/paypay_activity_add_pay_type230"
+                android:padding="10pt"
+                android:textColor="@color/payTextContent"
+                android:textColorHint="@color/payTextHint"
+                android:textSize="26pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type251"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt" />
+
+            <RelativeLayout
+                android:id="@+id/rlWx"
+                android:layout_width="match_parent"
+                android:layout_height="200pt"
+                android:layout_marginTop="30pt"
+                android:layout_marginEnd="30pt"
+                android:background="@color/payBgDeep">
+
+                <ImageView
+                    android:layout_width="59pt"
+                    android:layout_height="52pt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40pt"
+                    android:src="@mipmap/pay_icon_add_pay_type"
+                    android:translationZ="0pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20pt"
+                    android:layout_marginBottom="50pt"
+                    android:text="@string/paypay_activity_add_pay_type310"
+                    android:textColor="@color/payTextHint"
+                    android:textSize="22pt" />
+
+                <ImageView
+                    android:id="@+id/ivQRWx"
+                    android:layout_width="400pt"
+                    android:layout_height="200pt"
+                    android:layout_centerInParent="true"
+                    android:background="@color/payBgDeep"
+                    android:paddingStart="80pt"
+                    android:paddingEnd="80pt"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAlipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type390"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt" />
+
+            <EditText
+                android:id="@+id/etAlipay"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pay_shape_strokeeee"
+                android:gravity="center_vertical"
+                android:hint="@string/payaddPayTypeActivity4"
+                android:padding="10pt"
+                android:textColor="@color/payTextContent"
+                android:textColorHint="@color/payTextHint"
+                android:textSize="26pt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type250"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt" />
+
+            <RelativeLayout
+                android:id="@+id/rlAlipay"
+                android:layout_width="match_parent"
+                android:layout_height="227pt"
+                android:background="@color/payBgDeep">
+
+                <ImageView
+                    android:layout_width="59pt"
+                    android:layout_height="52pt"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/pay_icon_add_pay_type"
+                    android:translationZ="0pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50pt"
+                    android:text="@string/paypay_activity_add_pay_type490"
+                    android:textColor="@color/payTextHint"
+                    android:textSize="22pt" />
+
+                <ImageView
+                    android:id="@+id/ivQRAlipay"
+                    android:layout_width="400pt"
+                    android:layout_height="200pt"
+                    android:layout_centerInParent="true"
+                    android:background="@color/payBgDeep"
+                    android:paddingStart="80pt"
+                    android:paddingEnd="80pt"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llBank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10pt"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type570"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt" />
+
+
+            <EditText
+                android:id="@+id/etBankName"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pay_shape_strokeeee"
+                android:gravity="center_vertical"
+                android:hint="@string/payaddPayTypeActivity6"
+                android:padding="10pt"
+                android:textColor="@color/payTextContent"
+                android:textColorHint="@color/payTextHint"
+                android:textSize="26pt" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type650"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt" />
+
+            <EditText
+                android:id="@+id/etBranch"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pay_shape_strokeeee"
+                android:gravity="center_vertical"
+                android:hint="@string/paypay_activity_add_pay_type670"
+                android:padding="10pt"
+                android:textColor="@color/payTextContent"
+                android:textColorHint="@color/payTextHint"
+                android:textSize="26pt" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:paddingTop="8pt"
+                android:paddingBottom="8pt"
+                android:text="@string/paypay_activity_add_pay_type610"
+                android:textColor="@color/payTextTitle"
+                android:textSize="28pt"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/etBankNum"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10pt"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/pay_shape_strokeeee"
+                android:gravity="center_vertical"
+                android:hint="@string/payaddPayTypeActivity7"
+                android:inputType="number"
+                android:padding="10pt"
+                android:textColor="@color/payTextContent"
+                android:textColorHint="@color/payTextHint"
+                android:textSize="26pt" />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10pt"
+            android:paddingTop="8pt"
+            android:paddingBottom="8pt"
+            android:text="@string/paypay_activity_add_pay_type700"
+            android:textColor="@color/payTextTitle"
+            android:textSize="28pt" />
+
+        <EditText
+            android:id="@+id/etPwd"
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10pt"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/pay_shape_strokeeee"
+            android:gravity="center_vertical"
+            android:hint="@string/payaddPayTypeActivity3"
+            android:inputType="textWebPassword"
+            android:padding="10pt"
+            android:textColor="@color/payTextContent"
+            android:textColorHint="@color/payTextHint"
+            android:textSize="26pt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginTop="10pt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                style="@style/payButtonCancel"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_margin="15pt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/paypay_activity_add_pay_type760" />
+
+            <TextView
+                android:id="@+id/tvSure"
+                style="@style/payButtonSure"
+                android:layout_width="0pt"
+                android:layout_height="match_parent"
+                android:layout_margin="15pt"
+                android:layout_weight="1"
+                android:text="@string/paypay_activity_add_pay_type780" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

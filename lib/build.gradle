@@ -1,0 +1,96 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    signingConfigs {
+        release {
+            storeFile file(rootProject.ext.release["storeFile"])
+            storePassword rootProject.ext.release["storePassword"]
+            keyAlias = rootProject.ext.release["keyAlias"]
+            keyPassword rootProject.ext.release["keyPassword"]
+        }
+        debug {
+
+            storeFile file(rootProject.ext.debug["storeFile"])
+            storePassword rootProject.ext.debug["storePassword"]
+            keyAlias = rootProject.ext.debug["keyAlias"]
+            keyPassword rootProject.ext.debug["keyPassword"]
+        }
+    }
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME  : project.getName(), AROUTER_GENERATE_DOC: "enable",
+                             "room.schemaLocation": "$projectDir/schemas".toString(),]
+            }
+        }
+        sourceSets {
+            androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+        }
+        buildConfigField("String", "IP", "\"${rootProject.ext.android["IP"]}\"")
+        buildConfigField("String", "IMG_IP", "\"${rootProject.ext.android["IMG_IP"]}\"")
+        buildConfigField("String", "WS7272", "\"${rootProject.ext.android["WS7272"]}\"")
+    }
+
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+    flavorDimensions "app"
+    //根据项目工程配置出不同的包
+    productFlavors {
+        re {
+            versionCode rootProject.ext.release["versionCode"]
+            versionName rootProject.ext.release["versionName"]
+            signingConfig signingConfigs.release
+            buildConfigField("String", "IP", "\"${rootProject.ext.release.IP}\"")
+            buildConfigField("String", "IMG_IP", "\"${rootProject.ext.release.IMG_IP}\"")
+            buildConfigField("String", "WS7272", "\"${rootProject.ext.release.WS7272}\"")
+        }
+        de {
+            versionCode rootProject.ext.debug["versionCode"]
+            versionName rootProject.ext.debug["versionName"]
+            signingConfig signingConfigs.debug
+            buildConfigField("String", "IP", "\"${rootProject.ext.debug.IP}\"")
+            buildConfigField("String", "IMG_IP", "\"${rootProject.ext.debug.IMG_IP}\"")
+            buildConfigField("String", "WS7272", "\"${rootProject.ext.debug.WS7272}\"")
+        }
+
+    }
+    resourcePrefix "lib"
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+dependencies {
+    api 'com.binaryfork:spanny:1.0.4'
+    api files('libs/captcha-release_v3.0.1.aar')
+    api 'com.sskj:depth:0.1.2'
+    api rootProject.ext.dependencies["dagger2"]
+    api 'com.zzhoujay.richtext:richtext:2.5.4'
+    api 'com.sskj:common:0.6.6'
+    implementation 'com.facebook.fresco:fresco:1.5.0'
+    implementation 'com.github.NaikSoftware:StompProtocolAndroid:1.6.4'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0-rc1"
+    annotationProcessor rootProject.ext.dependencies["dagger2-apt-compiler"]
+    api 'com.sskj.android:kchart:2.7.6'
+    //api 'com.hey:HeySpinner:2.1.0'
+    api 'com.github.HeyJuly:HeySpinner:2.1.8'
+    implementation 'org.raphets:roundimageview:1.2.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    api 'com.github.lvzhihao100:Loading:1.0'
+    implementation 'com.github.razerdp:BasePopup:2.1.8'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    api 'com.wei.android.lib:fingerprintidentify:1.2.1'
+
+
+}

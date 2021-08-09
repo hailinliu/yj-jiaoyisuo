@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fabi_shape_bg_corner_top"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:paddingStart="30pt"
+            android:paddingEnd="30pt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="100pt"
+                android:gravity="center_vertical"
+                android:text="@string/fabipublishActivity4"
+                android:textColor="@color/fabiTextTitle"
+                android:textSize="36pt" />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="50pt"
+                android:layout_height="50pt"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10pt"
+                android:src="@mipmap/fabi_icon_dialog_close" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/fabiDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30pt"
+            android:paddingEnd="30pt">
+
+            <LinearLayout
+                android:id="@+id/llAlipay"
+                android:layout_width="match_parent"
+                android:layout_height="130pt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40pt"
+                    android:layout_height="40pt"
+                    android:layout_marginEnd="30pt"
+                    android:src="@mipmap/fabi_icon_alipay" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100pt"
+                    android:gravity="center_vertical"
+                    android:text="@string/fabipublishActivity21"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="36pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:background="@color/fabiDivider" />
+
+            <LinearLayout
+                android:id="@+id/llBank"
+                android:layout_width="match_parent"
+                android:layout_height="130pt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40pt"
+                    android:layout_height="40pt"
+                    android:layout_marginEnd="30pt"
+                    android:src="@mipmap/fabi_icon_bank" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100pt"
+                    android:gravity="center_vertical"
+                    android:text="@string/fabibuySellFragment11"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="36pt" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1pt"
+                android:background="@color/fabiDivider" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="levellevel_fragment_buy_sell790">수수료</string>
+    <string name="levelbuyAndSellFragment10">최소 주문량</string>
+    <string name="levelbuyAndSellFragment7">먼저 로그인하십시오</string>
+    <string name="levelbuyAndSellFragment15">작업 성공</string>
+    <string name="levelbuyAndSellFragment25">주문 성공</string>
+    <string name="levelbuyAndSellFragment8">가격을 입력하십시오</string>
+    <string name="levelbuyAndSellFragment9">개수를 입력하십시오</string>
+    <string name="levellevel_recy_item_deal470">숏 프라이스</string>
+    <string name="levellevel_recy_item_holder1130">수정</string>
+    <string name="levellevel_fragment_buy_sell540">사용 가능 한</string>
+    <string name="levellevel_recy_item_deal400">거래가격</string>
+    <string name="leveltradeListBean2">한정 가격</string>
+    <string name="leveltradeListBean1">시가</string>
+    <string name="levellevel_dialog_cancel220">위탁 가격</string>
+    <string name="levellevel_recy_item_deal1180">나누기</string>
+    <string name="levellevel_recy_item_deal810">숙박비</string>
+    <string name="leveltradeActivity10">재고폭발율</string>
+    <string name="levellevel_dialog_trade_info_tip480">유형</string>
+    <string name="levellevel_fragment_buy_sell610">입력 갯수</string>
+    <string name="levellevel_activity_share170">usdt 계약</string>
+    <string name="levellevel_dialog_cancel290">영수증 취소하실 건지 여부입니다</string>
+    <string name="levellevel_dialog_trade_info_tip120">매입</string>
+    <string name="levellevel_dialog_trade_info_tip240">거래 총액</string>
+    <string name="levellevel_dialog_set_price270">적정 가격을 설정하세요</string>
+    <string name="levellevel_recy_item_holder1110">평창</string>
+    <string name="levellevel_recy_item_entrust710">취소</string>
+    <string name="levelbuyAndSellFragment3">시가 거래</string>
+    <string name="levelbuyAndSellFragment4">한정가격거래</string>
+    <string name="levelbuyAndSellFragment5">자금 부족</string>
+    <string name="levellevel_activity_share310">오픈 마켓 평균 가격</string>
+    <string name="levelbuyAndSellFragment6">1장 =</string>
+    <string name="levelbuySellEnum2">공매도</string>
+    <string name="levelbuySellEnum1">많이</string>
+    <string name="levelbuyAndSellFragment1">로그인하십시오</string>
+    <string name="levelbuyAndSellFragment2">재고 폭발율%s</string>
+    <string name="levellevel_dialog_pingcang290">풀링 물량</string>
+    <string name="leveltradeActivity4">거래</string>
+    <string name="leveltradeActivity3">위탁</string>
+    <string name="leveltradeActivity6">동적 지분</string>
+    <string name="levellevel_dialog_set_price140">최신 가격</string>
+    <string name="leveltradeActivity5">전부 결제할 것을 확인하십니까?</string>
+    <string name="leveltradeActivity2">포지션</string>
+    <string name="leveltradeActivity1">역사 기록</string>
+    <string name="leveltradeActivity8">usdt 동결</string>
+    <string name="leveltradeActivity7">usdt 사용 가능</string>
+    <string name="levellevel_dialog_cancel160">위탁량</string>
+    <string name="leveltradeActivity9">부동손익</string>
+    <string name="levellevel_fragment_main220">현재 위임</string>
+    <string name="levelcontractNoteBean18">수수료</string>
+    <string name="levellevel_fragment_buy_sell630">장</string>
+    <string name="leveltipLevelUtil4">최대 창고는%s 장입니다</string>
+    <string name="levellevel_dialog_set_price250">이익정지 가격</string>
+    <string name="levellevel_dialog_pingcang400">평창을 확인하시겠습니까?</string>
+    <string name="levellevel_dialog_set_price530">스톱손실 가격을 설정하세요</string>
+    <string name="levellevel_dialog_trade_info_tip170">수량</string>
+    <string name="levellevel_dialog_set_price510">정지 가격</string>
+    <string name="levellevel_dialog_cancel60">일 깨 워</string>
+    <string name="levellevel_fragment_five60">PanKou</string>
+    <string name="levellevel_fragment_buy_sell1020">거래총액:</string>
+    <string name="levellevel_activity_share240">인덱스 컨트랙</string>
+    <string name="levelholderFragment1">손익:</string>
+    <string name="leveldealFragment1">수동 정리</string>
+    <string name="levellevel_activity_trade270">원클릭 매매</string>
+    <string name="leveldealFragment3">손실을 멈추고 주식을 팔다</string>
+    <string name="leveldealFragment2">이익잉여를 막고 손실을 막다</string>
+    <string name="leveldealFragment5">매장량을 폭파시키고 강력하게 평정하다</string>
+    <string name="leveldealFragment4">시스템 평준화</string>
+    <string name="levellevel_dialog_set_price750">확인</string>
+    <string name="leveldealFragment6">손익:</string>
+    <string name="leveltradeListBean21">정지 가격</string>
+    <string name="leveltradeListBean22">이익억제가격</string>
+    <string name="levellevel_recy_item_deal570">거래량</string>
+    <string name="levelcurrentEntrustFragment1">영수증을 취소하실 건가요?</string>
+    <string name="levellevel_dialog_set_price80">방향</string>
+    <string name="levellevel_fragment_buy_sell480">현재의 가장 좋은 가격으로 거래하다</string>
+    <string name="levellevel_fragment_buy_sell80">위험률:-</string>
+    <string name="levellevel_dialog_set_price730">취소</string>
+    <string name="levellevel_dialog_pingcang60">창고정리 확인</string>
+    <string name="levellevel_dialog_trade_info_tip550">가격 (usdt)</string>
+    <string name="levellevel_recy_item_deal1080">손익</string>
+    <string name="levellevel_dialog_trade_info_tip5500">장 수</string>
+    <string name="level_slide_coin1">한 화폐의 종류</string>
+    <string name="level_slide_coin2">상승과 하락</string>
+    <string name="level_slide_coin3">최신 가격</string>
+    <string name="leveltipLevelUtil48">풀백의 수량이 0이 되어서는 안 된다</string>
+    <string name="level_pingcang_success">헤딩 성공</string>
+    <string name="level_with_drawal_success">성공적으로 철회하다</string>
+    <string name="level_num">수량</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell430">시장에서 가장 좋은 가격으로 거래가 이루어지다</string>
+
+    <string name="bibi_bibiBuyAndSellFragment4">최소 주문량</string>
+
+    <string name="bibi_pankouFragment3">갯수 (%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail530">거래가격</string>
+
+    <string name="bibi_bibiBuyAndSellFragment2">한정 가격</string>
+
+    <string name="bibi_pankouFragment1">구매 가격 (%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail330">수속비 (eth)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment3">거래액</string>
+
+    <string name="bibi_pankouFragment2">판매 가격 (%s)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment8">로그인하십시오</string>
+
+    <string name="bibi_bibiBuyAndSellFragment9">먼저 로그인하십시오</string>
+
+    <string name="bibi_bibi_activity_record_detail460">시간</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip250">유형</string>
+
+    <string name="bibi_bibi_activity_slide60">통화 전환</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip450">확정</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history310">거래 총액</string>
+
+    <string name="bibi_activity_all_entrust_and_history150">압축</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history80">취소</string>
+
+    <string name="bibi_allEntrustFragment4">가격(%s)</string>
+
+    <string name="bibi_tipBibiUtil1">매입</string>
+
+    <string name="bibi_allEntrustFragment3">취소</string>
+
+    <string name="bibi_allEntrustFragment6">갯수(%s)</string>
+
+    <string name="bibi_bibi_fragment_hangqing60">최신 가격</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history150">위탁가격 (usdt)</string>
+
+    <string name="bibi_allEntrustFragment5">총금액</string>
+
+    <string name="bibi_allEntrustFragment7">실제 거래가 이루어짐 (%s)</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip80">방향</string>
+
+    <string name="bibi_tipBibiUtil2">시가</string>
+
+    <string name="bibi_tipBibiUtil3">금액</string>
+
+    <string name="bibi_bibi_activity_record_detail190">거래량 (eth)</string>
+
+    <string name="bibi_bibi_fragment_pankou150">수량 (eos)</string>
+
+    <string name="bibi_bibi_activity_record_detail150">거래총액 (usdt)</string>
+
+    <string name="bibi_historyEntrustFragment11">평균 거래가격 (%s)</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell640">사용 가능 한</string>
+
+    <string name="bibi_historyEntrustFragment12">의뢰금액 (%s)</string>
+
+    <string name="bibi_recordDetailActivity4">평균 거래가격 (%s)</string>
+
+    <string name="bibi_historyEntrustFragment2">거래 중</string>
+
+    <string name="bibi_bibi_activity_record320">한 화폐의 종류</string>
+
+    <string name="bibi_recordDetailActivity5">거래 건수 (%s)</string>
+
+    <string name="bibi_recordDetailActivity2">총 거래 금액 (%s)</string>
+
+    <string name="bibi_recordDetailActivity3">수속비 (%s)</string>
+
+    <string name="bibi_historyEntrustFragment1">위탁 중</string>
+
+    <string name="bibi_bibi_activity_record_detail670">수수료</string>
+
+    <string name="bibi_historyEntrustFragment7">시가</string>
+
+    <string name="bibi_pankouUpDownFragment1">자리수 소수</string>
+
+    <string name="bibi_bibiBuyAndSellFragment13">%s 가격을 입력하십시오</string>
+
+    <string name="bibi_bibiBuyAndSellFragment14">거래액:</string>
+
+    <string name="bibi_recordActivity3">팔</string>
+
+    <string name="bibi_bibiBuyAndSellFragment15">거래량:</string>
+
+    <string name="bibi_recordActivity4">이미 거래가 성립되다</string>
+
+    <string name="bibi_bibiBuyAndSellFragment16">거래액:</string>
+
+    <string name="bibi_recordActivity5">취소됨</string>
+
+    <string name="bibi_bibiBuyAndSellFragment10">%s 개수를 입력하십시오</string>
+
+    <string name="bibi_bibiBuyAndSellFragment11">구매</string>
+
+    <string name="bibi_bibi_include_pankou60">PanKou</string>
+
+    <string name="bibi_bibiBuyAndSellFragment12">판매</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip150">가격</string>
+
+    <string name="bibi_bibi_activity_record280">거래쌍</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip430">취소</string>
+
+    <string name="bibi_activity_all_entrust_and_history120">역사 기록</string>
+
+    <string name="bibi_bibi_activity_record360">가격 계산 단위를 선택하다</string>
+
+    <string name="bibi_recordDetailActivity1">detail</string>
+
+    <string name="bibi_bibi_fragment_hangqing80">상승과 하락</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history170">위탁량</string>
+
+    <string name="bibi_activity_all_entrust_and_history80">모두 보기</string>
+
+    <string name="bibi_bibi_fragment_pankou_up_down40">소수 1자리</string>
+
+    <string name="bibi_bibi_activity_record_detail600">거래량</string>
+
+    <string name="bibi_bibi_activity_record_detail170">거래평균가격 (usdt)</string>
+
+    <string name="bibi_bibi_fragment_pankou130">매입 가격 (usdt)</string>
+
+    <string name="bibi_bibi_fragment_bibi_main210">창고 파괴율:-</string>
+
+    <string name="bibi_bibi_fragment_bibi_main330">현재 위임</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell820">거래액:</string>
+
+    <string name="bibi_bibi_activity_record390">오더 상태</string>
+
+    <string name="bibi_bibi_fragment_pankou170">판매가격 (usdt)</string>
+
+    <string name="bibi_count_hint">수량</string>
+
+    <string name="bibi_all_commission">현재 위임</string>
+    <string name="bibi_history_commission">과거 주문</string>
+    <string name="bibi_cfj">촉발 가격</string>
+    <string name="bibi_bibicftint">정확한 트리거 가격을 입력해주세요</string>
+    <string name="bibi_zyzs">손익과 손실을 막다</string>
+    <string name="bibi_allEntrustFragment400">트리거 가격 (%s)</string>
+    <string name="bibi_wcf">(트리거되지 않음)</string>
+    <string name="bibi_ycf">(트리거됨)</string>
+    <string name="bibi_cancel">취소</string>
+    <string name="bibi_cancel_title">주문을 철회하다</string>
+    <string name="bibi_qiehuan">통화 전환</string>
+    <string name="bibi_detail_record">거래 내역</string>
+    <string name="bibi_market_price">시가</string>
+    <string name="bibi_limit_price">한정 가격</string>
+    <string name="bibi_now_price">한정 가격</string>
+    <string name="bibi_shi_jia">시가</string>
+    <string name="bibi_stop_pl">이익과 손실을 막다</string>
+    <string name="level_cancel">취소</string>
+    <string name="levelUsdt">위탁가격 (usdt)</string>
+    <string name="level_unit">의뢰량 (usdt)</string>
+    <string name="level_zong">총 위탁 물량 (usdt)</string>
+    <string name="level_jiaoyi_zonge">거래 총액</string>
+    <string name="level_cedan">취소</string>
+    <string name="level_dangqian">당면 손익:</string>
+    <string name="level_fengxian">위험률:</string>
+    <string name="level_chicang">현재포지션</string>
+    <string name="levelbtc_usdt">btc/usdt 심도 차트</string>
+    <string name="level_zhankai">펴려면 누르십시오</string>
+    <string name="level_zuoduo">많이</string>
+    <string name="level_zuokong">공매도</string>
+    <string name="level_1">소수 1자리</string>
+    <string name="level_baozhengjin">보증금</string>
+    <string name="level_weituoliang">위탁량</string>
+    <string name="level_gangganbeishu">레버리지 배수</string>
+    <string name="level_pingcang">재고량</string>
+    <string name="level_new_usdt">위탁가격 (usdt)</string>
+    <string name="level_usdt_num">의뢰량 (usdt)</string>
+    <string name="level_zongliang">총 위탁 물량 (usdt)</string>
+    <string name="level_time">시간</string>
+    <string name="level_chengjiao_zongliang">거래 총액</string>
+    <string name="level_junjia">거래평균가격 (usdt)</string>
+    <string name="level_ganggan">레버리지 배수</string>
+    <string name="level_chicangliang">포지션 보유량</string>
+    <string name="level_zyzs">손익과 손실을 막다</string>
+    <string name="level_ce">해약증서</string>
+    <string name="level_shen">심도 그래프</string>
+    <string name="level_weituo">위탁 가격(%s)</string>
+    <string name="level_default">기본 디스크</string>
+    <string name="level_maipan">사는 값</string>
+    <string name="level_mai_pan">소매 가격.</string>
+    <string name="level_success">성공</string>
+
+</resources>

@@ -1,0 +1,221 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "e47deb9d978041ed3e9f7892a7c5283e",
+    "entities": [
+      {
+        "tableName": "SafeSettingBean",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`username` TEXT, `id` INTEGER NOT NULL, `createTime` TEXT, `realVerified` INTEGER NOT NULL, `emailVerified` INTEGER NOT NULL, `phoneVerified` INTEGER NOT NULL, `loginVerified` INTEGER NOT NULL, `fundsVerified` INTEGER NOT NULL, `googleVerified` INTEGER NOT NULL, `realAuditing` INTEGER NOT NULL, `mobilePhone` TEXT, `email` TEXT, `realName` TEXT, `realNameRejectReason` TEXT, `idCard` TEXT, `avatar` TEXT, `accountVerified` INTEGER NOT NULL, `googleStatus` INTEGER NOT NULL, `transactions` INTEGER NOT NULL, `transactionTime` TEXT, `level` INTEGER NOT NULL, `integration` INTEGER NOT NULL, `kycStatus` INTEGER NOT NULL, `memberGradeId` INTEGER NOT NULL, `securityMessage` TEXT, `securityCount` INTEGER NOT NULL, `memberLevel` INTEGER NOT NULL, `isQuick` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "username",
+            "columnName": "username",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createTime",
+            "columnName": "createTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "realVerified",
+            "columnName": "realVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emailVerified",
+            "columnName": "emailVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phoneVerified",
+            "columnName": "phoneVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "loginVerified",
+            "columnName": "loginVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fundsVerified",
+            "columnName": "fundsVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "googleVerified",
+            "columnName": "googleVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "realAuditing",
+            "columnName": "realAuditing",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mobilePhone",
+            "columnName": "mobilePhone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "realName",
+            "columnName": "realName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "realNameRejectReason",
+            "columnName": "realNameRejectReason",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "idCard",
+            "columnName": "idCard",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "avatar",
+            "columnName": "avatar",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "accountVerified",
+            "columnName": "accountVerified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "googleStatus",
+            "columnName": "googleStatus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transactions",
+            "columnName": "transactions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transactionTime",
+            "columnName": "transactionTime",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "level",
+            "columnName": "level",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "integration",
+            "columnName": "integration",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kycStatus",
+            "columnName": "kycStatus",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memberGradeId",
+            "columnName": "memberGradeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "securityMessage",
+            "columnName": "securityMessage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "securityCount",
+            "columnName": "securityCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "memberLevel",
+            "columnName": "memberLevel",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isQuick",
+            "columnName": "isQuick",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SelfCoinBean",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `code` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"e47deb9d978041ed3e9f7892a7c5283e\")"
+    ]
+  }
+}

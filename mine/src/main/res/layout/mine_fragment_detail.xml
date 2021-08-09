@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lib_bg">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20pt"
+        android:layout_height="wrap_content">
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="20pt"
+        android:textColor="@color/libTextGray"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/mine_yincang"
+            android:layout_marginStart="5pt"
+            android:textColor="@color/libTextGray"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="0pt"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:orientation="horizontal"
+         android:gravity="center"
+         android:layout_gravity="center"
+         android:background="@drawable/mine_shape_corner45_stroke_bg2"
+         android:layout_height="wrap_content">
+         <ImageView
+             android:layout_width="20pt"
+             android:src="@mipmap/mine_sousuo"
+             android:layout_marginStart="20pt"
+             android:layout_gravity="center"
+             android:layout_height="20pt"/>
+         <EditText
+             android:id="@+id/et_sousuo"
+             android:layout_width="200pt"
+             android:hint="@string/mine_solo"
+             android:paddingStart="20pt"
+             android:textColorHint="@color/libTextGray"
+             android:background="@null"
+             android:layout_height="wrap_content"/>
+     </LinearLayout>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="40pt"
+            android:src="@mipmap/mine_a_z"
+            android:layout_marginStart="10pt"
+            android:layout_marginEnd="30pt"
+            android:layout_gravity="center"
+            android:layout_height="40pt"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+
+
+

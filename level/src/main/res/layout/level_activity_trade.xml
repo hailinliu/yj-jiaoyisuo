@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/levelBgDeep"
+    tools:context="com.sskj.level.ui.activity.TradeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/lib_include_head" />
+
+
+<!--        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150pt"
+            android:layout_marginTop="2pt"
+            android:background="@color/levelBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/trade_item_dtqy"
+                layout="@layout/level_item_trade"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/trade_item_kyzj"
+                layout="@layout/level_item_trade"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/trade_item_djbzj"
+                layout="@layout/level_item_trade"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150pt"
+            android:layout_marginTop="20pt"
+            android:background="@color/levelBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="40pt"
+            android:paddingRight="40pt">
+
+            <include
+                android:id="@+id/trade_item_fdyk"
+                layout="@layout/level_item_trade2"
+                android:layout_width="0pt"
+                android:layout_height="106pt"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/trade_item_fxl"
+                layout="@layout/level_item_trade_boom"
+                android:layout_width="0pt"
+                android:layout_height="106pt"
+                android:layout_marginStart="20pt"
+                android:layout_weight="1" />
+        </LinearLayout>-->
+
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/slidingTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="90pt"
+            android:layout_marginTop="20pt"
+            android:background="@color/lib_bg"
+            app:tl_textBold="BOTH"
+            app:tl_textsize="30pt"
+            app:tl_underline_color="@color/transparent"
+            app:tl_underline_height="0pt"
+            tl:tl_divider_color="#1A000000"
+            tl:tl_divider_padding="0pt"
+            tl:tl_divider_width="0dp"
+            tl:tl_indicator_color="@color/levelApp"
+            tl:tl_indicator_height="5pt"
+            tl:tl_indicator_width="55pt"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_padding="5pt"
+            tl:tl_tab_space_equal="true"
+            tl:tl_textSelectColor="@color/levelApp"
+            tl:tl_textUnselectColor="@color/levelTextHint" />
+
+
+        <FrameLayout
+            android:id="@+id/tradeFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2pt" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/level_all_pc"
+        android:layout_width="110pt"
+        android:layout_height="110pt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20pt"
+        android:layout_marginBottom="120pt"
+        android:background="@drawable/level_oval_shape"
+        android:gravity="center"
+        android:padding="20pt"
+        android:text="@string/levellevel_activity_trade270"
+        android:textColor="@color/levelBg"
+        android:textSize="27pt"
+        android:visibility="invisible" />
+</RelativeLayout>

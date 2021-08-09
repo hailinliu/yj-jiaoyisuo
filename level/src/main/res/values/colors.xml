@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!--换肤产品，颜色-->
+    <color name="levelTextTitle">@color/libTextTitle</color>
+    <color name="levelTextContent">@color/libTextContent</color>
+    <color name="levelTextHint">@color/libTextHint</color>
+    <color name="levelBgDeep">@color/libBgDeep</color>
+    <color name="levelBg">@color/libBg</color>
+    <color name="levelGreen">@color/libGreen</color>
+    <color name="levelRed">@color/libRed</color>
+    <color name="levelDivider">@color/libDivider</color>
+    <color name="levelApp">@color/libApp</color>
+    <color name="levelSolidButtonText">@color/libSolidButtonText</color>
+    <color name="levelGreenHint">@color/libGreenHint</color>
+    <color name="levelRedHint">@color/libRedHint</color>
+    <color name="level_bg">#102341</color>
+    <color name="level_bottom_bg">#203049</color>
+    <color name="level_text">#01A98F</color>
+    <color name="level_32b">#1BCB44</color>
+    <color name="bibiRedText">#FF5755</color>
+    <color name="bibi_ff5">#FF5755</color>
+    <color name="bibiGreenText">#1ED189</color>
+    <color name="bibi_03c">#03C087</color>
+    <!--换肤产品，颜色-->
+    <color name="bibiTextContent">@color/libTextContent</color>
+    <color name="bibiTextHint">@color/libTextHint</color>
+    <color name="bibiBgDeep">@color/libBgDeep</color>
+    <color name="bibiBg">@color/libBg</color>
+    <color name="bibiSelect">@color/libSelect</color>
+    <color name="bibiUnSelect">@color/libUnSelect</color>
+    <color name="bibiGreen">@color/libGreen</color>
+    <color name="bibiRed">@color/libRed</color>
+    <color name="bibiDivider">@color/libDivider</color>
+    <color name="bibiApp">@color/libApp</color>
+    <color name="bibiGreenHint">#301ED189</color>
+    <color name="bibiRedHint">#30f53131</color>
+    <color name="bibiHistorytext">#1CB996</color>
+    <color name="bibiHistorytext1">#E59625</color>
+    <color name="bibiHistorytext2">#EF4444</color>
+</resources>

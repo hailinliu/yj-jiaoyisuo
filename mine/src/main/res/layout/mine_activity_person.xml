@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBg"
+    android:orientation="vertical">
+
+    <include layout="@layout/lib_include_head" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:background="@color/libBg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/libBg"
+        android:orientation="vertical"
+        android:paddingLeft="30pt"
+        android:paddingRight="30pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/minemine_activity_person100"
+                android:textColor="@color/libTextWhite" />
+
+            <TextView
+                android:id="@+id/grade_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/commonWhite"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/mineTextContent"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112pt"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/minemine_activity_person190"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/mobile_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112pt"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/minemine_activity_person280"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/transition_id_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112pt"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/minemine_activity_person370"
+                android:textColor="@color/commonWhite" />
+
+            <TextView
+                android:id="@+id/id_nation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textColor="@color/commonWhite"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112pt"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/minemine_activity_person460"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112pt"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/minemine_activity_person550"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/tv_leavl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/libTextContent"
+                android:textSize="30pt"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112pt"
+            android:background="@color/libBg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/minemine_activity_person640"
+                android:textColor="@color/libTextContent"
+                android:textSize="30pt" />
+
+            <TextView
+                android:id="@+id/id_card_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/libTextContent"
+                android:textSize="30pt"
+                tools:text="15093060100" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/libDivider" />
+
+    </LinearLayout>
+
+</LinearLayout>

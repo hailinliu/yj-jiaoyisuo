@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <!--换肤产品，颜色-->
+    <color name="identTextContent">@color/libTextContent</color>
+    <color name="identTextHint">@color/libTextHint</color>
+    <color name="identBgDeep">@color/libBgDeep</color>
+    <color name="identBg">@color/libBg</color>
+    <color name="identDivider">@color/libDivider</color>
+</resources>

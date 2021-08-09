@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.OtherRecordActivity">
+
+    <include layout="@layout/lib_include_head" />
+
+    <fragment
+        android:id="@+id/frameLayout"
+        android:name="com.sskj.tibi.ui.fragment.OtherRecordFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

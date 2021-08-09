@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/level_dialog_sure_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/level_dialog_sure_bg"
+            android:orientation="vertical"
+            android:padding="30pt"
+            android:paddingBottom="50pt">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:text="@string/levellevel_dialog_pingcang60"
+                android:textColor="@color/libTextWhite"
+                android:textSize="36pt"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40pt"
+                    android:text="@string/levellevel_dialog_trade_info_tip480"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/levelbuySellEnum2"
+                    android:textColor="@color/levelRed"
+                    android:textSize="30pt" />
+
+                <View
+                    android:layout_width="0pt"
+                    android:layout_height="0pt"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvEntrustNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="26pt"
+                    android:visibility="gone"
+                    tools:text="@string/levellevel_dialog_cancel160" />
+
+                <TextView
+                    android:id="@+id/tvDialogNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="26pt"
+                    android:visibility="gone"
+                    tools:text="62" />
+
+                <View
+                    android:layout_width="0pt"
+                    android:layout_height="0pt"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tvDialogNewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22pt"
+                    android:text="@string/levellevel_dialog_set_price140"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="200pt"
+                    android:layout_height="wrap_content"
+                    android:text="652.23"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="26pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:layout_marginTop="40pt"
+                android:background="@color/levelBgDeep"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="30pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50pt"
+                    android:text="@string/levellevel_dialog_pingcang290"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt" />
+
+                <EditText
+                    android:id="@+id/etNum"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/tvDecrease"
+                    android:layout_width="80pt"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="-"
+                    android:visibility="invisible"
+                    android:textColor="@color/levelApp"
+                    android:textSize="60pt" />
+
+                <View
+                    android:layout_width="1pt"
+                    android:layout_height="30pt"
+                    android:visibility="invisible"
+                    android:background="#6B717E" />
+
+                <TextView
+                    android:id="@+id/tvIncrease"
+                    android:layout_width="80pt"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="+"
+                    android:visibility="invisible"
+                    android:textColor="@color/levelApp"
+                    android:textSize="40pt" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvDialogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55pt"
+                android:paddingLeft="35pt"
+                android:text="@string/levellevel_dialog_pingcang400"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:layout_marginTop="50pt"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btCancel"
+                    style="@style/levelButtonCancel"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="100pt"
+                    android:layout_weight="1"
+                    android:text="@string/levellevel_dialog_set_price730" />
+
+                <Button
+                    android:id="@+id/btSure"
+                    style="@style/levelButtonSure"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/levellevel_dialog_set_price750" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

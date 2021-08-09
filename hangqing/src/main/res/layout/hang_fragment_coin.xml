@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="1091pt"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="30pt"
+        android:paddingTop="10pt"
+        android:paddingEnd="30pt"
+        android:paddingBottom="10pt"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/hang_hang_fragment_coin1300"
+            android:textStyle="bold"
+            android:textColor="@color/libTextWhite"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tv_title2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/hang_hang_fragment_coin150"
+            android:textStyle="bold"
+            android:textColor="@color/libTextWhite"
+            android:textSize="26pt" />
+
+        <TextView
+            android:id="@+id/tv_title3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="end|center_vertical"
+            android:maxLines="1"
+            android:text="@string/hang_hang_activity_market_scroll350"
+            android:layout_marginEnd="20pt"
+            android:textStyle="bold"
+            android:textColor="@color/libTextWhite"
+            android:textSize="26pt" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/includeEmpty"
+            layout="@layout/lib_mvc_empty_view" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+    </RelativeLayout>
+
+</LinearLayout>

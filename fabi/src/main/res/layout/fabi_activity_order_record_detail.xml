@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fabiBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.OrderRecordDetailActivity">
+
+    <include
+        android:id="@+id/include_head"
+        layout="@layout/lib_include_head" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lib_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fabiBgDeep"
+            android:orientation="vertical">
+
+            <include layout="@layout/fabi_include_order_record_status" />
+
+
+            <include layout="@layout/fabi_include_order_record_info" />
+
+
+            <LinearLayout
+                android:id="@+id/llPayType"
+                android:layout_width="match_parent"
+                android:layout_height="150pt"
+                android:layout_marginTop="20pt"
+                android:background="@color/lib_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="30pt"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivPayType"
+                    android:layout_width="60pt"
+                    android:layout_height="60pt"
+                    android:layout_marginEnd="30pt" />
+
+                <LinearLayout
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="0pt"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/libTextWhite"
+                        android:textSize="26pt"
+                        tools:text="@tools:sample/last_names" />
+
+
+                    <TextView
+                        android:id="@+id/tvUserInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0pt"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/fabiTextHint"
+                        android:textSize="28pt"
+                        tools:text="@tools:sample/last_names" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivQRCode"
+                    android:layout_width="60pt"
+                    android:layout_height="60pt"
+                    android:layout_marginEnd="30pt"
+                    android:src="@mipmap/fabi_icon_erweima"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llControl"
+                android:layout_width="match_parent"
+                android:layout_height="140pt"
+                android:background="@color/lib_bg"
+                android:orientation="horizontal"
+                android:padding="30pt"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btLeft"
+                    style="@style/fabiButtonStyle.Cancel"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="50pt"
+                    android:layout_weight="1"
+                    android:background="@drawable/fabi_shape_filter_uncheck" />
+
+                <Button
+                    android:id="@+id/btRight"
+                    style="@style/fabiButtonStyle.Sure"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

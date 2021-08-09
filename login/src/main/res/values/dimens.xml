@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_tongyi">80pt</dimen>
+    <dimen name="login_tonger">60pt</dimen>
+    <dimen name="login_magin_top">40pt</dimen>
+</resources>

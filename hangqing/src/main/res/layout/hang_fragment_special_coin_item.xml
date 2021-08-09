@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.SpecialCoinFragment">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+       <!-- <View
+            android:id="@+id/viewDot2"
+            android:layout_width="26pt"
+            android:layout_height="4pt"
+            android:background="@drawable/hang_shape_dot_unselect"
+            android:visibility="visible" />-->
+
+</LinearLayout>

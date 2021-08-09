@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="bibi_bibi_fragment_buy_and_sell430">시장에서 가장 좋은 가격으로 거래가 이루어지다</string>
+
+    <string name="bibi_bibiBuyAndSellFragment4">최소 주문량</string>
+
+    <string name="bibi_pankouFragment3">갯수 (%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail530">거래가격</string>
+
+    <string name="bibi_bibiBuyAndSellFragment2">한정 가격</string>
+
+    <string name="bibi_pankouFragment1">구매 가격 (%s)</string>
+
+    <string name="bibi_bibi_activity_record_detail330">수속비 (eth)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment3">거래액</string>
+
+    <string name="bibi_pankouFragment2">판매 가격 (%s)</string>
+
+    <string name="bibi_bibiBuyAndSellFragment8">로그인하십시오</string>
+
+    <string name="bibi_bibiBuyAndSellFragment9">먼저 로그인하십시오</string>
+
+    <string name="bibi_bibi_activity_record_detail460">시간</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip250">유형</string>
+
+    <string name="bibi_bibi_activity_slide60">통화 전환</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip450">확정</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history310">거래 총액</string>
+
+    <string name="bibi_activity_all_entrust_and_history150">압축</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history80">취소</string>
+
+    <string name="bibi_allEntrustFragment4">가격(%s)</string>
+
+    <string name="bibi_tipBibiUtil1">매입</string>
+
+    <string name="bibi_allEntrustFragment3">취소</string>
+
+    <string name="bibi_allEntrustFragment6">갯수(%s)</string>
+
+    <string name="bibi_bibi_fragment_hangqing60">최신 가격</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history150">위탁가격 (usdt)</string>
+
+    <string name="bibi_allEntrustFragment5">총금액</string>
+
+    <string name="bibi_allEntrustFragment7">실제 거래가 이루어짐 (%s)</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip80">방향</string>
+
+    <string name="bibi_tipBibiUtil2">시가</string>
+
+    <string name="bibi_tipBibiUtil3">금액</string>
+
+    <string name="bibi_bibi_activity_record_detail190">거래량 (eth)</string>
+
+    <string name="bibi_bibi_fragment_pankou150">수량 (eos)</string>
+
+    <string name="bibi_bibi_activity_record_detail150">거래총액 (usdt)</string>
+
+    <string name="bibi_historyEntrustFragment11">평균 거래가격 (%s)</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell640">사용 가능 한</string>
+
+    <string name="bibi_historyEntrustFragment12">의뢰금액 (%s)</string>
+
+    <string name="bibi_recordDetailActivity4">평균 거래가격 (%s)</string>
+
+    <string name="bibi_historyEntrustFragment2">거래 중</string>
+
+    <string name="bibi_bibi_activity_record320">한 화폐의 종류</string>
+
+    <string name="bibi_recordDetailActivity5">거래 건수 (%s)</string>
+
+    <string name="bibi_recordDetailActivity2">총 거래 금액 (%s)</string>
+
+    <string name="bibi_recordDetailActivity3">수속비 (%s)</string>
+
+    <string name="bibi_historyEntrustFragment1">위탁 중</string>
+
+    <string name="bibi_bibi_activity_record_detail670">수수료</string>
+
+    <string name="bibi_historyEntrustFragment7">시가</string>
+
+    <string name="bibi_pankouUpDownFragment1">자리수 소수</string>
+
+    <string name="bibi_bibiBuyAndSellFragment13">%s 가격을 입력하십시오</string>
+
+    <string name="bibi_bibiBuyAndSellFragment14">거래액:</string>
+
+    <string name="bibi_recordActivity3">팔</string>
+
+    <string name="bibi_bibiBuyAndSellFragment15">거래량:</string>
+
+    <string name="bibi_recordActivity4">이미 거래가 성립되다</string>
+
+    <string name="bibi_bibiBuyAndSellFragment16">거래액:</string>
+
+    <string name="bibi_recordActivity5">취소됨</string>
+
+    <string name="bibi_bibiBuyAndSellFragment10">%s 개수를 입력하십시오</string>
+
+    <string name="bibi_bibiBuyAndSellFragment11">구매</string>
+
+    <string name="bibi_bibi_include_pankou60">PanKou</string>
+
+    <string name="bibi_bibiBuyAndSellFragment12">판매</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip150">가격</string>
+
+    <string name="bibi_bibi_activity_record280">거래쌍</string>
+
+    <string name="bibi_bibi_dialog_trade_info_tip430">취소</string>
+
+    <string name="bibi_activity_all_entrust_and_history120">역사 기록</string>
+
+    <string name="bibi_bibi_activity_record360">가격 계산 단위를 선택하다</string>
+
+    <string name="bibi_recordDetailActivity1">detail</string>
+
+    <string name="bibi_bibi_fragment_hangqing80">상승과 하락</string>
+
+    <string name="bibi_bibi_recy_item_entrust_history170">위탁량</string>
+
+    <string name="bibi_activity_all_entrust_and_history80">모두 보기</string>
+
+    <string name="bibi_bibi_fragment_pankou_up_down40">소수 1자리</string>
+
+    <string name="bibi_bibi_activity_record_detail600">거래량</string>
+
+    <string name="bibi_bibi_activity_record_detail170">거래평균가격 (usdt)</string>
+
+    <string name="bibi_bibi_fragment_pankou130">매입 가격 (usdt)</string>
+
+    <string name="bibi_bibi_fragment_bibi_main210">창고 파괴율:-</string>
+
+    <string name="bibi_bibi_fragment_bibi_main330">현재 위임</string>
+
+    <string name="bibi_bibi_fragment_buy_and_sell820">거래액:</string>
+
+    <string name="bibi_bibi_activity_record390">오더 상태</string>
+
+    <string name="bibi_bibi_fragment_pankou170">판매가격 (usdt)</string>
+
+    <string name="bibi_count_hint">수량</string>
+
+
+    <string name="bibi_all_commission">현재 위임</string>
+
+    <string name="bibi_history_commission">과거 주문</string>
+
+    <string name="bibi_cfj">촉발 가격</string>
+
+    <string name="bibi_bibicftint">정확한 트리거 가격을 입력해주세요</string>
+
+    <string name="bibi_zyzs">손익과 손실을 막다</string>
+
+    <string name="bibi_all_Entrust_Fragment400">트리거 가격 (%s)</string>
+
+    <string name="bibi_wcf">(트리거되지 않음)</string>
+
+    <string name="bibi_ycf">(트리거됨)</string>
+    <string name="bibi_cancel">취소</string>
+    <string name="bibi_cancel_title">주문을 철회하다</string>
+    <string name="bibi_qiehuan">통화 전환</string>
+    <string name="bibi_detail_record">거래 내역</string>
+    <string name="bibi_market_price">시가</string>
+    <string name="bibi_limit_price">한정 가격</string>
+    <string name="bibi_now_price">한정 가격</string>
+    <string name="bibi_shi_jia">시가</string>
+    <string name="bibi_stop_pl">이익과 손실을 막다</string>
+    <string name="bibi_xiaoshu">소수점</string>
+    <string name="bibi_moren">기본 디스크</string>
+    <string name="bibi_maipan">바이</string>
+    <string name="bibi_mai_pan">판매 가격</string>
+    <string name="bibiBtc_usdt">btc/usdt 심도 차트</string>
+    <string name="bibi_zhankai">펴려면 누르십시오</string>
+    <string name="bibi_shendu">심도 그래프</string>
+    <string name="bibi_weituo">위탁가격 (%s)</string>
+    <string name="bibi_weituoliang">의뢰량 (%s)</string>
+    <string name="bibi_weituoe">총 위탁 금액 (%s)</string>
+    <string name="bibi_shijia">시가</string>
+    <string name="bibi_jiaoyizhong">거래 중</string>
+    <string name="bibi_wancheng">완료</string>
+    <string name="bibi_chaoshi">시간이 초과 되었습니다.</string>
+    <string name="bibi_chengjiaozong">총 거래 금액 (%s)</string>
+    <string name="bibi_shijichengjiao">실제 거래가 이루어짐 (%s)</string>
+    <string name="bibi_chengjiaojunjia">평균 거래가격 (%s)</string>
+    <string name="bibiUsdt_chengjiao">거래가(USDT)</string>
+    <string name="bibiUsdt_all">총액.(USDT)</string>
+    <string name="bibi_success">성공</string>
+</resources>

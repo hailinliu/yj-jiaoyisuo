@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sskj.lib">
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application>
+        <activity android:name=".ui.activity.FingerActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name=".ui.activity.SplashActivity" android:screenOrientation="portrait" android:theme="@style/libSplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.FingerLoginActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

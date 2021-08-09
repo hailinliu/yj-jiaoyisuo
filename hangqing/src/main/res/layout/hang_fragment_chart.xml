@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ChartFragment">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="90pt"
+        android:background="@color/lib_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/commonTabLayout"
+            android:layout_width="450pt"
+            android:layout_height="match_parent"
+            app:tl_iconVisible="false"
+            app:tl_indicator_color="@color/hangSelect"
+            app:tl_indicator_height="4pt"
+            app:tl_indicator_width="50pt"
+            app:tl_textSelectColor="@color/hangSelect"
+            app:tl_textUnselectColor="@color/hangUnSelect"
+            app:tl_textsize="26pt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30pt"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10pt"
+                    android:text="@string/hangqingchartFragment3"
+                    android:textColor="@color/hangUnSelect"
+                    android:textSize="26pt" />
+
+                <View
+                    android:layout_width="12pt"
+                    android:layout_height="12pt"
+                    android:layout_marginEnd="30pt"
+                    android:background="@mipmap/hang_icon_spinner_down"
+                    android:backgroundTint="@color/hangUnSelect" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30pt"
+                    android:visibility="visible"
+                    android:text="@string/hangqinghang_fragment_chart170"
+                    android:textColor="@color/hangUnSelect"
+                    android:textSize="26pt" />
+                <TextView
+                    android:id="@+id/tv_shendu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10pt"
+                    android:visibility="visible"
+                    android:text="@string/hang_shendu"
+                    android:textColor="@color/hangUnSelect"
+                    android:textSize="26pt" />
+
+
+                <View
+                    android:layout_width="12pt"
+                    android:layout_height="12pt"
+                    android:layout_marginEnd="30pt"
+                    android:visibility="gone"
+                    android:background="@mipmap/hang_icon_spinner_down"
+                    android:backgroundTint="@color/hangUnSelect" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.github.tifezh.kchartlib.chart.KChartView
+        android:id="@+id/kChartView"
+        android:layout_width="match_parent"
+        android:layout_height="800pt"
+        app:kc_background_color="@color/lib_bg"
+        app:kc_ma10_color="#5E789A"
+        app:kc_ma20_color="#3D734E"
+        app:kc_ma5_color="#6A478F"
+        app:kc_minute_line_color="@color/hangApp" />
+    <RelativeLayout
+        android:id="@+id/rl_deep"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <com.sskj.depth.view.DepthMapView
+            android:id="@+id/depthMapView"
+            android:layout_width="match_parent"
+            android:layout_height="320pt"
+            android:visibility="visible"
+            app:depth_mv_background_color="@color/lib_bg"
+            app:depth_mv_buy_path_color="@color/hangGreenHint"
+            app:depth_mv_sell_path_color="@color/hangRedHint" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:layout_marginTop="45pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="20pt"
+                android:layout_height="20pt"
+                android:layout_marginEnd="8pt"
+                android:background="@color/hangGreen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20pt"
+                android:text="@string/hangqinghang_fragment_deepth120"
+                android:textColor="@color/hangTextHint"
+                android:textSize="20pt" />
+
+            <View
+                android:layout_width="20pt"
+                android:layout_height="20pt"
+                android:layout_marginEnd="8pt"
+                android:background="@color/hangRed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hangqinghang_fragment_deepth160"
+                android:textColor="@color/hangTextHint"
+                android:textSize="20pt" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

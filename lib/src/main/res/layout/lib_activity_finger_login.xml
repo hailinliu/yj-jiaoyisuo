@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/libBg" android:gravity="center_horizontal" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.activity.FingerLoginActivity">
+
+    <include layout="@layout/lib_include_head"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_marginTop="71pt" android:layout_width="wrap_content" android:text="@string/liblib_activity_finger_login40" android:textColor="@color/libTextContent" android:textSize="34pt"/>
+
+    <LinearLayout android:background="@color/libBgDeep" android:gravity="center_vertical" android:layout_height="110pt" android:layout_marginTop="120pt" android:layout_width="match_parent" android:orientation="horizontal">
+
+        <EditText android:background="@null" android:digits="@string/common_filter_number_letter" android:hint="@string/liblib_activity_finger_login80" android:id="@+id/etPwd" android:inputType="textWebPassword" android:layout_height="match_parent" android:layout_marginStart="80pt" android:layout_weight="1" android:layout_width="0pt" android:textColor="@color/libTextContent" android:textColorHint="@color/libTextHint" android:textSize="28pt"/>
+
+        <ImageView android:id="@+id/ivPwdToggle" android:layout_height="17pt" android:layout_marginEnd="80pt" android:layout_width="32pt" android:src="@mipmap/lib_icon_hide"/>
+
+    </LinearLayout>
+
+    <Button android:id="@+id/btSubmit" android:layout_height="90pt" android:layout_marginTop="500pt" android:layout_width="650pt" android:text="@string/liblib_activity_finger_login130" style="@style/libButtonStyle.Sure"/>
+
+    <TextView android:id="@+id/tvLogin" android:layout_height="wrap_content" android:layout_marginTop="71pt" android:layout_width="wrap_content" android:text="@string/liblib_activity_finger_login150" android:textColor="@color/libTextContent" android:textSize="26pt"/>
+</LinearLayout>

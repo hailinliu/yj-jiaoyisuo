@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:psts="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lib_bg"
+    android:orientation="vertical">
+    <com.sskj.lib.util.HeySlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/lib_bg"
+        />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

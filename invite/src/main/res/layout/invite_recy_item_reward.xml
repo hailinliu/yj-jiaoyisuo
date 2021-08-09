@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="121pt"
+    android:background="@color/inviteBg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="@color/inviteTextContent"
+            android:textSize="30pt"
+            tools:text="@tools:sample/last_names" />
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/inviteTextContent"
+            android:textSize="30pt"
+            tools:text="@tools:sample/last_names" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/inviteTextContent"
+            android:textSize="26pt"
+            tools:text="@tools:sample/last_names" />
+
+    </LinearLayout>
+
+</LinearLayout>

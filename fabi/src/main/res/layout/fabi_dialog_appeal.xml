@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fabi_shape_bg_corner_top"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="50pt">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/fabiorderRecordDetailActivity12"
+            android:textColor="@color/libTextWhite"
+            android:textSize="40pt"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/etReason"
+            android:layout_width="match_parent"
+            android:layout_height="230pt"
+            android:layout_marginTop="46pt"
+            android:background="@drawable/fabi_shape_edit_border"
+            android:gravity="left|top"
+            android:hint="@string/fabifabi_dialog_appeal60"
+            android:padding="15pt"
+            android:textColor="@color/libTextWhite"
+            android:textColorHint="@color/fabiTextHint"
+            android:textSize="26pt" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_marginTop="45pt"
+            android:background="@color/libDivider" />
+
+        <include layout="@layout/fabi_include_cancel_sure" />
+
+    </LinearLayout>
+
+</LinearLayout>

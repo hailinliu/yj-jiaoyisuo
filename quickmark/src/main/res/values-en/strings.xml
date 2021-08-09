@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+
+<string name="quickmark_quickMarkActivity1_j">Scanning recognition failed!</string>
+<string name="quickmark_viewfinderView1_j">.</string>
+<string name="quickmark_quickMarkActivity2_j">The privilege is not open. We need this privilege to provide you with scanning service.</string>
+<string name="quickmarkquickMarkActivity1">Two-Dimensional Code Scanning</string>
+</resources>

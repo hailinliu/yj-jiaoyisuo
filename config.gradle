@@ -1,0 +1,31 @@
+ext {
+    release = [
+            APP_NAME      : "Tcoin_yj",//app名字
+            IP            : "https://www.yolocoin.uk",//域名
+            IMG_IP        : "https://www.yolocoin.uk",//图片域名
+            WS7272        : "wss://www.yolocoin.uk/market/market-ws/websocket1",//推送
+            APPLICATION_ID: "com.mbkj.yj",//app 包名
+            storeFile     : "../tengbi.jks",//签名文件位置
+            storePassword : "a123456",//签名文件密码
+            keyAlias      : "sskj",//签名文件别名
+            keyPassword   : "a123456",//签名文件别名密码
+            versionCode   : 1,
+            versionName   : "1.4.0",
+    ]
+
+    debug = [
+            APP_NAME      : "Tcoin_yj",//app名字
+            IP            : "https://www.yolocoin.uk",//域名
+            IMG_IP        : "https://www.yolocoin.uk",//图片域名
+            WS7272        : "wss://www.yolocoin.uk/market/market-ws/websocket1",//推送
+            APPLICATION_ID: "com.mbkj.yj",//app 包名
+            storeFile     : "../tengbi.jks",//签名文件位置
+            storePassword : "a123456",//签名文件密码
+            keyAlias      : "sskj",//签名文件别名
+            keyPassword   : "a123456",//签名文件别名密码
+            versionCode   : 1,
+            versionName   : "1.4.0",
+            ]
+
+}
+

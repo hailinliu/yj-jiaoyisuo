@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:drawable="@drawable/shape_line_green" android:state_checked="true" />-->
+    <item android:drawable="@drawable/level_radio_button_paper_check" android:state_checked="true"/>
+    <item android:drawable="@drawable/level_radio_button_paper_no_check"/>
+</selector>

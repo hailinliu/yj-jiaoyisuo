@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/level_dialog_sure_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/level_dialog_sure_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="28pt"
+                    android:text="@string/levellevel_dialog_set_price80"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="130pt"
+                    android:textColor="@color/levelRed"
+                    android:textSize="30pt"
+                    tools:text="@string/levelbuySellEnum2" />
+
+                <View
+                    android:layout_width="0pt"
+                    android:layout_height="0pt"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22pt"
+                    android:text="@string/levellevel_dialog_set_price140"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="200pt"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt"
+                    tools:text="652.23" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30pt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="430pt"
+                        android:layout_height="80pt"
+                        android:background="@drawable/level_set_pingcang_et_bg"
+                        android:paddingStart="20pt">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/levellevel_dialog_set_price250"
+                            android:textColor="@color/libTextWhite"
+                            android:textSize="26pt" />
+
+                        <EditText
+                            android:id="@+id/etStopProfit"
+                            android:layout_width="0pt"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="35pt"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/levellevel_dialog_set_price270"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/levelTextHint"
+                            android:textSize="28pt" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="1pt"
+                                android:layout_height="34pt"
+                                android:layout_gravity="center_vertical" />
+
+                            <ImageView
+                                android:id="@+id/ivWinDecrease"
+                                android:layout_width="70pt"
+                                android:layout_height="70pt"
+                                android:layout_gravity="center_vertical"
+                                android:padding="25pt"
+                                android:src="@mipmap/level_jian" />
+
+                            <ImageView
+                                android:id="@+id/ivWinIncrease"
+                                android:layout_width="70pt"
+                                android:layout_height="70pt"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="20pt"
+                                android:padding="25pt"
+                                android:src="@mipmap/level_jia" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0pt"
+                        android:layout_height="0pt"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvStopProfit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/libTextWhite"
+                        android:textSize="28pt"
+                        tools:text="≥8164.32" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="430pt"
+                        android:layout_height="80pt"
+                        android:background="@drawable/level_set_pingcang_et_bg"
+                        android:paddingStart="20pt">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/levellevel_dialog_set_price510"
+                            android:textColor="@color/libTextWhite"
+                            android:textSize="26pt" />
+
+                        <EditText
+                            android:id="@+id/etStopLoss"
+                            android:layout_width="0pt"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="35pt"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/levellevel_dialog_set_price530"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/levelTextHint"
+                            android:textSize="28pt" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="1pt"
+                                android:layout_height="34pt"
+                                android:layout_gravity="center_vertical" />
+
+                            <ImageView
+                                android:id="@+id/ivLossDecrease"
+                                android:layout_width="70pt"
+                                android:layout_height="70pt"
+                                android:layout_gravity="center_vertical"
+                                android:padding="25pt"
+                                android:src="@mipmap/level_jian" />
+
+                            <ImageView
+                                android:id="@+id/ivLossIncrease"
+                                android:layout_width="70pt"
+                                android:layout_height="70pt"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="20pt"
+                                android:padding="25pt"
+                                android:src="@mipmap/level_jia" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0pt"
+                        android:layout_height="0pt"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvStopLoss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/libTextWhite"
+                        android:textSize="28pt"
+                        tools:text="≥8164.32" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:layout_marginTop="30pt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    style="@style/levelButtonCancel"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="100pt"
+                    android:layout_weight="1"
+                    android:text="@string/levellevel_dialog_set_price730" />
+
+                <Button
+                    android:id="@+id/btSure"
+                    style="@style/levelButtonSure"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/levellevel_dialog_set_price750" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

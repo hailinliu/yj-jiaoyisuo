@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    android:paddingTop="30pt"
+    android:paddingEnd="30pt">
+
+    <LinearLayout
+        android:id="@+id/llGrade"
+        android:layout_width="match_parent"
+        android:layout_height="46pt"
+        android:background="@drawable/bibi_shape_stroke5b5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:paddingStart="20pt"
+        android:paddingEnd="20pt">
+
+        <TextView
+            android:id="@+id/tvNumDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1位小数"
+            android:textColor="@color/bibiTextHint"
+            android:textSize="22pt" />
+
+        <View
+            android:layout_width="20pt"
+            android:layout_height="10pt"
+            android:background="@mipmap/bibi_icon_arrow_down"
+            android:backgroundTint="@color/bibiTextHint" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_shengdie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5pt"
+            android:text="+17.24%"
+            android:background="@color/bibiGreenHint"
+            android:textColor="@color/libGreen"
+            android:textSize="26pt" />
+
+        <View
+            android:layout_width="0pt"
+            android:layout_height="10pt"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/bibi_icon"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="30pt"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="60pt"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/levellevel_fragment_five60"
+                android:visibility="gone"
+                android:textColor="@color/bibiTextHint"
+                android:textSize="24pt" />
+
+            <TextView
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:paddingStart="5pt"
+                android:text="@string/levellevel_dialog_trade_info_tip550"
+                android:textColor="@color/bibiTextHint"
+                android:textSize="20pt" />
+
+            <TextView
+                android:layout_width="100pt"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:text="@string/levellevel_dialog_trade_info_tip170"
+                android:textColor="@color/bibiTextHint"
+                android:textSize="20pt" />
+        </LinearLayout>
+<LinearLayout
+    android:id="@+id/ll_rec"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/top"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/sellRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"
+        android:layout_marginTop="15pt"
+        android:nestedScrollingEnabled="false"
+       />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="40pt"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5pt"
+        android:textColor="@color/bibiGreen"
+        android:textSize="35pt"
+        android:text="23432432"
+       />
+
+    <TextView
+        android:id="@+id/tvRMBPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="40pt"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5pt"
+        android:layout_marginEnd="10pt"
+        android:textColor="@color/bibiTextHint"
+        android:textSize="28pt"
+        android:text="321312321"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/buyRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1"
+        android:layout_marginTop="10pt"
+        android:layout_marginBottom="15pt"
+        android:nestedScrollingEnabled="false"
+        />
+
+</LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/loading_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15pt"
+            android:background="@color/lib_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ll_container"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rlEditPrice"
+        android:layout_width="0pt"
+        android:layout_weight="1"
+        android:layout_height="40pt"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/lib_shape_stroke5b5_corner6"
+        android:padding="1pt"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/llDe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:background="@color/bibiBgDeep"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <TextView
+                android:id="@+id/tvDecrease"
+                android:layout_width="55pt"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="－"
+                android:textColor="@color/bibiTextHint"
+                android:textSize="24pt" />
+
+            <TextView
+                android:id="@+id/cuttingLine"
+                android:layout_width="2pt"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/bibiTextHint" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/llAddAndDe"
+            android:background="@null"
+            android:gravity="center"
+            android:enabled="false"
+            android:focusable="false"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:layout_marginStart="50pt"
+            android:textColor="@color/libTextWhite"
+            android:textSize="24pt"
+            tools:text="8170.3211" />
+        <LinearLayout
+            android:id="@+id/llAddAndDe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@color/bibiBgDeep"
+            android:orientation="horizontal"
+            android:visibility="visible">
+            <TextView
+                android:id="@+id/cuttingLine2"
+                android:layout_width="2pt"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/bibiTextHint" />
+            <TextView
+                android:id="@+id/tvIncrease"
+                android:layout_width="55pt"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="＋"
+                android:textColor="@color/bibiTextHint"
+                android:textSize="24pt" />
+        </LinearLayout>
+    </RelativeLayout>
+<ImageView
+    android:id="@+id/image"
+    android:src="@mipmap/bibi_icon_xuan"
+    android:layout_marginStart="10pt"
+    android:layout_gravity="center"
+    android:layout_width="80pt"
+    android:layout_height="60pt"/>
+    </LinearLayout>
+</LinearLayout>

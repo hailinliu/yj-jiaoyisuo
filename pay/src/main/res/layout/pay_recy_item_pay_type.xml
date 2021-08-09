@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clRoot"
+    android:layout_width="match_parent"
+    android:layout_height="200pt">
+
+    <TextView
+        android:id="@+id/tvEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/paypay_recy_item_pay_type20"
+        android:textSize="26pt"
+        android:textColor="@color/payApp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPayType"
+        app:layout_constraintTop_toBottomOf="@+id/payGuideline2" />
+
+    <TextView
+        android:id="@+id/tvPayType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/paypay_activity_add_pay_type130"
+        android:textColor="@color/payTextContent"
+        android:textSize="26pt"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPayType"
+        app:layout_constraintStart_toEndOf="@+id/ivPayType"
+        app:layout_constraintTop_toTopOf="@+id/ivPayType" />
+
+    <TextView
+        android:id="@+id/tvAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/payTextContent"
+        android:textSize="26pt"
+        app:layout_constraintBottom_toTopOf="@+id/payGuideline2"
+        app:layout_constraintStart_toStartOf="@+id/tvPayType"
+        app:layout_constraintTop_toBottomOf="@+id/payGuideline"
+        tools:text="187****5834" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/payTextContent"
+        android:textSize="26pt"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAccount"
+        app:layout_constraintStart_toEndOf="@+id/tvAccount"
+        app:layout_constraintTop_toTopOf="@+id/tvAccount"
+        tools:text="187****5834" />
+
+    <ImageView
+        android:id="@+id/ivPayType"
+        android:layout_width="52pt"
+        android:layout_height="52pt"
+        app:layout_constraintBottom_toTopOf="@+id/payGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/llCheckbox"
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvEdit"
+        app:layout_constraintTop_toBottomOf="@+id/payGuideline2">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pay_selector_switch_white"
+            android:button="@null"
+            android:clickable="false"
+            android:enabled="false" />
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/payGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/payGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.67" />
+</android.support.constraint.ConstraintLayout>

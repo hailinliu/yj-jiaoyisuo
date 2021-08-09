@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:background="@color/lib_bg"
+    >
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="20pt"
+        android:layout_height="34pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40pt"
+       android:tint="@color/libTextWhite"
+        android:src="@mipmap/lib_icon_back_white" />
+    <TextView
+        android:id="@+id/tv_denglu"
+        android:layout_width="wrap_content"
+        android:text="@string/hang_updata_phone"
+        android:textSize="46pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
+        android:layout_marginStart="20pt"
+        android:layout_marginTop="60pt"
+        android:textColor="@color/libTextWhite"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="80pt"
+        android:layout_marginStart="30pt"
+        android:layout_marginEnd="30pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_denglu"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:text="+86"
+            android:textSize="30pt"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="30pt"
+            android:textSize="30pt"
+            app:layout_constraintTop_toBottomOf="@id/tv_findyouxiang"
+            android:hint="@string/hang_phone_bind"
+            android:textColorHint="@color/libTextGray"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/video_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_view"
+        android:layout_marginTop="10pt"
+        android:layout_marginStart="20pt"
+        android:layout_marginEnd="20pt"
+        android:background="@color/libTextGray"
+        android:layout_width="match_parent"
+        android:layout_height="1pt"/>
+    <Button
+        android:id="@+id/btLogin"
+        style="@style/libButtonStyle"
+        android:text="@string/hang_sure"
+        android:layout_marginStart="30pt"
+        android:layout_marginEnd="30pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/video_view"
+        android:layout_marginTop="80pt"/>
+
+</android.support.constraint.ConstraintLayout>
+<!--
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBg4"
+    tools:context=".ui.activity.LoginActivity">
+
+    <include layout="@layout/login_include_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90pt"
+        android:background="@color/libBg2"
+        android:layout_marginTop="45pt"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="20pt"
+                android:layout_height="34pt"
+                android:layout_marginEnd="14pt"
+                android:background="@mipmap/lib_icon_back_white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="400pt">
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100pt"
+        android:text="@string/login_login_text"
+        android:textSize="43pt"
+        android:layout_marginStart="60pt"
+        android:layout_width="wrap_content"
+        android:textColor="@color/libColorText"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="900pt"
+        android:layout_marginTop="300pt"
+        android:orientation="vertical"
+        android:layout_marginStart="30pt"
+        android:background="@drawable/login_shape_login_corner"
+        android:layout_marginEnd="30pt"
+        android:paddingTop="100pt"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt">
+
+
+        <include layout="@layout/login_include_account" />
+
+
+
+        <include layout="@layout/login_include_pwd" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btLogin"
+            style="@style/libButtonStyle"
+            android:layout_marginTop="80pt"
+            android:text="@string/loginlogin_activity_login140" />
+
+        <RelativeLayout
+            android:layout_marginTop="10pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvPwdForget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/loginlogin_activity_login340"
+                android:textColor="@color/libTextGray"
+                android:textSize="30pt" />
+
+        </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="or"
+        android:textSize="32pt"
+        android:gravity="center"
+        android:layout_marginTop="10pt"
+        android:layout_marginBottom="10pt"
+        android:layout_gravity="center"
+        android:textColor="@color/lib_login"
+        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/tvRegister"
+            android:background="@drawable/login_shape_register"
+            android:layout_marginTop="30pt"
+            android:layout_height="80pt"
+            android:textSize="30pt"
+            android:textColor="@color/libTextGray"
+            android:layout_width="match_parent"
+            android:text="@string/loginlogin_activity_register100"/>
+    </LinearLayout>
+</RelativeLayout>
+-->

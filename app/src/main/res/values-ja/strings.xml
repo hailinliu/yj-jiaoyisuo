@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_label">Yolocoin</string>
+    <string name="appmainActivity6">わかりました</string>
+    <string name="appmainActivity5">資産</string>
+    <string name="appmainActivity2">资讯</string>
+    <string name="appmainActivity7">造幣造幣</string>
+    <string name="appmainActivity1">トップページ</string>
+    <string name="appmainActivity4">法币</string>
+    <string name="appmainActivity3">相場</string>
+    <string name="app_heyue">契約</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.NewHangFragment">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/image_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="30pt"
+                android:src="@mipmap/lib_icon_back_white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/hang_qing"
+                android:textColor="@color/libTextWhite"
+                android:textSize="36pt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/ivTopRight"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="100pt"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="60pt"
+                    android:layout_height="60pt"
+                    android:padding="15pt"
+                    android:src="@mipmap/lib_usd" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:text="USD"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/libTextWhite"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="40pt"
+                    android:layout_height="40pt"
+                    android:padding="15pt"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/hang_icon_arrow_down"
+                    android:tint="@color/libTextWhite"
+                    />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/image_sousuo"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/hang_solo"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10pt"
+                android:layout_marginEnd="30pt"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.constraint.ConstraintLayout>
+<com.flyco.tablayout.CommonTabLayout
+    android:id="@+id/newcommonTabLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30pt"
+    app:tl_indicator_height="6pt"
+    app:tl_indicator_width="60pt"
+    android:layout_marginStart="20pt"
+    app:tl_indicator_width_equal_title="true"
+    app:tl_tab_space_equal="true"
+    app:tl_textSelectColor="@color/libTextWhite"
+    app:tl_textUnselectColor="@color/hangUnSelect"
+    app:tl_textsize="36pt"/>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_marginTop="20pt"
+        android:layout_width="match_parent"
+        android:layout_height="0pt"
+        android:layout_weight="1" />
+</LinearLayout>

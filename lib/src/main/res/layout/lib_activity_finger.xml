@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/libBg" android:gravity="center_horizontal" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical" tools:context=".ui.activity.FingerActivity">
+
+
+    <TextView android:layout_height="wrap_content" android:layout_marginTop="240pt" android:layout_width="wrap_content" android:text="@string/liblib_activity_finger20" android:textColor="@color/libTextContent" android:textSize="48pt"/>
+
+    <View android:background="@mipmap/lib_icon_finger" android:backgroundTint="@color/libApp" android:id="@+id/viewCheck" android:layout_height="140pt" android:layout_marginTop="175pt" android:layout_width="140pt"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_marginTop="43pt" android:layout_width="wrap_content" android:text="@string/liblib_activity_finger60" android:textColor="@color/libTextContent" android:textSize="28pt"/>
+
+    <View android:layout_height="wrap_content" android:layout_weight="1" android:layout_width="match_parent"/>
+
+    <TextView android:id="@+id/tvPwdLogin" android:layout_height="wrap_content" android:layout_marginBottom="92pt" android:layout_width="wrap_content" android:text="@string/liblib_activity_finger100" android:textColor="@color/libTextContent" android:textSize="28pt"/>
+</LinearLayout>

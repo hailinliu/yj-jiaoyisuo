@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sskj.hangqing">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.MarketActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.GonggaoListActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTop" android:name=".ui.activity.GuideWebActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.GuideListActivity" />
+        <activity android:name=".ui.activity.NewSlideActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/bibiDialogStyle"/>
+        <activity android:name=".ui.activity.BIBIOrderActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.WorkerOrderContentActiivty"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.WorkerOrderActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.GonggaoActiivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.NewSettingActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.FeedBackActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.SoloActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.AccountSafetyActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.ChangeUserActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.ChangeTradActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.PhoneBindActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.IdentifyActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.EmailBindActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.OpenGoogleActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.OPenGoogleFourActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.OpenGoogleThirdActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.OpenGoogleTwoActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.SelectCountryActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.IdentifySecondActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.IdentifyThirdActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.IdentifyFourActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.PaySettingActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.ContactServiceActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.InformationCenterActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.QRLoginActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.NewHangActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.InviteActivity" />
+    </application>
+
+</manifest>

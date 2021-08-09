@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="quickmark_quickMarkActivity1_j">掃描識別失敗! </string>
+    <string name="quickmark_viewfinderView1_j">將二維碼放入框內, 即可自動掃描</string>
+    <string name="quickmark_quickMarkActivity2_j">權限未開啓，我們需要這個權限給你提供掃碼服務</string>
+    <string name="quickmarkquickMarkActivity1">二維碼掃描</string>
+</resources>

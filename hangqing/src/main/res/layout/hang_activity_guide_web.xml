@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hangBgDeep"
+    android:orientation="vertical"
+    tools:context=".ui.activity.GuideWebActivity">
+
+    <include layout="@layout/lib_include_head" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2pt"
+        android:background="@color/hangDivider" />
+
+    <LinearLayout
+        android:id="@+id/llHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lib_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100pt"
+            android:layout_marginTop="30pt"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="30pt"
+            android:paddingEnd="30pt"
+            android:paddingBottom="20pt">
+
+            <View
+                android:layout_width="60pt"
+                android:layout_height="60pt"
+                android:layout_marginEnd="28pt"
+                android:background="@mipmap/hang_icon_zixun"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvWebTitle"
+                android:layout_width="0pt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/libTextWhite"
+                android:textSize="30pt"
+                tools:text="@tools:sample/lorem/random" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="30pt"
+            android:layout_marginEnd="30pt"
+            android:textColor="@color/hangTextHint"
+            android:textSize="24pt"
+            tools:text="@tools:sample/date/mmddyy" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_marginTop="30pt"
+            android:background="@color/libDivider" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lib_bg"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30pt"
+                android:textColor="@color/libTextWhite"
+                android:textSize="26pt" />
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.sskj.common.widget.DensityWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30pt"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

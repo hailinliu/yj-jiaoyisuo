@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        release {
+            storeFile file(rootProject.ext.release["storeFile"])
+            storePassword rootProject.ext.release["storePassword"]
+            keyAlias = rootProject.ext.release["keyAlias"]
+            keyPassword rootProject.ext.release["keyPassword"]
+        }
+        debug {
+
+            storeFile file(rootProject.ext.debug["storeFile"])
+            storePassword rootProject.ext.debug["storePassword"]
+            keyAlias = rootProject.ext.debug["keyAlias"]
+            keyPassword rootProject.ext.debug["keyPassword"]
+        }
+    }
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+        applicationId rootProject.ext.android["APPLICATION_ID"]
+        manifestPlaceholders = [
+                APP_NAME: "${rootProject.ext.android["APP_NAME"]}",
+        ]
+
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+
+    }
+    flavorDimensions "app"
+    //根据项目工程配置出不同的包
+    productFlavors {
+        re {
+            println("-打包app")
+            println("appName:" + rootProject.ext.release["APP_NAME"])
+            println("applicationId:" + rootProject.ext.release["APPLICATION_ID"])
+            println("versionCode:" + rootProject.ext.release["versionCode"])
+            println("versionName:" + rootProject.ext.release["versionName"])
+            applicationId rootProject.ext.release["APPLICATION_ID"]
+            versionCode rootProject.ext.release["versionCode"]
+            versionName rootProject.ext.release["versionName"]
+            manifestPlaceholders = [
+                    APP_NAME: "${rootProject.ext.release["APP_NAME"]}",
+            ]
+            signingConfig signingConfigs.release
+        }
+        de {
+            println("-打包app")
+            println("appName:" + rootProject.ext.debug["APP_NAME"])
+            println("applicationId:" + rootProject.ext.debug["APPLICATION_ID"])
+            println("versionCode:" + rootProject.ext.debug["versionCode"])
+            println("versionName:" + rootProject.ext.debug["versionName"])
+            applicationId rootProject.ext.debug["APPLICATION_ID"]
+            versionCode rootProject.ext.debug["versionCode"]
+            versionName rootProject.ext.debug["versionName"]
+            manifestPlaceholders = [
+                    APP_NAME: "${rootProject.ext.debug["APP_NAME"]}",
+            ]
+            signingConfig signingConfigs.debug
+        }
+
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            print(buildType.name)
+            println("release")
+            if (buildType.name == 'release') {
+                output.outputFileName = "${rootProject.ext.release["APP_NAME"]}_${defaultConfig.versionName}.apk"
+            } else {
+                output.outputFileName = "${rootProject.ext.debug["APP_NAME"]}_${buildType.name}_${defaultConfig.versionName}.apk"
+
+            }
+        }
+    }
+
+
+    resourcePrefix "app"
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.5'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc2'
+    annotationProcessor rootProject.ext.dependencies["dagger2-apt-compiler"]
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.1'
+    api project(':lib')
+    api project(':mine')
+    api project(':fabi')
+    api project(':hangqing')
+    api project(':level')
+    api project(':login')
+    api project(':pay')
+    api project(':tibi')
+    api project(':ident')
+    api project(':quickmark')
+    api project(':invite')
+    api project(':bibi')
+
+
+}

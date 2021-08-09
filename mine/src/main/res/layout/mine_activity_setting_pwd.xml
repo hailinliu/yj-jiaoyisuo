@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mineBgDeep"
+    android:orientation="vertical">
+
+    <include layout="@layout/lib_include_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20pt"
+        android:background="@color/mineBg"
+        android:orientation="vertical"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60pt"
+                android:layout_marginTop="20pt"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="@string/minemine_activity_setting_password80"
+                android:textColor="@color/mineTextContent"
+                android:textSize="30pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPwdOrigin"
+                    android:layout_width="0pt"
+                    android:layout_height="110pt"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/minemine_activity_setting_password80"
+                    android:inputType="textPassword"
+                    android:textColor="@color/mineTextContent"
+                    android:textColorHint="@color/mineTextHint"
+                    android:textSize="30pt" />
+
+                <ImageView
+                    android:id="@+id/ivPwdToggle"
+                    android:layout_width="64pt"
+                    android:layout_height="40pt"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="15pt"
+                    android:paddingTop="6pt"
+                    android:paddingEnd="15pt"
+                    android:paddingBottom="6pt"
+                    android:src="@mipmap/mine_icon_hide_white"
+                    android:tint="@color/mineTextTitle" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:background="@color/mineDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60pt"
+                android:layout_marginTop="20pt"
+                android:gravity="center_vertical"
+                android:text="@string/minemine_activity_setting_password170"
+                android:visibility="gone"
+                android:textColor="@color/mineTextContent"
+                android:textSize="30pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPwd"
+                    android:layout_width="0pt"
+                    android:layout_height="110pt"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/minemine_activity_setting_password190"
+                    android:inputType="textPassword"
+                    android:textColor="@color/mineTextContent"
+                    android:textColorHint="@color/mineTextHint"
+                    android:textCursorDrawable="@drawable/lib_cursor_color"
+                    android:textSize="30pt" />
+
+                <ImageView
+                    android:id="@+id/ivNewPwdToggle"
+                    android:layout_width="64pt"
+                    android:layout_height="40pt"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="15pt"
+                    android:paddingTop="6pt"
+                    android:paddingEnd="15pt"
+                    android:paddingBottom="6pt"
+                    android:src="@mipmap/mine_icon_hide_white"
+                    android:tint="@color/mineTextTitle" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_marginLeft="30pt"
+            android:layout_marginRight="30pt"
+            android:background="@color/mineDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60pt"
+                android:layout_marginTop="20pt"
+                android:gravity="center_vertical"
+                android:text="@string/minemine_activity_setting_password260"
+                android:visibility="gone"
+                android:textColor="@color/mineTextContent"
+                android:textSize="30pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPwdAgain"
+                    android:layout_width="0pt"
+                    android:layout_height="110pt"
+                    android:layout_marginEnd="10pt"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/minemine_activity_setting_password260"
+                    android:inputType="textPassword"
+                    android:textColor="@color/mineTextContent"
+                    android:textColorHint="@color/mineTextHint"
+                    android:textSize="30pt" />
+
+                <ImageView
+                    android:id="@+id/ivNewNextPwdToggle"
+                    android:layout_width="64pt"
+                    android:layout_height="40pt"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="15pt"
+                    android:paddingTop="6pt"
+                    android:paddingEnd="15pt"
+                    android:paddingBottom="6pt"
+                    android:src="@mipmap/mine_icon_hide_white"
+                    android:tint="@color/mineTextTitle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1pt"
+            android:layout_marginLeft="30pt"
+            android:layout_marginRight="30pt"
+            android:background="@color/mineDivider" />
+
+        <Button
+            android:id="@+id/btSubmit"
+            style="@style/mineButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="90pt"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50pt"
+            android:text="@string/minemine_activity_bind_mobile330" />
+    </LinearLayout>
+
+</LinearLayout>

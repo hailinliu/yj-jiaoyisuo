@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:background="@color/mineBgDeep" android:layout_height="match_parent" android:layout_width="match_parent" android:orientation="vertical">
+
+    <include layout="@layout/lib_include_head"/>
+
+    <LinearLayout android:background="@color/mineBg" android:layout_height="match_parent" android:layout_marginTop="20pt" android:layout_width="match_parent" android:orientation="vertical" android:padding="30pt">
+
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/minemine_activity_seller_apply60" android:textColor="@color/mineTextTitle" android:textSize="32pt"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_width="wrap_content" android:text="@string/minemine_activity_seller_apply80" android:textColor="@color/mineTextContent" android:textSize="30pt"/>
+
+        <TextView android:id="@+id/shop_money" android:layout_height="wrap_content" android:layout_marginTop="40pt" android:layout_width="wrap_content" android:text="@string/minesellerApplyActivity3" android:textColor="@color/mineTextHint" android:textSize="26pt"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_marginTop="60pt" android:layout_width="wrap_content" android:text="@string/minemine_activity_seller_apply120" android:textColor="@color/mineTextContent" android:textSize="30pt"/>
+
+        <TextView android:layout_height="wrap_content" android:layout_marginTop="40pt" android:layout_width="wrap_content" android:text="@string/minemine_activity_seller_apply140" android:textColor="@color/mineTextHint" android:textSize="26pt"/>
+
+        <View android:layout_height="0pt" android:layout_weight="1" android:layout_width="match_parent"/>
+
+        <CheckBox android:button="@drawable/selector_seller_apply_agreement" android:id="@+id/check_agree" android:layout_height="wrap_content" android:layout_marginBottom="20pt" android:layout_width="match_parent" android:textColor="@color/mineTextHint" android:textSize="26pt" tools:text="@tools:sample/last_names"/>
+
+        <Button android:id="@+id/submit_btn" android:layout_marginBottom="30pt" android:text="@string/minemine_activity_seller_apply200" style="@style/mineButtonStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>

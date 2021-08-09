@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    android:paddingStart="33pt"
+    android:paddingTop="33pt"
+    android:paddingEnd="33pt"
+
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="45pt"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35pt"
+            android:layout_marginEnd="10pt"
+            android:layout_marginTop="30pt"
+            android:gravity="end"
+            android:layout_gravity="end"
+            android:layout_marginStart="20pt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvOrderType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textColor="@color/bibiTextContent"
+                android:textSize="28pt"
+                android:textStyle="bold"
+                tools:text="买入" />
+
+            <TextView
+                android:id="@+id/tvCoinType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10pt"
+                android:visibility="gone"
+                android:textColor="@color/libTextWhite"
+                android:textSize="28pt"
+                tools:text="ETH/USDT" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/libTextWhite"
+            android:textSize="24pt"
+            tools:text="08-12 14:24" />
+        <View
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/tvDeal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:paddingStart="20pt"
+            android:paddingTop="5pt"
+            android:paddingEnd="20pt"
+            android:paddingBottom="5pt"
+            android:background="@drawable/bibi_shape_xianjia1"
+            android:textColor="@color/bibiHistorytext"
+            android:textSize="28pt"
+            android:textStyle="bold"
+            tools:text="撤单" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTitlePrice"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textColor="@color/libTextGray"
+            android:textSize="26pt"
+            tools:text="08-12 14:24" />
+
+        <TextView
+            android:id="@+id/tvTitleNum"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/libTextGray"
+            android:textSize="26pt"
+            tools:text="08-12 14:24" />
+
+        <TextView
+            android:id="@+id/tvTitleDealNum"
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:textColor="@color/libTextGray"
+            android:textSize="26pt"
+            tools:text="撤单" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textColor="@color/bibiTextHint"
+            android:textSize="21pt"
+            tools:text="08-12 14:24" />
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/bibiTextHint"
+            android:textSize="21pt"
+            tools:text="08-12 14:24" />
+
+        <TextView
+            android:id="@+id/tvDealNum"
+            android:layout_width="0pt"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="end"
+            android:textColor="@color/bibiTextHint"
+            android:textSize="21pt"
+            tools:text="撤单" />
+    </LinearLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20pt"
+        android:paddingBottom="20pt">
+
+        <TextView
+            android:id="@+id/tvcfj"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10pt"
+            android:layout_weight="3"
+            android:textColor="@color/bibiTextContent"
+            android:textSize="26pt"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/tvcfjNum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="08-12 14:24" />
+
+        <TextView
+            android:id="@+id/tvcfjNum"
+            android:layout_width="0pt"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/bibiTextContent"
+            android:textSize="21pt"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvcfj"
+            tools:text="08-12 14:24" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.GuideListFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300pt"
+        android:background="@color/lib_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/lib_include_head" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="690pt"
+                android:layout_height="360pt"
+                android:layout_gravity="center"
+                android:layout_marginStart="30pt"
+                android:layout_marginTop="15pt"
+                android:layout_marginEnd="30pt"
+                android:layout_marginBottom="15pt"
+                android:clipChildren="false"
+                app:banner_default_image="@mipmap/hang_guide_banner_default"
+                app:image_scale_type="fit_xy"
+                app:indicator_drawable_selected="@drawable/hang_shape_5e8_corner2"
+                app:indicator_drawable_unselected="@drawable/hang_shape_white_corner2"
+                app:indicator_height="4pt"
+                app:indicator_margin="0pt"
+                app:indicator_width="26pt"
+                app:is_auto_play="true" />
+        </LinearLayout>
+
+        <com.shizhefei.view.coolrefreshview.CoolRefreshView
+            android:id="@+id/coolRefreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lib_bg" />
+        </com.shizhefei.view.coolrefreshview.CoolRefreshView>
+    </LinearLayout>
+
+</RelativeLayout>

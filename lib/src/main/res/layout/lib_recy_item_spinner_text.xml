@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/commonText222" android:gravity="center_vertical" android:id="@+id/tvTitle" android:layout_height="50pt" android:layout_width="wrap_content" android:minWidth="200pt" android:paddingStart="30pt" android:textColor="@color/commonWhite" android:textSize="30pt">
+
+
+</TextView>

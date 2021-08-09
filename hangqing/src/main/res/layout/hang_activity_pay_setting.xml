@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBgDeep"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:orientation="vertical"
+    android:layout_marginTop="290pt"
+    tools:ignore="MissingDefaultResource">
+   <include layout="@layout/lib_include_head" />
+   <com.sskj.lib.util.HeySlidingTabLayout
+       android:id="@+id/tabs"
+       android:layout_height="100pt"
+       android:layout_marginTop="20pt"
+       android:layout_width="match_parent"
+       />
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="1pt"
+       android:background="@color/fabiDivider" />
+   <android.support.v4.view.ViewPager
+       android:id="@+id/viewpager"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1" />
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sskj.invite.ui.activity.MineInviteActivity"
+    tools:ignore="ResourceName">
+
+    <include layout="@layout/lib_include_head" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="610pt"
+            android:layout_height="357pt"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="90pt"
+            android:paddingStart="78pt"
+            android:paddingEnd="30pt">
+
+            <ImageView
+                android:id="@+id/ivQRCode"
+                android:layout_width="194pt"
+                android:layout_height="194pt"
+                android:layout_marginTop="85pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85pt"
+                android:layout_toEndOf="@+id/ivQRCode"
+                android:orientation="vertical"
+                android:paddingStart="40pt">
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保存"
+                    android:textColor="@color/inviteBg"
+                    android:textSize="30pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20pt"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/inviteBg"
+                        android:textSize="30pt" />
+
+                    <TextView
+                        android:id="@+id/tvCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15pt"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="ASDFGH"
+                        android:textColor="@color/inviteBg"
+                        android:textSize="30pt" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCopy"
+                    android:layout_width="209pt"
+                    android:layout_height="70pt"
+                    android:layout_marginTop="35pt"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="复制"
+                    android:textColor="@color/inviteApp"
+                    android:textSize="26pt" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <!--换肤产品，颜色-->
+    <color name="mineTextContent">@color/libTextContent</color>
+    <color name="mineTextHint">@color/libTextHint</color>
+    <color name="mineTextTitle">@color/libTextTitle</color>
+    <color name="mineBgDeep">@color/libBgDeep</color>
+    <color name="mineBg">@color/libBg</color>
+    <color name="mineBgAlpha">#90ffffff</color>
+    <color name="mineDivider">@color/libDivider</color>
+    <color name="mineApp">@color/libApp</color>
+    <color name="mineApp1">#ff0000</color>
+    <color name="minestatus">#f6dd55</color>
+    <color name="mine_text_assert">#666666</color>
+
+</resources>

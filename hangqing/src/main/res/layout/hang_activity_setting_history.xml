@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lib_bg"
+    android:orientation="vertical"
+    tools:context=".ui.activity.NewSettingActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="0pt"
+        android:text="@string/hang_setting_content"
+        android:layout_weight="1"
+        android:textColor="@color/libTextGray"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="0pt"
+        android:text="IP"
+        android:layout_weight="1"
+        android:textColor="@color/libTextGray"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="0pt"
+        android:text="@string/hang_time"
+        android:gravity="end"
+        android:layout_weight="1"
+        android:textColor="@color/libTextGray"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:paddingStart="30pt"
+        android:paddingEnd="30pt"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

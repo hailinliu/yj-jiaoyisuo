@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+
+<string name="identverificationResultActivity4">重新认证</string>
+<string name="identverificationResultActivity3">认证失败，请</string>
+<string name="identverificationResultActivity1">认证成功</string>
+<string name="identident_activity_verification_second100">请上传身份证正面</string>
+<string name="identident_activity_verification_second220">请上传身份证</string>
+<string name="identident_activity_verification_second180">身份证手持证件确保无水印无污渍，身份信息清晰，非文字反向照片，请勿进行PS处理。</string>
+<string name="identident_activity_verification_first80">为保障您的账户安全，需要进行身份验证\n身份一旦认证无法修改，请仔细填写您的真实信息</string>
+<string name="identverificationMenuActivity2">未认证</string>
+<string name="identverificationMenuActivity1">身份认证</string>
+<string name="identverificationMenuActivity4">已认证</string>
+<string name="identverificationMenuActivity3">请先进行初级认证</string>
+<string name="identverificationMenuActivity6">审核中</string>
+<string name="identverificationMenuActivity5">您已初级认证</string>
+<string name="identverificationMenuActivity8">认证失败</string>
+<string name="identverificationMenuActivity7">请耐心等待审核</string>
+<string name="identident_activity_verification_second160">请上传身份证件正面手持照</string>
+<string name="identident_activity_verification_first120">请输入您的姓名</string>
+<string name="identident_activity_verification_first240">提交</string>
+<string name="identident_activity_verification_first100">姓名</string>
+<string name="identident_activity_verification_result100">恭喜您认证成功</string>
+<string name="identident_activity_verification_first180">请输入您的身份证号码</string>
+<string name="identident_activity_verification_second120">身份证正面确保无水印无污渍，身份信息清晰，非文字反向照片，请勿进行PS处理。</string>
+<string name="identident_activity_verification_second240">需要您本人单手手持一张放置有身份证、有您手写的腾币和当天日期的白纸，确保身份证和白纸在您的胸前，不遮挡您的脸部，并且身份证和白纸上的信息清晰可见</string>
+<string name="identverificationSecondActivity1">高级认证</string>
+<string name="identverificationSecondActivity2">请补齐二张照片</string>
+<string name="identident_activity_verification_first160">身份证号码</string>
+<string name="identverificationFirstActivity1">初级认证</string>
+    <string name="ident_verificationn_result100">失败原因:</string>
+</resources>

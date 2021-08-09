@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130pt"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:id="@+id/ll_coinlist"
+    android:background="@color/lib_bg"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt">
+
+<ImageView
+    android:id="@+id/image"
+    android:layout_width="30pt"
+    android:layout_height="30pt"/>
+<TextView
+    android:id="@+id/tv_jiancheng"
+    android:layout_width="wrap_content"
+    android:text="ATC"
+    android:textSize="30pt"
+    android:layout_marginStart="20pt"
+    android:textColor="@color/libTextWhite"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_quancheng"
+        android:layout_width="wrap_content"
+        android:text="(Alt Things Connect)"
+        android:textColor="@color/libTextWhite"
+        android:textSize="28pt"
+        android:layout_marginStart="20pt"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

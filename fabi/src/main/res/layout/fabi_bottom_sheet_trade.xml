@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lib_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lib_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30pt">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="50pt"
+                android:textColor="@color/libTextWhite"
+                android:textSize="32pt"
+                tools:text="@string/fabiorderActivity3" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/fabifabi_bottom_sheet_trade80"
+                android:textColor="@color/libTextHint"
+                android:textSize="24pt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="81pt"
+            android:background="@color/lib_bg"
+            android:orientation="horizontal"
+            android:paddingStart="30pt"
+            android:paddingEnd="30pt">
+
+            <com.flyco.tablayout.CommonTabLayout
+                android:id="@+id/commonTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tl_iconVisible="false"
+                app:tl_indicator_color="@color/libApp"
+                app:tl_indicator_height="6pt"
+                app:tl_indicator_width="40pt"
+                app:tl_tab_space_equal="false"
+                app:tl_textSelectColor="@color/libApp"
+                app:tl_textUnselectColor="@color/libTextHint"
+                app:tl_textsize="28pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="30pt"
+            android:paddingTop="20pt"
+            android:paddingEnd="30pt">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:background="@color/lib_bg"
+                android:orientation="horizontal"
+                android:paddingStart="15pt"
+                android:paddingEnd="15pt">
+
+                <EditText
+                    android:id="@+id/etNum"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/fabifabi_bottom_sheet_trade200"
+                    android:inputType="numberDecimal"
+                    android:paddingEnd="20pt"
+                    android:textColor="@color/libTextWhite"
+                    android:textColorHint="@color/libTextHint"
+                    android:textCursorDrawable="@drawable/lib_cursor_color"
+                    android:textSize="28pt" />
+
+                <TextView
+                    android:id="@+id/tvUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="USDT"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="30pt"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="2pt"
+                    android:layout_height="26pt"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginEnd="20pt"
+                    android:background="@color/libDivider" />
+
+                <TextView
+                    android:id="@+id/tvAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/fabifabi_bottom_sheet_trade260"
+                    android:textColor="@color/libApp"
+                    android:textSize="30pt" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26pt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLimitMoney"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="30pt"
+                    android:textColor="@color/libTextHint"
+                    android:textSize="28pt"
+                    tools:text="@tools:sample/first_names" />
+
+
+                <TextView
+                    android:id="@+id/tvUSDTTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="10pt"
+                    android:textColor="@color/libTextHint"
+                    android:textSize="26pt"
+                    tools:text="@tools:sample/first_names" />
+
+                <TextView
+                    android:id="@+id/tvUSDT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:textColor="@color/libTextHint"
+                    android:textSize="26pt"
+                    tools:text="@tools:sample/first_names" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etPwd"
+                android:layout_width="match_parent"
+                android:layout_height="100pt"
+                android:layout_marginTop="26pt"
+                android:background="@color/lib_bg"
+                android:gravity="center_vertical"
+                android:hint="@string/fabitipFabiUtil17"
+                android:inputType="textPassword"
+                android:paddingStart="15pt"
+                android:paddingEnd="15pt"
+                android:textColor="@color/libTextWhite"
+                android:textColorHint="@color/libTextHint"
+                android:textCursorDrawable="@drawable/lib_cursor_color"
+                android:textSize="28pt" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39pt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/fabifabi_bottom_sheet_trade420"
+                    android:textColor="@color/libTextHint"
+                    android:textSize="32pt" />
+
+                <TextView
+                    android:id="@+id/tvRMB"
+                    android:layout_width="0pt"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="￥0.00"
+                    android:textColor="@color/libTextWhite"
+                    android:textSize="34pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90pt"
+                android:layout_marginStart="15pt"
+                android:layout_marginTop="34pt"
+                android:layout_marginEnd="15pt"
+                android:layout_marginBottom="35pt"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btAutoCancel"
+                    style="@style/fabiButtonStyle.Cancel"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/fabifabi_bottom_sheet_trade490" />
+
+                <Button
+                    android:id="@+id/btOrder"
+                    style="@style/libButtonStyle"
+                    android:layout_width="0pt"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50pt"
+                    android:layout_weight="1"
+                    android:text="@string/fabifabi_activity_order850" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

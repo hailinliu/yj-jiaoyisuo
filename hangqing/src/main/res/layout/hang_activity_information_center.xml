@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/libBgDeep"
+    android:paddingStart="30pt"
+    android:paddingEnd="30pt"
+    android:orientation="vertical"
+    android:layout_marginTop="290pt"
+    tools:ignore="MissingDefaultResource">
+   <include layout="@layout/lib_include_head" />
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+     <View
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="match_parent"/>
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="@string/hang_all_read"
+         android:textColor="@color/libTextGray"
+         android:layout_height="wrap_content"/>
+ </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/libTextGray"
+        android:layout_marginTop="20pt"
+        android:layout_height="1pt"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
