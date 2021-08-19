@@ -64,10 +64,7 @@ public class TwoFragment extends BaseFragment<TwoFragmentPresenter> {
                 ImageView imageView = (ImageView)iViewInjector.findViewById(R.id.image);
                 ImageUtil.setImage(HttpConfig.BASE_URL+bean.getCoin().getImgUrl(),imageView);
                 iViewInjector.text(R.id.tv_name,bean.getCoin().getUnit())
-                        .text(R.id.tv_num,new BigDecimal(bean.getBalance()).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString())
-                        .clicked(R.id.ll_zong,(v)->{
-
-                        });
+                        .text(R.id.tv_num,new BigDecimal(bean.getBalance()).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString());
                 // iViewInjector.image(R.id.image,H)
             }
         }).attachTo(rv).updateData(new ArrayList());
@@ -82,4 +79,6 @@ public class TwoFragment extends BaseFragment<TwoFragmentPresenter> {
         if(data!=null&&data.size()>0)
         slimAdapter.updateData(data);
     }
+
+
 }

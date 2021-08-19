@@ -115,7 +115,7 @@ public class HttpService {
                 ;
     }
     public MyWebSocketServer pushCoin1() {
-        MyWebSocketServer socketServer = new MyWebSocketServer("wss://www.yolocoin.uk/level-market/level-market-ws/websocket","/topic/level/thumb");
+        MyWebSocketServer socketServer = new MyWebSocketServer("wss://www.bitflnex.pro/market/market-ws/websocket","/topic/level/thumb");
         socketServer.connect();
         return socketServer;
     }

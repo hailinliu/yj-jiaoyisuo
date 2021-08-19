@@ -1,5 +1,7 @@
 package com.sskj.bibi.presenter;
 
+import android.text.TextUtils;
+
 import com.google.gson.Gson;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -54,23 +56,26 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
 
                     @Override
                     public void onSuccess(Response<String> response) {
-                        WSFiveBean1 httpData = GSonUtil.GsonToBean(response.body(),WSFiveBean1.class);
-                        if (httpData!= null){
-                            WSFiveBean1 wsFiveBean = httpData;
+                        if(!TextUtils.isEmpty(response.body())){
+                            WSFiveBean1 httpData = GSonUtil.GsonToBean(response.body(),WSFiveBean1.class);
+                            if (httpData!= null){
+                                WSFiveBean1 wsFiveBean = httpData;
 
-                            Gson gson = new Gson();
-                            AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
-                            BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
-                            //bean.setItems();
-                            mView.updateUI(bean);
-                            mView.updateUI(bean1);
-                        } else {
-                            AskBean bean = new AskBean();
-                            BidBean bean1 = new BidBean();
-                            mView.updateUI(bean1);
-                            mView.updateUI(bean);
+                                Gson gson = new Gson();
+                                AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
+                                BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
+                                //bean.setItems();
+                                mView.updateUI(bean);
+                                mView.updateUI(bean1);
+                            } else {
+                                AskBean bean = new AskBean();
+                                BidBean bean1 = new BidBean();
+                                mView.updateUI(bean1);
+                                mView.updateUI(bean);
 
+                            }
                         }
+
                     }
                 });
     }
@@ -82,7 +87,7 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
         code= CommonUtil.dealReuqestCode(code);
         String url = "/topic/market/trade-plate/"+code;
         if(mStompClient==null){
-            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/market/market-ws/websocket");
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
@@ -91,22 +96,25 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
-                    WSFiveBean1.BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
-                    // bean1.setBid(bidBean);
-                    if(bidBean1.getDirection()==0){
-                        WSFiveBean1.BidBean bidBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
-                        Gson gson = new Gson();
-                        BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
-                        mView.updateUI(bean);
-                        //bean1.setBid(bidBean);
-                    }else if(bidBean1.getDirection()==1){
-                        WSFiveBean1.AskBean askBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.AskBean.class);
-                        Gson gson = new Gson();
-                        AskBean bean = GSonUtil.GsonToBean(gson.toJson(askBean),AskBean.class);
-                        mView.updateUI(bean);
-                        // bean1.setAsk(askBean);
+                    if(!TextUtils.isEmpty(topicMessage.getPayload())){
+                        WSFiveBean1.BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
+                        // bean1.setBid(bidBean);
+                        if(bidBean1.getDirection()==0){
+                            WSFiveBean1.BidBean bidBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
+                            Gson gson = new Gson();
+                            BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
+                            mView.updateUI(bean);
+                            //bean1.setBid(bidBean);
+                        }else if(bidBean1.getDirection()==1){
+                            WSFiveBean1.AskBean askBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.AskBean.class);
+                            Gson gson = new Gson();
+                            AskBean bean = GSonUtil.GsonToBean(gson.toJson(askBean),AskBean.class);
+                            mView.updateUI(bean);
+                            // bean1.setAsk(askBean);
 
+                        }
                     }
+
                     // mView.updateUI(bean1);
                     //LiveDataBus.get().with(RxBusCode.DEPTH,WSFiveBean1.class).postValue(bean1);
                     //  LogUtil.i("数据是:"+topicMessage.getPayload());

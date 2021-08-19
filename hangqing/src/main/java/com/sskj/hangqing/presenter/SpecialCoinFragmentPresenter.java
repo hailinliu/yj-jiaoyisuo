@@ -1,5 +1,7 @@
 package com.sskj.hangqing.presenter;
 
+import android.text.TextUtils;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.lzy.okgo.callback.StringCallback;
@@ -24,10 +26,11 @@ public class SpecialCoinFragmentPresenter extends BasePresenter<SpecialCoinFragm
         httpService.getProduct2(null).execute(new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
+                if(!TextUtils.isEmpty(response.body())){
                 Gson gson = new Gson();
                List<CoinBean1> list = gson.fromJson(response.body(),new TypeToken<List<CoinBean1>>(){}.getType());
                mView.updateCoin(list);
-            }
+            }}
         });
 
     }
@@ -36,5 +39,11 @@ public class SpecialCoinFragmentPresenter extends BasePresenter<SpecialCoinFragm
         stockSocket1 = httpService.pushCoin();
         stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
                 .subscribe(newcoinbean->mView.refreshCoin(newcoinbean),Throwable::getMessage);
+    }
+
+    @Override
+    public void detachView() {
+        stockSocket1.disconnectStomp();
+        super.detachView();
     }
 }

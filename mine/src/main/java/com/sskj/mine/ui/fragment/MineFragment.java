@@ -127,8 +127,9 @@ public class MineFragment extends BaseFragment<MineFragmentPresenter> {
         fragments.add((Fragment) ARouter.getInstance().build(RConfig.TWOFRAGMENT).navigation());
         fragments.add((Fragment) ARouter.getInstance().build(RConfig.THIRDFRAGMENT).navigation());
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getChildFragmentManager(),fragments);
-        viewpager.setAdapter(adapter);
         viewpager.setCurrentItem(0);
+        viewpager.setOffscreenPageLimit(1);
+        viewpager.setAdapter(adapter);
         tabLayout.setTabSpaceEqual(true);
         tabLayout.setIndicatorWidthEqualTitle(false);
         tabLayout.setTextsize(15);

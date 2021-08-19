@@ -1,5 +1,7 @@
 package com.sskj.level.presenter;
 
+import android.text.TextUtils;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
@@ -43,8 +45,11 @@ public class NewBuyAndSellFragmentPresenter extends BasePresenter<NewBuyAndSellF
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
-                        WSFiveBean1  bean = GSonUtil.GsonToBean(response.body(), WSFiveBean1.class);
-                        mView.updateFive(bean);
+                        if(!TextUtils.isEmpty(response.body())){
+                            WSFiveBean1  bean = GSonUtil.GsonToBean(response.body(), WSFiveBean1.class);
+                            mView.updateFive(bean);
+                        }
+
                     }
                 });
 
@@ -56,9 +61,10 @@ public class NewBuyAndSellFragmentPresenter extends BasePresenter<NewBuyAndSellF
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
+                        if(!TextUtils.isEmpty(response.body())){
                         MinNumBean bean = GSonUtil.GsonToBean(response.body(), MinNumBean.class);
                         mView.setUi(bean);
-                    }
+                    }}
                 });
 
     }
@@ -70,15 +76,16 @@ public class NewBuyAndSellFragmentPresenter extends BasePresenter<NewBuyAndSellF
                     .execute(new StringCallback() {
                         @Override
                         public void onSuccess(Response<String> response) {
-                            LevelBean bean = GSonUtil.GsonToBean(response.body(), LevelBean.class);
-                            if(bean.getCode()==4000){
-                              //  ARouter.getInstance().build(RConfig.LOGIN_LOGIN).navigation();
-                            }else if(bean.getData()!=null){
-                                mView.updateData(bean.getData());
-                            }
+                            if(!TextUtils.isEmpty(response.body())) {
+                                LevelBean bean = GSonUtil.GsonToBean(response.body(), LevelBean.class);
+                                if (bean.getCode() == 4000) {
+                                    //  ARouter.getInstance().build(RConfig.LOGIN_LOGIN).navigation();
+                                } else if (bean.getData() != null) {
+                                    mView.updateData(bean.getData());
+                                }
 
-                            // mView.setBIBI(bean.getData());
-                        }
+                                // mView.setBIBI(bean.getData());
+                            }}
 
                     });
 

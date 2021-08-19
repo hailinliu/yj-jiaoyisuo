@@ -60,10 +60,7 @@ public class ThirdFragment extends BaseFragment<ThirdFragmentPresenter> {
               imageView.setImageResource(R.mipmap.mine_usdt);
                 iViewInjector.text(R.id.tv_name,bean.getCoinId())
                         .text(R.id.tv_num,App.INSTANCE.getString(R.string.mine_availble)+":"+new BigDecimal(bean.getBalance()).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString())
-                        .text(R.id.tv_suo,"锁仓:"+new BigDecimal(bean.getLockBalance()).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString())
-                        .clicked(R.id.ll_zong,(v)->{
-
-                        });
+                        .text(R.id.tv_suo,"锁仓:"+new BigDecimal(bean.getLockBalance()).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString());
                 // iViewInjector.image(R.id.image,H)
             }
         }).attachTo(rv).updateData(new ArrayList());
@@ -89,4 +86,6 @@ public class ThirdFragment extends BaseFragment<ThirdFragmentPresenter> {
         }
 
     }
+
+
 }

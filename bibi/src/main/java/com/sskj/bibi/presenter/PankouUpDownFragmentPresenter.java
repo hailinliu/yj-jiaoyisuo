@@ -1,5 +1,7 @@
 package com.sskj.bibi.presenter;
 
+import android.text.TextUtils;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.lzy.okgo.callback.StringCallback;
@@ -49,10 +51,13 @@ public class PankouUpDownFragmentPresenter extends BasePresenter<PankouUpDownFra
             httpService.getProduct2(null).execute(new StringCallback() {
                 @Override
                 public void onSuccess(Response<String> response) {
-                    Gson gson = new Gson();
-                    List<CoinBean1> list = gson.fromJson(response.body(), new TypeToken<List<CoinBean1>>() {
-                    }.getType());
-                    mView.updateUI(list);
+                    if(!TextUtils.isEmpty(response.body())){
+                        Gson gson = new Gson();
+                        List<CoinBean1> list = gson.fromJson(response.body(), new TypeToken<List<CoinBean1>>() {
+                        }.getType());
+                        mView.updateUI(list);
+                    }
+
 
                 }
             });
@@ -79,23 +84,26 @@ public void getPankou(String code) {
 
                 @Override
                 public void onSuccess(Response<String> response) {
-                    WSFiveBean1 httpData = GSonUtil.GsonToBean(response.body(),WSFiveBean1.class);
-                    if (httpData!= null){
-                        WSFiveBean1 wsFiveBean = httpData;
+                    if(!TextUtils.isEmpty(response.body())){
+                        WSFiveBean1 httpData = GSonUtil.GsonToBean(response.body(),WSFiveBean1.class);
+                        if (httpData!= null){
+                            WSFiveBean1 wsFiveBean = httpData;
 
-                        Gson gson = new Gson();
-                        AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
-                        BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
-                        //bean.setItems();
-                        mView.updateUI(bean);
-                        mView.updateUI(bean1);
-                    } else {
-                        AskBean bean = new AskBean();
-                        BidBean bean1 = new BidBean();
-                        mView.updateUI(bean1);
-                        mView.updateUI(bean);
+                            Gson gson = new Gson();
+                            AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
+                            BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
+                            //bean.setItems();
+                            mView.updateUI(bean);
+                            mView.updateUI(bean1);
+                        } else {
+                            AskBean bean = new AskBean();
+                            BidBean bean1 = new BidBean();
+                            mView.updateUI(bean1);
+                            mView.updateUI(bean);
 
+                        }
                     }
+
                 }
             });
 }
@@ -111,7 +119,7 @@ public void getPankou(String code) {
         code= CommonUtil.dealReuqestCode(code);
         String url = "/topic/market/trade-plate/"+code;
         if(mStompClient==null){
-            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/market/market-ws/websocket");
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
@@ -121,23 +129,26 @@ public void getPankou(String code) {
        // mStompClient.lifecycle()
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
-                    WSFiveBean1.BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
-                    if(bidBean1.getDirection()==0){
-                        WSFiveBean1.BidBean bidBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
-                        Gson gson = new Gson();
-                        BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
-                        mView.updateUI(bean);
-                        //bean1.setBid(bidBean);
+                    if(!TextUtils.isEmpty(topicMessage.getPayload())){
+                        WSFiveBean1.BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
+                        if(bidBean1.getDirection()==0){
+                            WSFiveBean1.BidBean bidBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
+                            Gson gson = new Gson();
+                            BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
+                            mView.updateUI(bean);
+                            //bean1.setBid(bidBean);
 
 
-                    }else if(bidBean1.getDirection()==1){
-                        WSFiveBean1.AskBean askBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.AskBean.class);
-                        Gson gson = new Gson();
-                        AskBean bean = GSonUtil.GsonToBean(gson.toJson(askBean),AskBean.class);
-                        mView.updateUI(bean);
-                        // bean1.setAsk(askBean);
+                        }else if(bidBean1.getDirection()==1){
+                            WSFiveBean1.AskBean askBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.AskBean.class);
+                            Gson gson = new Gson();
+                            AskBean bean = GSonUtil.GsonToBean(gson.toJson(askBean),AskBean.class);
+                            mView.updateUI(bean);
+                            // bean1.setAsk(askBean);
 
+                        }
                     }
+
 
                 },throwable -> {
                     LogUtil.e("链接错误",throwable);
@@ -153,7 +164,7 @@ public void getPankou(String code) {
            closeWebSocket();
            String url = "/topic/market/trade-depth/"+code+"_step"+i;
            if(mStompClient2==null){
-               mStompClient2 = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/market/market-ws/websocket");
+               mStompClient2 = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
                mStompClient2.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                    lifecycleEvent.getType();
                });
@@ -163,19 +174,22 @@ public void getPankou(String code) {
         // mStompClient.lifecycle()
         Disposable dispTopic =  mStompClient2.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
-                    BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),BidBean.class);
-                    if(bidBean1.getDirection()==0){
-                        BidBean bean = GSonUtil.GsonToBean(topicMessage.getPayload(),BidBean.class);
-                        mView.updateUI(bean);
-                        //bean1.setBid(bidBean);
+                    if(!TextUtils.isEmpty(topicMessage.getPayload())){
+                        BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),BidBean.class);
+                        if(bidBean1.getDirection()==0){
+                            BidBean bean = GSonUtil.GsonToBean(topicMessage.getPayload(),BidBean.class);
+                            mView.updateUI(bean);
+                            //bean1.setBid(bidBean);
 
 
-                    }else if(bidBean1.getDirection()==1){
-                        AskBean bean = GSonUtil.GsonToBean(topicMessage.getPayload(),AskBean.class);
-                        mView.updateUI(bean);
-                        // bean1.setAsk(askBean);
+                        }else if(bidBean1.getDirection()==1){
+                            AskBean bean = GSonUtil.GsonToBean(topicMessage.getPayload(),AskBean.class);
+                            mView.updateUI(bean);
+                            // bean1.setAsk(askBean);
 
+                        }
                     }
+
 
                 },throwable -> {
                     LogUtil.e("链接错误",throwable);
@@ -207,6 +221,14 @@ public void getPankou(String code) {
            mStompClient.disconnect();
            mStompClient=null;
        }
+        if(mStompClient2!=null&&mStompClient2.isConnected()){
+            mStompClient2.disconnect();
+            mStompClient2=null;
+        }
+        if(stockSocket1!=null){
+            stockSocket1.disconnectStomp();
+            stockSocket1 = null;
+        }
 
         if (compositeDisposable != null)
             compositeDisposable.dispose();

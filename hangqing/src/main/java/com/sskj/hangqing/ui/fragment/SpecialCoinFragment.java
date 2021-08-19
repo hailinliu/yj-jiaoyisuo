@@ -30,6 +30,7 @@ import com.sskj.hangqing.R2;
 import com.sskj.hangqing.bean.NewChartBean;
 import com.sskj.hangqing.presenter.SpecialCoinFragmentPresenter;
 import com.sskj.hangqing.util.MyViewPager;
+import com.sskj.lib.BuildConfig;
 import com.sskj.lib.Constans;
 import com.sskj.lib.RConfig;
 import com.sskj.lib.RxBusCode;
@@ -122,7 +123,8 @@ public boolean equalZero(BigDecimal decimal){
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                Log.e(TAG, "onPageScrollStateChanged: "+state);
+                if(BuildConfig.DEBUG){
+                Log.e(TAG, "onPageScrollStateChanged: "+state);}
             }
         });
         viewPager.setAdapter(new PagerAdapter() {
@@ -239,6 +241,7 @@ public boolean equalZero(BigDecimal decimal){
     @Override
     public void onDestroy() {
         DisposUtil.close(coinDispo);
+        RxBus.getDefault().unregister(this);
         super.onDestroy();
     }
     class MyAdapter extends BaseQuickAdapter<CoinBean, BaseViewHolder>{

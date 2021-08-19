@@ -78,7 +78,7 @@ public class PayOrderSellActivityPresenter extends BasePresenter<PayOrderSellAct
 
         String url = "/topic/otc/order/"+orn;
         if(mStompClient==null){
-            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/otc/otc-ws/websocket");
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/otc/otc-ws/websocket");
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });

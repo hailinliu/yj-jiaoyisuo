@@ -14,7 +14,7 @@ public class HttpConfig {
     public static final String BASE_URL = BaseHttpConfig.BASE_URL;
     public static final String BASE_URL1 = BaseHttpConfig.BASE_URL1;
     public static final String WS_BASE_URL = BaseHttpConfig.WS_BASE_URL;
-    public static final String WS_BASE_URL1 = "wss://www.yolocoin.uk/websocket1123123";
+    public static final String WS_BASE_URL1 = "wss://www.bitflnex.pro/websocket1123123";
     public static final String COIN_ORDER_CANCEL = "/app/coincoin/cancelBill";
     public static final String PRODUCT_LIST1 = "/app/kline/goodInfo";
     public static final String PRODUCT_LIST = "/market/history";

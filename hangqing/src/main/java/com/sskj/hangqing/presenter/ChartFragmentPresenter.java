@@ -100,7 +100,7 @@ public class ChartFragmentPresenter extends BasePresenter<ChartFragment> {
         }
 
         if(mStompClient==null){
-            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/market/market-ws/websocket");
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
@@ -124,22 +124,7 @@ public class ChartFragmentPresenter extends BasePresenter<ChartFragment> {
         }
         compositeDisposable = new CompositeDisposable();
     }
-    @Override
-    public void detachView() {
-        closeWebSocket();
-        super.detachView();
-    }
-    public void closeWebSocket() {
 
-        if(mStompClient!=null&&mStompClient.isConnected()){
-            mStompClient.disconnect();
-            mStompClient=null;
-        }
-
-        if (compositeDisposable != null)
-            compositeDisposable.dispose();
-
-    }
     public void getPankou(String code) {
         httpService.getPankou(code)
                 .tag(this)
@@ -172,7 +157,7 @@ public class ChartFragmentPresenter extends BasePresenter<ChartFragment> {
             return;
         code= CommonUtil.dealReuqestCode(code);
         String url = "/topic/market/trade-plate/"+code;
-        mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/market/market-ws/websocket");
+        mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
         mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
             lifecycleEvent.getType();
         });
@@ -219,6 +204,21 @@ public class ChartFragmentPresenter extends BasePresenter<ChartFragment> {
         initSocket(code);
     }
 
+    @Override
+    public void detachView() {
+        closeWebSocket();
+        super.detachView();
+    }
+    public void closeWebSocket() {
 
+        if(mStompClient!=null&&mStompClient.isConnected()){
+            mStompClient.disconnect();
+            mStompClient=null;
+        }
+
+        if (compositeDisposable != null)
+            compositeDisposable.dispose();
+
+    }
 
 }

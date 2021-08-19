@@ -24,6 +24,7 @@ import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.github.tifezh.kchartlib.chart.BaseKChartAdapter;
 import com.github.tifezh.kchartlib.chart.KChartView;
 import com.github.tifezh.kchartlib.chart.formatter.DateFormatter;
+import com.google.gson.Gson;
 import com.sskj.common.base.App;
 import com.sskj.common.util.ClickUtil;
 import com.sskj.depth.bean.DepthData;
@@ -482,6 +483,8 @@ public class NewChartFragment extends BaseFragment<NewChartFragmentPresenter> {
 
     @Override
     public void onDestroy() {
+        kChartView.closeObservable();
+        kChartView = null;
         super.onDestroy();
 
     }
@@ -632,6 +635,67 @@ public class NewChartFragment extends BaseFragment<NewChartFragmentPresenter> {
         }, e -> {
             System.out.println(e);
         });
+    }
+
+    public void refreshCoin(String payload) {
+        Gson gson = new Gson();
+        NewChartBean data = gson.fromJson(payload,NewChartBean.class);
+        if (data.getSymbol().equals(code) && mAdapter.getCount() > 0) {
+            newPrice = data.getClosePrice()+"";
+            if (isLastNewData(data)) {
+                List<Stock> list = mAdapter.getDatas();
+                Stock stock = list.get(mAdapter.getCount() - 1);
+                stock.setLowestPrice(Math.min(stock.getLowestPrice(), data.getClosePrice()));
+                stock.setHighestPrice(Math.max(stock.getHighestPrice(), data.getClosePrice()));
+                stock.setClosePrice(data.getClosePrice());
+                stock.setOpenPrice(data.getOpenPrice());
+                stock.setVolume(data.getVolume());
+                stock.setTime(mAdapter.getDatas().get(mAdapter.getCount()-1).getTime());
+                list.set(mAdapter.getCount() - 1,stock);
+                mAdapter.updateData(list);
+                DataUtil.calculate(mAdapter.getDatas());
+            } else {
+                Stock stock = new Stock();
+                stock.setClosePrice(data.getClosePrice());
+                stock.setLowestPrice(data.getLowestPrice());
+                stock.setHighestPrice(data.getHighestPrice());
+                stock.setOpenPrice(data.getOpenPrice());
+                stock.setVolume(data.getVolume());
+                switch (mAdapter.getDatas().get(mAdapter.getCount()-1).getPeriod()){
+                    case "1min":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+60*1000));
+                        break;
+                    case "5min":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+5*60*1000));
+                        break;
+                    case "15min":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+15*60*1000));
+                        break;
+                    case "30min":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+30*60*1000));
+                        break;
+                    case "60min":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+60*60*1000));
+                        break;
+                    case "4hour":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+4*60*60*1000));
+                        break;
+                    case "1day":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+24*60*60*1000));
+                        break;
+                    case "1week":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+7*24*60*60*1000));
+                        break;
+                    case "1month":
+                        stock.setTime((mAdapter.getDatas().get(mAdapter.getCount()-1).getTime()+30*24*60*60*1000));
+                        break;
+                }
+
+                mAdapter.getDatas().add(stock);
+                DataUtil.calculate(mAdapter.getDatas());
+
+            }
+        }
     }
 
     /*public void updateUI(WSFiveBean data) {

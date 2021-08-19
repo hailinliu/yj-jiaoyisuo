@@ -21,6 +21,7 @@ public class RxBusCode {
     public static final int ADDRESS_POST = 1014;
     public static final int CHANGE_MARKET_CODE = 1015;
     public static final int CHANGE_MAIN_TAB = 1016;
+    public static final int CHANGE_MAIN_TAB1 = 1080;
     public static final int SHOW_VERSION = 1017;
     public static final int CHANGE_QUICK_BUY = 1018;
     public static final int CHANGE_FABI_PUBLISH_RECORD_TYPE = 1019;

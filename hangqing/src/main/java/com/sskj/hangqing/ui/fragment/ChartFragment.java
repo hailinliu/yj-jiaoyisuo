@@ -489,11 +489,14 @@ public class ChartFragment extends BaseFragment<ChartFragmentPresenter> {
         }
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
 
+    @Override
+    public void onDestroyView() {
+        kChartView.closeObservable();
+        kChartView = null;
+        super.onDestroyView();
     }
+
     public void refreshCoin(NewChartBean data) {
         if (data.getSymbol().equals(code) && mAdapter.getCount() > 0) {
             newPrice = data.getClosePrice()+"";
@@ -876,4 +879,6 @@ public class ChartFragment extends BaseFragment<ChartFragmentPresenter> {
         }
 
     }
+
+
 }

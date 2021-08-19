@@ -40,6 +40,8 @@ import ua.naiksoftware.stomp.dto.StompMessage;
 
 public class HolderFragmentPresenter extends BasePresenter<HolderFragment> {
 
+    private StompClient mStompClient;
+
     public void getAllList() {
         OkGo.<HttpData>post(HttpConfig.BASE_URL+"/level/order/closeAll")
                 .execute(new CallBackOption<HttpData>() {
@@ -116,7 +118,7 @@ public class HolderFragmentPresenter extends BasePresenter<HolderFragment> {
        // code= CommonUtil.dealReuqestCode(code);
         String id = SPUtil.get(SPConfig.ID,"");
         String url = "/topic/level/profitLoss/"+id;
-        StompClient mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.yolocoin.uk/level-market/level-market-ws/websocket");
+        mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
         mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
             lifecycleEvent.getType();
         });
@@ -139,6 +141,19 @@ public class HolderFragmentPresenter extends BasePresenter<HolderFragment> {
             stockSocketFive.connect();
         }*/
 
+    }
+
+    @Override
+    public void detachView() {
+        closeWebSocket();
+        super.detachView();
+    }
+
+    public void closeWebSocket(){
+            if(mStompClient!=null){
+                mStompClient.disconnect();
+                mStompClient =null;
+            }
     }
 /*    public void getSet(String stockCode) {
         httpService.getProductData(stockCode)

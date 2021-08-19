@@ -148,7 +148,7 @@
     <string name="hang_logout">Log out</string>
     <string name="hang_setting_content">Set the content</string>
     <string name="hang_zhuce">Register/Login</string>
-    <string name="hangMitcion">Welcome to Yolocoin</string>
+    <string name="hangMitcion">Welcome to Bitfinex</string>
     <string name="hang_cong">Charge money</string>
     <string name="hang_tibi">Mention money</string>
     <string name="hang_submit">submit</string>
@@ -194,7 +194,7 @@
     <string name="hang_input_again">Please enter your transaction password again</string>
     <string name="hang_chakan_erweima">View QR code</string>
     <string name="hangMitcion_login">Cattle Farm web side login confirmation</string>
-    <string name="hangMitcion_yunxu">Whether to allow the current Yolocoin account to log in the webpage</string>
+    <string name="hangMitcion_yunxu">Whether to allow the current Bitfinex account to log in the webpage</string>
     <string name="hang_login">The login</string>
     <string name="hang_back">return</string>
     <string name="hang_dangqian">Commissioned by the current</string>
@@ -213,7 +213,7 @@
     <string name="hang_register">Registration time</string>
     <string name="hang_status1">state</string>
     <string name="hang_fuzhi_success">Copy success</string>
-    <string name="hang_yangniu">Yolocoin</string>
+    <string name="hang_yangniu">Bitfinex</string>
     <string name="hang_yao_qing">Invite friends</string>
     <string name="hang_deyong">A commission</string>
     <string name="hang_lianxi">Contact customer service</string>

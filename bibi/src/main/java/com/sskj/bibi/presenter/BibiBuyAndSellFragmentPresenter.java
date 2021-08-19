@@ -1,5 +1,7 @@
 package com.sskj.bibi.presenter;
 
+import android.text.TextUtils;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
@@ -46,8 +48,6 @@ import io.reactivex.schedulers.Schedulers;
 
 
 public class BibiBuyAndSellFragmentPresenter extends BasePresenter<BibiBuyAndSellFragment> {
-    private Disposable disposable;
-    private String code;
 
 public void submit(String price,String amount,String direction,String symbol,String type){
 OkGo.<BaseBean<String>>post(HttpConfig.BASE_URL+"/exchange/order/add")
@@ -69,18 +69,21 @@ OkGo.<BaseBean<String>>post(HttpConfig.BASE_URL+"/exchange/order/add")
 
                     @Override
                     public void onSuccess(Response<String> response) {
-                        WSFiveBean1 httpData = GSonUtil.GsonToBean(response.body(),WSFiveBean1.class);
-                        if (httpData!= null ) {
-                            WSFiveBean1 wsFiveBean = httpData;
-                            mView.updateFive(wsFiveBean);
-                        } else {
-                            WSFiveBean1 wsFiveBean = new WSFiveBean1();
-                            //  wsFiveBean.setCode(code);
-                            wsFiveBean.setAsk(new WSFiveBean1.AskBean());
-                            wsFiveBean.setBid(new WSFiveBean1.BidBean());
+                        if(!TextUtils.isEmpty(response.body())){
+                            WSFiveBean1 httpData = GSonUtil.GsonToBean(response.body(),WSFiveBean1.class);
+                            if (httpData!= null ) {
+                                WSFiveBean1 wsFiveBean = httpData;
+                                mView.updateFive(wsFiveBean);
+                            } else {
+                                WSFiveBean1 wsFiveBean = new WSFiveBean1();
+                                //  wsFiveBean.setCode(code);
+                                wsFiveBean.setAsk(new WSFiveBean1.AskBean());
+                                wsFiveBean.setBid(new WSFiveBean1.BidBean());
 
-                            mView.updateFive(wsFiveBean);
+                                mView.updateFive(wsFiveBean);
+                            }
                         }
+
                     }
                 });
 
@@ -93,6 +96,7 @@ OkGo.<BaseBean<String>>post(HttpConfig.BASE_URL+"/exchange/order/add")
                 .execute(new StringCallback() {
                              @Override
                              public void onSuccess(Response<String> response) {
+                                 if(!TextUtils.isEmpty(response.body())){
                                   CoinDetailBean bean =GSonUtil.GsonToBean(response.body(), CoinDetailBean.class);
                                  if(bean!=null&&bean.getCode()==4000){
                                      mView.setdata();
@@ -104,7 +108,7 @@ OkGo.<BaseBean<String>>post(HttpConfig.BASE_URL+"/exchange/order/add")
                                     mView.updateData(bean);
                                 }
 
-                             }
+                             }}
                          }
                         );
     }
@@ -114,36 +118,19 @@ public void getDealDetail(String symbol){
             .execute(new StringCallback() {
                          @Override
                          public void onSuccess(Response<String> response) {
+                             if(!TextUtils.isEmpty(response.body())){
                              DealDetailBean bean =GSonUtil.GsonToBean(response.body(), DealDetailBean.class);
                              mView.getDealDetail(bean);
-                            ;
-                         }
+
+                         }}
                      }
                 );
 }
-    @Override
+   /* @Override
     public void detachView() {
         DisposUtil.close(disposable);
         super.detachView();
-    }
-
-
-    private WebSocketObserver stockSocket;
-    private Disposable stockDisposable;
-
-
-
-
-    public void sendCode(String code) {
-
-      //  initSocket(code);
-    }
-
-    public void closeWebSocket() {
-        stockSocket.close();
-        stockSocket = null;
-
-    }
+    }*/
     public void getRate(String fromUnit,String toUnit){
         httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
         }.loadBind(mView).execute(httpService->{

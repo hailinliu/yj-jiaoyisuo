@@ -120,7 +120,6 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
             //ARouter.getInstance().build()
         });*/
         ClickUtil.click(btTrade, () -> {
-            SPUtil.put("newcode",code);
             if(isSolo){
                ARouter.getInstance().build(RConfig.APP_MAIN).navigation();
                 LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN,BibiCoinType.class).postValue(new BibiCoinType(code));
@@ -133,6 +132,7 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
                 LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB, Integer.class)
                         .postValue(3);
             }else{
+                SPUtil.put("newcode",code);
                 LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN,BibiCoinType.class).postValue(new BibiCoinType(code));
                 LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB, Integer.class)
                         .postValue(2);
@@ -144,11 +144,10 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
             finish();
         });
         ClickUtil.click(btSell, () -> {
-            SPUtil.put("newcode",code);
             if(isSolo){
                 ARouter.getInstance().build(RConfig.APP_MAIN).navigation();
                 LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN2,BibiCoinType.class).postValue(new BibiCoinType(code));
-                LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB, Integer.class)
+                LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB1, Integer.class)
                         .postValue(2);
             }
             if(isLevel){
@@ -156,8 +155,9 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
                 LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB, Integer.class)
                         .postValue(3);
             }else{
+                SPUtil.put("newcode",code);
                 LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN2,BibiCoinType.class).postValue(new BibiCoinType(code));
-                LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB, Integer.class)
+                LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB1, Integer.class)
                         .postValue(2);
             }
 
@@ -355,6 +355,12 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
 
             }
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        mPresenter.closeSocket();
+        super.onDestroy();
     }
 }
 

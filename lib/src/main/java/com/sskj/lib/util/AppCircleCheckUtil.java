@@ -42,7 +42,7 @@ public class AppCircleCheckUtil {
         if(userData.getRealVerified()!=0){
             return true;
         }else {
-            ToastUtil.showShort("请先实名");
+            ToastUtil.showShort(App.INSTANCE.getString(R.string.lib_qingxian));
         }
       /*  if(userData.getRealVerified()){
 

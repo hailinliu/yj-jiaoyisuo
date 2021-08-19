@@ -1,5 +1,7 @@
 package com.sskj.mine.presenter;
 
+import android.text.TextUtils;
+
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -17,8 +19,11 @@ public class ThirdFragmentPresenter extends BasePresenter<ThirdFragment> {
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
-                        LevelBean bean = GSonUtil.GsonToBean(response.body(), LevelBean.class);
-                        mView.setLevel(bean.getData());
+                        if(!TextUtils.isEmpty(response.body())){
+                            LevelBean bean = GSonUtil.GsonToBean(response.body(), LevelBean.class);
+                            mView.setLevel(bean.getData());
+                        }
+
                         // mView.setBIBI(bean.getData());
                     }
 

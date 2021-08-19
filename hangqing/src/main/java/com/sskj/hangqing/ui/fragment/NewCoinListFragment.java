@@ -99,7 +99,7 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
     public String multifyDouble(String a,String b){
     BigDecimal a1 =  new BigDecimal(a);
     BigDecimal b1 = new BigDecimal(b);
-    return a1.multiply(b1).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()+"";
+    return a1.multiply(b1).setScale(8,BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString();
 }
     @Override
     public void initView() {
@@ -117,15 +117,15 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
         slimAdapter = SlimAdapter.create().register(R.layout.hang_recy_item_coin, new SlimInjector<CoinBean1>() {
             @Override
             public void onInject(CoinBean1 data, IViewInjector injector, List payloads) {
-                BigDecimal bigDecimal = new BigDecimal(data.getClose()+"").setScale(data.getScale(),BigDecimal.ROUND_DOWN);
+                BigDecimal bigDecimal = new BigDecimal(data.getClose()).setScale(8,BigDecimal.ROUND_DOWN);
                 BigDecimal a =  new BigDecimal(Double.toString(data.getChg()));
                 BigDecimal b = new BigDecimal(Integer.toString(100));
                 String changerate = a.multiply(b).doubleValue()+"%";
 
                     injector
                             .image(R.id.ivCoin, HttpConfig.BASE_URL+data.getImgUrl())
-                            .text(R.id.tvUSDT,data.getClose()+"")
-                            .text(R.id.tvRMB,unit+multifyDouble(Double.toString(data.getClose()),rate))
+                            .text(R.id.tvUSDT,bigDecimal.stripTrailingZeros().toPlainString())
+                            .text(R.id.tvRMB,unit+multifyDouble(data.getClose(),rate))
                             //.textColor(R.id.tvUSDT,data.isUp() ? getResources().getColor(R.color.hangGreen) : getResources().getColor(R.color.hangRed))
                             .text(R.id.tvCode, data.getLCode())
                           //  .text(R.id.tvRate, changerate+(data.isUp()?" ↑":" ↓"))
@@ -140,7 +140,7 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
 
                 ClickUtil.click(injector.findViewById(R.id.hang_main), () -> {
                     if (!isSlide) {
-                        SPUtil.put("newcode",data.getSymbol());
+                      //  SPUtil.put("newcode1",data.getSymbol());
                         ARouter.getInstance().build(RConfig.APP_MAIN).navigation();
                         if(ishangqing){
                             ARouter.getInstance().build(RConfig.HANG_MARKET)
@@ -270,6 +270,7 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
 
     @Override
     public void onDestroy() {
+        mPresenter.closeSocket();
         super.onDestroy();
     }
 

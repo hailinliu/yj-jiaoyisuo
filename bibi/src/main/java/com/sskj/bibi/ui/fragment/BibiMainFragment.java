@@ -93,6 +93,8 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
     SmartRefreshLayout smartRefreshLayout;
     @Autowired(required = true)
     String code;
+    @Autowired
+    boolean isnewflag;
     @BindView(R2.id.depthMapView)
     DepthMapView depthMapView;
     @Inject
@@ -127,6 +129,8 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
         DaggerUserDataComponent.create().inject(this);
         RxBus.getDefault().register(this);
         depthMapView.setDrawText(false);
+        imageView.setImageResource(R.mipmap.lib_usd);
+        textView.setText("USD");
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_eru,"EUR"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_hkd,"HKD"));
@@ -135,7 +139,7 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_myr,"MYR"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_usd,"USD"));
-      //  code = SPUtil.get("newcode",code);
+        code = SPUtil.get("newcode",code);
         tvTitle.setText(TextUtils.isEmpty(code) ? "" : code.replace("_", "/").toUpperCase());
         SPUtil.put("cointype",TextUtils.isEmpty(code) ? "" : code.replace("_", "/").toUpperCase());
        // ImageUtil.setImage("https://v.qq.com/x/page/q0897fvyjg9.html?vframe/jpg/offset/0",ivEntrustAll);
@@ -147,6 +151,7 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
         Fragment buyAndSellFragment = (Fragment) ARouter.getInstance()
                 .build(RConfig.BIBI_FRAGMENT_BUY_AND_SELL)
                 .withString(Constans.CODE, code)
+                .withBoolean("isnewflag",isnewflag)
                 .navigation();
         Fragment entrustFragment = (Fragment) ARouter.getInstance()
                 .build(RConfig.BIBI_FRAGMENT_CURRENT_ENTRUST)
@@ -219,6 +224,8 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
             /*if(userData==null){
                 ARouter.getInstance().build(RConfig.LOGIN_LOGIN).navigation();
             }*/
+            imageView.setImageResource(R.mipmap.lib_usd);
+            textView.setText("USD");
             LiveDataBus.get().with(RxBusCode.BIBI_FRESH).postValue(1);
             smartRefreshLayout.finishRefresh(3);
         });
@@ -237,6 +244,8 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
     @Override
     public void initData() {
        // mPresenter.getProduct(code);
+      /*  imageView.setImageResource(R.mipmap.lib_usd);
+        textView.setText("USD");*/
         mPresenter.getPankou(code);
         mPresenter.initSocket(code);
         mPresenter.getRate("USD","USD");
@@ -258,8 +267,10 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
         code = coinType.getCode();
         tvTitle.setText(code);
         tvName.setText(code+App.INSTANCE.getString(R.string.bibi_shendu));
-        initData();
-
+        //initData();
+        mPresenter.getPankou(code);
+        mPresenter.initSocket(code);
+        mPresenter.getRate("USD","USD");
         //mPresenter.getPankou(coinType.getCode());
 
     }

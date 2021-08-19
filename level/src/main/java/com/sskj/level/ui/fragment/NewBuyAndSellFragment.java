@@ -40,6 +40,7 @@ import com.sskj.level.bean.WSFiveBean;
 import com.sskj.level.bean.WSFiveBean1;
 import com.sskj.level.component.DaggerUserDataComponent;
 import com.sskj.level.presenter.NewBuyAndSellFragmentPresenter;
+import com.sskj.lib.BuildConfig;
 import com.sskj.lib.RConfig;
 import com.sskj.lib.RxBusCode;
 import com.sskj.lib.SPConfig;
@@ -494,16 +495,20 @@ public class NewBuyAndSellFragment extends BaseFragment<NewBuyAndSellFragmentPre
         });*/
         //输入价格
         RxTextView.textChanges(etPrice1).subscribe(data->{
-                    Log.e(TAG, "initInputChange3:"+data);
+            if(BuildConfig.DEBUG){
+                Log.e(TAG, "initInputChange3:"+data);
+            }
+
                     String text = data.toString();
-                    Log.e(TAG, "initInputChange2: "+text);
+                    if(BuildConfig.DEBUG){
+                    Log.e(TAG, "initInputChange2: "+text);}
                     if (TextUtils.isEmpty(text)) {
                         currentPrice = "0";
                     } else {
                         currentPrice = text;
                     }
-
-                    Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了:" + text);
+                    if(BuildConfig.DEBUG){
+                    Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了:" + text);}
                     calculateMaxTrade();
                     // changeShowData();
                     etNum1.setText(etNum1.getText());
@@ -528,7 +533,8 @@ public class NewBuyAndSellFragment extends BaseFragment<NewBuyAndSellFragmentPre
                         currentNum = "0";
                         text = "0";
                     }
-                    Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了1:" + text);
+                    if(BuildConfig.DEBUG){
+                    Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了1:" + text);}
                     if (TextUtils.isEmpty(text) || Double.valueOf(text) == 0 ||
                             TextUtils.isEmpty(etPrice1.getText()) || Double.valueOf(etPrice1.getText().toString()) == 0) {
 

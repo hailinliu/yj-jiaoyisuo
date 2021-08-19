@@ -152,4 +152,5 @@
     <string name="lib_yanzhengma">验证码</string>
     <string name="lib_chongxin">%s秒后重新发送</string>
     <string name="lib_huoqu">点击获取</string>
+    <string name="lib_qingxian">请先实名</string>
 </resources>

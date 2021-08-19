@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
-    <string name="app_label">Yolocoin</string>
+    <string name="app_label">Bitfinex</string>
     <string name="appmainActivity6">알아챘습니다</string>
     <string name="appmainActivity5">자산</string>
     <string name="appmainActivity2">정보</string>

@@ -31,7 +31,7 @@ public class CoinBean1 implements Serializable {
     private double open;
     private double high;
     private double low;
-    private double close;
+    private String close;
     private double chg;
     private boolean isUp;
     private String LCode;
@@ -66,6 +66,14 @@ public class CoinBean1 implements Serializable {
     private int scale;
     private String imgUrl;
 
+    public String getClose() {
+        return close;
+    }
+
+    public void setClose(String close) {
+        this.close = close;
+    }
+
     public String getSymbol() {
         return symbol;
     }
@@ -98,13 +106,7 @@ public class CoinBean1 implements Serializable {
         this.low = low;
     }
 
-    public double getClose() {
-        return close;
-    }
 
-    public void setClose(double close) {
-        this.close = close;
-    }
 
     public double getChg() {
         return chg;

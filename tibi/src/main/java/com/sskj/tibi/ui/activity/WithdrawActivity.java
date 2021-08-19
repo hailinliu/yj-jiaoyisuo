@@ -19,6 +19,7 @@ import com.github.yoojia.inputs.AndroidNextInputs;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.sskj.common.base.App;
 import com.sskj.common.util.ToastUtil;
+import com.sskj.lib.BuildConfig;
 import com.sskj.lib.RConfig;
 import com.sskj.lib.base.BaseActivity;
 import com.sskj.lib.bean.CoinListBean;
@@ -177,9 +178,13 @@ public class WithdrawActivity extends BaseActivity<WithdrawActivityPresenter> {
             }
         });
         RxTextView.textChanges(etNum).subscribe(data->{
-                    Log.e(TAG, "initInputChange3:"+data);
+            if(BuildConfig.DEBUG){
+                Log.e(TAG, "initInputChange3:"+data);
+            }
+
                     String text = data.toString();
-                    Log.e(TAG, "initInputChange2: "+text);
+                    if(BuildConfig.DEBUG){
+                    Log.e(TAG, "initInputChange2: "+text);}
                     if (TextUtils.isEmpty(text)) {
                          num= "0";
                          tvShiji.setText(App.INSTANCE.getString(R.string.tibi_shiji)+"0 "+tvType1.getText().toString());

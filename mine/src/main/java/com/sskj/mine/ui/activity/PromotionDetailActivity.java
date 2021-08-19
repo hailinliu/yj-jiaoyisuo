@@ -60,7 +60,7 @@ public class PromotionDetailActivity extends BaseActivity<PromotionDetailActivit
         String  invitationCode =  SPUtil.get("invitationCode","");
         ImageUtil.setCircleImage(HttpConfig.BASE_URL + HttpConfig.GETERWEIMA+"?id="+id+"&number="+invitationCode,image);
         tvYaoqing.setText(invitationCode);
-       // tvLianjie.setText("https://www.yolocoin.uk/register/index.html?invitationCode="+invitationCode);
+       // tvLianjie.setText("https://www.bitflnex.pro/register/index.html?invitationCode="+invitationCode);
     }
 
     @Override

@@ -72,4 +72,7 @@ public class MarketActivityPresenter extends BasePresenter<MarketActivity> {
         stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
                 .subscribe(newcoinbean-> mView.refreshCoin(newcoinbean),Throwable::getMessage);
     }
+    public void closeSocket(){
+        stockSocket1.disconnectStomp();
+    }
 }

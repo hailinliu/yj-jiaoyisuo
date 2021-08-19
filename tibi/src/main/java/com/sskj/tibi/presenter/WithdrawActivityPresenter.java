@@ -1,5 +1,7 @@
 package com.sskj.tibi.presenter;
 
+import android.text.TextUtils;
+
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -23,8 +25,11 @@ public class WithdrawActivityPresenter extends BasePresenter<WithdrawActivity> {
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
-                        CoinListBean bean = GSonUtil.GsonToBean(response.body(),CoinListBean.class);
-                        mView.setData(bean.getData());
+                        if(!TextUtils.isEmpty(response.body())){
+                            CoinListBean bean = GSonUtil.GsonToBean(response.body(),CoinListBean.class);
+                            mView.setData(bean.getData());
+                        }
+
                     }
                 });
     }
@@ -35,9 +40,10 @@ public class WithdrawActivityPresenter extends BasePresenter<WithdrawActivity> {
                 .execute(new StringCallback() {
                              @Override
                              public void onSuccess(Response<String> response) {
+                                 if(!TextUtils.isEmpty(response.body())){
                                  CoinDetailBean bean =GSonUtil.GsonToBean(response.body(), CoinDetailBean.class);
                                  mView.updateData(bean);
-                             }
+                             }}
                          }
                 );
     }

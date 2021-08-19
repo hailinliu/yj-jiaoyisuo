@@ -159,7 +159,7 @@ public class CoinUtil {
             case "MANA/ETH":
                 return 4;
             default:
-                return 4;
+                return 6;
 
         }
     }
@@ -230,7 +230,7 @@ public class CoinUtil {
                 count = 4;
                 break;
             default:
-                count = 4;
+                count = 8;
                 break;
         }
         return count;

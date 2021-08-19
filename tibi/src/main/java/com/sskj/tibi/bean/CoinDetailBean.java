@@ -80,7 +80,16 @@ public class CoinDetailBean {
         private String addressList;
         private boolean canOtc;
         private String balance;
-        private int frozenBalance;
+        private String frozenBalance;
+
+        public String getFrozenBalance() {
+            return frozenBalance;
+        }
+
+        public void setFrozenBalance(String frozenBalance) {
+            this.frozenBalance = frozenBalance;
+        }
+
         private String address;
         private int isLock;
         private String releaseBalance;
@@ -135,13 +144,6 @@ public class CoinDetailBean {
             this.balance = balance;
         }
 
-        public int getFrozenBalance() {
-            return frozenBalance;
-        }
-
-        public void setFrozenBalance(int frozenBalance) {
-            this.frozenBalance = frozenBalance;
-        }
 
         public String getAddress() {
             return address;
@@ -256,25 +258,25 @@ public class CoinDetailBean {
 
             private String usdRate;
             private String sgdRate;
-            private int enableRpc;
-            private int sort;
-            private int canWithdraw;
-            private int canRecharge;
-            private int canTransfer;
-            private int canAutoWithdraw;
-            private int withdrawThreshold;
+            private String enableRpc;
+            private String sort;
+            private String canWithdraw;
+            private String canRecharge;
+            private String canTransfer;
+            private String canAutoWithdraw;
+            private String withdrawThreshold;
             private String minWithdrawAmount;
             private String maxWithdrawAmount;
-            private int isPlatformCoin;
+            private String isPlatformCoin;
             private boolean hasLegal;
             private String allBalance;
             private String coldWalletAddress;
-            private int hotAllBalance;
-            private int minerFee;
-            private int withdrawScale;
-            private int minRechargeAmount;
+            private String hotAllBalance;
+            private String minerFee;
+            private String withdrawScale;
+            private String minRechargeAmount;
             private String masterAddress;
-            private int maxDailyWithdrawRate;
+            private String maxDailyWithdrawRate;
             private String imgUrl;
             private String releaseAmount;
             private String releaseTime;
@@ -284,12 +286,140 @@ public class CoinDetailBean {
             private String blockQuery;
             private String coinInfo;
             private boolean isSettlement;
-            private int burnAmount;
-            private int circulateAmount;
+            private String burnAmount;
+            private String circulateAmount;
             private String blockHeight;
             private String contractAddress;
             private String contractDecimals;
             private String chainType;
+
+            public String getEnableRpc() {
+                return enableRpc;
+            }
+
+            public void setEnableRpc(String enableRpc) {
+                this.enableRpc = enableRpc;
+            }
+
+            public String getSort() {
+                return sort;
+            }
+
+            public void setSort(String sort) {
+                this.sort = sort;
+            }
+
+            public String getCanWithdraw() {
+                return canWithdraw;
+            }
+
+            public void setCanWithdraw(String canWithdraw) {
+                this.canWithdraw = canWithdraw;
+            }
+
+            public String getCanRecharge() {
+                return canRecharge;
+            }
+
+            public void setCanRecharge(String canRecharge) {
+                this.canRecharge = canRecharge;
+            }
+
+            public String getCanTransfer() {
+                return canTransfer;
+            }
+
+            public void setCanTransfer(String canTransfer) {
+                this.canTransfer = canTransfer;
+            }
+
+            public String getCanAutoWithdraw() {
+                return canAutoWithdraw;
+            }
+
+            public void setCanAutoWithdraw(String canAutoWithdraw) {
+                this.canAutoWithdraw = canAutoWithdraw;
+            }
+
+            public String getWithdrawThreshold() {
+                return withdrawThreshold;
+            }
+
+            public void setWithdrawThreshold(String withdrawThreshold) {
+                this.withdrawThreshold = withdrawThreshold;
+            }
+
+            public String getIsPlatformCoin() {
+                return isPlatformCoin;
+            }
+
+            public void setIsPlatformCoin(String isPlatformCoin) {
+                this.isPlatformCoin = isPlatformCoin;
+            }
+
+            public String getHotAllBalance() {
+                return hotAllBalance;
+            }
+
+            public void setHotAllBalance(String hotAllBalance) {
+                this.hotAllBalance = hotAllBalance;
+            }
+
+            public String getMinerFee() {
+                return minerFee;
+            }
+
+            public void setMinerFee(String minerFee) {
+                this.minerFee = minerFee;
+            }
+
+            public String getWithdrawScale() {
+                return withdrawScale;
+            }
+
+            public void setWithdrawScale(String withdrawScale) {
+                this.withdrawScale = withdrawScale;
+            }
+
+            public String getMinRechargeAmount() {
+                return minRechargeAmount;
+            }
+
+            public void setMinRechargeAmount(String minRechargeAmount) {
+                this.minRechargeAmount = minRechargeAmount;
+            }
+
+            public String getMaxDailyWithdrawRate() {
+                return maxDailyWithdrawRate;
+            }
+
+            public void setMaxDailyWithdrawRate(String maxDailyWithdrawRate) {
+                this.maxDailyWithdrawRate = maxDailyWithdrawRate;
+            }
+
+            public boolean isSettlement() {
+                return isSettlement;
+            }
+
+            public void setSettlement(boolean settlement) {
+                isSettlement = settlement;
+            }
+
+            public String getBurnAmount() {
+                return burnAmount;
+            }
+
+            public void setBurnAmount(String burnAmount) {
+                this.burnAmount = burnAmount;
+            }
+
+            public String getCirculateAmount() {
+                return circulateAmount;
+            }
+
+            public void setCirculateAmount(String circulateAmount) {
+                this.circulateAmount = circulateAmount;
+            }
 
             public String getName() {
                 return name;
@@ -350,61 +480,7 @@ public class CoinDetailBean {
                 this.sgdRate = sgdRate;
             }
 
-            public int getEnableRpc() {
-                return enableRpc;
-            }
 
-            public void setEnableRpc(int enableRpc) {
-                this.enableRpc = enableRpc;
-            }
-
-            public int getSort() {
-                return sort;
-            }
-
-            public void setSort(int sort) {
-                this.sort = sort;
-            }
-
-            public int getCanWithdraw() {
-                return canWithdraw;
-            }
-
-            public void setCanWithdraw(int canWithdraw) {
-                this.canWithdraw = canWithdraw;
-            }
-
-            public int getCanRecharge() {
-                return canRecharge;
-            }
-
-            public void setCanRecharge(int canRecharge) {
-                this.canRecharge = canRecharge;
-            }
-
-            public int getCanTransfer() {
-                return canTransfer;
-            }
-
-            public void setCanTransfer(int canTransfer) {
-                this.canTransfer = canTransfer;
-            }
-
-            public int getCanAutoWithdraw() {
-                return canAutoWithdraw;
-            }
-
-            public void setCanAutoWithdraw(int canAutoWithdraw) {
-                this.canAutoWithdraw = canAutoWithdraw;
-            }
-
-            public int getWithdrawThreshold() {
-                return withdrawThreshold;
-            }
-
-            public void setWithdrawThreshold(int withdrawThreshold) {
-                this.withdrawThreshold = withdrawThreshold;
-            }
 
             public String getMinWithdrawAmount() {
                 return minWithdrawAmount;
@@ -422,13 +498,7 @@ public class CoinDetailBean {
                 this.maxWithdrawAmount = maxWithdrawAmount;
             }
 
-            public int getIsPlatformCoin() {
-                return isPlatformCoin;
-            }
 
-            public void setIsPlatformCoin(int isPlatformCoin) {
-                this.isPlatformCoin = isPlatformCoin;
-            }
 
             public boolean isHasLegal() {
                 return hasLegal;
@@ -454,37 +524,6 @@ public class CoinDetailBean {
                 this.coldWalletAddress = coldWalletAddress;
             }
 
-            public int getHotAllBalance() {
-                return hotAllBalance;
-            }
-
-            public void setHotAllBalance(int hotAllBalance) {
-                this.hotAllBalance = hotAllBalance;
-            }
-
-            public int getMinerFee() {
-                return minerFee;
-            }
-
-            public void setMinerFee(int minerFee) {
-                this.minerFee = minerFee;
-            }
-
-            public int getWithdrawScale() {
-                return withdrawScale;
-            }
-
-            public void setWithdrawScale(int withdrawScale) {
-                this.withdrawScale = withdrawScale;
-            }
-
-            public int getMinRechargeAmount() {
-                return minRechargeAmount;
-            }
-
-            public void setMinRechargeAmount(int minRechargeAmount) {
-                this.minRechargeAmount = minRechargeAmount;
-            }
 
             public String getMasterAddress() {
                 return masterAddress;
@@ -494,13 +533,6 @@ public class CoinDetailBean {
                 this.masterAddress = masterAddress;
             }
 
-            public int getMaxDailyWithdrawRate() {
-                return maxDailyWithdrawRate;
-            }
-
-            public void setMaxDailyWithdrawRate(int maxDailyWithdrawRate) {
-                this.maxDailyWithdrawRate = maxDailyWithdrawRate;
-            }
 
             public String getImgUrl() {
                 return imgUrl;
@@ -574,21 +606,6 @@ public class CoinDetailBean {
                 this.isSettlement = isSettlement;
             }
 
-            public int getBurnAmount() {
-                return burnAmount;
-            }
-
-            public void setBurnAmount(int burnAmount) {
-                this.burnAmount = burnAmount;
-            }
-
-            public int getCirculateAmount() {
-                return circulateAmount;
-            }
-
-            public void setCirculateAmount(int circulateAmount) {
-                this.circulateAmount = circulateAmount;
-            }
 
             public String getBlockHeight() {
                 return blockHeight;

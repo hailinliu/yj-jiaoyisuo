@@ -34,7 +34,7 @@ public class UserViewModel extends ViewModel {
 
     public LiveData<List<SafeSettingBean>> getUsers() {
         if (userRepository == null) {
-            Log.e("---->", "isNull");
+          //  Log.e("---->", "isNull");
             return null;
         }
         return userRepository.getAllUser();
@@ -43,7 +43,7 @@ public class UserViewModel extends ViewModel {
 
     public SafeSettingBean getUser() {
         if (userRepository == null) {
-            Log.e("---->", "isNull");
+         //   Log.e("---->", "isNull");
             return null;
         }
         List<SafeSettingBean> dataList = userRepository.getAllUser().getValue();
@@ -55,28 +55,28 @@ public class UserViewModel extends ViewModel {
 
     public void insert(SafeSettingBean user) {
         if (userRepository == null) {
-            Log.e("---->", "isNull");
+         //   Log.e("---->", "isNull");
         }
         userRepository.insert(user);
     }
 
     public void clear() {
         if (userRepository == null) {
-            Log.e("---->", "isNull");
+          //  Log.e("---->", "isNull");
         }
         userRepository.clear();
     }
 
     public void update(SafeSettingBean user) {
         if (userRepository == null) {
-            Log.e("---->", "isNull");
+           // Log.e("---->", "isNull");
         }
         userRepository.update(user);
     }
 
     public void update() {
         if (userRepository == null) {
-            Log.e("---->", "isNull");
+          //  Log.e("---->", "isNull");
         }
         userRepository.update();
     }

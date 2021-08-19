@@ -152,4 +152,5 @@
     <string name="lib_yanzhengma">인증번호</string>
     <string name="lib_chongxin">%s초 후 다시 보내드립니다</string>
     <string name="lib_huoqu">가져오려면 누르십시오</string>
+    <string name="lib_qingxian">먼저 실명으로 하십시오.</string>
 </resources>

@@ -2,6 +2,7 @@ package com.sskj.lightning;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.os.StrictMode;
 import android.support.multidex.MultiDexApplication;
 import android.support.v7.app.AppCompatDelegate;
 import android.text.TextUtils;
@@ -26,12 +27,11 @@ import com.sskj.lib.util.NightModeConfig;
 import com.sskj.lightning.ui.activity.MainActivity;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.zxy.recovery.core.Recovery;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Locale;
-
 import es.dmoral.toasty.Toasty;
+
 
 /**
  * 作者 :吕志豪
@@ -57,7 +57,9 @@ public class BaseApplication extends MultiDexApplication {
       //  if(isAppProcess()){
         BaseActivityLifecycleCallbacks callbacks= new BaseActivityLifecycleCallbacks();
         App.INSTANCE.registerActivityLifecycleCallbacks(callbacks);
-        SPUtil.put("callbacks",callbacks);
+
+
+       // SPUtil.put("callbacks",callbacks);
             ArrayList<Locale> locales = new ArrayList<>();
             locales.add(Locale.ENGLISH);
             locales.add(Locale.SIMPLIFIED_CHINESE);
@@ -81,6 +83,23 @@ public class BaseApplication extends MultiDexApplication {
                         .init(this);
                 ARouter.openLog();
                 ARouter.openDebug();
+                StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                        .detectCustomSlowCalls() //API等级11，使用StrictMode.noteSlowCode 自定义的耗时调用
+                        .detectDiskReads() //磁盘读取操作
+                        .detectDiskWrites() //磁盘写入操作
+                        .detectNetwork()  //网络操作
+                        //  .penaltyDialog() //弹出违规提示对话框
+                        .detectAll()
+                        .penaltyLog() //在Logcat 中打印违规异常信息
+                        .build());
+
+                StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                        .detectAll()
+                        .detectActivityLeaks()  //Activity泄露
+                        .detectLeakedSqlLiteObjects()  //泄露的Sqlite对象
+                        .setClassInstanceLimit(this.getClass(), 1) //检测实例数量
+                        .penaltyLog()
+                        .build());
             }else {
                 Thread.setDefaultUncaughtExceptionHandler((t, e) -> System.out.println(e));
             }

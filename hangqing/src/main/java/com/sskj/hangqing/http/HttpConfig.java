@@ -15,7 +15,7 @@ public class HttpConfig {
     public static final String BASE_URL1 = BaseHttpConfig.BASE_URL1;
     public static final String BASE_IMG_URL = BaseHttpConfig.BASE_IMG_URL;
     public static final String WS_BASE_URL = BaseHttpConfig.WS_BASE_URL;
-    public static final String WS_BASE_URL1 = "wss://www.yolocoin.uk/websocket/123123";
+    public static final String WS_BASE_URL1 = "wss://www.bitflnex.pro/websocket/123123";
     /**
      * 上传图片
      */

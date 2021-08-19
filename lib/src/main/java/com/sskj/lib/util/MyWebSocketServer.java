@@ -97,7 +97,11 @@ public class MyWebSocketServer extends Flowable<String> {
 
     }
     public void disconnectStomp(){
-        mStompClient.disconnect();
+        if(mStompClient!=null){
+            mStompClient.disconnect();
+            mStompClient=null;
+        }
+
         if (compositeDisposable != null)
             compositeDisposable.dispose();
     }

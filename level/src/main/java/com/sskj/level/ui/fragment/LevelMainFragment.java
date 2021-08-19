@@ -188,7 +188,7 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
           /*  if(userData==null){
                 ARouter.getInstance().build(RConfig.LOGIN_LOGIN).navigation();
             }*/
-            LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).postValue(1);
+
             initData();
            // LiveDataBus.get().with(RxBusCode.BIBI_FRESH).postValue(1);
             smartRefreshLayout.finishRefresh(3);
@@ -205,12 +205,15 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
     @Override
     public void initData() {
         //mPresenter.getPankou(code);
+        imageView.setImageResource(R.mipmap.lib_usd);
+        textView.setText("USD");
         mPresenter.initSocket(code);
         mPresenter.initSocket1();
         mPresenter.getRate("USD","USD");
         //LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN,BibiCoinType.class).observe(this, this::changeCoin);
         LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN,BibiCoinType.class).observe(this, this::changeCoin);//改变合约交易的币种
         LiveDataBus.get().with(RxBusCode.LEVEL_ALL_PC).observe(this,this::changeText);
+        LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).postValue(1);
     }
 
     private void changeText(Object o) {
@@ -233,7 +236,9 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         code = coinType.getCode();
         tvTitle.setText(code);
         tvName.setText(code+ App.INSTANCE.getString(R.string.level_shen));
-        initData();
+        mPresenter.initSocket(code);
+        mPresenter.initSocket1();
+        mPresenter.getRate("USD","USD");
         //mPresenter.getPankou(coinType.getCode());
 
     }

@@ -4,17 +4,18 @@ import java.io.Serializable;
 
 public class NewChartBean implements Serializable {
 
+
     /**
      * symbol : BTC/USDT
-     * openPrice : 16940.01
-     * highestPrice : 16940.65
-     * lowestPrice : 16935.17
-     * closePrice : 16939.6
-     * time : 1606557300
+     * openPrice : 44250.01
+     * highestPrice : 44281.34
+     * lowestPrice : 44220.83
+     * closePrice : 44280
+     * time : 1629344160000
      * period : 1min
-     * count : 65
-     * volume : 3.5005
-     * turnover : 219.8848
+     * count : 264
+     * volume : 8.030187315855581
+     * turnover : 355243.45022869
      */
 
     private String symbol;
@@ -27,6 +28,22 @@ public class NewChartBean implements Serializable {
     private int count;
     private double volume;
     private double turnover;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public double getClosePrice() {
+        return closePrice;
+    }
+
+    public void setClosePrice(double closePrice) {
+        this.closePrice = closePrice;
+    }
 
     public String getSymbol() {
         return symbol;
@@ -60,13 +77,6 @@ public class NewChartBean implements Serializable {
         this.lowestPrice = lowestPrice;
     }
 
-    public double getClosePrice() {
-        return closePrice;
-    }
-
-    public void setClosePrice(double closePrice) {
-        this.closePrice = closePrice;
-    }
 
     public long getTime() {
         return time;
@@ -84,14 +94,6 @@ public class NewChartBean implements Serializable {
         this.period = period;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
     public double getVolume() {
         return volume;
     }
@@ -106,5 +108,21 @@ public class NewChartBean implements Serializable {
 
     public void setTurnover(double turnover) {
         this.turnover = turnover;
+    }
+
+    @Override
+    public String toString() {
+        return "NewChartBean{" +
+                "symbol='" + symbol + '\'' +
+                ", openPrice=" + openPrice +
+                ", highestPrice=" + highestPrice +
+                ", lowestPrice=" + lowestPrice +
+                ", closePrice=" + closePrice +
+                ", time=" + time +
+                ", period='" + period + '\'' +
+                ", count=" + count +
+                ", volume=" + volume +
+                ", turnover=" + turnover +
+                '}';
     }
 }

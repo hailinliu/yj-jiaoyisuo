@@ -122,7 +122,7 @@ public String multifyDouble(String a,String b,int scale){
         slimAdapter = SlimAdapter.create().register(R.layout.hang_recy_item_coin, new SlimInjector<CoinBean1>() {
             @Override
             public void onInject(CoinBean1 data, IViewInjector injector, List payloads) {
-                BigDecimal bigDecimal = new BigDecimal(data.getClose()+"");
+                BigDecimal bigDecimal = new BigDecimal(data.getClose());
                 BigDecimal a =  new BigDecimal(Double.toString(data.getChg()));
                 BigDecimal b = new BigDecimal(Integer.toString(100));
                 String changerate = a.multiply(b).doubleValue()+"%";
@@ -143,7 +143,7 @@ public String multifyDouble(String a,String b,int scale){
 
                     injector
                             .text(R.id.tvUSDT,bigDecimal.stripTrailingZeros().toPlainString())
-                            .text(R.id.tvRMB,"≈ "+unit+multifyDouble(Double.toString(data.getClose()),rate,data.getScale()))
+                            .text(R.id.tvRMB,"≈ "+unit+multifyDouble(data.getClose(),rate,data.getScale()))
                           //  .textColor(R.id.tvUSDT,data.isUp() ? getResources().getColor(R.color.hangGreen) : getResources().getColor(R.color.hangRed))
                             .text(R.id.tvCode, data.getLCode())
                           //  .text(R.id.tvRate, changerate+(data.isUp()?" ↑":" ↓"))
@@ -293,6 +293,8 @@ public String multifyDouble(String a,String b,int scale){
 
     @Override
     public void onDestroy(){
+        RxBus.getDefault().unregister(this);
+        mPresenter.closeSocket();
         super.onDestroy();
     }
     String unit ="￥";

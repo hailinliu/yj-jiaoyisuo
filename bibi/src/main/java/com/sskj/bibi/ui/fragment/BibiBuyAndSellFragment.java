@@ -24,6 +24,8 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.jakewharton.rxbinding2.widget.RxRadioGroup;
 import com.jakewharton.rxbinding2.widget.RxTextView;
+import com.lzy.okgo.OkGo;
+import com.lzy.okgo.model.HttpHeaders;
 import com.sskj.bibi.R;
 import com.sskj.bibi.R2;
 import com.sskj.bibi.bean.CoinDetailBean;
@@ -33,6 +35,9 @@ import com.sskj.bibi.component.DaggerUserDataComponent;
 import com.sskj.bibi.presenter.BibiBuyAndSellFragmentPresenter;
 import com.sskj.common.base.App;
 import com.sskj.common.box.inputfilter.MoneyValueFilter;
+import com.sskj.common.rxbus2.RxBus;
+import com.sskj.common.rxbus2.Subscribe;
+import com.sskj.common.rxbus2.ThreadMode;
 import com.sskj.common.util.ClickUtil;
 import com.sskj.common.util.LanguageUtil;
 import com.sskj.common.util.SPUtil;
@@ -41,6 +46,7 @@ import com.sskj.depth.bean.DepthData;
 import com.sskj.depth.bean.IDepthData;
 import com.sskj.depth.view.DepthMapView;
 import com.sskj.level.util.TipLevelUtil;
+import com.sskj.lib.BuildConfig;
 import com.sskj.lib.RConfig;
 import com.sskj.lib.RxBusCode;
 import com.sskj.lib.SPConfig;
@@ -56,6 +62,7 @@ import com.sskj.lib.box.LiveDataBus;
 import com.sskj.lib.model.room.UserViewModel;
 import com.sskj.lib.util.BottomSheetUtil;
 import com.sskj.lib.util.CoinUtil;
+import com.sskj.lib.util.CommonUtil;
 import com.sskj.lib.util.NumberUtil;
 import com.sskj.lib.widget.MyRadioGroup;
 import com.warkiz.widget.IndicatorSeekBar;
@@ -147,6 +154,8 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
     TextView tv_unit;
     @Autowired(required = true)
     String code = "BTC/USDT";//币种类型code
+    @Autowired
+     boolean isnewflag;
     String type = "BTC";//币种类型
     String moneyType = "USDT";//币种类型
     private BottomSheetDialog priceModeSheet;
@@ -195,7 +204,6 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
 
     @Override
     protected void initEvent() {
-
         group.setOnCheckedChangeListener(new MyRadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(MyRadioGroup group, int checkedId) {
@@ -263,9 +271,10 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
     @Override
     public void initView() {
         ARouter.getInstance().inject(this);
+        RxBus.getDefault().register(this);
         DaggerUserDataComponent.create().inject(this);
-
         btBuy.setBackground(ContextCompat.getDrawable(App.INSTANCE, isBuy ? R.drawable.bibi_shape_green : R.drawable.bibi_shape_red));
+        type = code.split("/")[0];
        // etNum1.setText("0");
         ClickUtil.click(btBuy, () -> {
             ARouter.getInstance().build(RConfig.LOGIN_LOGIN).navigation();
@@ -294,9 +303,13 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
                 rate = "0.01";
                 break;
         }*/
+       if(isnewflag){
+           isBuy =false;
+           radioGroup.check(R.id.rbSell);
+           mPresenter.getwallet("0",type);
+       }
         initClick();
         updateUI();
-
 
     }
 
@@ -373,6 +386,11 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
                 data = new BigDecimal(mincommonTypeTradNum).stripTrailingZeros().toPlainString();
                 etNum1.setHint(App.INSTANCE.getString(R.string.bibi_bibiBuyAndSellFragment4)+"\n"+data);
             }
+        }
+        if(isBuy){
+            tv_unit.setText(moneyType);
+        }else {
+            tv_unit.setText(type);
         }
        // changeShowData();
     }
@@ -512,7 +530,13 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
         }
       boolean b =   TextUtils.isEmpty(etPrice1.getText());
     }
-
+    @Subscribe(threadMode = ThreadMode.MAIN,code=1234)
+    public void rel(){
+        isBuy =false;
+        radioGroup.check(R.id.rbSell);
+        mPresenter.getwallet("0",type);
+        updateUI();
+    }
     @RequiresApi(api = Build.VERSION_CODES.M)
     @SuppressLint("CheckResult")
     private void initClick() {
@@ -675,16 +699,18 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
             Log.e(TAG, "initInputChange: "+text);
         });*/
         RxTextView.textChanges(etPrice1).subscribe(data->{
-            Log.e(TAG, "initInputChange3:"+data);
+                    if(BuildConfig.DEBUG){
+            Log.e(TAG, "initInputChange3:"+data);}
             String text = data.toString();
-            Log.e(TAG, "initInputChange2: "+text);
+                    if(BuildConfig.DEBUG){
+            Log.e(TAG, "initInputChange2: "+text);}
             if (TextUtils.isEmpty(text)) {
                 currentPrice = "0";
             } else {
                 currentPrice = text;
             }
-
-            Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了:" + text);
+                    if(BuildConfig.DEBUG){
+            Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了:" + text);}
             calculateMaxTrade();
            // changeShowData();
                     etNum1.setText(etNum1.getText());
@@ -703,13 +729,15 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
                         return;
                     }
                     String text = data.toString();
-                    Log.e(TAG, "initInputChange1: "+text);
+                    if(BuildConfig.DEBUG){
+                    Log.e(TAG, "initInputChange1: "+text);}
                     if (!TextUtils.isEmpty(text) && text.equals(".")) {
                         etNum1.setText("0");
                         currentNum = "0";
                         text = "0";
                     }
-                    Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了1:" + text);
+                    if(BuildConfig.DEBUG){
+                    Log.e("rx_binding_test", "textChanges:etRxTextView内容变化了1:" + text);}
                     if (TextUtils.isEmpty(text) || Double.valueOf(text) == 0 ||
                             TextUtils.isEmpty(etPrice1.getText()) || Double.valueOf(etPrice1.getText().toString()) == 0) {
 
@@ -788,7 +816,12 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
             if (users != null && users.size() > 0) {
                 userData = users.get(0);
                 mPresenter.getDealDetail(code);
-                mPresenter.getwallet("0",moneyType);
+                if(isnewflag){
+                    mPresenter.getwallet("0",type);
+                }else {
+                    mPresenter.getwallet("0",moneyType);
+                }
+
             } else {
                 userData = null;
             }
@@ -1005,6 +1038,7 @@ String unit="$";
     public void setdata() {
         userViewModel.clear();
         SPUtil.clear();
-        initView();
+        updateUI();
+       // initView();
     }
 }

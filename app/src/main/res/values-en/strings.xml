@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
 
-    <string name="app_label">Yolocoin</string>
+    <string name="app_label">Bitfinex</string>
 
     <string name="appmainActivity6">I got it!</string>
     <string name="appmainActivity5">asset</string>

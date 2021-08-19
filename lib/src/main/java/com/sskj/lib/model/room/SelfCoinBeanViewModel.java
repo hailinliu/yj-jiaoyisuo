@@ -26,7 +26,7 @@ public class SelfCoinBeanViewModel extends ViewModel {
 
     public LiveData<List<SelfCoinBean>> getUsers() {
         if (selfCoinRepository == null) {
-            Log.e("---->", "isNull");
+        //   Log.e("---->", "isNull");
             return null;
         }
         return selfCoinRepository.getAllUser();
@@ -35,27 +35,27 @@ public class SelfCoinBeanViewModel extends ViewModel {
 
     public void insert(SelfCoinBean user) {
         if (selfCoinRepository == null) {
-            Log.e("---->", "isNull");
+         //   Log.e("---->", "isNull");
         }
         selfCoinRepository.insert(user);
     }
     public void delete(SelfCoinBean user) {
         if (selfCoinRepository == null) {
-            Log.e("---->", "isNull");
+          //  Log.e("---->", "isNull");
         }
         selfCoinRepository.delete(user);
     }
 
     public void clear() {
         if (selfCoinRepository == null) {
-            Log.e("---->", "isNull");
+           // Log.e("---->", "isNull");
         }
         selfCoinRepository.clear();
     }
 
     public void update(SelfCoinBean user) {
         if (selfCoinRepository == null) {
-            Log.e("---->", "isNull");
+           // Log.e("---->", "isNull");
         }
         selfCoinRepository.update(user);
     }

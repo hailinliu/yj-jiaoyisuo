@@ -316,7 +316,7 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     public String multifyDouble(String a,String b){
         BigDecimal a1 =  new BigDecimal(a);
         BigDecimal b1 = new BigDecimal(b);
-        return a1.multiply(b1).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()+"";
+        return a1.multiply(b1).setScale(8, BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString();
     }
 //升跌幅还有展示行情数据长连接刷新
     public void refreshCoin(CoinBean1 productBean) {
@@ -393,7 +393,7 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
 
     }
 
-String unit = "￥";
+String unit = "$";
  //更新切换汇率
     public void updateRate(RateBean bean) {
         rate = bean.getRate();
@@ -479,10 +479,10 @@ String unit = "￥";
     public void updateUI(List<CoinBean1> list) {
         for(CoinBean1 data:list){
             if(data.getSymbol().equals(code)){
-                BigDecimal a =  new BigDecimal(Double.toString(data.getChg()));
-                BigDecimal b = new BigDecimal(Integer.toString(100));
-                tvPrice.setText((equalZero(new BigDecimal(data.getClose()))?"0":new BigDecimal(data.getClose()).setScale(2, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString()));
-                tvRMBPrice.setText(String.format("≈%s ","≈ ￥"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
+                /*BigDecimal a =  new BigDecimal(Double.toString(data.getChg()));
+                BigDecimal b = new BigDecimal(Integer.toString(100));*/
+                tvPrice.setText((equalZero(new BigDecimal(data.getClose()))?"0":new BigDecimal(data.getClose()).setScale(6, BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString()));
+                tvRMBPrice.setText(String.format("≈%s ","≈ $"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(6, BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString()));
 
 
             }

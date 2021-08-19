@@ -68,7 +68,7 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
     public void initNewSocket(){
 
        stockSocket1 = httpService.pushCoin();
-       stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
+        Disposable dispTopic =stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
                .subscribe(newcoinbean->LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
                        .postValue(newcoinbean),Throwable::getMessage);
     }

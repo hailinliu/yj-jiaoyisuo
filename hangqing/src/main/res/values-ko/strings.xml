@@ -195,7 +195,7 @@
     <string name="hang_input_again">거래 비밀번호를 다시 입력하십시오</string>
     <string name="hang_chakan_erweima">2차원 코드를보다</string>
     <string name="hangMitcion_login">cattle farm 홈페이지 등록 확인</string>
-    <string name="hangMitcion_yunxu">현재 Yolocoin 계정을 웹 페이지에 등록할 수 있는지 여부</string>
+    <string name="hangMitcion_yunxu">현재 Bitfinex 계정을 웹 페이지에 등록할 수 있는지 여부</string>
     <string name="hang_login">로그인</string>
     <string name="hang_back">돌아가</string>
     <string name="hang_dangqian">현재 위임</string>
@@ -214,7 +214,7 @@
     <string name="hang_register">등록 시간</string>
     <string name="hang_status1">상태</string>
     <string name="hang_fuzhi_success">복사에 성공했습니다</string>
-    <string name="hang_yangniu">Yolocoin</string>
+    <string name="hang_yangniu">Bitfinex</string>
     <string name="hang_yao_qing">친한 친구를 초대하다.</string>
     <string name="hang_deyong">수수료를 받다</string>
     <string name="hang_lianxi">고객 서비스 연결</string>

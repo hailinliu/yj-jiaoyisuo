@@ -111,7 +111,7 @@ public class CurrentEntrustFragment extends BaseFragment<CurrentEntrustFragmentP
                         .text(R.id.tvTitlePrice, String.format(App.INSTANCE.getString(R.string.bibi_allEntrustFragment4), data.getBaseSymbol()))
                         .text(R.id.tvTitleNum,  String.format(App.INSTANCE.getString(R.string.bibi_allEntrustFragment6), data.getCoinSymbol()))
                         .text(R.id.tvTitleDealNum, String.format(App.INSTANCE.getString(R.string.bibi_allEntrustFragment7), data.getCoinSymbol()))
-                        .text(R.id.tvPrice,new BigDecimal(data.getPrice()).stripTrailingZeros().toPlainString())
+                        .text(R.id.tvPrice,new BigDecimal(data.getPrice()).compareTo(BigDecimal.ZERO)==0?"市价":new BigDecimal(data.getPrice()).stripTrailingZeros().toPlainString())
                         .text(R.id.tvNum,new BigDecimal(data.getAmountStr()).stripTrailingZeros().toPlainString())
                         .text(R.id.tvDealNum, new BigDecimal(data.getTradedAmount()).stripTrailingZeros().toPlainString())
                        // .text(R.id.tvcfj, String.format(App.INSTANCE.getString(R.string.bibi_allEntrustFragment400), data.getRCode()))
@@ -246,4 +246,11 @@ public class CurrentEntrustFragment extends BaseFragment<CurrentEntrustFragmentP
     public void noTips() {
         userViewModel.update();
     }
+
+    @Override
+    public void onDestroy() {
+        DisposUtil.close(subscribe);
+        super.onDestroy();
+    }
 }
+

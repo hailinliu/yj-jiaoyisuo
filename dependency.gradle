@@ -1,17 +1,17 @@
 ext {
     android = [
 
-            APP_NAME                : "yj",//app名字
+            APP_NAME                : "bitflnex",//app名字
             IP                      : "http://api.digbit.pro",//域名
             IMG_IP                  : "http://49.4.21.136:9538",//图片域名
             WS7272                  : "ws://api.digbit.pro/websocket/123123",//推送
-            APPLICATION_ID          : "com.sskj.yj",//app 包名
+            APPLICATION_ID          : "com.sskj.bitflnex",//app 包名
             storeFile               : '../bi.jks',//签名文件位置
             storePassword           : 'a123456',//签名文件密码
             keyAlias                : 'sskj',//签名文件别名
             keyPassword             : 'a123456',//签名文件别名密码
             versionCode             : 1,
-            versionName             : "1.4.0",
+            versionName             : "1.1.5",
             compileSdkVersion       : 27,
             buildToolsVersion       : "27.0.3",
             minSdkVersion           : 21,
@@ -76,8 +76,7 @@ ext {
             "nineoldandroids"          : "com.nineoldandroids:library:2.4.0",
 
             /*##########################内存泄漏检测#############################*/
-            "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:1.4-beta2",
-            "canary-release"           : "com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2",
+            "canary-debug"             : "com.squareup.leakcanary:leakcanary-android:2.7",
 
             /*##########################二维码扫描,解析,生成#############################*/
             "zxing-library"            : "cn.bingoogolapple:bga-qrcode-zxing:1.2.1",

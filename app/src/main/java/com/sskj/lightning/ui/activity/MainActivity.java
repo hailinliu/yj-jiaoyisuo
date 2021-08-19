@@ -66,6 +66,7 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> {
     int myflag;
     private SafeSettingBean userData;
     private int curPos = 0;
+    private boolean isflag;
     private ArrayList<Fragment> fragments;
     SparseArray<Fragment> tabMap = new SparseArray<>();
 
@@ -135,7 +136,7 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> {
         fragments = new ArrayList<>();
         fragments.add((Fragment) ARouter.getInstance().build(RConfig.HANG_HANGQING).navigation());
         fragments.add((Fragment) ARouter.getInstance().build(RConfig.NEWHANGFRAGMENT).navigation());
-        fragments.add((Fragment) ARouter.getInstance().build(RConfig.BIBI_FRAGMENT_MAIN).withString(Constans.CODE, "BTC/USDT").navigation());
+        fragments.add((Fragment) ARouter.getInstance().build(RConfig.BIBI_FRAGMENT_MAIN).withString(Constans.CODE, "BTC/USDT").withBoolean("isnewflag",isflag).navigation());
         fragments.add((Fragment) ARouter.getInstance().build(RConfig.LEVELMAINFRAGMENT).withString(Constans.CODE, "BTC/USDT").navigation());
         //fragments.add((Fragment) ARouter.getInstance().build(RConfig.FABI_FRAGMENT_FABI_MAIN).navigation());
         fragments.add((Fragment) ARouter.getInstance().build(RConfig.MINE_FRAGMENT_MAIN).navigation());
@@ -153,11 +154,11 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> {
         changeTab(0);
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN,code =1234)
+/*@Subscribe(threadMode = ThreadMode.MAIN,code =1234)
 public void getdemo(){
     commonTabLayout.setCurrentTab(1);
     changeTab(1);
-}
+}*/
 
 
     @Override
@@ -219,6 +220,17 @@ public void getdemo(){
                     commonTabLayout.setCurrentTab(integer);
                     changeTab(integer);
                 });
+        LiveDataBus.get().with(RxBusCode.CHANGE_MAIN_TAB1, Integer.class)
+                .observe(this, integer -> {
+                    if(tabMap.get(integer)==null){
+                        isflag = true;
+                        fragments.set(integer,(Fragment) ARouter.getInstance().build(RConfig.BIBI_FRAGMENT_MAIN).withString(Constans.CODE, "BTC/USDT").withBoolean("isnewflag",isflag).navigation());
+                    }else {
+                        RxBus.getDefault().send(1234);
+                    }
+                    commonTabLayout.setCurrentTab(integer);
+                    changeTab(integer);
+                });
         LiveDataBus.get().with(RxBusCode.SHOW_VERSION, AppVersionBean.class)
                 .observe(this, versionBean -> {
                     assert versionBean != null;
@@ -268,5 +280,10 @@ public void getdemo(){
 
     }
 
-
+    @Override
+    protected void onDestroy() {
+        RxBus.getDefault().unregister(this);
+        tabMap = null;
+        super.onDestroy();
+    }
 }

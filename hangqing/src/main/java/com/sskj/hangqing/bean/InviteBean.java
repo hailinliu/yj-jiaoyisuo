@@ -3,7 +3,7 @@ package com.sskj.hangqing.bean;
 public class InviteBean {
 
     /**
-     * promotePrefix : https://www.yolocoin.uk/register/index.html?inviteCode=MU000119FR
+     * promotePrefix : https://www.bitflnex.pro/register/index.html?inviteCode=MU000119FR
      * indirectCount : 0
      * inviteCode : MU000119FR
      * count : 0

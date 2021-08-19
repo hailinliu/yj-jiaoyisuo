@@ -44,7 +44,7 @@ public class HttpService {
         return socketServer;
     }
     public MyWebSocketServer pushCoin1() {
-        MyWebSocketServer socketServer = new MyWebSocketServer("wss://www.yolocoin.uk/level-market/level-market-ws/websocket","/topic/level/thumb");
+        MyWebSocketServer socketServer = new MyWebSocketServer("wss://www.bitflnex.pro/market/market-ws/websocket","/topic/level/thumb");
         socketServer.connect();
         return socketServer;
     }
@@ -197,7 +197,7 @@ public class HttpService {
         //.params("type", 3);
     }
     public GetRequest<String> getProduct1(String code) {
-        return OkGo.<String>get(HttpConfig.BASE_URL + "/level-market/symbol-thumb");
+        return OkGo.<String>get(HttpConfig.BASE_URL + "/market/symbol-thumb");
         //.params("type", 3);
     }
     /**
@@ -246,7 +246,7 @@ public class HttpService {
      */
     public GetRequest<String> getKData(long from,String resolution, String code,long to,boolean isLevel) {
         if(isLevel){
-            return OkGo.<String>get(HttpConfig.BASE_URL1 + "/level-market/history")
+            return OkGo.<String>get(HttpConfig.BASE_URL1 + "/market/history")
                     .params("from", from)
                     .params("resolution", resolution)
                     .params("symbol", CommonUtil.dealReuqestCode(code))
