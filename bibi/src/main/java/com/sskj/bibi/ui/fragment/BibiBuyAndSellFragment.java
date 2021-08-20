@@ -194,12 +194,8 @@ public class BibiBuyAndSellFragment extends BaseFragment<BibiBuyAndSellFragmentP
 
     @Override
     public void onDestroy() {
+        RxBus.getDefault().unregister(this);
         super.onDestroy();
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
     }
 
     @Override
@@ -1041,4 +1037,5 @@ String unit="$";
         updateUI();
        // initView();
     }
+
 }

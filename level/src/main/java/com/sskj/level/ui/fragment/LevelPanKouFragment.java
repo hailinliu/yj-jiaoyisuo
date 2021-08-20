@@ -101,6 +101,13 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
     }
     @Override
     protected void initEvent() {
+        LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).observe(this, o -> refresh());
+        LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1, CoinBean1.class)
+                .observe(this, this::refreshCoin);
+
+        LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
+        // LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
+        LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN, BibiCoinType.class).observe(this, this::changeCoin);
         ClickUtil.click(rlEditPrice, () -> {
             bottomSheet1 = BottomSheetUtil.getBottomSheet(getActivity(), "小数位", (recyclerView, i, view) -> {
                 bottomSheet1.dismiss();
@@ -142,13 +149,7 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
         changeCoin(new BibiCoinType(code));
         mPresenter.initHangqingSocket();
         mPresenter.initSocket(code);
-        LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).observe(this, o -> refresh());
-        LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1, CoinBean1.class)
-                .observe(this, this::refreshCoin);
 
-        LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
-        // LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
-        LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN, BibiCoinType.class).observe(this, this::changeCoin);
     }
     public void changeCoin(BibiCoinType coinType) {
         code = coinType.getCode();
@@ -157,8 +158,9 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
         // resetFiveUI();
         //  mPresenter.getProduct(code);
        // mPresenter.getPankou(code);
-        mPresenter.initSocket(code);
         mPresenter.initHangqingSocket();
+        mPresenter.initSocket(code);
+
     }
     /**
      * 刷新页面
@@ -166,8 +168,9 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
     public void refresh() {
         // mPresenter.getProduct(code);
        // mPresenter.getPankou(code);
-        mPresenter.initSocket(code);
         mPresenter.initHangqingSocket();
+        mPresenter.initSocket(code);
+       //
     }
     @Override
     public void initView() {

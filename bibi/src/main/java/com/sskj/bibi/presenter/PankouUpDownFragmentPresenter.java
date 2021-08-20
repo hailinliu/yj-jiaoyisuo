@@ -44,9 +44,10 @@ public class PankouUpDownFragmentPresenter extends BasePresenter<PankouUpDownFra
 
 
     private CompositeDisposable compositeDisposable;
+    private CompositeDisposable compositeDisposable1;
+    private CompositeDisposable compositeDisposable2;
     StompClient mStompClient;
     public void getData(String code) {
-
 
             httpService.getProduct2(null).execute(new StringCallback() {
                 @Override
@@ -107,11 +108,29 @@ public void getPankou(String code) {
                 }
             });
 }
-    private MyWebSocketServer stockSocket1;
+    StompClient mStompClient1;
    public void initHangqingSocket(){
-       stockSocket1 = httpService.pushCoin();
-       stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
-               .subscribe(newcoinbean->mView.refreshCoin(newcoinbean),Throwable::getMessage);
+       String url = "/topic/market/thumb";
+       if(mStompClient1==null){
+           mStompClient1 = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
+           mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
+               lifecycleEvent.getType();
+           });
+           mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+       }
+       resetSubscriptions1();
+       Disposable dispTopic1 =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+               .subscribe((StompMessage topicMessage)->{
+                   CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
+                   mView.refreshCoin(bean);
+                   // mView.updateUI(bean);
+
+               },throwable -> {
+                   LogUtil.e("链接错误",throwable);
+               });
+       compositeDisposable1.add(dispTopic1);
+       mStompClient1.connect();
+
    }
     public void initSocket(String code) {
         if (code==null)
@@ -170,9 +189,9 @@ public void getPankou(String code) {
                });
                mStompClient2.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
            }
-        resetSubscriptions();
+        resetSubscriptions2();
         // mStompClient.lifecycle()
-        Disposable dispTopic =  mStompClient2.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+        Disposable dispTopic2 =  mStompClient2.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
                     if(!TextUtils.isEmpty(topicMessage.getPayload())){
                         BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),BidBean.class);
@@ -194,7 +213,7 @@ public void getPankou(String code) {
                 },throwable -> {
                     LogUtil.e("链接错误",throwable);
                 });
-        compositeDisposable.add(dispTopic);
+        compositeDisposable2.add(dispTopic2);
         mStompClient2.connect();
 
     }
@@ -205,7 +224,18 @@ public void getPankou(String code) {
         }
         compositeDisposable = new CompositeDisposable();
     }
-
+    private void resetSubscriptions1() {
+        if (compositeDisposable1 != null) {
+            compositeDisposable1.dispose();
+        }
+        compositeDisposable1 = new CompositeDisposable();
+    }
+    private void resetSubscriptions2() {
+        if (compositeDisposable2 != null) {
+            compositeDisposable2.dispose();
+        }
+        compositeDisposable2 = new CompositeDisposable();
+    }
     public void sendCode(String code) {
         initSocket(code);
     }
@@ -225,13 +255,19 @@ public void getPankou(String code) {
             mStompClient2.disconnect();
             mStompClient2=null;
         }
-        if(stockSocket1!=null){
-            stockSocket1.disconnectStomp();
-            stockSocket1 = null;
+        if(mStompClient1!=null&&mStompClient1.isConnected()){
+            mStompClient1.disconnect();
+            mStompClient1=null;
         }
 
-        if (compositeDisposable != null)
+        if (compositeDisposable != null){
             compositeDisposable.dispose();
-
+        }
+        if (compositeDisposable2 != null){
+            compositeDisposable2.dispose();
+        }
+        if (compositeDisposable1 != null){
+            compositeDisposable1.dispose();
+        }
     }
 }

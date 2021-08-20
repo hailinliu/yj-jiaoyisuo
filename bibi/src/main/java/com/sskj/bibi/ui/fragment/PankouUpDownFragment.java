@@ -153,6 +153,13 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
         ARouter.getInstance().inject(this);
         buyRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         sellRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        LiveDataBus.get().with(RxBusCode.BIBI_FRESH).observe(this, o -> refresh());
+        LiveDataBus.get().with(RxBusCode.NEWCODEBEAN, CoinBean1.class)
+                .observe(this, this::refreshCoin);
+
+        LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
+        LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN, BibiCoinType.class).observe(this, this::changeCoin);
+        LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN2,BibiCoinType.class).observe(this, this::changeCoin);
         list1 = new ArrayList<>();
         list1.add("0");
         list1.add("1");
@@ -277,14 +284,8 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     public void initData() {
         mPresenter.getRate("USD","CNY");
         mPresenter.initHangqingSocket();
+      //  mPresenter.initHangqingSocket();
         changeCoin(new BibiCoinType(code));
-        LiveDataBus.get().with(RxBusCode.BIBI_FRESH).observe(this, o -> refresh());
-        LiveDataBus.get().with(RxBusCode.NEWCODEBEAN, CoinBean1.class)
-                .observe(this, this::refreshCoin);
-
-        LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
-        LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN, BibiCoinType.class).observe(this, this::changeCoin);
-        LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN2,BibiCoinType.class).observe(this, this::changeCoin);
     }
 
     private void refreshRate(RateBean rateBean) {
@@ -300,8 +301,8 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
      */
     public void refresh() {
         mPresenter.getPankou(code);
-        mPresenter.initHangqingSocket();
         mPresenter.initSocket(code);
+        mPresenter.initHangqingSocket();
     }
 
  //改变币种刷新数据
@@ -310,6 +311,7 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
         mPresenter.getPankou(code);
         mPresenter.initSocket(code);
         mPresenter.initHangqingSocket();
+
 
     }
 //计算BigDecimal

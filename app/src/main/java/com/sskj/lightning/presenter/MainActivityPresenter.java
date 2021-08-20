@@ -5,6 +5,9 @@ import android.annotation.SuppressLint;
 import com.google.gson.Gson;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
+import com.sskj.common.log.LogUtil;
+import com.sskj.common.util.GSonUtil;
+import com.sskj.level.bean.WSFiveBean;
 import com.sskj.lib.bean.CoinBean1;
 import com.sskj.lib.bean.HangQingBean;
 import com.sskj.common.base.App;
@@ -20,17 +23,23 @@ import com.sskj.lib.box.LiveDataBus;
 import com.sskj.lib.http.CallBackOption;
 import com.sskj.lib.util.APKVersionCodeUtils;
 import com.sskj.lib.util.MyWebSocketServer;
+import com.sskj.lightning.http.HttpConfig;
 import com.sskj.lightning.ui.activity.MainActivity;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
+import ua.naiksoftware.stomp.Stomp;
+import ua.naiksoftware.stomp.StompClient;
+import ua.naiksoftware.stomp.dto.StompMessage;
 
 
 public class MainActivityPresenter extends BasePresenter<MainActivity> {
 
-    private MyWebSocketServer stockSocket;
-    private MyWebSocketServer stockSocket1;
-    private Disposable stockDispo;
-
+    private StompClient mStompClient;
+    private StompClient mStompClient1;
+    public CompositeDisposable compositeDisposable;
 
     public void getGonggao() {
         httpService.getGonggao()
@@ -66,36 +75,70 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
     }*/
     @SuppressLint("CheckResult")
     public void initNewSocket(){
+        String url = "/topic/market/thumb";
+        if(mStompClient==null){
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
+            mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
+                lifecycleEvent.getType();
+            });
+            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+        }
+        resetSubscriptions();
+        Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe((StompMessage topicMessage)->{
+                    CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
+                    LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
+                            .postValue(bean);
+                   // mView.updateUI(bean);
 
-       stockSocket1 = httpService.pushCoin();
-        Disposable dispTopic =stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
-               .subscribe(newcoinbean->LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
-                       .postValue(newcoinbean),Throwable::getMessage);
+                },throwable -> {
+                    LogUtil.e("链接错误",throwable);
+                });
+        compositeDisposable.add(dispTopic);
+        mStompClient.connect();
+       /* if(stockSocket1==null){
+            stockSocket1 = httpService.pushCoin();
+        }
+        stockDispo =stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
+                .subscribe(newcoinbean->LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
+                        .postValue(newcoinbean),Throwable::getMessage);*/
+
     }
     @SuppressLint("CheckResult")
     public void initNewSocket1(){
-        stockSocket1 = httpService.pushCoin1();
-        stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
+        String url = "/topic/level/thumb";
+        if(mStompClient1==null){
+            mStompClient1 = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
+            mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
+                lifecycleEvent.getType();
+            });
+            mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+        }
+        resetSubscriptions();
+        Disposable dispTopic =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe((StompMessage topicMessage)->{
+                    CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
+                    LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)
+                            .postValue(bean);
+                    // mView.updateUI(bean);
+
+                },throwable -> {
+                    LogUtil.e("链接错误",throwable);
+                });
+        compositeDisposable.add(dispTopic);
+        mStompClient1.connect();
+        /*stockSocket1 = httpService.pushCoin1();
+        stockDispo1 =stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
                 .subscribe(newcoinbean->LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)
-                        .postValue(newcoinbean),Throwable::getMessage);
-    }
-    @Override
-    public void detachView() {
-
-        DisposUtil.close(stockDispo);
-        if (stockSocket != null) {
-           // stockSocket.close();
-            stockSocket.disconnectStomp();
-            stockSocket = null;
-        }
-        if(stockSocket1!=null){
-            stockSocket1.disconnectStomp();
-            stockSocket1 = null;
-        }
-
-        super.detachView();
+                        .postValue(newcoinbean),Throwable::getMessage);*/
     }
 
+    private void resetSubscriptions() {
+        if (compositeDisposable != null) {
+            compositeDisposable.dispose();
+        }
+        compositeDisposable = new CompositeDisposable();
+    }
 
     public void getNewVersion() {
         httpService.getVersion()
@@ -127,4 +170,22 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
                 );
 
     }
+    @Override
+    public void detachView() {
+
+        if(mStompClient!=null&&mStompClient.isConnected()){
+            mStompClient.disconnect();
+            mStompClient=null;
+        }
+        if(mStompClient1!=null&&mStompClient1.isConnected()){
+            mStompClient1.disconnect();
+            mStompClient1=null;
+        }
+        if (compositeDisposable != null)
+            compositeDisposable.dispose();
+
+
+        super.detachView();
+    }
+
 }

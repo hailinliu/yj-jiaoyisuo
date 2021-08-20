@@ -893,16 +893,19 @@ public class NewBuyAndSellFragment extends BaseFragment<NewBuyAndSellFragmentPre
     //获取杠杆以及税率
     double speed;
     public void getGangGan(GangGanBean data) {
-        String[] arr = data.getLevelType().split(",");
-        minxianTradNum = new BigDecimal(data.getMinVolume()).setScale(4,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString();
-        mincommonTypeTradNum =  new BigDecimal(data.getMinVolume()).setScale(4,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString();
-        speed = data.getSpread();
-        fee = data.getFee();
-        gangGan = Arrays.asList(arr);
-        level = gangGan.get(0);
-        spinnerGang.setText(gangGan.get(0));
-        calculateMaxTrade();
-        updateUI();
+        if(data!=null){
+            String[] arr = data.getLevelType().split(",");
+            minxianTradNum = new BigDecimal(data.getMinVolume()).setScale(4,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString();
+            mincommonTypeTradNum =  new BigDecimal(data.getMinVolume()).setScale(4,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString();
+            speed = data.getSpread();
+            fee = data.getFee();
+            gangGan = Arrays.asList(arr);
+            level = gangGan.get(0);
+            spinnerGang.setText(gangGan.get(0));
+            calculateMaxTrade();
+            updateUI();
+        }
+
     }
     public void setUi(MinNumBean bean) {
         if(bean!=null){

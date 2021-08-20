@@ -21,6 +21,8 @@ import com.sskj.common.adapter.slimadapter.SlimInjector;
 import com.sskj.common.base.App;
 import com.sskj.common.box.decoration.DividerLineItemDecoration;
 import com.sskj.common.rxbus2.RxBus;
+import com.sskj.common.rxbus2.Subscribe;
+import com.sskj.common.rxbus2.ThreadMode;
 import com.sskj.common.util.ClickUtil;
 import com.sskj.hangqing.R;
 import com.sskj.hangqing.R2;
@@ -174,7 +176,7 @@ public String multifyDouble(String a,String b,int scale){
         slimAdapter.attachTo(recyclerView).updateData(new ArrayList());
         LiveDataBus.get().with(1880,Integer.class).observe(this,this::refresh);
     }
-
+    @Subscribe(threadMode = ThreadMode.MAIN,code = RxBusCode.REFRESH_RE)
     private void refresh(Integer integer) {
         type = integer;
         initData();

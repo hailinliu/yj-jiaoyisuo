@@ -270,7 +270,7 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
 
     @Override
     public void onDestroy() {
-        mPresenter.closeSocket();
+      //  mPresenter.closeSocket();
         super.onDestroy();
     }
 

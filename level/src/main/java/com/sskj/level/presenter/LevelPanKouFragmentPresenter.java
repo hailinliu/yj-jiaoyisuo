@@ -43,7 +43,8 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
 
     StompClient mStompClient;
     private CompositeDisposable compositeDisposable;
-    private MyWebSocketServer stockSocket1;
+    private CompositeDisposable compositeDisposable1;
+  //  private MyWebSocketServer stockSocket1;
     public void getData(String code) {
 
 
@@ -83,10 +84,31 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
             //RxBus.getDefault().send(RxBusCode.RATE,rate);
         }));
     }
+    StompClient mStompClient1;
     public void initHangqingSocket(){
-        stockSocket1 = httpService.pushCoin1();
+        String url = "/topic/level/thumb";
+        if(mStompClient1==null){
+            mStompClient1 = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
+            mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
+                lifecycleEvent.getType();
+            });
+            mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+        }
+        resetSubscriptions1();
+        Disposable dispTopic =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe((StompMessage topicMessage)->{
+                    CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
+                    mView.refreshCoin(bean);
+                    // mView.updateUI(bean);
+
+                },throwable -> {
+                    LogUtil.e("链接错误",throwable);
+                });
+        compositeDisposable1.add(dispTopic);
+        mStompClient1.connect();
+        /*stockSocket1 = httpService.pushCoin1();
         stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
-                .subscribe(newcoinbean->mView.refreshCoin(newcoinbean),Throwable::getMessage);
+                .subscribe(newcoinbean->mView.refreshCoin(newcoinbean),Throwable::getMessage);*/
     }
     public void initSocket(String code) {
         if (code==null)
@@ -118,8 +140,11 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
         }
         compositeDisposable = new CompositeDisposable();
     }
-    public void sendCode(String code) {
-        initSocket(code);
+    private void resetSubscriptions1() {
+        if (compositeDisposable1 != null) {
+            compositeDisposable1.dispose();
+        }
+        compositeDisposable1 = new CompositeDisposable();
     }
     @Override
     public void detachView() {
@@ -133,12 +158,15 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
             mStompClient.disconnect();
             mStompClient=null;
         }
-            if(stockSocket1!=null){
-                stockSocket1.disconnectStomp();
-                stockSocket1=null;
-            }
-        if (compositeDisposable != null)
-            compositeDisposable.dispose();
+        if(mStompClient1!=null&&mStompClient1.isConnected()){
+            mStompClient1.disconnect();
+            mStompClient1=null;
+        }
+        if (compositeDisposable != null){
+            compositeDisposable.dispose();}
+        if (compositeDisposable1 != null){
+            compositeDisposable1.dispose();}
+
 
     }
 }

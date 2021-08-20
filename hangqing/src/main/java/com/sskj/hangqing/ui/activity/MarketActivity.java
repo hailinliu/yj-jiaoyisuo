@@ -359,7 +359,7 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
 
     @Override
     protected void onDestroy() {
-        mPresenter.closeSocket();
+       // mPresenter.closeSocket();
         super.onDestroy();
     }
 }

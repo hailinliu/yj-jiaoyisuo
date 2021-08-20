@@ -8,6 +8,8 @@ import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.lzy.okgo.request.GetRequest;
 import com.sskj.common.base.HttpData;
+import com.sskj.common.log.LogUtil;
+import com.sskj.common.util.GSonUtil;
 import com.sskj.hangqing.http.HttpConfig;
 import com.sskj.hangqing.ui.fragment.CoinListFragment;
 import com.sskj.lib.RxBusCode;
@@ -26,11 +28,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.Flowable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
+import ua.naiksoftware.stomp.Stomp;
+import ua.naiksoftware.stomp.StompClient;
+import ua.naiksoftware.stomp.dto.StompMessage;
 
 
 public class CoinFragmentPresenter extends BasePresenter<CoinListFragment> {
-    private MyWebSocketServer stockSocket1;
+    private StompClient mStompClient;
+    public CompositeDisposable compositeDisposable;
     /**
      * 行情数据
      *
@@ -63,16 +72,43 @@ public class CoinFragmentPresenter extends BasePresenter<CoinListFragment> {
         }));
     }
     public void initNewSocket(){
+        String url = "/topic/market/thumb";
+        if(mStompClient==null){
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
+            mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
+                lifecycleEvent.getType();
+            });
+            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+        }
+        resetSubscriptions();
+        Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe((StompMessage topicMessage)->{
+                    CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
+                    mView.refreshCoin(bean);
+                    // mView.updateUI(bean);
 
-        stockSocket1 = httpService.pushCoin();
+                },throwable -> {
+                    LogUtil.e("链接错误",throwable);
+                });
+        compositeDisposable.add(dispTopic);
+        mStompClient.connect();
+       /* stockSocket1 = httpService.pushCoin();
         stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
-                .subscribe(newcoinbean->mView.refreshCoin(newcoinbean),Throwable::getMessage);
+                .subscribe(newcoinbean->mView.refreshCoin(newcoinbean),Throwable::getMessage);*/
+    }
+    private void resetSubscriptions() {
+        if (compositeDisposable != null) {
+            compositeDisposable.dispose();
+        }
+        compositeDisposable = new CompositeDisposable();
     }
     public void closeSocket(){
-        if(stockSocket1!=null){
-            stockSocket1.disconnectStomp();
-            stockSocket1 =null;
+        if(mStompClient!=null&&mStompClient.isConnected()){
+            mStompClient.disconnect();
+            mStompClient=null;
         }
-
+        if(compositeDisposable!=null){
+            compositeDisposable.dispose();
+        }
     }
 }

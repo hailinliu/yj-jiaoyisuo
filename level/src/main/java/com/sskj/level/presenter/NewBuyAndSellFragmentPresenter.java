@@ -122,7 +122,10 @@ public class NewBuyAndSellFragmentPresenter extends BasePresenter<NewBuyAndSellF
                 .params("symbol",symbol)
                 .execute(new CallBackOption<HttpData<GangGanBean>>() {
                 }.loadBind(mView).execute(httpdata->{
-                 mView.getGangGan(httpdata.getData());
+                    if(httpdata!=null){
+                        mView.getGangGan(httpdata.getData());
+                    }
+
                 }));
     }
 }
