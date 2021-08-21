@@ -31,7 +31,7 @@ import com.sskj.hangqing.bean.AskBean;
 import com.sskj.hangqing.bean.BidBean;
 import com.sskj.level.R;
 import com.sskj.level.R2;
-import com.sskj.level.bean.WSFiveBean;
+
 import com.sskj.level.presenter.LevelPanKouFragmentPresenter;
 import com.sskj.lib.RConfig;
 import com.sskj.lib.RxBusCode;
@@ -39,6 +39,7 @@ import com.sskj.lib.base.BaseFragment;
 import com.sskj.lib.bean.BibiCoinType;
 import com.sskj.lib.bean.CoinBean1;
 import com.sskj.lib.bean.RateBean;
+import com.sskj.lib.bean.WSFiveBean;
 import com.sskj.lib.box.LiveDataBus;
 import com.sskj.lib.util.BottomSheetUtil;
 import com.sskj.lib.util.CoinUtil;
@@ -48,6 +49,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 
@@ -148,6 +150,7 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
         mPresenter.getRate("USD","USD");
         changeCoin(new BibiCoinType(code));
         mPresenter.initHangqingSocket();
+      //  LiveDataBus.get().with(RxBusCode.NEW_LEVEL_HANG, WSFiveBean.class).observe(this,this::updateUI);
         mPresenter.initSocket(code);
 
     }
@@ -314,6 +317,13 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
         unit = rateBean.getSimple();
     }
     public void refreshCoin(CoinBean1 productBean) {
+        Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)
+                        .postValue(productBean);
+            }
+        });
         if (code.equals(productBean.getSymbol())) {
             updateTitle(productBean);
             tvShengdie.setText(productBean.getChg()>0?"+"+new BigDecimal(productBean.getChg()).multiply(new BigDecimal(100)).setScale(2,BigDecimal.ROUND_DOWN).stripTrailingZeros().toPlainString()+"%":

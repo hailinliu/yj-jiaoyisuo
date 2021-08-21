@@ -276,7 +276,7 @@ public String multifyDouble(String a,String b,int scale){
         }
         mPresenter.getProduct();
         mPresenter.getRate("USD","CNY");
-        mPresenter.initNewSocket();
+       // mPresenter.initNewSocket();
         LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
                 .observe(this, this::refreshCoin);
         userViewModel.getUsers().observe(this, users -> {
@@ -296,7 +296,7 @@ public String multifyDouble(String a,String b,int scale){
     @Override
     public void onDestroy(){
         RxBus.getDefault().unregister(this);
-        mPresenter.closeSocket();
+      //  mPresenter.closeSocket();
         super.onDestroy();
     }
     String unit ="￥";

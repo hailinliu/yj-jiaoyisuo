@@ -13,7 +13,6 @@ import com.sskj.common.util.DisposUtil;
 import com.sskj.common.util.GSonUtil;
 import com.sskj.hangqing.bean.AskBean;
 import com.sskj.hangqing.bean.BidBean;
-import com.sskj.level.bean.WSFiveBean;
 import com.sskj.level.bean.WSFiveBean1;
 import com.sskj.level.http.HttpConfig;
 import com.sskj.level.ui.fragment.LevelPanKouFragment;
@@ -22,6 +21,7 @@ import com.sskj.lib.bean.BaseBean;
 import com.sskj.lib.bean.CoinBean;
 import com.sskj.lib.bean.CoinBean1;
 import com.sskj.lib.bean.RateBean;
+import com.sskj.lib.bean.WSFiveBean;
 import com.sskj.lib.box.LiveDataBus;
 import com.sskj.lib.http.CallBackOption;
 import com.sskj.lib.http.JsonCallBack;
@@ -125,6 +125,7 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
+                   // topicMessage.getPayload();
                     WSFiveBean bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean.class);
                     mView.updateUI(bean);
 

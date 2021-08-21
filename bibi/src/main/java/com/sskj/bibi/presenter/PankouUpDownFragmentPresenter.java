@@ -142,12 +142,13 @@ public void getPankou(String code) {
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(10000).withServerHeartbeat(10000).reconnect();
         }
         resetSubscriptions();
        // mStompClient.lifecycle()
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
+                    //topicMessage.getPayload();
                     if(!TextUtils.isEmpty(topicMessage.getPayload())){
                         WSFiveBean1.BidBean bidBean1 =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
                         if(bidBean1.getDirection()==0){
@@ -156,7 +157,6 @@ public void getPankou(String code) {
                             BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
                             mView.updateUI(bean);
                             //bean1.setBid(bidBean);
-
 
                         }else if(bidBean1.getDirection()==1){
                             WSFiveBean1.AskBean askBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.AskBean.class);

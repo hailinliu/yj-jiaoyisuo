@@ -13,13 +13,12 @@ import com.sskj.level.bean.DealDetailBean;
 import com.sskj.level.bean.GangGanBean;
 import com.sskj.level.bean.LevelBean;
 import com.sskj.level.bean.MinNumBean;
-import com.sskj.level.bean.WSFiveBean;
-import com.sskj.level.bean.WSFiveBean1;
 import com.sskj.level.http.HttpConfig;
 import com.sskj.level.ui.fragment.NewBuyAndSellFragment;
 import com.sskj.lib.RConfig;
 import com.sskj.lib.bean.BaseBean;
 import com.sskj.lib.bean.RateBean;
+import com.sskj.lib.bean.WSFiveBean1;
 import com.sskj.lib.http.CallBackOption;
 import com.sskj.lib.util.CommonUtil;
 
@@ -46,7 +45,7 @@ public class NewBuyAndSellFragmentPresenter extends BasePresenter<NewBuyAndSellF
                     @Override
                     public void onSuccess(Response<String> response) {
                         if(!TextUtils.isEmpty(response.body())){
-                            WSFiveBean1  bean = GSonUtil.GsonToBean(response.body(), WSFiveBean1.class);
+                            WSFiveBean1 bean = GSonUtil.GsonToBean(response.body(), WSFiveBean1.class);
                             mView.updateFive(bean);
                         }
 

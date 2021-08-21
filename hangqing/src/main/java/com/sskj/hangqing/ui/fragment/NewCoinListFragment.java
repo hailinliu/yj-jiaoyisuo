@@ -250,13 +250,13 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
         }
         mPresenter.getRate("USD","CNY");
         if(isLevel){
-            mPresenter.initNewSocket1();
-            /*LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)
-                    .observe(this, this::refreshCoin1);*/
+           // mPresenter.initNewSocket1();
+            LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)
+                    .observe(this, this::refreshCoin1);
         }else {
-          /*  LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
-                    .observe(this, this::refreshCoin2);*/
-          mPresenter.initNewSocket();
+            LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
+                    .observe(this, this::refreshCoin2);
+         // mPresenter.initNewSocket();
         }
 
 

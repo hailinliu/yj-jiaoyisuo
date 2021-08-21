@@ -93,7 +93,7 @@ public class SpecialCoinFragment extends BaseFragment<SpecialCoinFragmentPresent
         LiveDataBus.get().with(RxBusCode.RATE, RateBean.class).observe(this,this::refreshRate);
         LiveDataBus.get().with(RxBusCode.NEWCODEBEAN, CoinBean1.class)
                 .observe(this, this::refreshCoin);
-        mPresenter.initNewSocket();
+       // mPresenter.initNewSocket();
        // LiveDataBus.get().with(RxBusCode.PUSH_COIN_BEAN1, NewChartBean.class).observe(this,this::refreshCoin);
    /*     LiveDataBus.get().with(RxBusCode.PUSH_COIN_BEAN, NewChartBean.class)
                 .observe(this, this::refreshCoin);*/
@@ -217,7 +217,7 @@ public boolean equalZero(BigDecimal decimal){
         }
         initRecycle();
     }
-
+    //@Subscribe(threadMode = ThreadMode.MAIN,code = 10010)
     public void refreshCoin(CoinBean1 coinBean) {
         if (slimAdapter == null || slimAdapter.getData() == null || slimAdapter.getData().size() == 0) {
             return;
@@ -236,7 +236,7 @@ public boolean equalZero(BigDecimal decimal){
     @Subscribe(threadMode = ThreadMode.MAIN,code = RxBusCode.REFRESH_RE)
     public void getData(){
         mPresenter.getData();
-        mPresenter.initNewSocket();
+       // mPresenter.initNewSocket();
     }
     @Override
     public void onDestroy() {

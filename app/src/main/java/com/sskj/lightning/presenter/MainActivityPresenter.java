@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.sskj.common.log.LogUtil;
+import com.sskj.common.rxbus2.RxBus;
 import com.sskj.common.util.GSonUtil;
 import com.sskj.level.bean.WSFiveBean;
 import com.sskj.lib.bean.CoinBean1;
@@ -86,7 +87,9 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
+                 // Thread thread =  Thread.currentThread();
                     CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
+                   // RxBus.getDefault().send(10010,bean);
                     LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
                             .postValue(bean);
                    // mView.updateUI(bean);

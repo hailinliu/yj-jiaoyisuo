@@ -227,6 +227,7 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
             imageView.setImageResource(R.mipmap.lib_usd);
             textView.setText("USD");
             LiveDataBus.get().with(RxBusCode.BIBI_FRESH).postValue(1);
+            RxBus.getDefault().send(RxBusCode.REFRESH_RE);
             smartRefreshLayout.finishRefresh(3);
         });
         userViewModel.getUsers().observe(this, users -> {

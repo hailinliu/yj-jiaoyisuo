@@ -1,6 +1,7 @@
 package com.sskj.lightning.ui.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.MainThread;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -39,7 +40,6 @@ import com.sskj.lib.box.LiveDataBus;
 import com.sskj.lib.model.room.UserViewModel;
 import com.sskj.lib.ui.fragment.AppUpDateFragment;
 import com.sskj.lib.util.APKVersionCodeUtils;
-import com.sskj.lib.util.TipUtil;
 import com.sskj.lightning.R;
 import com.sskj.lightning.component.DaggerUserDataComponent;
 import com.sskj.lightning.presenter.MainActivityPresenter;
@@ -62,6 +62,8 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> {
     FrameLayout frameLayout;
     @Inject
     UserViewModel userViewModel;
+/*    @BindView(R.id.tv_anniu)
+    TextView tv;*/
     @Autowired
     int myflag;
     private SafeSettingBean userData;
@@ -84,7 +86,13 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> {
     public MainActivityPresenter getPresenter() {
         return new MainActivityPresenter();
     }
-
+@Subscribe(threadMode = ThreadMode.MAIN,code=RxBusCode.REFRESH_RE)
+public void ref(){
+        mPresenter.initNewSocket();
+       // mPresenter.initNewSocket1();
+    /*mPresenter.initNewSocket();
+    mPresenter.initNewSocket1();*/
+}
     @Override
     protected void dealFirstSaveInstance(Bundle savedInstanceState) {
         FragmentManager mManager = getSupportFragmentManager();
@@ -113,7 +121,6 @@ public class MainActivity extends BaseActivity<MainActivityPresenter> {
 
         });
         LiveDataBus.get().with(RxBusCode.LOGIN_MAIN,Integer.class).observe(this,this::refresh);
-
         ArrayList<CustomTabEntity> tabItems = new ArrayList<>();
         tabItems.add(new TabItem(App.INSTANCE.getString(R.string.appmainActivity1), R.mipmap.lib_icon_menu_first_unselect, R.mipmap.lib_icon_menu_first_select));
         tabItems.add(new TabItem(App.INSTANCE.getString(R.string.appmainActivity3), R.mipmap.lib_icon_menu_second_unselect, R.mipmap.lib_icon_menu_second_select));
@@ -207,10 +214,34 @@ public void getdemo(){
 
     @Override
     protected void initData() {
+      /*  tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.initNewSocket();
+            }
+        });*/
+      /*new Handler().postDelayed(new Runnable() {
+          @Override
+          public void run() {
+              mPresenter.initNewSocket();
+          }
+      },10000);*/
+     /* new Thread(new Runnable() {
+          @Override
+          public void run() {
+              mPresenter.initNewSocket();
+          }
+      }).start();*/
+     runOnUiThread(new Runnable() {
+         @Override
+         public void run() {
+             mPresenter.initNewSocket();
+         }
+     });
        // mPresenter.initWebSocket();
         //mPresenter.initWebSocket1();
-        mPresenter.initNewSocket();
-        mPresenter.initNewSocket1();
+        //mPresenter.initNewSocket();
+        //mPresenter.initNewSocket1();
         mPresenter.getRate("USD","CNY");
         mPresenter.getNewVersion();
   /*      LiveDataBus.get().with(RxBusCode.SHOW_GONGGAO, Integer.class)

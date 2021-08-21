@@ -61,6 +61,7 @@ public class LevelMainFragmentPresenter extends BasePresenter<LevelMainFragment>
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
+                   // topicMessage.getPayload();
                     WSFiveBean bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean.class);
                     mView.updateUI(bean);
                     LiveDataBus.get().with(RxBusCode.NEW_LEVEL_HANG,WSFiveBean.class).postValue(bean);

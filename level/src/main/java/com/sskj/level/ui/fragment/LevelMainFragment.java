@@ -51,6 +51,8 @@ import com.sskj.lib.util.BottomSheetUtil;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+
 import javax.inject.Inject;
 
 import butterknife.BindView;
@@ -188,8 +190,13 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
           /*  if(userData==null){
                 ARouter.getInstance().build(RConfig.LOGIN_LOGIN).navigation();
             }*/
-
-            initData();
+            imageView.setImageResource(R.mipmap.lib_usd);
+            textView.setText("USD");
+            mPresenter.initSocket(code);
+            mPresenter.initSocket1();
+            mPresenter.getRate("USD","USD");
+            LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).postValue(1);
+           // initData();
            // LiveDataBus.get().with(RxBusCode.BIBI_FRESH).postValue(1);
             smartRefreshLayout.finishRefresh(3);
         });
@@ -207,7 +214,12 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         //mPresenter.getPankou(code);
         imageView.setImageResource(R.mipmap.lib_usd);
         textView.setText("USD");
-        mPresenter.initSocket(code);
+        Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mPresenter.initSocket(code);
+            }
+        });
         mPresenter.initSocket1();
         mPresenter.getRate("USD","USD");
         //LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN,BibiCoinType.class).observe(this, this::changeCoin);

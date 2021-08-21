@@ -283,7 +283,7 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     @Override
     public void initData() {
         mPresenter.getRate("USD","CNY");
-        mPresenter.initHangqingSocket();
+      //  mPresenter.initHangqingSocket();
       //  mPresenter.initHangqingSocket();
         changeCoin(new BibiCoinType(code));
     }
@@ -302,7 +302,8 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     public void refresh() {
         mPresenter.getPankou(code);
         mPresenter.initSocket(code);
-        mPresenter.initHangqingSocket();
+
+      //  mPresenter.initHangqingSocket();
     }
 
  //改变币种刷新数据
@@ -310,7 +311,7 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
         code = coinType.getCode();
         mPresenter.getPankou(code);
         mPresenter.initSocket(code);
-        mPresenter.initHangqingSocket();
+       // mPresenter.initHangqingSocket();
 
 
     }

@@ -363,6 +363,7 @@ public class HangqingFragment extends BaseFragment<HangqingFragmentPresenter> {
     public void onDestroy() {
         DisposUtil.close(noticeDispo);
         DisposUtil.close(bannerDispo);
+        RxBus.getDefault().unregister(this);
         super.onDestroy();
     }
 

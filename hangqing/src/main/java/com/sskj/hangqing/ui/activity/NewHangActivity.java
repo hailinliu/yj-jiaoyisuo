@@ -62,9 +62,7 @@ public class NewHangActivity extends BaseActivity<NewHangActivityPresenter> {
     @Override
     protected void initEvent() {
         //super.initEvent();
-        ClickUtil.click(imageStart,()->{
-            finish();
-        });
+        ClickUtil.click(imageStart, this::finish);
         ClickUtil.click(tvContent, () -> {
             priceModeSheet = BottomSheetUtil.getBottomSheet1(this, App.INSTANCE.getString(R.string.lib_xuanze), (recyclerView, position, v) -> {
                 priceModeSheet.dismiss();
@@ -166,5 +164,14 @@ public class NewHangActivity extends BaseActivity<NewHangActivityPresenter> {
 
     public void setUI(RateBean bean) {
         LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).postValue(bean);
+    }
+
+    @Override
+    protected void onDestroy() {
+        if(priceModeSheet!=null){
+            priceModeSheet.cancel();
+        }
+        priceModeSheet = null;
+        super.onDestroy();
     }
 }

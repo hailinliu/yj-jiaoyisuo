@@ -328,9 +328,12 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
         rate = bean.getRate();
         mPresenter.getData(code,isLevel);
         if(isLevel){
-           mPresenter.initNewSocket1();
+            LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class).observe(this, this::refreshCoin);
+
+           //mPresenter.initNewSocket1();
         }else {
-           mPresenter.initNewSocket();
+          // mPresenter.initNewSocket();
+            LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class).observe(this, this::refreshCoin);
         }
 
      /*   LiveDataBus.get().with(RxBusCode.PUSH_COIN_BEAN1, NewChartBean.class)
@@ -360,6 +363,10 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
     @Override
     protected void onDestroy() {
        // mPresenter.closeSocket();
+        if(bottomMap!=null){
+            bottomMap.clear();
+            bottomMap = null;
+        }
         super.onDestroy();
     }
 }
