@@ -90,7 +90,7 @@
     <string name="fabibuySellFragment7">禁止向自己發起交易</string>
     <string name="fabitipFabiUtil2">全部%s</string>
     <string name="fabibuySellFragment6">去出售</string>
-    <string name="fabitipFabiUtil3">單價 ￥%s</string>
+    <string name="fabitipFabiUtil3">單價 $%s</string>
     <string name="fabitipFabiUtil4">請輸入%s%s</string>
     <string name="fabibuySellFragment8">數據獲取失敗，請刷新頁面</string>
     <string name="fabitipFabiUtil5">金額</string>
@@ -99,7 +99,7 @@
     <string name="fabifabi_include_order_record_info310">對方信息</string>
     <string name="fabitipFabiUtil7">實際%s</string>
     <string name="fabifabi_dialog_appeal60">請輸入申訴理由</string>
-    <string name="fabitipFabiUtil8">限額 ￥%s-￥%s</string>
+    <string name="fabitipFabiUtil8">限額 $%s-$%s</string>
     <string name="fabitipFabiUtil9">法幣計價</string>
     <string name="fabifabi_include_order_record_info710">付款參考號</string>
     <string name="fabifabi_recy_item_order_record250">單價</string>

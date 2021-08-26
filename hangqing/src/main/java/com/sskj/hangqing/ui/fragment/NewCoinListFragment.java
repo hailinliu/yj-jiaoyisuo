@@ -248,7 +248,7 @@ public class NewCoinListFragment extends BaseFragment<NewCoinFragmentPresenter> 
             textView2.setText(R.string.hang_hang_fragment_coin150);
             textView3.setText(App.INSTANCE.getString(R.string.hang_hang_activity_market_scroll350));
         }
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
         if(isLevel){
            // mPresenter.initNewSocket1();
             LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)

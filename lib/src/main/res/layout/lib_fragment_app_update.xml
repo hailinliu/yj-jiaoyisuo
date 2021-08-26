@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="51pt"
             android:text="@string/lib_ban_ben_updata_content"
+            android:visibility="invisible"
             android:textColor="@color/libTextWhite"
             android:textSize="42pt" />
 

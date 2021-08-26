@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.facebook.stetho.common.LogUtil;
+import com.sskj.bibi.BuildConfig;
 import com.sskj.bibi.R;
 import com.sskj.bibi.R2;
 import com.sskj.bibi.presenter.PankouUpDownFragmentPresenter;
@@ -34,6 +34,7 @@ import com.sskj.common.adapter.slimadapter.IViewInjector;
 import com.sskj.common.adapter.slimadapter.SlimAdapter;
 import com.sskj.common.adapter.slimadapter.SlimInjector;
 import com.sskj.common.base.App;
+import com.sskj.common.log.LogUtil;
 import com.sskj.common.util.ClickUtil;
 import com.sskj.hangqing.bean.AskBean;
 import com.sskj.hangqing.bean.BidBean;
@@ -60,6 +61,8 @@ import java.util.Collections;
 import java.util.List;
 
 import butterknife.BindView;
+import io.reactivex.functions.Consumer;
+import io.reactivex.plugins.RxJavaPlugins;
 
 @Route(path = RConfig.BIBI_FRAGMENT_PANKOU)
 public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPresenter> {
@@ -110,7 +113,15 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     @Override
     protected void initEvent() {
         //super.initEvent();
+       /* RxJavaPlugins.setErrorHandler(new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                if(BuildConfig.DEBUG){
+                    Log.e("throwable==",throwable.getMessage());
+                }
 
+            }
+        });*/
         ClickUtil.click(rlEditPrice, () -> {
             bottomSheet1 = BottomSheetUtil.getBottomSheet(getActivity(), App.INSTANCE.getString(R.string.bibi_xiaoshu), (recyclerView, i, view) -> {
                bottomSheet1.dismiss();
@@ -282,7 +293,7 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     }
     @Override
     public void initData() {
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
       //  mPresenter.initHangqingSocket();
       //  mPresenter.initHangqingSocket();
         changeCoin(new BibiCoinType(code));
@@ -310,6 +321,8 @@ public class PankouUpDownFragment extends BaseFragment<PankouUpDownFragmentPrese
     public void changeCoin(BibiCoinType coinType) {
         code = coinType.getCode();
         mPresenter.getPankou(code);
+       // mPresenter.getData(code);
+        mPresenter.getRate("USD","USD");
         mPresenter.initSocket(code);
        // mPresenter.initHangqingSocket();
 

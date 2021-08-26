@@ -101,7 +101,7 @@ public class NewCoinFragmentPresenter extends BasePresenter<NewCoinListFragment>
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -131,7 +131,7 @@ public class NewCoinFragmentPresenter extends BasePresenter<NewCoinListFragment>
             mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient1.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions1();
         Disposable dispTopic =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())

@@ -105,7 +105,7 @@
     <string name="fabifabi_include_order_record_info310">相手情報</string>
     <string name="fabitipFabiUtil7">実際%s</string>
     <string name="fabifabi_dialog_appeal60">申し立て理由を入力してください</string>
-    <string name="fabitipFabiUtil8">限度額￥%s-￥%s</string>
+    <string name="fabitipFabiUtil8">限度額￥%s-$%s</string>
     <string name="fabitipFabiUtil9">法貨勘定</string>
     <string name="fabifabi_include_order_record_info710">支払い基準番号</string>
     <string name="fabifabi_recy_item_order_record250">単価</string>

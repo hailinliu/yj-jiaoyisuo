@@ -118,7 +118,7 @@ public class HolderFragmentPresenter extends BasePresenter<HolderFragment> {
        // code= CommonUtil.dealReuqestCode(code);
         String id = SPUtil.get(SPConfig.ID,"");
         String url = "/topic/level/profitLoss/"+id;
-        mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
+        mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/level-market/market-ws/websocket");
         mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
             lifecycleEvent.getType();
         });

@@ -52,6 +52,7 @@ public class PankouUpDownFragmentPresenter extends BasePresenter<PankouUpDownFra
             httpService.getProduct2(null).execute(new StringCallback() {
                 @Override
                 public void onSuccess(Response<String> response) {
+                      Thread thread =  Thread.currentThread();
                     if(!TextUtils.isEmpty(response.body())){
                         Gson gson = new Gson();
                         List<CoinBean1> list = gson.fromJson(response.body(), new TypeToken<List<CoinBean1>>() {
@@ -91,11 +92,15 @@ public void getPankou(String code) {
                             WSFiveBean1 wsFiveBean = httpData;
 
                             Gson gson = new Gson();
-                            AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
-                            BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
-                            //bean.setItems();
-                            mView.updateUI(bean);
-                            mView.updateUI(bean1);
+                            if(wsFiveBean.getAsk()!=null){
+                                AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
+                                mView.updateUI(bean);
+                            }
+                            if(wsFiveBean.getBid()!=null){
+                                BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
+                                mView.updateUI(bean1);
+                            }
+
                         } else {
                             AskBean bean = new AskBean();
                             BidBean bean1 = new BidBean();
@@ -116,7 +121,7 @@ public void getPankou(String code) {
            mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                lifecycleEvent.getType();
            });
-           mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+           mStompClient1.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
        }
        resetSubscriptions1();
        Disposable dispTopic1 =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -142,7 +147,7 @@ public void getPankou(String code) {
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(10000).withServerHeartbeat(10000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
        // mStompClient.lifecycle()
@@ -156,6 +161,7 @@ public void getPankou(String code) {
                             Gson gson = new Gson();
                             BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
                             mView.updateUI(bean);
+                            LiveDataBus.get().with(RxBusCode.DEPTH1,BidBean.class).postValue(bean);
                             //bean1.setBid(bidBean);
 
                         }else if(bidBean1.getDirection()==1){
@@ -163,6 +169,7 @@ public void getPankou(String code) {
                             Gson gson = new Gson();
                             AskBean bean = GSonUtil.GsonToBean(gson.toJson(askBean),AskBean.class);
                             mView.updateUI(bean);
+                            LiveDataBus.get().with(RxBusCode.DEPTH,AskBean.class).postValue(bean);
                             // bean1.setAsk(askBean);
 
                         }
@@ -187,7 +194,7 @@ public void getPankou(String code) {
                mStompClient2.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                    lifecycleEvent.getType();
                });
-               mStompClient2.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+               mStompClient2.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
            }
         resetSubscriptions2();
         // mStompClient.lifecycle()

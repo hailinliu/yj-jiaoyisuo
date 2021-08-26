@@ -529,7 +529,7 @@ public static MaterialDialog showBottom(Activity activity,OnInputList onInputLis
                             resultNum = usdtBig.toPlainString();
                             resultRMB = text;
 
-                          /*  tvRMB.setText(String.format("￥%s", CoinUtil.keepRMB(text)));
+                          /*  tvRMB.setText(String.format("$%s", CoinUtil.keepRMB(text)));
                             resultRMB = text;*/
                         } else {
                             BigDecimal priceBig = new BigDecimal(text).multiply(new BigDecimal(price));
@@ -538,7 +538,7 @@ public static MaterialDialog showBottom(Activity activity,OnInputList onInputLis
                             resultRMB = priceBig.toPlainString();
                             tv_price.setText(String.format("%s",priceBig.toPlainString()));
 
-                         /*   tvRMB.setText(String.format("￥%s", CoinUtil.keepRMB(rmb)));
+                         /*   tvRMB.setText(String.format("$%s", CoinUtil.keepRMB(rmb)));
                             resultRMB = rmb;*/
                         }
                     } else {

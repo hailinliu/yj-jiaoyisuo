@@ -82,7 +82,7 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -110,15 +110,15 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
     @SuppressLint("CheckResult")
     public void initNewSocket1(){
         String url = "/topic/level/thumb";
-        if(mStompClient1==null){
-            mStompClient1 = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
-            mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
+        if(mStompClient==null){
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, HttpConfig.WS_BASE_URL);
+            mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
-        Disposable dispTopic =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+        Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
                     CoinBean1 bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),CoinBean1.class);
                     LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)
@@ -129,7 +129,7 @@ httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
                     LogUtil.e("链接错误",throwable);
                 });
         compositeDisposable.add(dispTopic);
-        mStompClient1.connect();
+        mStompClient.connect();
         /*stockSocket1 = httpService.pushCoin1();
         stockDispo1 =stockSocket1.map(s->new Gson().fromJson(s, CoinBean1.class))
                 .subscribe(newcoinbean->LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1,CoinBean1.class)

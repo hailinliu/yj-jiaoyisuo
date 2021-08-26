@@ -101,7 +101,7 @@
 <string name="levelbtc_unit">BTC/USDT </string>
     <string name="levelbtc_usdt">BTC/USDT deepmap</string>
 <string name="level_zhankai"> Click to expand </string>
-<string name="level_zuoduo"> do long </string>
+<string name="level_zuoduo"> long </string>
 <string name="level_zuokong"> Short </string>
 <string name="level_1">1 decimal </string>
 <string name="level_weituoliang"> delegate </string>

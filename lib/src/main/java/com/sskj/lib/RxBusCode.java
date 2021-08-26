@@ -40,7 +40,7 @@ public class RxBusCode {
     public static final int ISLOGIN=1054;
     public static final int REFRESH=1055;
     public static final int DEPTH=1057;
-    public static final int CHANGEBAR=1058;
+    public static final int DEPTH1=1058;
     public static final int CHANGE_FABI_ORDER_FILTER = 1059;
     public static final int LEVEL_PUSH_COIN_BEAN = 1060;
     public static final int LEVEL_CHANGE_COIN =1061;

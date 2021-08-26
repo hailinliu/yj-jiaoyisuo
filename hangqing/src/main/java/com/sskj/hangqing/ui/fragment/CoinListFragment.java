@@ -275,7 +275,7 @@ public String multifyDouble(String a,String b,int scale){
             textView3.setText(R.string.hang_hang_activity_market_scroll350);
         }
         mPresenter.getProduct();
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
        // mPresenter.initNewSocket();
         LiveDataBus.get().with(RxBusCode.NEWCODEBEAN,CoinBean1.class)
                 .observe(this, this::refreshCoin);
@@ -299,7 +299,7 @@ public String multifyDouble(String a,String b,int scale){
       //  mPresenter.closeSocket();
         super.onDestroy();
     }
-    String unit ="￥";
+    String unit ="$";
     public void setUI(RateBean bean){
       rate = bean.getRate();
       unit = bean.getSimple();

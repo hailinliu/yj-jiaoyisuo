@@ -52,11 +52,11 @@ public class LevelMainFragmentPresenter extends BasePresenter<LevelMainFragment>
         code= CommonUtil.dealReuqestCode(code);
         String url = "/topic/level/trade-plate/"+code;
         if(mStompClient==null){
-            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/level-market/level-market-ws/websocket");
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/level-market/market-ws/websocket");
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(30000).withServerHeartbeat(30000).reconnect();
         }
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -75,10 +75,13 @@ public class LevelMainFragmentPresenter extends BasePresenter<LevelMainFragment>
     public void initSocket1() {
 
         String url = "/topic/level/position/"+ SPUtil.get(SPConfig.ID,"");
-        mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/market/market-ws/websocket");
+        if(mStompClient==null){
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/level-market/market-ws/websocket");
+        }
         mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
             lifecycleEvent.getType();
         });
+        resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe((StompMessage topicMessage)->{
                     TotalRiskBean totalRiskBean=  GSonUtil.GsonToBean(topicMessage.getPayload(), TotalRiskBean.class);

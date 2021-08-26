@@ -131,13 +131,13 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
         depthMapView.setDrawText(false);
         imageView.setImageResource(R.mipmap.lib_usd);
         textView.setText("USD");
-        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
+       /* list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_eru,"EUR"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_hkd,"HKD"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_rub,"RUB"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_krw,"KRW"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_myr,"MYR"));
-        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));
+        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));*/
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_usd,"USD"));
         code = SPUtil.get("newcode",code);
         tvTitle.setText(TextUtils.isEmpty(code) ? "" : code.replace("_", "/").toUpperCase());
@@ -248,8 +248,10 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
       /*  imageView.setImageResource(R.mipmap.lib_usd);
         textView.setText("USD");*/
         mPresenter.getPankou(code);
-        mPresenter.initSocket(code);
+       // mPresenter.initSocket(code);
         mPresenter.getRate("USD","USD");
+        LiveDataBus.get().with(RxBusCode.DEPTH,AskBean.class).observe(this,this::updateUI1);
+        LiveDataBus.get().with(RxBusCode.DEPTH1,BidBean.class).observe(this,this::updateUI2);
         LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN,BibiCoinType.class).observe(this, this::changeCoin);
         LiveDataBus.get().with(RxBusCode.BIBI_CHANGE_COIN2,BibiCoinType.class).observe(this, this::changeCoin);
 
@@ -270,7 +272,7 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
         tvName.setText(code+App.INSTANCE.getString(R.string.bibi_shendu));
         //initData();
         mPresenter.getPankou(code);
-        mPresenter.initSocket(code);
+      //  mPresenter.initSocket(code);
         mPresenter.getRate("USD","USD");
         //mPresenter.getPankou(coinType.getCode());
 
@@ -278,49 +280,60 @@ public class BibiMainFragment extends BaseFragment<BibiMainFragmentPresenter> {
 
     public void setUI(RateBean bean) {
       // String rate = bean.getRate();
+
        LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).postValue(bean);
 
 
     }
 
 
-    public void updateUI(AskBean bean) {
-        double num =0.00;
-        for(AskBean.ItemsBean data:bean.getItems()){
-            num = new BigDecimal(data.getAmountStr()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
-            data.setAmountStr(String.valueOf(num));
+    public void updateUI1(AskBean bean) {
+        if(bean!=null&&bean.getItems()!=null&&bean.getItems().size()>0){
+            double num =0.00;
+            for(AskBean.ItemsBean data:bean.getItems()){
+                if(!TextUtils.isEmpty(data.getAmountStr())){
+                    num = new BigDecimal(data.getAmountStr()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
+                    data.setAmountStr(String.valueOf(num));
+                }
+
+            }
+            sellFlow = Flowable.fromIterable(bean.getItems())
+                    .map(fiveBean -> (IDepthData)new DepthData(fiveBean.getAmountStr(), fiveBean.getPriceStr()))
+                    .toList()
+                    .toFlowable();
         }
-        sellFlow = Flowable.fromIterable(bean.getItems())
-                .map(fiveBean -> (IDepthData)new DepthData(fiveBean.getAmountStr(), fiveBean.getPriceStr()))
-                .toList()
-                .toFlowable();
+
     }
 
-    public void updateUI(BidBean bean1) {
-        double num =0.00;
-        for(BidBean.ItemsBeanX data:bean1.getItems()){
-            num = new BigDecimal(data.getAmountStr()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
-            data.setAmountStr(String.valueOf(num));
-        }
-        buyFlow = Flowable.fromIterable(bean1.getItems())
-                .map(fiveBean -> (IDepthData)new DepthData(fiveBean.getAmountStr(),String.valueOf(fiveBean.getPrice())))
-                .toList()
-                .toFlowable();
-        Flowable.zip(buyFlow, sellFlow, (buyData, sellData) -> {
-            if (depthMapView != null) {
-                if (code.toUpperCase().contains("BNR")) {
-                    depthMapView.mPriceLimit = 6;
-                    depthMapView.mVolumeLimit = 6;
-                } else {
-                    depthMapView.mPriceLimit = 4;
-                    depthMapView.mVolumeLimit = 4;
+    public void updateUI2(BidBean bean1) {
+        if(bean1!=null&&bean1.getItems()!=null&&bean1.getItems().size()>0){
+            double num =0.00;
+            for(BidBean.ItemsBeanX data:bean1.getItems()){
+                if(!TextUtils.isEmpty(data.getAmountStr())){
+                num = new BigDecimal(data.getAmountStr()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
+                data.setAmountStr(String.valueOf(num));
+            }}
+            buyFlow = Flowable.fromIterable(bean1.getItems())
+                    .map(fiveBean -> (IDepthData)new DepthData(fiveBean.getAmountStr(),String.valueOf(fiveBean.getPrice())))
+                    .toList()
+                    .toFlowable();
+            Flowable.zip(buyFlow, sellFlow, (buyData, sellData) -> {
+                if (depthMapView != null) {
+                    if (code.toUpperCase().contains("BNR")) {
+                        depthMapView.mPriceLimit = 6;
+                        depthMapView.mVolumeLimit = 6;
+                    } else {
+                        depthMapView.mPriceLimit = 4;
+                        depthMapView.mVolumeLimit = 4;
+                    }
+                    depthMapView.setData(buyData, sellData);
                 }
-                depthMapView.setData(buyData, sellData);
-            }
-            return "1";
-        }).subscribe(s -> {
-        }, e -> {
-            System.out.println(e);
-        });
+                return "1";
+            }).subscribe(s -> {
+            }, e -> {
+                System.out.println(e);
+            });
+        }
+
     }
 }

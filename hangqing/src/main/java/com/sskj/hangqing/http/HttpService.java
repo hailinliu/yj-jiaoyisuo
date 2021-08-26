@@ -197,7 +197,7 @@ public class HttpService {
         //.params("type", 3);
     }
     public GetRequest<String> getProduct1(String code) {
-        return OkGo.<String>get(HttpConfig.BASE_URL + "/market/symbol-thumb");
+        return OkGo.<String>get(HttpConfig.BASE_URL + "/level-market/symbol-thumb");
         //.params("type", 3);
     }
     /**

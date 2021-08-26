@@ -94,13 +94,13 @@ public class NewHangFragment extends BaseFragment<NewHangFragmentPresenter> {
         ARouter.getInstance().inject(this);
         DaggerUserDataComponent.create().inject(this);
         imageStart.setVisibility(View.INVISIBLE);
-        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
+       /* list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_eru,"EUR"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_hkd,"HKD"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_rub,"RUB"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_krw,"KRW"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_myr,"MYR"));
-        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));
+        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));*/
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_usd,"USD"));
         ArrayList<CustomTabEntity> tabItems = new ArrayList<>();
        // tabItems.add(new TabItem(App.INSTANCE.getString(R.string.hangqinghang_fragment_trade1)));

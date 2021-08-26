@@ -300,7 +300,7 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
     }
     @Override
     protected void initData() {
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
 
 
 
@@ -313,7 +313,7 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
             BigDecimal b = new BigDecimal(Integer.toString(100));
             String changerate = a.multiply(b).doubleValue()>0?"+"+a.multiply(b).doubleValue()+"%":a.multiply(b).doubleValue()+"%";
             tvUSDT.setText((equalZero(new BigDecimal(data.getClose()))?"0":new BigDecimal(data.getClose()).setScale(8, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString()));
-            tvRMB.setText(String.format("≈%s "," ￥"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
+            tvRMB.setText(String.format("≈%s "," $"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
             tvRate.setText(changerate);
             tvNum.setText(new BigDecimal(data.getVolume()).compareTo(new BigDecimal(1000))<0?new BigDecimal(data.getVolume()).setScale(4, RoundingMode.DOWN).stripTrailingZeros().toPlainString():
                     new BigDecimal(data.getVolume()).divide(new BigDecimal(1000)).setScale(2, RoundingMode.DOWN).stripTrailingZeros().toPlainString()+"K");
@@ -347,7 +347,7 @@ public class MarketActivity extends BaseActivity<MarketActivityPresenter> {
                 BigDecimal b = new BigDecimal(Integer.toString(100));
                 String changerate = a.multiply(b).doubleValue()>0?"+"+a.multiply(b).doubleValue()+"%":a.multiply(b).doubleValue()+"%";
                 tvUSDT.setText((equalZero(new BigDecimal(data.getClose()))?"0":new BigDecimal(data.getClose()).setScale(8, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString()));
-                tvRMB.setText(String.format("≈%s ","≈ ￥"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
+                tvRMB.setText(String.format("≈%s ","≈ $"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
                 tvRate.setText(changerate);
                 tvNum.setText(new BigDecimal(data.getVolume()).compareTo(new BigDecimal(1000))<0?new BigDecimal(data.getVolume()).setScale(4, RoundingMode.DOWN).stripTrailingZeros().toPlainString():
                         new BigDecimal(data.getVolume()).divide(new BigDecimal(1000)).setScale(2, RoundingMode.DOWN).stripTrailingZeros().toPlainString()+"K");

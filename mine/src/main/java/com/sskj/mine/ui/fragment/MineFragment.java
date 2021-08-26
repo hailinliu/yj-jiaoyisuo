@@ -318,7 +318,7 @@ ClickUtil.click(image_eye,()->{
     }
     String rate;
     String name;
-    String unit="￥";
+    String unit="$";
     public void setRate(RateBean bean) {
         if(refreshView!=null&&refreshView.isRefreshing()){
             refreshView.setRefreshing(false);

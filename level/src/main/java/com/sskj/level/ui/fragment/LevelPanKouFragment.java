@@ -106,7 +106,6 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
         LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).observe(this, o -> refresh());
         LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1, CoinBean1.class)
                 .observe(this, this::refreshCoin);
-
         LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
         // LiveDataBus.get().with(RxBusCode.RATE,RateBean.class).observe(this,this::refreshRate);
         LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN, BibiCoinType.class).observe(this, this::changeCoin);
@@ -150,7 +149,6 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
         mPresenter.getRate("USD","USD");
         changeCoin(new BibiCoinType(code));
         mPresenter.initHangqingSocket();
-      //  LiveDataBus.get().with(RxBusCode.NEW_LEVEL_HANG, WSFiveBean.class).observe(this,this::updateUI);
         mPresenter.initSocket(code);
 
     }
@@ -163,6 +161,7 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
        // mPresenter.getPankou(code);
         mPresenter.initHangqingSocket();
         mPresenter.initSocket(code);
+        mPresenter.getRate("USD","USD");
 
     }
     /**
@@ -308,6 +307,7 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
     public void updateRate(RateBean bean) {
         rate = bean.getRate();
         unit = bean.getSimple();
+        mPresenter.getData(code);
         LiveDataBus.get().with(RxBusCode.NEWCODEBEAN1, CoinBean1.class)
                 .observe(this, this::refreshCoin);
 
@@ -353,7 +353,7 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
                 tvRMBPrice.setText("≈ "+unit+multifyDouble(stockCoinBean.getClose()+"",rate));
             }
 
-          /*  tvRMBPrice.setText(String.format("%s", "≈ ￥"+CoinUtil.keepRMB(stockCoinBean.get())));
+          /*  tvRMBPrice.setText(String.format("%s", "≈ $"+CoinUtil.keepRMB(stockCoinBean.get())));
             tvPrice.setTextColor(ContextCompat.getColor(App.INSTANCE, stockCoinBean.isUp() ? ColorEnum.UP.getColor() : ColorEnum.DOWN.getColor()));*/
         } catch (Exception e) {
 
@@ -458,7 +458,7 @@ public class LevelPanKouFragment extends BaseFragment<LevelPanKouFragmentPresent
                 BigDecimal a =  new BigDecimal(Double.toString(data.getChg()));
                 BigDecimal b = new BigDecimal(Integer.toString(100));
                 tvPrice.setText((equalZero(new BigDecimal(data.getClose()))?"0":new BigDecimal(data.getClose()).setScale(2, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString()));
-                tvRMBPrice.setText(String.format("≈%s ","≈ ￥"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
+                tvRMBPrice.setText(String.format("≈%s ","≈ $"+new BigDecimal(rate).multiply(new BigDecimal(data.getClose())).setScale(2, BigDecimal.ROUND_HALF_UP).toString()));
 
 
             }

@@ -44,7 +44,7 @@ public class MyWebSocketServer extends Flowable<String> {
 
     }
     public void connect(){
-                mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000);
+                mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000);
                 resetSubscriptions();
                 Disposable dispLifecycle = mStompClient.lifecycle()
                         .subscribeOn(Schedulers.io())

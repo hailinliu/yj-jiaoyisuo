@@ -105,7 +105,7 @@
     <string name="fabifabi_include_order_record_info310">The other information</string>
     <string name="fabitipFabiUtil7">The actual %s</string>
     <string name="fabifabi_dialog_appeal60">Please enter reasons for appeal</string>
-    <string name="fabitipFabiUtil8">Quota ￥%s-￥%s</string>
+    <string name="fabitipFabiUtil8">Quota $%s-$%s</string>
     <string name="fabitipFabiUtil9">In terms of legal tender</string>
     <string name="fabifabi_include_order_record_info710">Payment Reference No.</string>
     <string name="fabifabi_recy_item_order_record250">The unit price</string>

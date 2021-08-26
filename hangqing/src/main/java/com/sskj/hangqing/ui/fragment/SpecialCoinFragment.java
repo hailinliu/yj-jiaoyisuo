@@ -195,7 +195,7 @@ public boolean equalZero(BigDecimal decimal){
 
 //slimAdapter.updateData(maps.get(0));
     }
-    String unit ="￥";
+    String unit ="$";
     public void refreshRate(RateBean bean){
         rate = bean.getRate();
         unit = bean.getSimple();

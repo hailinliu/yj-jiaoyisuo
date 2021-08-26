@@ -720,7 +720,7 @@ public class NewBuyAndSellFragment extends BaseFragment<NewBuyAndSellFragmentPre
 
     @Override
     public void initData() {
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
         // mPresenter.getDealDetail(code);
         mPresenter.getData("0","");
         mPresenter.getGanggan(code);
@@ -813,7 +813,7 @@ public class NewBuyAndSellFragment extends BaseFragment<NewBuyAndSellFragmentPre
         refresh();
     }
     public void refresh() {
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
         mPresenter.getPankou(code);
         // mPresenter.getDealDetail(code);
         mPresenter.getMinNum(code);

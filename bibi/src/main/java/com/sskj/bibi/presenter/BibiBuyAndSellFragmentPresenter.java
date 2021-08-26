@@ -58,7 +58,10 @@ OkGo.<BaseBean<String>>post(HttpConfig.BASE_URL+"/exchange/order/add")
         .params("type",type)
         .execute(new CallBackOption<BaseBean<String>>() {
         }.loadBind(mView).execute(httpdata->{
-            mView.success(httpdata.getMessage());
+            if(httpdata!=null){
+                mView.success(httpdata.getMessage());
+            }
+
 
         }));
 }
@@ -134,11 +137,14 @@ public void getDealDetail(String symbol){
     public void getRate(String fromUnit,String toUnit){
         httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
         }.loadBind(mView).execute(httpService->{
-            String rate=  httpService.getData().toString();
-            RateBean bean = new RateBean();
-            bean.setName(toUnit);
-            bean.setRate(rate);
-            mView.setRate(bean);
+            if(httpService!=null&&httpService.getData()!=null){
+                String rate=  httpService.getData().toString();
+                RateBean bean = new RateBean();
+                bean.setName(toUnit);
+                bean.setRate(rate);
+                mView.setRate(bean);
+            }
+
            // LiveDataBus.get().with(RxBusCode.RATE, RateBean.class).postValue(bean);
             //RxBus.getDefault().send(RxBusCode.RATE,rate);
         }));

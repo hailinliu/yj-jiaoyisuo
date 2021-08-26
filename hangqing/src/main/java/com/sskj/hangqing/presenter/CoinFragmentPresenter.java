@@ -78,7 +78,7 @@ public class CoinFragmentPresenter extends BasePresenter<CoinListFragment> {
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())

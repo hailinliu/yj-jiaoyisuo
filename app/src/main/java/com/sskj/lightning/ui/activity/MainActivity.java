@@ -242,7 +242,7 @@ public void getdemo(){
         //mPresenter.initWebSocket1();
         //mPresenter.initNewSocket();
         //mPresenter.initNewSocket1();
-        mPresenter.getRate("USD","CNY");
+        mPresenter.getRate("USD","USD");
         mPresenter.getNewVersion();
   /*      LiveDataBus.get().with(RxBusCode.SHOW_GONGGAO, Integer.class)
                 .observe(this, integer -> showGonggao());*/

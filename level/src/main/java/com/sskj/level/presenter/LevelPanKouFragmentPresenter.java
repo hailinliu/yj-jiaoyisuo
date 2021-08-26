@@ -92,7 +92,7 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
             mStompClient1.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient1.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient1.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions1();
         Disposable dispTopic =  mStompClient1.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -116,11 +116,11 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
         code= CommonUtil.dealReuqestCode(code);
         String url = "/topic/level/trade-plate/"+code;
         if(mStompClient==null){
-            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/level-market/level-market-ws/websocket");
+            mStompClient = Stomp.over(Stomp.ConnectionProvider.OKHTTP, "wss://www.bitflnex.pro/level-market/market-ws/websocket");
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -128,7 +128,7 @@ public class LevelPanKouFragmentPresenter extends BasePresenter<LevelPanKouFragm
                    // topicMessage.getPayload();
                     WSFiveBean bean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean.class);
                     mView.updateUI(bean);
-
+                    LiveDataBus.get().with(RxBusCode.NEW_LEVEL_HANG,WSFiveBean.class).postValue(bean);
                 },throwable -> {
                     LogUtil.e("链接错误",throwable);
                 });

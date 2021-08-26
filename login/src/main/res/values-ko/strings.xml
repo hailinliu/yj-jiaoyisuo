@@ -65,4 +65,5 @@
     <string name="login_shu_again">비밀번호를 다시 입력하십시오</string>
     <string name="login_cuowu">인증 코드 오류</string>
     <string name="login_success">성공</string>
+    <string name="login_youxiang">메일박스 인증 코드</string>
 </resources>

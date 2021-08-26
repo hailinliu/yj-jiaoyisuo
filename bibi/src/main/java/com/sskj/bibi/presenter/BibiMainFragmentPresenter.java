@@ -12,10 +12,12 @@ import com.sskj.common.log.LogUtil;
 import com.sskj.common.util.GSonUtil;
 import com.sskj.hangqing.bean.AskBean;
 import com.sskj.hangqing.bean.BidBean;
+import com.sskj.lib.RxBusCode;
 import com.sskj.lib.bean.BaseBean;
 import com.sskj.lib.bean.CoinBean;
 import com.sskj.lib.bean.RateBean;
 import com.sskj.lib.bean.WSFiveBean1;
+import com.sskj.lib.box.LiveDataBus;
 import com.sskj.lib.http.CallBackOption;
 import com.sskj.lib.http.JsonCallBack;
 import com.sskj.lib.util.CommonUtil;
@@ -40,11 +42,14 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
     public void getRate(String fromUnit,String toUnit){
         httpService.getRate(fromUnit,toUnit).execute(new CallBackOption<BaseBean>() {
         }.loadBind(mView).execute(httpService->{
-            String rate=  httpService.getData().toString();
-            RateBean bean = new RateBean();
-            bean.setName(toUnit);
-            bean.setRate(rate);
-            mView.setUI(bean);
+            if(httpService!=null&&httpService.getData()!=null){
+                String rate=  httpService.getData().toString();
+                RateBean bean = new RateBean();
+                bean.setName(toUnit);
+                bean.setRate(rate);
+                mView.setUI(bean);
+            }
+
             // LiveDataBus.get().with(RxBusCode.RATE, RateBean.class).postValue(bean);
             //RxBus.getDefault().send(RxBusCode.RATE,rate);
         }));
@@ -65,13 +70,13 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
                                 AskBean bean =  GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getAsk()),AskBean.class);
                                 BidBean bean1 = GSonUtil.GsonToBean(gson.toJson(wsFiveBean.getBid()),BidBean.class);
                                 //bean.setItems();
-                                mView.updateUI(bean);
-                                mView.updateUI(bean1);
+                                mView.updateUI1(bean);
+                                mView.updateUI2(bean1);
                             } else {
                                 AskBean bean = new AskBean();
                                 BidBean bean1 = new BidBean();
-                                mView.updateUI(bean1);
-                                mView.updateUI(bean);
+                                mView.updateUI2(bean1);
+                                mView.updateUI1(bean);
 
                             }
                         }
@@ -91,7 +96,7 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
             mStompClient.lifecycle().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(lifecycleEvent -> {
                 lifecycleEvent.getType();
             });
-            mStompClient.withClientHeartbeat(1000).withServerHeartbeat(1000).reconnect();
+            mStompClient.withClientHeartbeat(60000).withServerHeartbeat(60000).reconnect();
         }
         resetSubscriptions();
         Disposable dispTopic =  mStompClient.topic(url).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
@@ -103,13 +108,13 @@ public class BibiMainFragmentPresenter extends BasePresenter<BibiMainFragment> {
                             WSFiveBean1.BidBean bidBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.BidBean.class);
                             Gson gson = new Gson();
                             BidBean bean = GSonUtil.GsonToBean(gson.toJson(bidBean),BidBean.class);
-                            mView.updateUI(bean);
+                            mView.updateUI2(bean);
                             //bean1.setBid(bidBean);
                         }else if(bidBean1.getDirection()==1){
                             WSFiveBean1.AskBean askBean =  GSonUtil.GsonToBean(topicMessage.getPayload(),WSFiveBean1.AskBean.class);
                             Gson gson = new Gson();
                             AskBean bean = GSonUtil.GsonToBean(gson.toJson(askBean),AskBean.class);
-                            mView.updateUI(bean);
+                            mView.updateUI1(bean);
                             // bean1.setAsk(askBean);
 
                         }

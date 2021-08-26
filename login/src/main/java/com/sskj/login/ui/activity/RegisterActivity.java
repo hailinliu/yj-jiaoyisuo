@@ -221,7 +221,7 @@ public class RegisterActivity extends BaseActivity<RegisterActivityPresenter> {
             tv.setTextColor(Color.WHITE);
             tv.setText("完成验证");
             dialog.dismiss();
-            BottomSheetUtil.showYanZhengMa(RegisterActivity.this, etAccount.getText().toString(), new BottomSheetUtil.NewOnSure() {
+            BottomSheetUtil.showYanZhengMap(RegisterActivity.this, etAccount.getText().toString(), isEmail?App.INSTANCE.getString(R.string.login_youxiang):App.INSTANCE.getString(R.string.lib_phone_yanzheng),new BottomSheetUtil.NewOnSure() {
               @Override
               public void onSure(String code) {
                 if(!etAccount.getText().toString().isEmpty()&&!code.isEmpty()){

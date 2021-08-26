@@ -118,13 +118,13 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         DaggerUserDataComponent.create().inject(this);
         RxBus.getDefault().register(this);
         depthMapView.setDrawText(false);
-        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
+      /*  list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_cny,"CNY"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_eru,"EUR"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_hkd,"HKD"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_rub,"RUB"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_krw,"KRW"));
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_myr,"MYR"));
-        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));
+        list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_twd,"TWD"));*/
         list.add(new BottomSheetUtil.ItemBean(R.mipmap.lib_usd,"USD"));
         tvTitle.setText(TextUtils.isEmpty(code) ? "" : code.replace("_", "/").toUpperCase());
         SPUtil.put("cointype",TextUtils.isEmpty(code) ? "" : code.replace("_", "/").toUpperCase());
@@ -179,7 +179,7 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         ClickUtil.click(ivTopRight, () -> {
             priceModeSheet = BottomSheetUtil.getBottomSheet1(getActivity(), App.INSTANCE.getString(R.string.lib_xuanze), (recyclerView, position, v) -> {
                 priceModeSheet.dismiss();
-                mPresenter.getRate("USD",list.get(position).content);
+                mPresenter.getRate("USD","USD");
                 imageView.setImageResource(list.get(position).id);
                 textView.setText(list.get(position).content);
             },list);
@@ -192,7 +192,7 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
             }*/
             imageView.setImageResource(R.mipmap.lib_usd);
             textView.setText("USD");
-            mPresenter.initSocket(code);
+          //  mPresenter.initSocket(code);
             mPresenter.initSocket1();
             mPresenter.getRate("USD","USD");
             LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).postValue(1);
@@ -214,18 +214,19 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         //mPresenter.getPankou(code);
         imageView.setImageResource(R.mipmap.lib_usd);
         textView.setText("USD");
-        Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
+       /* Objects.requireNonNull(getActivity()).runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 mPresenter.initSocket(code);
             }
-        });
+        });*/
         mPresenter.initSocket1();
         mPresenter.getRate("USD","USD");
         //LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN,BibiCoinType.class).observe(this, this::changeCoin);
         LiveDataBus.get().with(RxBusCode.LEVEL_CHANGE_COIN,BibiCoinType.class).observe(this, this::changeCoin);//改变合约交易的币种
         LiveDataBus.get().with(RxBusCode.LEVEL_ALL_PC).observe(this,this::changeText);
         LiveDataBus.get().with(RxBusCode.LEVEL_FRESH).postValue(1);
+        LiveDataBus.get().with(RxBusCode.NEW_LEVEL_HANG, WSFiveBean.class).observe(this,this::updateUI);
     }
 
     private void changeText(Object o) {
@@ -248,7 +249,7 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         code = coinType.getCode();
         tvTitle.setText(code);
         tvName.setText(code+ App.INSTANCE.getString(R.string.level_shen));
-        mPresenter.initSocket(code);
+       // mPresenter.initSocket(code);
         mPresenter.initSocket1();
         mPresenter.getRate("USD","USD");
         //mPresenter.getPankou(coinType.getCode());
@@ -286,8 +287,11 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
         if(bean1.getBids()!=null&&bean1.getBids().size()>0){
             double num =0.00;
             for(WSFiveBean.FiveBean data:bean1.getBids()){
-                num = new BigDecimal(data.getAmount()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
-                data.setAmount(String.valueOf(num));
+                if(!TextUtils.isEmpty(data.getAmount())){
+                    num = new BigDecimal(data.getAmount()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
+                    data.setAmount(String.valueOf(num));
+                }
+
             }
             buyFlow = Flowable.fromIterable(bean1.getBids())
                     .map(fiveBean -> (IDepthData)new DepthData(fiveBean.getAmount(),String.valueOf(fiveBean.getPrice())))
@@ -297,9 +301,10 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
      if(bean1.getAsks()!=null&&bean1.getAsks().size()>0){
          double num =0.00;
          for(WSFiveBean.FiveBean data:bean1.getAsks()){
+             if(!TextUtils.isEmpty(data.getAmount())){
              num = new BigDecimal(data.getAmount()).add(new BigDecimal(num)).setScale(8,BigDecimal.ROUND_DOWN).stripTrailingZeros().doubleValue();
              data.setAmount(String.valueOf(num));
-         }
+         }}
          sellFlow = Flowable.fromIterable(bean1.getAsks())
                  .map(fiveBean -> (IDepthData)new DepthData(fiveBean.getAmount(), fiveBean.getPrice()))
                  .toList()
@@ -350,7 +355,7 @@ public class LevelMainFragment extends BaseFragment<LevelMainFragmentPresenter> 
 
     @Override
     public void onDestroy() {
-        mPresenter.closeWebSocket();
+      //  mPresenter.closeWebSocket();
         super.onDestroy();
 
     }

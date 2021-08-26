@@ -229,17 +229,17 @@ public class BottomSheetUtil {
             ((TextView) inflate.findViewById(R.id.tv_yourphone)).setText(App.INSTANCE.getString(R.string.libbottomSheetUtil1));
         }*/
         TextView tv_dianji = inflate.findViewById(R.id.tv_dianji);
-       TextView tv_cancel = inflate.findViewById(R.id.tv_cancel);
-       TextView tv_phone = inflate.findViewById(R.id.tv_yourphone);
-       tv_phone.setText(String.format(App.INSTANCE.getString(R.string.lib_yanzheng),content));
-       ClickUtil.click(tv_cancel,()->{
-           DisposUtil.close(timeDis);
-           bottomSheetDialog.dismiss();
-       });
+        TextView tv_cancel = inflate.findViewById(R.id.tv_cancel);
+        TextView tv_phone = inflate.findViewById(R.id.tv_yourphone);
+        tv_phone.setText(String.format(App.INSTANCE.getString(R.string.lib_yanzheng),content));
+        ClickUtil.click(tv_cancel,()->{
+            DisposUtil.close(timeDis);
+            bottomSheetDialog.dismiss();
+        });
         ClickUtil.click(tv_dianji,()->{
             DisposUtil.close(timeDis);
             if(getTime!=null){
-              getTime.getTime();
+                getTime.getTime();
             }
             timeDis = Flowable.intervalRange(1, 60, 0, 1, TimeUnit.SECONDS)
                     .compose(RxSchedulersHelper.transformer())
@@ -249,15 +249,69 @@ public class BottomSheetUtil {
                         tv_dianji.setText(String.format(App.INSTANCE.getString(R.string.lib_chongxin), aLong + ""));
                         tv_dianji.setEnabled(false);
                         tv_dianji.setClickable(false);
-                      //  btAutoCancel.setText(String.format(App.INSTANCE.getString(R.string.fabi_tipFabiUtil9), aLong + ""));
+                        //  btAutoCancel.setText(String.format(App.INSTANCE.getString(R.string.fabi_tipFabiUtil9), aLong + ""));
                     }, e -> {
                     }, () -> {
                         tv_dianji.setText(R.string.lib_huoqu);
                         tv_dianji.setTextColor(inflate.getContext().getColor(R.color.libGreen1));
                         tv_dianji.setClickable(true);
                         tv_dianji.setEnabled(true);
-                       // DisposUtil.close(timeDis);
-                       // bottomSheetDialog.dismiss();
+                        // DisposUtil.close(timeDis);
+                        // bottomSheetDialog.dismiss();
+                    });
+        });
+        EditText et = inflate.findViewById(R.id.et_yanzheng);
+        ClickUtil.click(inflate.findViewById(R.id.btSure), () -> {
+            bottomSheetDialog.dismiss();
+            if (onSure != null) {
+                onSure.onSure(et.getText().toString());
+            }
+        });
+
+        bottomSheetDialog.setContentView(inflate);
+        bottomSheetDialog.setCancelable(true);
+        bottomSheetDialog.setCanceledOnTouchOutside(true);
+        bottomSheetDialog.show();
+        return bottomSheetDialog;
+    }
+    public static BottomSheetDialog showYanZhengMap(Activity activity, String content,String title, NewOnSure onSure, GetTime getTime) {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(activity);
+        View inflate = activity.getLayoutInflater().inflate(R.layout.lib_bottom_sheet_yanzhengma, null, false);
+       /* if (!TextUtils.isEmpty(content)) {
+            ((TextView) inflate.findViewById(R.id.tv_yourphone)).setText(App.INSTANCE.getString(R.string.libbottomSheetUtil1));
+        }*/
+        TextView tv_dianji = inflate.findViewById(R.id.tv_dianji);
+        TextView tv_cancel = inflate.findViewById(R.id.tv_cancel);
+        TextView tv_phone = inflate.findViewById(R.id.tv_yourphone);
+       TextView tv_title= inflate.findViewById(R.id.content);
+        tv_title.setText(title);
+        tv_phone.setText(String.format(App.INSTANCE.getString(R.string.lib_yanzheng),content));
+        ClickUtil.click(tv_cancel,()->{
+            DisposUtil.close(timeDis);
+            bottomSheetDialog.dismiss();
+        });
+        ClickUtil.click(tv_dianji,()->{
+            DisposUtil.close(timeDis);
+            if(getTime!=null){
+                getTime.getTime();
+            }
+            timeDis = Flowable.intervalRange(1, 60, 0, 1, TimeUnit.SECONDS)
+                    .compose(RxSchedulersHelper.transformer())
+                    .map(aLong -> 60 - aLong)
+                    .subscribe(aLong -> {
+                        tv_dianji.setTextColor(inflate.getContext().getColor(R.color.libTextGray));
+                        tv_dianji.setText(String.format(App.INSTANCE.getString(R.string.lib_chongxin), aLong + ""));
+                        tv_dianji.setEnabled(false);
+                        tv_dianji.setClickable(false);
+                        //  btAutoCancel.setText(String.format(App.INSTANCE.getString(R.string.fabi_tipFabiUtil9), aLong + ""));
+                    }, e -> {
+                    }, () -> {
+                        tv_dianji.setText(R.string.lib_huoqu);
+                        tv_dianji.setTextColor(inflate.getContext().getColor(R.color.libGreen1));
+                        tv_dianji.setClickable(true);
+                        tv_dianji.setEnabled(true);
+                        // DisposUtil.close(timeDis);
+                        // bottomSheetDialog.dismiss();
                     });
         });
         EditText et = inflate.findViewById(R.id.et_yanzheng);

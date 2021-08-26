@@ -22,7 +22,10 @@ public class NewRechargeActivityPresenter extends BasePresenter<NewRechargeActiv
                     @Override
                     public void onSuccess(Response<String> response) {
                         CoinAddressBean bean = GSonUtil.GsonToBean(response.body(), CoinAddressBean.class);
-                        mView.setAddress(bean.getData());
+
+                            mView.setAddress(bean.getData());
+
+
                     }
                 });
     }

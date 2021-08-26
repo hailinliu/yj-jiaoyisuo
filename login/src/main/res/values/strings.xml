@@ -67,4 +67,5 @@
     <string name="login_shu_again">请再次输入密码</string>
     <string name="login_cuowu">验证码错误</string>
     <string name="login_success">成功</string>
+    <string name="login_youxiang">邮箱验证码</string>
 </resources>

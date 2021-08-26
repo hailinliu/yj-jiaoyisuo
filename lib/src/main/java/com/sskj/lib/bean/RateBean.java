@@ -8,7 +8,7 @@ public class RateBean {
     public String getSimple() {
        switch (name){
            case "CNY":
-               return "￥";
+               return "$";
            case "EUR":
               return "€";
            case "HKD":
@@ -25,7 +25,7 @@ public class RateBean {
                return "$";
 
        }
-        return "￥";
+        return "$";
     }
 
     public void setSimple(String simple) {

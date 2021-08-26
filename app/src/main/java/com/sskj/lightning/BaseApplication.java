@@ -72,7 +72,7 @@ public class BaseApplication extends MultiDexApplication {
                 SPUtil.put("language", Locale.ENGLISH.toString(), "language");
             }
             if(BuildConfig.DEBUG) {
-                Recovery.getInstance()
+              /*  Recovery.getInstance()
                         .debug(true)
                         .recoverInBackground(false)
                         .recoverStack(true)
@@ -80,7 +80,7 @@ public class BaseApplication extends MultiDexApplication {
                         .recoverEnabled(true)
                         .callback(null)
                         .silent(false, Recovery.SilentMode.RECOVER_ACTIVITY_STACK)
-                        .init(this);
+                        .init(this);*/
                 ARouter.openLog();
                 ARouter.openDebug();
                 StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
@@ -117,7 +117,7 @@ public class BaseApplication extends MultiDexApplication {
             ARouter.init(this);
             ARouter.getInstance().inject(this);
             commonService.initOkGoHttp(this, true);
-            CrashReport.initCrashReport(this, "ca36751b7a", false);
+         //   CrashReport.initCrashReport(this, "ca36751b7a", false);
 
 
             CoolRefreshView.setPullHeaderFactory(new IPullHeaderFactory() {

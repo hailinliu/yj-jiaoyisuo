@@ -201,7 +201,7 @@ ClickUtil.click(imageView,()->{
                 RadioButton button = group.findViewById(checkedId);
                 tv_chakan.setClickable(false);
                 tv_chakan.setEnabled(false);
-                if(button.getText().toString().contains("TRC20")){
+                if(button.getText().toString().contains("TRC")){
                     tvAddress.setText("");
                     for(CoinAddressBean.DataBean bean:data){
                         if(bean.getCoinKey().contains("TRC")){
@@ -221,7 +221,7 @@ ClickUtil.click(imageView,()->{
                         }
                     }
                 }
-                if(button.getText().toString().contains("ERC20")){
+                if(button.getText().toString().contains("ERC")){
                     tvAddress.setText("");
                     for(CoinAddressBean.DataBean bean:data){
                         if(bean.getCoinKey().contains("ERC")){
@@ -303,6 +303,8 @@ ClickUtil.click(imageView,()->{
             ImageUtil.setImage(HttpConfig.BASE_URL+ bean.getCoin().getImgUrl(),image);
             if(bean.getCoin().getUnit().contains("USDT")){
                 group.setVisibility(View.VISIBLE);
+                RadioButton button=  group.findViewById(R.id.radio_trc20);
+                button.setChecked(true);
             }else {
                 group.setVisibility(View.INVISIBLE);
             }
@@ -315,21 +317,33 @@ ClickUtil.click(imageView,()->{
 
     public void setAddress(List<CoinAddressBean.DataBean> data) {
         this.data = data;
-        for(CoinAddressBean.DataBean bean:data){
-            if(bean.getCoinKey().contains("TRC")){
-                tvAddress.setText(bean.getAddress());
-                QRCodeUtil.createImage(bean.getAddress(),200,new QRCodeUtil.OnEncodeQRCodeCallback(){
-                    @Override
-                    public void onAnalyzeSuccess(Bitmap bitmap) {
-                        bitmap1 = bitmap;
-                    }
-                    @Override
-                    public void onAnalyzeFailed() {
+        if(data!=null&&data.size()>0){
+            tvAddress.setText(data.get(0).getAddress());
+            QRCodeUtil.createImage(data.get(0).getAddress(),200,new QRCodeUtil.OnEncodeQRCodeCallback(){
+                @Override
+                public void onAnalyzeSuccess(Bitmap bitmap) {
+                    bitmap1 = bitmap;
+                }
+                @Override
+                public void onAnalyzeFailed() {
 
-                    }
-                });
-            }
-            if(tv_type.getText().toString().equals("ETH")&&bean.getCoinKey().contains("ERC")){
+                }
+            });
+            for(CoinAddressBean.DataBean bean:data){
+                if(bean.getCoinKey().contains("TRC")){
+                    tvAddress.setText(bean.getAddress());
+                    QRCodeUtil.createImage(bean.getAddress(),200,new QRCodeUtil.OnEncodeQRCodeCallback(){
+                        @Override
+                        public void onAnalyzeSuccess(Bitmap bitmap) {
+                            bitmap1 = bitmap;
+                        }
+                        @Override
+                        public void onAnalyzeFailed() {
+
+                        }
+                    });
+                }
+          /*  if(tv_type.getText().toString().equals("ETH")&&bean.getCoinKey().contains("ERC")){
                 tvAddress.setText(bean.getAddress());
                 QRCodeUtil.createImage(bean.getAddress(),200,new QRCodeUtil.OnEncodeQRCodeCallback(){
                     @Override
@@ -353,11 +367,25 @@ ClickUtil.click(imageView,()->{
                     public void onAnalyzeFailed() {
 
                     }
-                });
+                });*/
             }
+        }else {
+            tvAddress.setText("");
+            QRCodeUtil.createImage("1",200,new QRCodeUtil.OnEncodeQRCodeCallback(){
+                @Override
+                public void onAnalyzeSuccess(Bitmap bitmap) {
+                    bitmap1 = bitmap;
+                }
+                @Override
+                public void onAnalyzeFailed() {
+
+                }
+            });
         }
 
-    }
+        }
+
+
 
     public void setRecord(CongRecordBean bean) {
         slimAdapter.updateData(bean.getData().getContent());
