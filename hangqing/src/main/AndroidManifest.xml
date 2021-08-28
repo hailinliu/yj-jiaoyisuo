@@ -23,7 +23,7 @@
         <activity android:name=".ui.activity.NewSettingActivity"  android:launchMode="singleTop"/>
         <activity android:name=".ui.activity.FeedBackActivity"  android:launchMode="singleTop"/>
         <activity android:name=".ui.activity.SoloActivity"  android:launchMode="singleTop"/>
-        <activity android:name=".ui.activity.AccountSafetyActivity"  android:launchMode="singleTop"/>
+        <activity android:name=".ui.activity.AccountSafetyActivity"  android:launchMode="singleTask"/>
         <activity android:name=".ui.activity.ChangeUserActivity"  android:launchMode="singleTop"/>
         <activity android:name=".ui.activity.ChangeTradActivity"  android:launchMode="singleTop"/>
         <activity android:name=".ui.activity.PhoneBindActivity"  android:launchMode="singleTop"/>

@@ -210,6 +210,7 @@ public class IdentifyFourActivity extends BaseActivity<IdentifyFourActivityPrese
         userViewModel.update();
         ToastUtil.showShort(message);
         LiveDataBus.get().with(RxBusCode.REFRESHSAFETY,Integer.class).postValue(1);
-        finish();
+        ARouter.getInstance().build(RConfig.ACCOUNTSAFETYACTIVITY).navigation();
+       // finish();
     }
 }

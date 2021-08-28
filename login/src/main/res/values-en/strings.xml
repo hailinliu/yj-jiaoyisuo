@@ -48,8 +48,8 @@
     <string name="login_safety"> safety item missing?</string>
     <string name="login_email_register"> mailbox register </string>
     <string name="login_phone_register"> mobile register </string>
-    <string name="login_18"> I am over 18 years old and agree to register the protocol </string>
-    <string name="login_register_xieyi"> registration protocol </string>
+    <string name="login_18">register must 18 year</string>
+    <string name="login_register_xieyi"> regist protocol </string>
     <string name="login_already"> already has an account?</string>
     <string name="login_setting_pwd"> Set password </string>
     <string name="login_zhishao"> at least 8 characters, must contain letters and numbers </string>

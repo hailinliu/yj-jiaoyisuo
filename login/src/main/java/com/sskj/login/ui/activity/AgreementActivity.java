@@ -82,7 +82,7 @@ public class AgreementActivity extends BaseActivity<AgreementActivityPresenter> 
 
     public void updataUI(AgreementBean bean) {
         for(AgreementBean.DataBean data:bean.getData()){
-            if(data.getTitle().equals("注册协议")){
+            if(data.getTitle().equals("注册协议")||data.getTitle().contains("the registration agreement")){
                 RichText.fromHtml(data.getContent()).into(tvContent);
             }
          if(isflag==2){

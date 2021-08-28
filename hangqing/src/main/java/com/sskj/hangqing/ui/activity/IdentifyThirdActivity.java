@@ -67,7 +67,7 @@ public class IdentifyThirdActivity extends BaseActivity<IdentifyActivityPresente
              if(inputs.test()){
                  if(et_zhengjianhao.getText().toString().length()>=10){
                      ARouter.getInstance().build(RConfig.IDENTIFYFOURACTIVITY).withString("zcountry",zcountry).withString("name",et_name.getText().toString()).withString("Idcard",et_zhengjianhao.getText().toString()).withInt("newtype",type).navigation();
-                     finish();
+                     //finish();
                  }else {
                      ToastUtil.showShort(App.INSTANCE.getString(R.string.hang_zhengjianhao));
                  }

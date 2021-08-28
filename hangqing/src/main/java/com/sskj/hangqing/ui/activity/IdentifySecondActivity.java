@@ -74,7 +74,7 @@ public class IdentifySecondActivity extends BaseActivity<IdentifyActivityPresent
             @Override
             public void onClick(View v) {
                 ARouter.getInstance().build(RConfig.IDENTIFYTHIRDACTIVITY).withString("zcountry",zcountry).withInt("type",type).navigation();
-                finish();
+                //finish();
             }
         });
     }

@@ -10,7 +10,7 @@ ext {
             keyAlias      : "sskj",//签名文件别名
             keyPassword   : "a123456",//签名文件别名密码
             versionCode   : 1,
-            versionName   : "1.2.7",
+            versionName   : "1.2.8",
     ]
 
     debug = [
@@ -24,7 +24,7 @@ ext {
             keyAlias      : "sskj",//签名文件别名
             keyPassword   : "a123456",//签名文件别名密码
             versionCode   : 1,
-            versionName   : "1.2.7",
+            versionName   : "1.2.8",
             ]
 
 }

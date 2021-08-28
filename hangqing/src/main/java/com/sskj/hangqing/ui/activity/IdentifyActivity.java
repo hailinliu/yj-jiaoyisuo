@@ -55,7 +55,7 @@ public class IdentifyActivity extends BaseActivity<IdentifyActivityPresenter> {
             public void onClick(View v) {
                 if(tv_guoji.getText().toString().contains("+")){
                 ARouter.getInstance().build(RConfig.IDENTIFYSECONDACTIVITY).withString("zcountry",zcountry).navigation();
-                finish();
+               // finish();
                 }else {
                     ToastUtil.showShort(App.INSTANCE.getString(R.string.hang_pealse_select_country));
                 }
